@@ -1,0 +1,41 @@
+.floatLeft {float: left !important;}
+.floatRight {float: right !important;}
+.floatNone {float: none !important;}
+
+.displayNone {display: none !important;}
+.displayInline {display: inline !important;}
+.displayBlock {display: block !important;}
+
+.clearBoth {clear: both !important;}
+.clearNone {clear: none !important;}
+
+.padding20 {padding: 20px !important}
+.padding15 {padding: 15px !important}
+.padding10 {padding: 10px !important;}
+.padding0 {padding: 0 !important;}
+
+.margin20 {margin: 20px !important}
+.margin15 {margin: 15px !important}
+.margin10 {margin: 10px !important}
+.margin0 {margin: 0 !important;}
+
+.border0 {border: 0 none !important;}
+
+.backgroundNone {background: none !important;}
+
+.width100 {width: 100% !important}
+.width50 {width: 50% !important}
+.width33 {width: 33% !important}
+.width25 {width: 25% !important}
+
+.alignLeft {text-align: left !important;}
+.alignCenter {text-align: center !important;}
+.alignRight {text-align: right !important;}
+
+.cursorPointer {cursor: pointer !important;}
+.cursorDefault {cursor: default !important;}
+
+.fontBold {font-weight: bold !important;}
+
+.hidden {display: none !important;}
+

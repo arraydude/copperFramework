@@ -4,13 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><?php echo copperConfig::get('appName'); ?></title>
     <?php copperConfig::incCss('main.css'); ?>
-
     <?php
         $customsCss = copperUtils::valid(copperConfig::get('customsCss'), array());
         foreach($customsCss as $css){
           copperConfig::incCss($css);
         }
-
 
         if(strpos($_SERVER['HTTP_USER_AGENT'], "MSIE 7.0") !== false) {
           copperConfig::incCss('ie7.css');
@@ -32,7 +30,9 @@
     <script type="text/javascript">
       var CALLBACK_URL  = '<?php echo copperConfig::get('callbackUrl')?>';
       var CANVAS_URL  = '<?php echo copperConfig::get('canvasUrl')?>';
-      var SIGNED_REQUEST  = '<?php echo htmlentities($_REQUEST['signed_request']); ?>';
+      <?php if(copperConfig::get('facebookActivate')):?>
+        var SIGNED_REQUEST  = '<?php echo htmlentities($_REQUEST['signed_request']); ?>';
+      <?php endif;?>
     </script>
     <?php
       $fbInstance = copperConfig::get('fbInstance');

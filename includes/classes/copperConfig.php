@@ -110,7 +110,11 @@ class copperConfig {
       echo '</style>';
     } else {
       echo '<link rel="stylesheet" type="text/css" media="screen" href="';
-      echo self::publicPath(self::$conf['stylesDir'] . '/' . $fileName) . '?vs=' . self::$conf['stylesVersion'] . '" />' . "\n";
+      /**
+       * @todo Check this out
+       */
+      //echo self::publicPath(self::$conf['stylesDir'] . '/' . $fileName) . '?vs=' . self::$conf['stylesVersion'] . '" />' . "\n";
+      echo copperConfig::get('callbackUrl') . self::$conf['stylesDir'] . '/' . $fileName . '?vs=' . self::$conf['stylesVersion'] . '" />' . "\n";
     }
     return true;
   }
@@ -124,7 +128,11 @@ class copperConfig {
       echo '</script>' . "\n";
     } else {
       echo '<script type="text/javascript"  src="';
-      echo self::publicPath(self::$conf['jsDir'] . '/' . $fileName) . '?vs=' . self::$conf['jsVersion'] . '"></script>' . "\n";
+      /**
+       * @todo Check this out
+       */
+      //echo self::publicPath(self::$conf['jsDir'] . '/' . $fileName) . '?vs=' . self::$conf['jsVersion'] . '"></script>' . "\n";
+      echo copperConfig::get('callbackUrl') . self::$conf['jsDir'] . '/' . $fileName . '?vs=' . self::$conf['jsVersion'] . '"></script>' . "\n";
     }
     return true;
   }

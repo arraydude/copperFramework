@@ -21,9 +21,6 @@ Configuring
 Example
 -------
 
-### Controller, View , how to MVC...
-As the standard , the main controller is index.php
-
     <?php
 
     require_once 'config.php';

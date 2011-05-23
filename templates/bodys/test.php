@@ -5,5 +5,5 @@
   
   <div class='container'>
     <h1><?php echo copperConfig::get('welcome');?></h1>
-  </div>
+    </div>
 </div>

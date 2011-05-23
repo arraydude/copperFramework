@@ -1,7 +1,7 @@
 copperFramework README
 ======================
 
-An easy to use Framework oriented to facebook APPS with the great MVC pattern.
+An easy to use Framework oriented to facebook APPS with the great MVC pattern and PDO Extension.
 
 
 Contributing
@@ -13,9 +13,9 @@ Want to contribute? Great! please create a branch or contact me at arraydude@gma
 Configuring
 -----------
 
-* Rename and configure the """config-custom-template.php""" file to """config-custom.php"""
+* Rename and configure the "config-custom-template.php" file to "config-custom.php"
 * Configure the config.php file
-* Test the framework is working going to """callbackUrl"""
+* Test the framework is working going to "callbackUrl"
 
 
 Example

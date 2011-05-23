@@ -15,8 +15,8 @@ class copperFacebook {
   public static function factory($params = array(), $loginParams = array()) {
     $instance = self::instance();
     $init = array(
-        'appId' => copperConfig::get('appId_' . copperConfig::get('lang')),
-        'secret' => copperConfig::get('appSecret_' . copperConfig::get('lang')),
+        'appId' => copperConfig::get('appId'),
+        'secret' => copperConfig::get('appSecret'),
         'cookie' => true,
         'domain' => copperConfig::get('canvasUrl')
     );

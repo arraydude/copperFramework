@@ -1,15 +1,15 @@
 <?php
 
 $copperConfigCustom = array(
-    'appId' => '219278324751417',
-    'apiKey' => 'b6a96a88dd7f7d6b81bc6438851cab37',
-    'appSecret' => '29a4f253b8dac6b67183f04a069f6547',
+    'appId' => '151220508282096',
+    'apiKey' => '21b655c7184b8120c06ca8efb8873f50',
+    'appSecret' => 'e5706001a9bae30fa28d5bde42c90e11',
     'fanPageId' => '',
-    'canvasUrl' => 'http://apps.facebook.com/pilsendevemilio/',
-    'callbackUrl' => 'http://altodotdev.dyndns.org:8000/',
+    'canvasUrl' => 'http://apps.facebook.com/copperframework/',
+    'callbackUrl' => 'http://copperframework.awardspace.us/',
     'tabUrl' => '',
     'dbUser' => 'root',
-    'dbPass' => 'chulo432',
-    'dbName' => 'pilsen',
+    'dbPass' => '',
+    'dbName' => '',
     'dbHost' => 'localhost',
 );

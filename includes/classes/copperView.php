@@ -6,6 +6,8 @@ class copperView {
 
   public function __construct($view = NULL) {
     $this->view = $view;
+
+    return $this;
   }
 
   public function render() {
@@ -14,6 +16,8 @@ class copperView {
 
   public function __set($key, $value) {
     copperConfig::set($key, $value);
+
+    return $this;
   }
 
 }

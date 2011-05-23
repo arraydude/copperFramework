@@ -7,7 +7,7 @@ date_default_timezone_set("America/Buenos_Aires");
 
 
 $copperConfig = array(
-    'appName' => 'Pilsen Cup',
+    'appName' => 'copperFramework',
     'includes' => 'includes',
     'lib' => 'includes/lib',
     'classes' => 'includes/classes',
@@ -25,9 +25,9 @@ $copperConfig = array(
     'swfsVersion' => '0.02',
     'lang' => 'es',
     // youtube upload settings
-    'youtubeDeveloperKey' =>  'AI39si6MAsVFqtkAmh3Ny8scJpmJuQnywI76s7fkUhdj5OtZvmS6AqCCQRQUC2W7eDLdqLCJmQ86nImhBj9_Ye73EKkspx2WwQ',
-    'youtubeUsername' => 'pilsencup',
-    'youtubePassword' => 'pilsencup432',
+    'youtubeDeveloperKey' =>  '',
+    'youtubeUsername' => '',
+    'youtubePassword' => '',
 );
 
 $customConfig = realpath('.') . DIRECTORY_SEPARATOR . 'config-custom.php';
@@ -46,21 +46,24 @@ ini_set('error_log',copperConfig::get('log'));
 require_once copperConfig::get('lib') . '/phpmailer/class.phpmailer.php';
 
 require_once copperConfig::get('lib') . '/facebook/facebook.php';
-try {
-  $fbInstance = copperFacebook::factory(array(), array('req_perms' => 'photo_upload,user_photos,email,friends_photos,user_photo_video_tags,friends_photo_video_tags'));
-} catch(Exception $e) {
-  copperConfig::doError('Error cargando facebook: ' . $e->getMessage());
-  copperConfig::doError($e->getTraceAsString());
-  if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-    echo json_encode(array('error' => true, 'msg'=>'Imposible cargar Session'));
-  } else {
-    copperConfig::incTemplate('head.php');
-    copperConfig::incTemplate('bodys/error500.php');
-    copperConfig::incTemplate('foot.php');
-  }
-  die;
-}
 
-copperConfig::set('fbInstance', $fbInstance);
-$model = new copperModel($fbInstance);
-copperConfig::set('model', $model);
+if(copperConfig::get('activateFacebook')){
+  try {
+    $fbInstance = copperFacebook::factory(array(), array('req_perms' => 'photo_upload,user_photos,email,friends_photos,user_photo_video_tags,friends_photo_video_tags'));
+  } catch(Exception $e) {
+    copperConfig::doError('Error cargando facebook: ' . $e->getMessage());
+    copperConfig::doError($e->getTraceAsString());
+    if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+      echo json_encode(array('error' => true, 'msg'=>'Imposible cargar Session'));
+    } else {
+      copperConfig::incTemplate('head.php');
+      copperConfig::incTemplate('bodys/error500.php');
+      copperConfig::incTemplate('foot.php');
+    }
+    die;
+  }
+
+  copperConfig::set('fbInstance', $fbInstance);
+  $model = new copperModel($fbInstance);
+  copperConfig::set('model', $model);
+}

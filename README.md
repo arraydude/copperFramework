@@ -22,10 +22,9 @@ Example
 -------
 
     <?php
+      require_once 'config.php';
 
-    require_once 'config.php';
-
-    $view = new copperView('bodys/test.php');
-    $view->welcome = 'Welcome, your copperFramework is succesful installed.';
-    $view->render();
+      $view = new copperView('bodys/test.php');
+      $view->welcome = 'Welcome, your copperFramework is succesful installed.';
+      $view->render();
     ?>

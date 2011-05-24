@@ -1,5 +1,13 @@
 <?php
-
+/**
+ * copperView
+ *
+ * Class to handle views
+ *
+ * @package    copperFramework
+ * @author     Nahuel Rosso
+ * @version    1.0
+ */
 class copperView {
 
   private $view;

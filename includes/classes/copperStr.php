@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * copperStr
+ *
+ * helper to handle strings
+ *
+ * @package    copperFramwork
+ * @version    1.0
+ */
 class copperStr {
 
   /**

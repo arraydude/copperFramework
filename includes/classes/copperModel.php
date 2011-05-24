@@ -1,10 +1,6 @@
 <?php
 
 class copperModel {
-  /**
-   *
-   * @var PDO pdo instance
-   */
   public $db;
   public $fb;
 

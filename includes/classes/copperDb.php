@@ -5,6 +5,15 @@ class copperDbPDO extends PDO
 
 }
 
+/**
+ * copperDb
+ *
+ * A layer to handle SQL connections with the great PDO php extension
+ *
+ * @package    copperFramework
+ * @author     Emilio Astarita
+ * @version    1.0
+ */
 class copperDb
 {
   static private $instance = NULL;
@@ -13,7 +22,14 @@ class copperDb
   {
 
   }
-  
+
+  /**
+   * Configure the instance
+   * @param <type> $dsn
+   * @param <type> $user
+   * @param <type> $pass
+   * @return db
+   */
   static public function configure($dsn,$user,$pass)
   {
     if(self::$instance !== NULL) {

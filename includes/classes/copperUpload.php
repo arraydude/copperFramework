@@ -1,6 +1,16 @@
 <?php
+
+/**
+ * copperUpload
+ *
+ * Upload helper
+ *
+ * @package    copperFramework
+ * @version    1.0
+ */
 class copperUpload {
   public $fileExt;
+
   
   public function __construct($fileNameForm) {
     $this->uploadDir = copperConfig::get('uploadPath');

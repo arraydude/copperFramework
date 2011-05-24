@@ -3,7 +3,7 @@
 /**
  * Twitter API
  *
- * Clase para manejo de la api search de twitter
+ * Class to handle the twitter api
  *
  * @package    twitterAPP
  * @author     Nahuel Rosso

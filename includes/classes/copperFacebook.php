@@ -1,8 +1,15 @@
 <?php
-
+/**
+ * copperFacebook
+ *
+ * Factory the facebook api
+ *
+ * @package    copperFramework
+ * @author     Nahuel Rosso
+ */
 class copperFacebook {
 
-  public static function instance($facebook = null, $signedRequest = null, $session = null, $me = null) {
+  private static function instance($facebook = null, $signedRequest = null, $session = null, $me = null) {
     $instance = new stdClass();
     $instance->facebook = $facebook;
     $instance->signedRequest = $signedRequest;
@@ -12,6 +19,13 @@ class copperFacebook {
     return $instance;
   }
 
+  /**
+   * Factory the API
+   *
+   * @param <type> $params
+   * @param <type> $loginParams
+   * @return <type>
+   */
   public static function factory($params = array(), $loginParams = array()) {
     $instance = self::instance();
     $init = array(
@@ -52,6 +66,13 @@ class copperFacebook {
     return $instance;
   }
 
+  /**
+   * Delete an appRequest
+   *
+   * @param <type> $requestId
+   * @param <type> $appToken
+   * @return <type>
+   */
   public static function deleteRequest($requestId, $appToken){
     $deleted = file_get_contents("https://graph.facebook.com/$requestId?access_token=$appToken&method=delete"); // Should return true on success
 

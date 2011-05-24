@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * copperUtils
+ *
+ * some util methods
+ *
+ * @package copperFramework
+ * @version 1.0
+ */
 class copperUtils {
 
   public static function valid(&$var, $return = FALSE) {

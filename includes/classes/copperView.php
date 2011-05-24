@@ -13,6 +13,8 @@ class copperView {
   private $view;
 
   /**
+   * __construct
+   *
    * create the instance view
    * @param * $view
    * @param bool $render
@@ -29,6 +31,8 @@ class copperView {
   }
 
   /**
+   * render()
+   *
    * Render the view
    */
   public function render() {
@@ -36,6 +40,8 @@ class copperView {
   }
 
   /**
+   * __set
+   *
    * Treat the View as an Object
    */
   public function __set($key, $value) {

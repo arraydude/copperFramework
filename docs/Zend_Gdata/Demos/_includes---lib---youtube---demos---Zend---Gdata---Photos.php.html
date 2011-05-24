@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page Photos.php</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/includes/lib/youtube/demos/Zend/Gdata/Photos.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+									<a href="#sec-includes">Includes</a>
+			|											<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Zend Framework</p>
+<p class="description"><p>LICENSE</p><p>This source file is subject to the new BSD license that is bundled  with this package in the file LICENSE.txt.  It is also available through the world-wide-web at this URL:  http://framework.zend.com/license/new-bsd  If you did not receive a copy of the license and are unable to  obtain it through the world-wide-web, please send an email  to license@zend.com so we can send you a copy immediately.</p></p>
+	<ul class="tags">
+				<li><span class="field">copyright:</span> Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+				<li><span class="field">license:</span> <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Includes</span>
+			|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="_Zend/Loader_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require_once</span>
+			(<span class="include-name">'Zend/Loader.php'</span>)
+			(line <span class="line-number">41</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../Zend_Loader/Zend_Loader.html">Zend_Loader</a></li>
+			</ul>
+	
+</div>
+		</div>
+	</div>
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|												<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionaddAlbum" id="functionaddAlbum"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">addAlbum</span> (line <span class="line-number">149</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new album to the specified user's album</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addAlbum
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The user's account name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the new album</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionaddComment" id="functionaddComment"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">addComment</span> (line <span class="line-number">198</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new comment to the specified photo</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addComment
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$album</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$photo</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$comment</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$albumId</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$photoId</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The user's account name</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$albumId</span><span class="var-description">: The album's id</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$photoId</span><span class="var-description">: The photo's id</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$comment</span><span class="var-description">: The comment to add</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$album</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$photo</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionaddPhoto" id="functionaddPhoto"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">addPhoto</span> (line <span class="line-number">90</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new photo to the specified album</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addPhoto
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$albumId</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$photo</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The user's account name</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$albumId</span><span class="var-description">: The album's id</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$photo</span><span class="var-description">: The uploaded photo</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionaddTag" id="functionaddTag"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">addTag</span> (line <span class="line-number">261</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new tag to the specified photo</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addTag
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$album</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$photo</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tag</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The user's account name</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$album</span><span class="var-description">: The album's id</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$photo</span><span class="var-description">: The photo's id</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tag</span><span class="var-description">: The tag to add to the photo</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiondeleteAlbum" id="functiondeleteAlbum"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">deleteAlbum</span> (line <span class="line-number">172</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes the specified album</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deleteAlbum
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$albumId</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The user's account name</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$albumId</span><span class="var-description">: The album's id</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiondeleteComment" id="functiondeleteComment"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">deleteComment</span> (line <span class="line-number">232</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes the specified comment</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deleteComment
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$albumId</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$photoId</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$commentId</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The user's account name</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$albumId</span><span class="var-description">: The album's id</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$photoId</span><span class="var-description">: The photo's id</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$commentId</span><span class="var-description">: The comment's id</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiondeletePhoto" id="functiondeletePhoto"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">deletePhoto</span> (line <span class="line-number">124</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes the specified photo</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deletePhoto
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$albumId</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$photoId</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The user's account name</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$albumId</span><span class="var-description">: The album's id</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$photoId</span><span class="var-description">: The photo's id</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiondeleteTag" id="functiondeleteTag"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">deleteTag</span> (line <span class="line-number">294</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes the specified tag</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deleteTag
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$albumId</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$photoId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tagContent</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The user's account name</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$albumId</span><span class="var-description">: The album's id</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$photoId</span><span class="var-description">: The photo's id</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tagContent</span><span class="var-description">: The name of the tag to be deleted</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiondisplayAlbumMenu" id="functiondisplayAlbumMenu"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">displayAlbumMenu</span> (line <span class="line-number">621</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Displays the album menu, allowing the user to request a specific album's feed.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			displayAlbumMenu
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functiondisplayBackLink" id="functiondisplayBackLink"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">displayBackLink</span> (line <span class="line-number">550</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Outputs an HTML link to return to the previous page.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			displayBackLink
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functiondisplayPhotoMenu" id="functiondisplayPhotoMenu"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">displayPhotoMenu</span> (line <span class="line-number">589</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Displays the photo menu, allowing the user to request a specific photo's feed.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			displayPhotoMenu
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functiongetCurrentScript" id="functiongetCurrentScript"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">getCurrentScript</span> (line <span class="line-number">327</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the path to the current script, without any query params</p>
+<p class="description"><p>Env variables used:  $_SERVER['PHP_SELF']</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Current script path</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getCurrentScript
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionoutputAlbumFeed" id="functionoutputAlbumFeed"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">outputAlbumFeed</span> (line <span class="line-number">706</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Outputs an HTML unordered list (ul), with each list item representing a  photo in the user's album feed.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			outputAlbumFeed
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$albumId</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The user's account name</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$albumId</span><span class="var-description">: The album's id</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionoutputPhotoFeed" id="functionoutputPhotoFeed"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">outputPhotoFeed</span> (line <span class="line-number">760</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Outputs the feed of the specified photo</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			outputPhotoFeed
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$albumId</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$photoId</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The user's account name</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$albumId</span><span class="var-description">: The album's id</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$photoId</span><span class="var-description">: The photo's id</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionoutputUserFeed" id="functionoutputUserFeed"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">outputUserFeed</span> (line <span class="line-number">654</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Outputs an HTML unordered list (ul), with each list item representing an  album in the user's feed.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			outputUserFeed
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The user's account name</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionprocessPageLoad" id="functionprocessPageLoad"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">processPageLoad</span> (line <span class="line-number">432</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Processes loading of this sample code through a web browser.  Uses AuthSub  authentication and outputs a list of a user's albums if succesfully  authenticated.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			processPageLoad
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 24 May 2011 16:30:39 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

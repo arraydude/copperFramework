@@ -1,5 +1,15 @@
 <?php
-
+/**
+ *
+ * __autoLoad
+ *
+ * magic auto load method
+ * 
+ * All files will be included should be prefixed with copper and be in CamelCase
+ *
+ * @author Emilio Astarita
+ * @package copperFramework
+ */
 function __autoLoad($className) {
   $classFile = copperConfig::libPath($className . '.php');
   if (preg_match("/^copper/", $className) &&
@@ -37,6 +47,8 @@ class copperConfig {
   }
 
   /**
+   * doLog
+   *
    * log an message into log file
    *
    * @param string $msg
@@ -59,6 +71,8 @@ class copperConfig {
 
 
   /**
+   *  doError
+   *
    *  Log an error
    *
    * @param string $msg
@@ -70,6 +84,8 @@ class copperConfig {
   }
 
   /**
+   * set
+   *
    * Set an global var
    *
    * @param string $key
@@ -84,6 +100,8 @@ class copperConfig {
   }
 
   /**
+   * get
+   *
    *  Get an global var
    *
    * @param string $key
@@ -97,6 +115,8 @@ class copperConfig {
   }
 
   /**
+   * libPath
+   *
    * Get the libraries path
    *
    * @param <type> $fileName
@@ -111,6 +131,8 @@ class copperConfig {
   }
 
   /**
+   * templatesPath
+   *
    * Get the templates path
    * @param <type> $fileName
    * @return <type>
@@ -124,6 +146,8 @@ class copperConfig {
   }
 
   /**
+   * publicPath
+   *
    * Get the public path
    *
    * @param <type> $fileName
@@ -137,6 +161,8 @@ class copperConfig {
   }
 
   /**
+   * link
+   *
    * Generate a clean link
    *
    * @param string $l
@@ -151,6 +177,8 @@ class copperConfig {
   }
 
   /**
+   * inc
+   *
    * Include a lib file
    * @param string $fileName
    */
@@ -159,6 +187,8 @@ class copperConfig {
   }
 
   /**
+   * incTemplate
+   *
    * Include a template
    * @param string $fileName
    */
@@ -167,6 +197,8 @@ class copperConfig {
   }
 
   /**
+   * incCss
+   *
    * Include a CSS file
    * @param string $fileName
    * @param bool $external
@@ -194,6 +226,8 @@ class copperConfig {
   }
 
   /**
+   * incJs
+   *
    * Include a JS file
    * @param string $fileName
    * @param bool $external
@@ -218,6 +252,8 @@ class copperConfig {
   }
 
   /**
+   * pub
+   *
    * Include a public file
    *
    * @param string $fileName
@@ -228,6 +264,8 @@ class copperConfig {
   }
 
   /**
+   * pubUpload
+   *
    * Return the path of an public upload
    *
    * @param string $fileName

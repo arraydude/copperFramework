@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page Gbase.php</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/includes/lib/youtube/demos/Zend/Gdata/Gbase.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+									<a href="#sec-includes">Includes</a>
+			|							<a href="#sec-constants">Constants</a>
+			|									<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Zend Framework</p>
+<p class="description"><p>LICENSE</p><p>This source file is subject to the new BSD license that is bundled  with this package in the file LICENSE.txt.  It is also available through the world-wide-web at this URL:  http://framework.zend.com/license/new-bsd  If you did not receive a copy of the license and are unable to  obtain it through the world-wide-web, please send an email  to license@zend.com so we can send you a copy immediately.</p></p>
+	<ul class="tags">
+				<li><span class="field">copyright:</span> Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+				<li><span class="field">license:</span> <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Includes</span>
+			|							<a href="#sec-constants">Constants</a>
+				|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="_Zend/Loader_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require_once</span>
+			(<span class="include-name">'Zend/Loader.php'</span>)
+			(line <span class="line-number">23</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|						<span class="disabled">Constants</span>
+			|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="defineITEMS_FEED_URI"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ITEMS_FEED_URI</span> = 'http://www.google.com/base/feeds/items'
+			(line <span class="line-number">28</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|									<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionbatchDelete" id="functionbatchDelete"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">batchDelete</span> (line <span class="line-number">175</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes all recipes by performing an HTTP POST to the  batch URI.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The reponse of the post</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Zend_Http/Response/Zend_Http_Response.html">Zend_Http_Response</a></span>
+		<span class="method-name">
+			batchDelete
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionbuildBatchXML" id="functionbuildBatchXML"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">buildBatchXML</span> (line <span class="line-number">147</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates the XML content used to perform a batch delete.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The constructed XML to be used for the batch delete</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			buildBatchXML
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functiondeleteItem" id="functiondeleteItem"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">deleteItem</span> (line <span class="line-number">129</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes a recipe by performing an HTTP DELETE on its feed URI.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deleteItem
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionexchangeToken" id="functionexchangeToken"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">exchangeToken</span> (line <span class="line-number">556</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Exchanges the given single-use token for a session  token using AuthSubSessionToken, and returns the result.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The upgraded (session) token</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			exchangeToken
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$token</span><span class="var-description">: The single-use token from AuthSubRequest</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhandleBatch" id="functionhandleBatch"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">handleBatch</span> (line <span class="line-number">615</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Main logic to handle a batch deletion of items.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			handleBatch
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionhandleDelete" id="functionhandleDelete"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">handleDelete</span> (line <span class="line-number">601</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Main logic to handle deleting an item.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			handleDelete
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionhandlePost" id="functionhandlePost"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">handlePost</span> (line <span class="line-number">584</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Main logic to handle the POST operation of inserting an item.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			handlePost
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionhandleUpdate" id="functionhandleUpdate"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">handleUpdate</span> (line <span class="line-number">633</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Main logic to handle updating an item</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			handleUpdate
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionpostItem" id="functionpostItem"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">postItem</span> (line <span class="line-number">43</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Inserts a new recipe by performing an HTTP POST to the  items feed.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The newly created entry</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase_ItemFeed.html">Zend_Gdata_Gbase_ItemFeed</a></span>
+		<span class="method-name">
+			postItem
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$dryRun</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$dryRun</span><span class="var-description">: (optional) True if this should be a dry run insert</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionprintHTMLFooter" id="functionprintHTMLFooter"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">printHTMLFooter</span> (line <span class="line-number">214</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Writes the HTML footer for the demo.</p>
+<p class="description"><p>NOTE: We would normally keep the HTML/CSS markup separate from the business        logic above, but have decided to include it here for simplicity of        having a single-file sample.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			printHTMLFooter
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionprintHTMLHeader" id="functionprintHTMLHeader"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">printHTMLHeader</span> (line <span class="line-number">192</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Writes the HTML header for the demo.</p>
+<p class="description"><p>NOTE: We would normally keep the HTML/CSS markup separate from the business        logic above, but have decided to include it here for simplicity of        having a single-file sample.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			printHTMLHeader
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionshowEditMenu" id="functionshowEditMenu"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">showEditMenu</span> (line <span class="line-number">407</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Shows a menu allowing the user to update an existing  recipe with the Base API update feature.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			showEditMenu
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionshowFirstAuthScreen" id="functionshowFirstAuthScreen"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">showFirstAuthScreen</span> (line <span class="line-number">565</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">We arrive here after the user first authenticates and we get back  a single-use token.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			showFirstAuthScreen
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionshowIntroPage" id="functionshowIntroPage"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">showIntroPage</span> (line <span class="line-number">222</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">We arrive here when the user first comes to the form. The first step is  to have them get a single-use token.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			showIntroPage
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionshowMainMenu" id="functionshowMainMenu"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">showMainMenu</span> (line <span class="line-number">520</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Displays both the &quot;List of current recipes&quot; and  &quot;Insert a new recipe&quot; panels in a single table.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			showMainMenu
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableTitle</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$sessionToken</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableTitle</span><span class="var-description">: The title to display in the html table</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sessionToken</span><span class="var-description">: A session token</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionshowRecipeInsertPane" id="functionshowRecipeInsertPane"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">showRecipeInsertPane</span> (line <span class="line-number">363</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prints a small form allowing the user to insert a new  recipe.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			showRecipeInsertPane
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sessionToken</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sessionToken</span><span class="var-description">: A session token</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionshowRecipeListPane" id="functionshowRecipeListPane"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">showRecipeListPane</span> (line <span class="line-number">255</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prints the table of recipes the user has already entered  on the left-hand side of the page.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			showRecipeListPane
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$token</span><span class="var-description">: The session token</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionupdateItem" id="functionupdateItem"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">updateItem</span> (line <span class="line-number">80</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Updates an existing recipe by performing an HTTP PUT  on its feed URI, using the updated values as the data.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">true</span>
+		<span class="method-name">
+			updateItem
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 24 May 2011 16:30:16 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

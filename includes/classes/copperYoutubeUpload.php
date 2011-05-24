@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Youtube upload helper
+ *
+ * @author Emilio Astarita
+ * @package copperFramework
+ * @version 1.0
+ */
 class copperYoutubeUpload {
 
   /*

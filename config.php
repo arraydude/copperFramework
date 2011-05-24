@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * Kernel configuration file
+ * 
+ * please dont touch this if you are not sure what you doing
+ *
+ * @author Emilio Astarita
+ * @package copperFramework
+ * @version 1.0
+ * @todo This need a cleaning
+ */
+
 ini_set('display_errors', '1');
 error_reporting(E_ALL);
 

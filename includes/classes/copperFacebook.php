@@ -20,6 +20,8 @@ class copperFacebook {
   }
 
   /**
+   * factory
+   *
    * Factory the API
    *
    * @param <type> $params
@@ -67,6 +69,8 @@ class copperFacebook {
   }
 
   /**
+   * deleteRequest
+   *
    * Delete an appRequest
    *
    * @param <type> $requestId

@@ -5,7 +5,7 @@
  *
  * Class to handle the twitter api
  *
- * @package    twitterAPP
+ * @package    copperFramework
  * @author     Nahuel Rosso
  * @version    1.2
  */

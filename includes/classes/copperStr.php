@@ -5,7 +5,7 @@
  *
  * helper to handle strings
  *
- * @package    copperFramwork
+ * @package    copperFramework
  * @version    1.0
  */
 class copperStr {

@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * copperModel
+ *
+ * @author Nahuel Rosso
+ * @package copperFramework
+ */
 class copperModel {
   public $db;
   public $fb;

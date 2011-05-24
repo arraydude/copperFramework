@@ -1,1 +1,4 @@
 
+[23-May-2011 16:57:40] PHP Notice:  Undefined variable: view in /var/www/copperFramework/templates/bodys/test.php on line 8
+[23-May-2011 16:57:50] PHP Notice:  Undefined variable: body in /var/www/copperFramework/templates/bodys/test.php on line 8
+[23-May-2011 16:57:52] PHP Notice:  Undefined variable: body in /var/www/copperFramework/templates/bodys/test.php on line 8

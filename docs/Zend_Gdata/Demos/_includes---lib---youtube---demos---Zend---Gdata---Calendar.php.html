@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page Calendar.php</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/includes/lib/youtube/demos/Zend/Gdata/Calendar.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+									<a href="#sec-includes">Includes</a>
+			|											<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Zend Framework</p>
+<p class="description"><p>LICENSE</p><p>This source file is subject to the new BSD license that is bundled  with this package in the file LICENSE.txt.  It is also available through the world-wide-web at this URL:  http://framework.zend.com/license/new-bsd  If you did not receive a copy of the license and are unable to  obtain it through the world-wide-web, please send an email  to license@zend.com so we can send you a copy immediately.</p></p>
+	<ul class="tags">
+				<li><span class="field">copyright:</span> Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+				<li><span class="field">license:</span> <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Includes</span>
+			|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="_Zend/Loader_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require_once</span>
+			(<span class="include-name">'Zend/Loader.php'</span>)
+			(line <span class="line-number">51</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../Zend_Loader/Zend_Loader.html">Zend_Loader</a></li>
+			</ul>
+	
+</div>
+		</div>
+	</div>
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|												<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionaddExtendedProperty" id="functionaddExtendedProperty"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">addExtendedProperty</span> (line <span class="line-number">587</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds an extended property to the event specified as a parameter.</p>
+<p class="description"><p>An extended property is an arbitrary name/value pair that can be added  to an event and retrieved via the API.  It is not accessible from the  calendar web interface.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The updated entry</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Zend_Gdata/Calendar/Zend_Gdata_Calendar_EventEntry.html">Zend_Gdata_Calendar_EventEntry</a>|null</span>
+		<span class="method-name">
+			addExtendedProperty
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$eventId</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">&#039;http://www.example.com/schemas/2005#mycal.id&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">&#039;1234&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$eventId</span><span class="var-description">: The event ID string</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the extended property</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: The value of the extended property</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncreateEvent" id="functioncreateEvent"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">createEvent</span> (line <span class="line-number">391</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates an event on the authenticated user's default calendar with the  specified event details.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The ID URL for the event.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			createEvent
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">&#039;Tennis with Beth&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$desc</span> = <span class="var-default">&#039;Meet for a quick lesson&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">&#039;On the courts&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$startDate</span> = <span class="var-default">&#039;2008-01-20&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$startTime</span> = <span class="var-default">&#039;10:00&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$endDate</span> = <span class="var-default">&#039;2008-01-20&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$endTime</span> = <span class="var-default">&#039;11:00&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$tzOffset</span> = <span class="var-default">&#039;-08&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: The event title</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$desc</span><span class="var-description">: The detailed description of the event</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$where</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$startDate</span><span class="var-description">: The start date of the event in YYYY-MM-DD format</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$startTime</span><span class="var-description">: The start time of the event in HH:MM 24hr format</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$endDate</span><span class="var-description">: The end date of the event in YYYY-MM-DD format</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$endTime</span><span class="var-description">: The end time of the event in HH:MM 24hr format</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tzOffset</span><span class="var-description">: The offset from GMT/UTC in [+-]DD format (eg -08)</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncreateQuickAddEvent" id="functioncreateQuickAddEvent"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">createQuickAddEvent</span> (line <span class="line-number">421</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates an event on the authenticated user's default calendar using  the specified QuickAdd string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The ID URL for the event</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			createQuickAddEvent
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$quickAddText</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$quickAddText</span><span class="var-description">: The QuickAdd text for the event</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncreateRecurringEvent" id="functioncreateRecurringEvent"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">createRecurringEvent</span> (line <span class="line-number">492</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates a recurring event on the authenticated user's default calendar with  the specified event details.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			createRecurringEvent
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">&#039;Tennis with Beth&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$desc</span> = <span class="var-default">&#039;Meet for a quick lesson&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">&#039;On the courts&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$recurData</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: The event title</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$desc</span><span class="var-description">: The detailed description of the event</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$where</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$recurData</span><span class="var-description">: The iCalendar recurring event syntax (RFC2445)</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncreateWebContentEvent" id="functioncreateWebContentEvent"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">createWebContentEvent</span> (line <span class="line-number">447</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates a new web content event on the authenticated user's default  calendar with the specified event details. For simplicity, the event  is created as an all day event and does not include a description.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The ID URL for the event.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			createWebContentEvent
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">&#039;World Cup 2006&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$startDate</span> = <span class="var-default">&#039;2006-06-09&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$endDate</span> = <span class="var-default">&#039;2006-06-09&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$icon</span> = <span class="var-default">&#039;http://www.google.com/calendar/images/google-holiday.gif&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span> = <span class="var-default">&#039;http://www.google.com/logos/worldcup06.gif&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">&#039;120&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">&#039;276&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">&#039;image/gif&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: The event title</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$startDate</span><span class="var-description">: The start date of the event in YYYY-MM-DD format</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$endDate</span><span class="var-description">: The end time of the event in HH:MM 24hr format</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$icon</span><span class="var-description">: URL pointing to a 16x16 px icon representing the event.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: The URL containing the web content for the event.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$height</span><span class="var-description">: The desired height of the web content pane.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$width</span><span class="var-description">: The desired width of the web content pane.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The MIME type of the web content.</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiondeleteEventById" id="functiondeleteEventById"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">deleteEventById</span> (line <span class="line-number">640</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes the event specified by retrieving the atom entry object  and calling Zend_Feed_EntryAtom::delete() method.  This is for  example purposes only, as it is inefficient to retrieve the entire  atom entry only for the purposes of deleting it.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deleteEventById
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$eventId</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$eventId</span><span class="var-description">: The event ID string</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiondeleteEventByUrl" id="functiondeleteEventByUrl"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">deleteEventByUrl</span> (line <span class="line-number">655</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes the event specified by calling the Zend_Gdata::delete()  method.  The URL is typically in the format of:  http://www.google.com/calendar/feeds/default/private/full/&lt;eventId&gt;</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deleteEventByUrl
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: The url for the event to be deleted</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiongetEvent" id="functiongetEvent"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">getEvent</span> (line <span class="line-number">527</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an entry object representing the event with the specified ID.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> if the event is found, null if it's not</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Zend_Gdata/Calendar/Zend_Gdata_Calendar_EventEntry.html">Zend_Gdata_Calendar_EventEntry</a>|null</span>
+		<span class="method-name">
+			getEvent
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$eventId</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$eventId</span><span class="var-description">: The event ID string</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionoutputCalendar" id="functionoutputCalendar"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">outputCalendar</span> (line <span class="line-number">277</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Outputs an HTML unordered list (ul), with each list item representing an  event on the authenticated user's calendar.  Includes the start time and  event ID in the output.  Events are ordered by starttime and include only  events occurring in the future.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			outputCalendar
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionoutputCalendarByDateRange" id="functionoutputCalendarByDateRange"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">outputCalendarByDateRange</span> (line <span class="line-number">320</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Outputs an HTML unordered list (ul), with each list item representing an  event on the authenticated user's calendar which occurs during the  specified date range.</p>
+<p class="description"><p>To query for all events occurring on 2006-12-24, you would query for  a startDate of '2006-12-24' and an endDate of '2006-12-25' as the upper  bound for date queries is exclusive.  See the 'query parameters reference':  http://code.google.com/apis/gdata/calendar.html#Parameters</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			outputCalendarByDateRange
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$startDate</span> = <span class="var-default">&#039;2007-05-01&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$endDate</span> = <span class="var-default">&#039;2007-08-01&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$startDate</span><span class="var-description">: The start date in YYYY-MM-DD format</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$endDate</span><span class="var-description">: The end date in YYYY-MM-DD format</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionoutputCalendarByFullTextQuery" id="functionoutputCalendarByFullTextQuery"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">outputCalendarByFullTextQuery</span> (line <span class="line-number">354</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Outputs an HTML unordered list (ul), with each list item representing an  event on the authenticated user's calendar which matches the search string  specified as the $fullTextQuery parameter</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			outputCalendarByFullTextQuery
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$fullTextQuery</span> = <span class="var-default">&#039;tennis&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fullTextQuery</span><span class="var-description">: The string for which you are searching</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionoutputCalendarList" id="functionoutputCalendarList"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">outputCalendarList</span> (line <span class="line-number">256</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Outputs an HTML unordered list (ul), with each list item representing a  calendar in the authenticated user's calendar list.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			outputCalendarList
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionoutputCalendarMagicCookie" id="functionoutputCalendarMagicCookie"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">outputCalendarMagicCookie</span> (line <span class="line-number">233</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Outputs an HTML unordered list (ul), with each list item representing an event  in the user's calendar.  The calendar is retrieved using the magic cookie  which allows read-only access to private calendar data using a special token  available from within the Calendar UI.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			outputCalendarMagicCookie
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$magicCookie</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The username or address of the calendar to be retrieved.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$magicCookie</span><span class="var-description">: The magic cookie token</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionsetReminder" id="functionsetReminder"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">setReminder</span> (line <span class="line-number">611</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a reminder to the event specified as a parameter.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The updated entry</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Zend_Gdata/Calendar/Zend_Gdata_Calendar_EventEntry.html">Zend_Gdata_Calendar_EventEntry</a>|null</span>
+		<span class="method-name">
+			setReminder
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$eventId</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$minutes</span> = <span class="var-default">15</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$eventId</span><span class="var-description">: The event ID string</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$minutes</span><span class="var-description">: Minutes before event to set reminder</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionupdateEvent" id="functionupdateEvent"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">updateEvent</span> (line <span class="line-number">555</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Updates the title of the event with the specified ID to be  the title specified.  Also outputs the new and old title  with HTML br elements separating the lines</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The updated entry</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Zend_Gdata/Calendar/Zend_Gdata_Calendar_EventEntry.html">Zend_Gdata_Calendar_EventEntry</a>|null</span>
+		<span class="method-name">
+			updateEvent
+		</span>
+					(<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$eventId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$newTitle</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The authenticated client object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$eventId</span><span class="var-description">: The event ID string</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$newTitle</span><span class="var-description">: The new title to set on this event</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 24 May 2011 16:29:52 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

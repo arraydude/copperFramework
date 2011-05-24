@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * copperDbPDO
+ *
+ * PDO renamed
+ *
+ * @package copperFramework
+ * @author Emilio Astarita
+ */
 class copperDbPDO extends PDO
 {
 
@@ -24,6 +31,8 @@ class copperDb
   }
 
   /**
+   * configure
+   *
    * Configure the instance
    * @param <type> $dsn
    * @param <type> $user

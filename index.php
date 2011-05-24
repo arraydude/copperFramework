@@ -1,4 +1,7 @@
 <?php
+/**
+ * This is the main controller of the app
+ */
 
 require_once 'config.php';
 

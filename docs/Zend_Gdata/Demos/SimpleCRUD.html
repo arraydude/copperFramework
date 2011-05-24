@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class SimpleCRUD</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class SimpleCRUD</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimpleCRUD</p>
+	<ul class="tags">
+				<li><span class="field">copyright:</span> Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+				<li><span class="field">license:</span> <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_includes---lib---youtube---demos---Zend---Gdata---Spreadsheet-ClientLogin.php.html">/includes/lib/youtube/demos/Zend/Gdata/Spreadsheet-ClientLogin.php</a> (line <span class="field">62</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$email</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#cellsGetAction" title="details" class="method-name">cellsGetAction</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#cellsUpdateAction" title="details" class="method-name">cellsUpdateAction</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$row</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$col</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$inputValue</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getRowAndColumnCount" title="details" class="method-name">getRowAndColumnCount</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#invalidCommandError" title="details" class="method-name">invalidCommandError</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#listDeleteAction" title="details" class="method-name">listDeleteAction</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$index</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#listGetAction" title="details" class="method-name">listGetAction</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#listInsertAction" title="details" class="method-name">listInsertAction</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$rowData</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#listUpdateAction" title="details" class="method-name">listUpdateAction</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$index</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$rowData</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#printFeed" title="details" class="method-name">printFeed</a>
+											(<span class="var-type"><a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase_Feed.html">Zend_Gdata_Gbase_Feed</a></span>&nbsp;<span class="var-name">$feed</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#promptForCellsAction" title="details" class="method-name">promptForCellsAction</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#promptForFeedtype" title="details" class="method-name">promptForFeedtype</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#promptForListAction" title="details" class="method-name">promptForListAction</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#promptForSpreadsheet" title="details" class="method-name">promptForSpreadsheet</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#promptForWorksheet" title="details" class="method-name">promptForWorksheet</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#promptToResize" title="details" class="method-name">promptToResize</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$newRowCount</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$newColumnCount</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#resizeWorksheet" title="details" class="method-name">resizeWorksheet</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$newRowCount</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$newColumnCount</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#run" title="details" class="method-name">run</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#stringToArray" title="details" class="method-name">stringToArray</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$rowData</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">71</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$email</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$email</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$password</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcellsGetAction" id="cellsGetAction"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">cellsGetAction</span> (line <span class="line-number">218</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">cellsGetAction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			cellsGetAction
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcellsUpdateAction" id="cellsUpdateAction"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">cellsUpdateAction</span> (line <span class="line-number">235</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">cellsUpdateAction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			cellsUpdateAction
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$row</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$col</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$inputValue</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$row</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$col</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$inputValue</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRowAndColumnCount" id="getRowAndColumnCount"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRowAndColumnCount</span> (line <span class="line-number">363</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">getRowAndColumnCount</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getRowAndColumnCount
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodinvalidCommandError" id="invalidCommandError"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">invalidCommandError</span> (line <span class="line-number">382</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">invalidCommandError</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			invalidCommandError
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlistDeleteAction" id="listDeleteAction"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">listDeleteAction</span> (line <span class="line-number">312</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">listDeleteAction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			listDeleteAction
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$index</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$index</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlistGetAction" id="listGetAction"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">listGetAction</span> (line <span class="line-number">255</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">listGetAction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			listGetAction
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodlistInsertAction" id="listInsertAction"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">listInsertAction</span> (line <span class="line-number">274</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">listInsertAction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			listInsertAction
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$rowData</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$rowData</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlistUpdateAction" id="listUpdateAction"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">listUpdateAction</span> (line <span class="line-number">292</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">listUpdateAction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			listUpdateAction
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$index</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$rowData</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$index</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$rowData</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodprintFeed" id="printFeed"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">printFeed</span> (line <span class="line-number">343</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">printFeed</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			printFeed
+		</span>
+					(<span class="var-type"><a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase_Feed.html">Zend_Gdata_Gbase_Feed</a></span>&nbsp;<span class="var-name">$feed</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase_Feed.html">Zend_Gdata_Gbase_Feed</a></span>
+				<span class="var-name">$feed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpromptForCellsAction" id="promptForCellsAction"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">promptForCellsAction</span> (line <span class="line-number">126</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">promptForCellsAction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			promptForCellsAction
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodpromptForFeedtype" id="promptForFeedtype"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">promptForFeedtype</span> (line <span class="line-number">392</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">promtForFeedtype</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			promptForFeedtype
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodpromptForListAction" id="promptForListAction"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">promptForListAction</span> (line <span class="line-number">190</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">promptForListAction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			promptForListAction
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodpromptForSpreadsheet" id="promptForSpreadsheet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">promptForSpreadsheet</span> (line <span class="line-number">93</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">promptForSpreadsheet</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			promptForSpreadsheet
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodpromptForWorksheet" id="promptForWorksheet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">promptForWorksheet</span> (line <span class="line-number">108</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">promptForWorksheet</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			promptForWorksheet
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodpromptToResize" id="promptToResize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">promptToResize</span> (line <span class="line-number">156</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">promptToResize</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			promptToResize
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$newRowCount</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$newColumnCount</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$newRowCount</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$newColumnCount</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodresizeWorksheet" id="resizeWorksheet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">resizeWorksheet</span> (line <span class="line-number">172</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">resizeWorksheet</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			resizeWorksheet
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$newRowCount</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$newColumnCount</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$newRowCount</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$newColumnCount</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrun" id="run"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">run</span> (line <span class="line-number">415</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">run</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			run
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodstringToArray" id="stringToArray"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">stringToArray</span> (line <span class="line-number">327</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">stringToArray</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			stringToArray
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$rowData</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rowData</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 24 May 2011 16:30:50 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

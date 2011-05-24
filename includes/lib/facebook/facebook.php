@@ -28,6 +28,7 @@ if (!function_exists('json_decode')) {
  * Thrown when an API call returns an exception.
  *
  * @author Naitik Shah <naitik@facebook.com>
+ * @package Facebook PHP SDK
  */
 class FacebookApiException extends Exception {
 
@@ -112,6 +113,7 @@ class FacebookApiException extends Exception {
  * Provides access to the Facebook Platform.
  *
  * @author Naitik Shah <naitik@facebook.com>
+ * @package Facebook PHP SDK
  */
 class Facebook {
   /**

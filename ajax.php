@@ -8,7 +8,7 @@ require_once 'config.php';
  * @author Nahuel Rosso
  * @package copperFramework
  * @version 1.2
- */
+   */
 class Ajax {
   private $model;
 

@@ -13,18 +13,25 @@ Want to contribute? Great! please create a branch or contact me at arraydude@gma
 Configuring
 -----------
 
-* Rename and configure the "config-custom-template.php" file to "config-custom.php"
-* Configure the config.php file
-* Test the framework is working going to "callbackUrl"
+* Rename and configure the "config-custom-template.php" file to "config-custom.php".
+* Configure the config.php file.
+* Use it.
 
 
 Example
 -------
 
     <?php
+
       require_once 'config.php';
 
-      $view = new copperView('bodys/test.php');
-      $view->welcome = 'Welcome, your copperFramework is succesful installed.';
-      $view->render();
+      $head = new copperView('head.php', true);
+
+      $body = new copperView('bodys/test.php');
+      $body->welcome = 'Welcome, your copperFramework is succesful installed.';
+      $body->render();
+
+      $foot = new copperView('foot.php', true);
     ?>
+
+See this on the main controller ( index.php ).

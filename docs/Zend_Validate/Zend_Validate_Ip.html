@@ -1,519 +1,494 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<!-- template designed by Marco Von Ballmoos -->
-			<title>Docs For Class Zend_Validate_Ip</title>
-			<link rel="stylesheet" href="../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
-		<body>
-			<div class="page-body">			
-<h2 class="class-name">Class Zend_Validate_Ip</h2>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Validate_Ip</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Validate_Ip
+</h2> (line <span class="linenumber">33</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
 
-<a name="sec-description"></a>
-<div class="info-box">
-	<div class="info-box-title">Description</div>
-	<div class="nav-bar">
-					<span class="disabled">Description</span> |
-													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-						
-											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-						
-			</div>
-	<div class="info-box-body">
-        		<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">copyright:</span> Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
-				<li><span class="field">license:</span> <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
-			</ul>
-		<p class="notes">
-			Located in <a class="field" href="_includes---lib---youtube---library---Zend---Validate---Ip.php.html">/includes/lib/youtube/library/Zend/Validate/Ip.php</a> (line <span class="field">33</span>)
-		</p>
-		
-				
-		<pre><a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a>
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+<a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a>
    |
    --Zend_Validate_Ip</pre>
-	
-			</div>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Validate---Ip.php.html">/includes/lib/youtube/library/Zend/Validate/Ip.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
 </div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
 
-
-	<a name="sec-const-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Class Constant Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
-												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-				 
-				|
-										| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<div class="const-summary">
-								<div class="const-title">
-					<img src="../media/images/Constant.png" alt=" " />
-					<a href="#INVALID" title="details" class="const-name">INVALID</a> = 					<span class="var-type"> 'ipInvalid'</span>
-
-				</div>
-								<div class="const-title">
-					<img src="../media/images/Constant.png" alt=" " />
-					<a href="#NOT_IP_ADDRESS" title="details" class="const-name">NOT_IP_ADDRESS</a> = 					<span class="var-type"> 'notIpAddress'</span>
-
-				</div>
-							</div>
-		</div>
-	</div>
-
-	<a name="sec-var-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variable Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
-							| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<div class="var-summary">
-																																<div class="var-title">
-					<span class="var-type">array</span>
-					<a href="#$_messageTemplates" title="details" class="var-name">$_messageTemplates</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">array</span>
-					<a href="#$_options" title="details" class="var-name">$_options</a>
-				</div>
-											</div>
-		</div>
-	</div>
-
-	<a name="sec-method-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Method Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-				 
-				|
-						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
-		</div>
-		<div class="info-box-body">			
-			<div class="method-summary">
-																																																				
-												<div class="method-definition">
-											<span class="method-result">void</span>
-										<a href="#__construct" title="details" class="method-name">__construct</a>
-											([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result">array</span>
-										<a href="#getOptions" title="details" class="method-name">getOptions</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">boolean</span>
-										<a href="#isValid" title="details" class="method-name">isValid</a>
-											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../Zend_Validate/Zend_Validate_Ip.html">Zend_Validate_Ip</a></span>
-										<a href="#setOptions" title="details" class="method-name">setOptions</a>
-											(<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">void</span>
-										<a href="#_validateIPv4" title="details" class="method-name">_validateIPv4</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">boolean</span>
-										<a href="#_validateIPv6" title="details" class="method-name">_validateIPv6</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-								</div>
-		</div>
-	</div>		
-
-	<a name="sec-vars"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variables</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
-						
-			
-												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-										| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<a name="var$_messageTemplates" id="$_messageTemplates"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">array</span>
-			<span class="var-name">$_messageTemplates</span>
-			 = <span class="var-default">array(<br />        self::INVALID        =&gt; &quot;Invalid type given. String expected&quot;,<br />        self::NOT_IP_ADDRESS =&gt; &quot;'%value%' does not appear to be a valid IP address&quot;,<br />    )</span>			(line <span class="line-number">41</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-			<hr class="separator" />
-		<div class="notes">Redefinition of:</div>
-		<dl>
-			<dt><a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_messageTemplates">Zend_Validate_Abstract::$_messageTemplates</a></dt>
-						<dd>Validation failure message template definitions</dd>
-					</dl>
-		
-		
-
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$_messageTemplates" title="details" class="property"><strong>$_messageTemplates</strong></a>
 </div>
-<a name="var$_options" id="$_options"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">array</span>
-			<span class="var-name">$_options</span>
-			 = <span class="var-default">array(<br />        'allowipv6' =&gt; true,<br />        'allowipv4' =&gt; true<br />    )</span>			(line <span class="line-number">51</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">internal options</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-		
-		
-
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$_options" title="details" class="property"><strong>$_options</strong></a>
 </div>
-							<h4>Inherited Variables</h4>
-				<A NAME='inherited_vars'><!-- --></A>
-									<p>Inherited from <span class="classname"><a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a></span></p>
-					<blockquote>
-													<span class="var-title">
-								<span class="var-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_defaultTranslator">Zend_Validate_Abstract::$_defaultTranslator</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_errors">Zend_Validate_Abstract::$_errors</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_messageLength">Zend_Validate_Abstract::$_messageLength</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_messages">Zend_Validate_Abstract::$_messages</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_messageVariables">Zend_Validate_Abstract::$_messageVariables</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_obscureValue">Zend_Validate_Abstract::$_obscureValue</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_translator">Zend_Validate_Abstract::$_translator</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_translatorDisabled">Zend_Validate_Abstract::$_translatorDisabled</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_value">Zend_Validate_Abstract::$_value</a></span><br>
-							</span>
-											</blockquote> 
-										
-		</div>
-	</div>
-	
-	<a name="sec-methods"></a>
-	<div class="info-box">
-		<div class="info-box-title">Methods</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
-						
-		</div>
-		<div class="info-box-body">
-			<A NAME='method_detail'></A>
-
-<a name="method__construct" id="__construct"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">62</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Sets validator options</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			__construct
-		</span>
-					([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">array</span>
-				<span class="var-name">$options</span><span class="var-description">: OPTIONAL Options to set, see the manual for all available options</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetOptions" id="getOptions"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getOptions</span> (line <span class="line-number">85</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns all set options</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">array</span>
-		<span class="method-name">
-			getOptions
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodisValid" id="isValid"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">isValid</span> (line <span class="line-number">122</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Defined by Zend_Validate_Interface</p>
-<p class="description"><p>Returns true if and only if $value is a valid IP address</p></p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">boolean</span>
-		<span class="method-name">
-			isValid
-		</span>
-					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$value</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetOptions" id="setOptions"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">setOptions</span> (line <span class="line-number">96</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Sets the options for this validator</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../Zend_Validate/Zend_Validate_Ip.html">Zend_Validate_Ip</a></span>
-		<span class="method-name">
-			setOptions
-		</span>
-					(<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">array</span>
-				<span class="var-name">$options</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="method_validateIPv4" id="_validateIPv4"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">_validateIPv4</span> (line <span class="line-number">145</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Validates an IPv4 address</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			_validateIPv4
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$value</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="method_validateIPv6" id="_validateIPv6"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">_validateIPv6</span> (line <span class="line-number">161</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Validates an IPv6 address</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> True when $value is a valid ipv6 address                  False otherwise</li>
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">boolean</span>
-		<span class="method-name">
-			_validateIPv6
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$value</span><span class="var-description">: Value to check against</span>			</li>
-				</ul>
-		
-			
-	</div>
-							<h4>Inherited Methods</h4>
-				<a name='inherited_methods'><!-- --></a>	
-									<!-- =========== Summary =========== -->
-					<p>Inherited From <span class="classname"><a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a></span></p>
-					<blockquote>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetDefaultTranslator">Zend_Validate_Abstract::getDefaultTranslator()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetErrors">Zend_Validate_Abstract::getErrors()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetMessageLength">Zend_Validate_Abstract::getMessageLength()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetMessages">Zend_Validate_Abstract::getMessages()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetMessageTemplates">Zend_Validate_Abstract::getMessageTemplates()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetMessageVariables">Zend_Validate_Abstract::getMessageVariables()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetObscureValue">Zend_Validate_Abstract::getObscureValue()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetTranslator">Zend_Validate_Abstract::getTranslator()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodhasDefaultTranslator">Zend_Validate_Abstract::hasDefaultTranslator()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodhasTranslator">Zend_Validate_Abstract::hasTranslator()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodsetDefaultTranslator">Zend_Validate_Abstract::setDefaultTranslator()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodsetDisableTranslator">Zend_Validate_Abstract::setDisableTranslator()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodsetMessage">Zend_Validate_Abstract::setMessage()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodsetMessageLength">Zend_Validate_Abstract::setMessageLength()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodsetMessages">Zend_Validate_Abstract::setMessages()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodsetObscureValue">Zend_Validate_Abstract::setObscureValue()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodsetTranslator">Zend_Validate_Abstract::setTranslator()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#methodtranslatorIsDisabled">Zend_Validate_Abstract::translatorIsDisabled()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#method_createMessage">Zend_Validate_Abstract::_createMessage()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#method_error">Zend_Validate_Abstract::_error()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#method_setValue">Zend_Validate_Abstract::_setValue()</a></span><br>
-													<span class="method-name"><a href="../Zend_Validate/Zend_Validate_Abstract.html#method__get">Zend_Validate_Abstract::__get()</a></span><br>
-											</blockquote>
-										
-		</div>
-	</div>
-
-	<a name="sec-consts"></a>
-	<div class="info-box">
-		<div class="info-box-title">Class Constants</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
-						
-			
-												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-														| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<a name="constINVALID" id="INVALID"><!-- --></A>
-<div class="oddrow">
-
-	<div class="const-header">
-		<img src="../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">INVALID</span>
-			 = <span class="const-default"> 'ipInvalid'</span>
-			(line <span class="line-number">35</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	
-	
+<hr />
+<a name="var$_messageTemplates" id="var$_messageTemplates"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_messageTemplates = array(<br />        self::INVALID        =&gt; &quot;Invalid type given. String expected&quot;,<br />        self::NOT_IP_ADDRESS =&gt; &quot;'%value%' does not appear to be a valid IP address&quot;,<br />    )</strong> (line <span class="linenumber">41</span>)
+ </h4>
+<h4>Data type : array</h4>
+<p><strong>Overrides:</strong> Array<br></p><!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
 </div>
-<a name="constNOT_IP_ADDRESS" id="NOT_IP_ADDRESS"><!-- --></A>
-<div class="evenrow">
+<a name="var$_options" id="var$_options"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_options = array(<br />        'allowipv6' =&gt; true,<br />        'allowipv4' =&gt; true<br />    )</strong> (line <span class="linenumber">51</span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>internal options</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
 
-	<div class="const-header">
-		<img src="../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">NOT_IP_ADDRESS</span>
-			 = <span class="const-default"> 'notIpAddress'</span>
-			(line <span class="line-number">36</span>)
-		</span>
-	</div>
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="const-title">
+    <a href="#constINVALID" title="details" class="property"><strong>INVALID</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constNOT_IP_ADDRESS" title="details" class="property"><strong>NOT_IP_ADDRESS</strong></a>
+</div>
+<hr />
+<a name="constINVALID" id="constINVALID"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/Constant.gif" border="0" /> <strong class="property">INVALID =  'ipInvalid'</strong> (line <span class="linenumber">35</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="constNOT_IP_ADDRESS" id="constNOT_IP_ADDRESS"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/Constant.gif" border="0" /> <strong class="property">NOT_IP_ADDRESS =  'notIpAddress'</strong> (line <span class="linenumber">36</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        ([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">array</span>
+        <a href="#methodgetOptions" title="details" class="method-name">getOptions</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodisValid" title="details" class="method-name">isValid</a>
+        (<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../Zend_Validate/Zend_Validate_Ip.html">Zend_Validate_Ip</a></span>
+        <a href="#methodsetOptions" title="details" class="method-name">setOptions</a>
+        (<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#method_validateIPv4" title="details" class="method-name">_validateIPv4</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#method_validateIPv6" title="details" class="method-name">_validateIPv6</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">62</span>)
+ </h4> 
+<h4><i>void</i> <strong>__construct(
+[array
+$options = array()])</strong></h4>
 
 	<!-- ========== Info from phpDoc block ========= -->
-	
-	
+<h5>Sets validator options</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>array $options</strong>: OPTIONAL Options to set, see the manual for all available options</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
 </div>
-						
-		</div>
-	</div>
+<a name="methodgetOptions" id="methodgetOptions"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getOptions</strong> (line <span class="linenumber">85</span>)
+ </h4> 
+<h4><i>array</i> <strong>getOptions(
+)</strong></h4>
 
-	<p class="notes" id="credit">
-		Documentation generated on Tue, 24 May 2011 16:30:23 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
-	</p>
-	</div></body>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns all set options</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodisValid" id="methodisValid"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method isValid</strong> (line <span class="linenumber">122</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>isValid(
+mixed
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Defined by Zend_Validate_Interface</h5>
+<div class="desc"><p>Returns true if and only if $value is a valid IP address</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetOptions" id="methodsetOptions"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setOptions</strong> (line <span class="linenumber">96</span>)
+ </h4> 
+<h4><i><a href="../Zend_Validate/Zend_Validate_Ip.html">Zend_Validate_Ip</a></i> <strong>setOptions(
+array
+$options)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the options for this validator</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>array $options</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="method_validateIPv4" id="method_validateIPv4"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _validateIPv4</strong> (line <span class="linenumber">145</span>)
+ </h4> 
+<h4><i>void</i> <strong>_validateIPv4(
+string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Validates an IPv4 address</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - protected</li>
+		</ul>
+</div>
+<a name="method_validateIPv6" id="method_validateIPv6"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _validateIPv6</strong> (line <span class="linenumber">161</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>_validateIPv6(
+string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Validates an IPv6 address</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: Value to check against</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - True when $value is a valid ipv6 address                  False otherwise</li>
+			<li><strong>access</strong> - protected</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a></h4>
+		<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_defaultTranslator">Zend_Validate_Abstract::$_defaultTranslator</a></strong> - Default translation object for all validate objects
+	</h4> 
+		<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_errors">Zend_Validate_Abstract::$_errors</a></strong> - Array of validation failure message codes
+	</h4> 
+		<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_messageLength">Zend_Validate_Abstract::$_messageLength</a></strong> - Limits the maximum returned length of a error message
+	</h4> 
+		<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_messages">Zend_Validate_Abstract::$_messages</a></strong> - Array of validation failure messages
+	</h4> 
+		<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_messageVariables">Zend_Validate_Abstract::$_messageVariables</a></strong> - Additional variables available for validation failure messages
+	</h4> 
+		<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_obscureValue">Zend_Validate_Abstract::$_obscureValue</a></strong> - Flag indidcating whether or not value should be obfuscated in error
+	</h4> 
+		<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_translator">Zend_Validate_Abstract::$_translator</a></strong> - Translation object
+	</h4> 
+		<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_translatorDisabled">Zend_Validate_Abstract::$_translatorDisabled</a></strong> - Is translation disabled?
+	</h4> 
+		<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#var$_value">Zend_Validate_Abstract::$_value</a></strong> - The value to be validated
+	</h4> 
+		</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a></h4>
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetDefaultTranslator">Zend_Validate_Abstract::getDefaultTranslator()</a></strong> - Get default translation object for all validate objects
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetErrors">Zend_Validate_Abstract::getErrors()</a></strong> - Returns array of validation failure message codes
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetMessageLength">Zend_Validate_Abstract::getMessageLength()</a></strong> - Returns the maximum allowed message length
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetMessages">Zend_Validate_Abstract::getMessages()</a></strong> - Returns array of validation failure messages
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetMessageTemplates">Zend_Validate_Abstract::getMessageTemplates()</a></strong> - Returns the message templates from the validator
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetMessageVariables">Zend_Validate_Abstract::getMessageVariables()</a></strong> - Returns an array of the names of variables that are used in constructing validation failure messages
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetObscureValue">Zend_Validate_Abstract::getObscureValue()</a></strong> - Retrieve flag indicating whether or not value should be obfuscated in  messages
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodgetTranslator">Zend_Validate_Abstract::getTranslator()</a></strong> - Return translation object
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodhasDefaultTranslator">Zend_Validate_Abstract::hasDefaultTranslator()</a></strong> - Is there a default translation object set?
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodhasTranslator">Zend_Validate_Abstract::hasTranslator()</a></strong> - Does this validator have its own specific translator?
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodsetDefaultTranslator">Zend_Validate_Abstract::setDefaultTranslator()</a></strong> - Set default translation object for all validate objects
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodsetDisableTranslator">Zend_Validate_Abstract::setDisableTranslator()</a></strong> - Indicate whether or not translation should be disabled
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodsetMessage">Zend_Validate_Abstract::setMessage()</a></strong> - Sets the validation failure message template for a particular key
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodsetMessageLength">Zend_Validate_Abstract::setMessageLength()</a></strong> - Sets the maximum allowed message length
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodsetMessages">Zend_Validate_Abstract::setMessages()</a></strong> - Sets validation failure message templates given as an array, where the array keys are the message keys,  and the array values are the message template strings.
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodsetObscureValue">Zend_Validate_Abstract::setObscureValue()</a></strong> - Set flag indicating whether or not value should be obfuscated in messages
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodsetTranslator">Zend_Validate_Abstract::setTranslator()</a></strong> - Set translation object
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#methodtranslatorIsDisabled">Zend_Validate_Abstract::translatorIsDisabled()</a></strong> - Is translation disabled?
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#method_createMessage">Zend_Validate_Abstract::_createMessage()</a></strong> - Constructs and returns a validation failure message with the given message key and value.
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#method_error">Zend_Validate_Abstract::_error()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#method_setValue">Zend_Validate_Abstract::_setValue()</a></strong> - Sets the value to be validated and clears the messages and errors arrays
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Validate/Zend_Validate_Abstract.html#method__get">Zend_Validate_Abstract::__get()</a></strong> - Magic function returns the value of the requested property, if and only if it is the value or a  message variable.
+		</h4> 
+
+				<br />
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 16:18:25 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
 </html>

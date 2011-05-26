@@ -1,1236 +1,1063 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<!-- template designed by Marco Von Ballmoos -->
-			<title>Docs For Class Zend_Gdata_Photos</title>
-			<link rel="stylesheet" href="../../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
-		<body>
-			<div class="page-body">			
-<h2 class="class-name">Class Zend_Gdata_Photos</h2>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Gdata_Photos</title>
+  <link rel="stylesheet" href="../../media/stylesheet.css" />
+  <script src="../../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../../media/images/plus.gif";
+	imgMinus.src = "../../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Gdata_Photos
+</h2> (line <span class="linenumber">58</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
 
-<a name="sec-description"></a>
-<div class="info-box">
-	<div class="info-box-title">Description</div>
-	<div class="nav-bar">
-					<span class="disabled">Description</span> |
-													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-						
-											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-						
-			</div>
-	<div class="info-box-body">
-        		<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Service class for interacting with the Google Photos Data API.</p>
-<p class="description"><p>Like other service classes in this module, this class provides access via  an HTTP client to Google servers for working with entries and feeds.</p></p>
-	<ul class="tags">
-				<li><span class="field">copyright:</span> Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
-				<li><span class="field">link:</span> <a href="http://code.google.com/apis/picasaweb/gdata.html">http://code.google.com/apis/picasaweb/gdata.html</a></li>
-				<li><span class="field">license:</span> <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
-			</ul>
-		<p class="notes">
-			Located in <a class="field" href="_includes---lib---youtube---library---Zend---Gdata---Photos.php.html">/includes/lib/youtube/library/Zend/Gdata/Photos.php</a> (line <span class="field">58</span>)
-		</p>
-		
-				
-		<pre><a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a>
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+<a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a>
    |
    --<a href="../../Zend_Gdata/Gdata/Zend_Gdata.html">Zend_Gdata</a>
       |
       --Zend_Gdata_Photos</pre>
-	
-			</div>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Gdata---Photos.php.html">/includes/lib/youtube/library/Zend/Gdata/Photos.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Service class for interacting with the Google Photos Data API.</h5>
+<div class="desc"><p>Like other service classes in this module, this class provides access via  an HTTP client to Google servers for working with entries and feeds.</p></div>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>link:</strong> - <a href="http://code.google.com/apis/picasaweb/gdata.html">http://code.google.com/apis/picasaweb/gdata.html</a></li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
 </div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    static <span class="var-type">array</span>
+    <a href="#var$namespaces" title="details" class="property"><strong>$namespaces</strong></a>
+</div>
+<hr />
+<a name="var$namespaces" id="var$namespaces"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">static $namespaces = array(<br />        array('gphoto', 'http://schemas.google.com/photos/2007', 1, 0),array('photo','http://www.pheed.com/pheed/',1,0),array('exif','http://schemas.google.com/photos/exif/2007',1,0),array('georss','http://www.georss.org/georss',1,0),array('gml','http://www.opengis.net/gml',1,0),array('media','http://search.yahoo.com/mrss/',1,0))</strong> (line <span class="linenumber">115</span>)
+ </h4>
+<h4>Data type : array</h4>
+<p><strong>Overrides:</strong> Array<br></p><!-- ========== Info from phpDoc block ========= -->
+<h5>Namespaces used for Zend_Gdata_Photos</h5>
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="const-title">
+    <a href="#constALBUM_PATH" title="details" class="property"><strong>ALBUM_PATH</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constAUTH_SERVICE_NAME" title="details" class="property"><strong>AUTH_SERVICE_NAME</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constCOMMUNITY_SEARCH_PATH" title="details" class="property"><strong>COMMUNITY_SEARCH_PATH</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constDEFAULT_PROJECTION" title="details" class="property"><strong>DEFAULT_PROJECTION</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constDEFAULT_USER" title="details" class="property"><strong>DEFAULT_USER</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constDEFAULT_VISIBILITY" title="details" class="property"><strong>DEFAULT_VISIBILITY</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constFEED_LINK_PATH" title="details" class="property"><strong>FEED_LINK_PATH</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constKIND_PATH" title="details" class="property"><strong>KIND_PATH</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constPHOTO_PATH" title="details" class="property"><strong>PHOTO_PATH</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constPICASA_BASE_FEED_URI" title="details" class="property"><strong>PICASA_BASE_FEED_URI</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constPICASA_BASE_URI" title="details" class="property"><strong>PICASA_BASE_URI</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constUSER_PATH" title="details" class="property"><strong>USER_PATH</strong></a>
+</div>
+<hr />
+<a name="constALBUM_PATH" id="constALBUM_PATH"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">ALBUM_PATH =  'albumid'</strong> (line <span class="linenumber">88</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Path to album feeds on the Picasa server.</h5>
+<ul>
+	</ul>
+</div>
+<a name="constAUTH_SERVICE_NAME" id="constAUTH_SERVICE_NAME"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">AUTH_SERVICE_NAME =  'lh2'</strong> (line <span class="linenumber">63</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="constCOMMUNITY_SEARCH_PATH" id="constCOMMUNITY_SEARCH_PATH"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">COMMUNITY_SEARCH_PATH =  'all'</strong> (line <span class="linenumber">98</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>The path to the community search feed on the Picasa server.</h5>
+<ul>
+	</ul>
+</div>
+<a name="constDEFAULT_PROJECTION" id="constDEFAULT_PROJECTION"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">DEFAULT_PROJECTION =  'api'</strong> (line <span class="linenumber">68</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Default projection when interacting with the Picasa server.</h5>
+<ul>
+	</ul>
+</div>
+<a name="constDEFAULT_USER" id="constDEFAULT_USER"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">DEFAULT_USER =  'default'</strong> (line <span class="linenumber">78</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>The default user to retrieve feeds for.</h5>
+<ul>
+	</ul>
+</div>
+<a name="constDEFAULT_VISIBILITY" id="constDEFAULT_VISIBILITY"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">DEFAULT_VISIBILITY =  'all'</strong> (line <span class="linenumber">73</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>The default visibility to filter events by.</h5>
+<ul>
+	</ul>
+</div>
+<a name="constFEED_LINK_PATH" id="constFEED_LINK_PATH"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">FEED_LINK_PATH =  'http://schemas.google.com/g/2005#feed'</strong> (line <span class="linenumber">103</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>The path to use for finding links to feeds within entries</h5>
+<ul>
+	</ul>
+</div>
+<a name="constKIND_PATH" id="constKIND_PATH"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">KIND_PATH =  'http://schemas.google.com/g/2005#kind'</strong> (line <span class="linenumber">108</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>The path to use for the determining type of an entry</h5>
+<ul>
+	</ul>
+</div>
+<a name="constPHOTO_PATH" id="constPHOTO_PATH"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">PHOTO_PATH =  'photoid'</strong> (line <span class="linenumber">93</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Path to photo feeds on the Picasa server.</h5>
+<ul>
+	</ul>
+</div>
+<a name="constPICASA_BASE_FEED_URI" id="constPICASA_BASE_FEED_URI"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">PICASA_BASE_FEED_URI =  'https://picasaweb.google.com/data/feed'</strong> (line <span class="linenumber">62</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="constPICASA_BASE_URI" id="constPICASA_BASE_URI"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">PICASA_BASE_URI =  'https://picasaweb.google.com/data'</strong> (line <span class="linenumber">61</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="constUSER_PATH" id="constUSER_PATH"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">USER_PATH =  'user'</strong> (line <span class="linenumber">83</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Path to the user feed on the Picasa server.</h5>
+<ul>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+            <span class="method-result">Zend_Gdata_Photos</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        ([<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$applicationId</span> = <span class="var-default">'MyCompany-MyApp-1.0'</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void.</span>
+        <a href="#methoddeleteAlbumEntry" title="details" class="method-name">deleteAlbumEntry</a>
+        (<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></span>&nbsp;<span class="var-name">$album</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$catch</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void.</span>
+        <a href="#methoddeleteCommentEntry" title="details" class="method-name">deleteCommentEntry</a>
+        (<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></span>&nbsp;<span class="var-name">$comment</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$catch</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void.</span>
+        <a href="#methoddeletePhotoEntry" title="details" class="method-name">deletePhotoEntry</a>
+        (<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></span>&nbsp;<span class="var-name">$photo</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$catch</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void.</span>
+        <a href="#methoddeleteTagEntry" title="details" class="method-name">deleteTagEntry</a>
+        (<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></span>&nbsp;<span class="var-name">$tag</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$catch</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></span>
+        <a href="#methodgetAlbumEntry" title="details" class="method-name">getAlbumEntry</a>
+        (<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumFeed.html">Zend_Gdata_Photos_AlbumFeed</a></span>
+        <a href="#methodgetAlbumFeed" title="details" class="method-name">getAlbumFeed</a>
+        ([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></span>
+        <a href="#methodgetCommentEntry" title="details" class="method-name">getCommentEntry</a>
+        (<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></span>
+        <a href="#methodgetPhotoEntry" title="details" class="method-name">getPhotoEntry</a>
+        (<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoFeed.html">Zend_Gdata_Photos_PhotoFeed</a></span>
+        <a href="#methodgetPhotoFeed" title="details" class="method-name">getPhotoFeed</a>
+        ([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></span>
+        <a href="#methodgetTagEntry" title="details" class="method-name">getTagEntry</a>
+        (<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_UserEntry.html">Zend_Gdata_Photos_UserEntry</a></span>
+        <a href="#methodgetUserEntry" title="details" class="method-name">getUserEntry</a>
+        (<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_UserFeed.html">Zend_Gdata_Photos_UserFeed</a></span>
+        <a href="#methodgetUserFeed" title="details" class="method-name">getUserFeed</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$userName</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></span>
+        <a href="#methodinsertAlbumEntry" title="details" class="method-name">insertAlbumEntry</a>
+        (<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></span>&nbsp;<span class="var-name">$album</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></span>
+        <a href="#methodinsertCommentEntry" title="details" class="method-name">insertCommentEntry</a>
+        (<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></span>&nbsp;<span class="var-name">$comment</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></span>
+        <a href="#methodinsertPhotoEntry" title="details" class="method-name">insertPhotoEntry</a>
+        (<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></span>&nbsp;<span class="var-name">$photo</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></span>
+        <a href="#methodinsertTagEntry" title="details" class="method-name">insertTagEntry</a>
+        (<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></span>&nbsp;<span class="var-name">$tag</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
 
 
-	<a name="sec-const-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Class Constant Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
-												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-				 
-				|
-										| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<div class="const-summary">
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#ALBUM_PATH" title="details" class="const-name">ALBUM_PATH</a> = 					<span class="var-type"> 'albumid'</span>
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">131</span>)
+ </h4> 
+<h4><i>Zend_Gdata_Photos</i> <strong>__construct(
+[<a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a>
+$client = null], [string
+$applicationId = 'MyCompany-MyApp-1.0'])</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#AUTH_SERVICE_NAME" title="details" class="const-name">AUTH_SERVICE_NAME</a> = 					<span class="var-type"> 'lh2'</span>
+<p><strong>Overrides :</strong> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#method__construct">Zend_Gdata::__construct()</a> Create Gdata object</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Create Zend_Gdata_Photos object</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a> $client</strong>: (optional) The HTTP client to use when           when communicating with the servers.</li>
+			<li><strong>string $applicationId</strong>: The identity of the app in the form of Company-AppName-Version</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methoddeleteAlbumEntry" id="methoddeleteAlbumEntry"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method deleteAlbumEntry</strong> (line <span class="linenumber">471</span>)
+ </h4> 
+<h4><i>void.</i> <strong>deleteAlbumEntry(
+<a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a>
+$album, boolean
+$catch)</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#COMMUNITY_SEARCH_PATH" title="details" class="const-name">COMMUNITY_SEARCH_PATH</a> = 					<span class="var-type"> 'all'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Delete an AlbumEntry.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a> $album</strong>: The album entry to           delete.</li>
+			<li><strong>boolean $catch</strong>: Whether to catch an exception when             modified and re-delete or throw</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methoddeleteCommentEntry" id="methoddeleteCommentEntry"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method deleteCommentEntry</strong> (line <span class="linenumber">529</span>)
+ </h4> 
+<h4><i>void.</i> <strong>deleteCommentEntry(
+<a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a>
+$comment, boolean
+$catch)</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#DEFAULT_PROJECTION" title="details" class="const-name">DEFAULT_PROJECTION</a> = 					<span class="var-type"> 'api'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Delete a CommentEntry.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a> $comment</strong>: The comment entry to           delete.</li>
+			<li><strong>boolean $catch</strong>: Whether to catch an exception when             modified and re-delete or throw</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methoddeletePhotoEntry" id="methoddeletePhotoEntry"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method deletePhotoEntry</strong> (line <span class="linenumber">500</span>)
+ </h4> 
+<h4><i>void.</i> <strong>deletePhotoEntry(
+<a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a>
+$photo, boolean
+$catch)</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#DEFAULT_USER" title="details" class="const-name">DEFAULT_USER</a> = 					<span class="var-type"> 'default'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Delete a PhotoEntry.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a> $photo</strong>: The photo entry to           delete.</li>
+			<li><strong>boolean $catch</strong>: Whether to catch an exception when             modified and re-delete or throw</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methoddeleteTagEntry" id="methoddeleteTagEntry"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method deleteTagEntry</strong> (line <span class="linenumber">558</span>)
+ </h4> 
+<h4><i>void.</i> <strong>deleteTagEntry(
+<a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a>
+$tag, boolean
+$catch)</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#DEFAULT_VISIBILITY" title="details" class="const-name">DEFAULT_VISIBILITY</a> = 					<span class="var-type"> 'all'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Delete a TagEntry.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a> $tag</strong>: The tag entry to           delete.</li>
+			<li><strong>boolean $catch</strong>: Whether to catch an exception when             modified and re-delete or throw</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetAlbumEntry" id="methodgetAlbumEntry"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getAlbumEntry</strong> (line <span class="linenumber">265</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></i> <strong>getAlbumEntry(
+mixed
+$location)</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#FEED_LINK_PATH" title="details" class="const-name">FEED_LINK_PATH</a> = 					<span class="var-type"> 'http://schemas.google.com/g/2005#feed'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retreive a single AlbumEntry object.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $location</strong>: The location for the feed, as a URL or Query.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetAlbumFeed" id="methodgetAlbumFeed"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getAlbumFeed</strong> (line <span class="linenumber">187</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumFeed.html">Zend_Gdata_Photos_AlbumFeed</a></i> <strong>getAlbumFeed(
+[mixed
+$location = null])</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#KIND_PATH" title="details" class="const-name">KIND_PATH</a> = 					<span class="var-type"> 'http://schemas.google.com/g/2005#kind'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retreive AlbumFeed object containing multiple PhotoEntry or TagEntry  objects.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $location</strong>: (optional) The location for the feed, as a URL or Query.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetCommentEntry" id="methodgetCommentEntry"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getCommentEntry</strong> (line <span class="linenumber">340</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></i> <strong>getCommentEntry(
+mixed
+$location)</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#PHOTO_PATH" title="details" class="const-name">PHOTO_PATH</a> = 					<span class="var-type"> 'photoid'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retreive a single CommentEntry object.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $location</strong>: The location for the feed, as a URL or Query.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetPhotoEntry" id="methodgetPhotoEntry"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getPhotoEntry</strong> (line <span class="linenumber">290</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></i> <strong>getPhotoEntry(
+mixed
+$location)</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#PICASA_BASE_FEED_URI" title="details" class="const-name">PICASA_BASE_FEED_URI</a> = 					<span class="var-type"> 'https://picasaweb.google.com/data/feed'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retreive a single PhotoEntry object.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $location</strong>: The location for the feed, as a URL or Query.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetPhotoFeed" id="methodgetPhotoFeed"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getPhotoFeed</strong> (line <span class="linenumber">215</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoFeed.html">Zend_Gdata_Photos_PhotoFeed</a></i> <strong>getPhotoFeed(
+[mixed
+$location = null])</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#PICASA_BASE_URI" title="details" class="const-name">PICASA_BASE_URI</a> = 					<span class="var-type"> 'https://picasaweb.google.com/data'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retreive PhotoFeed object containing comments and tags associated  with a given photo.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $location</strong>: (optional) The location for the feed, as a URL           or Query. If not specified, the community search feed will           be returned instead.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetTagEntry" id="methodgetTagEntry"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getTagEntry</strong> (line <span class="linenumber">315</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></i> <strong>getTagEntry(
+mixed
+$location)</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#USER_PATH" title="details" class="const-name">USER_PATH</a> = 					<span class="var-type"> 'user'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retreive a single TagEntry object.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $location</strong>: The location for the feed, as a URL or Query.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetUserEntry" id="methodgetUserEntry"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getUserEntry</strong> (line <span class="linenumber">240</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_UserEntry.html">Zend_Gdata_Photos_UserEntry</a></i> <strong>getUserEntry(
+mixed
+$location)</strong></h4>
 
-				</div>
-							</div>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retreive a single UserEntry object.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $location</strong>: The location for the feed, as a URL or Query.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetUserFeed" id="methodgetUserFeed"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getUserFeed</strong> (line <span class="linenumber">150</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_UserFeed.html">Zend_Gdata_Photos_UserFeed</a></i> <strong>getUserFeed(
+[string
+$userName = null], [mixed
+$location = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retrieve a UserFeed containing AlbumEntries, PhotoEntries and  TagEntries associated with a given user.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $userName</strong>: The userName of interest</li>
+			<li><strong>mixed $location</strong>: (optional) The location for the feed, as a URL           or Query. If not provided, a default URL will be used instead.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodinsertAlbumEntry" id="methodinsertAlbumEntry"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method insertAlbumEntry</strong> (line <span class="linenumber">370</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></i> <strong>insertAlbumEntry(
+<a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a>
+$album, [
+$uri = null], string
+$url)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Create a new album from a AlbumEntry.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a> $album</strong>: The album entry to           insert.</li>
+			<li><strong>string $url</strong>: (optional) The URI that the album should be           uploaded to. If null, the default album creation URI for           this domain will be used.</li>
+			<li><strong> $uri</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The inserted album entry as           returned by the server.</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodinsertCommentEntry" id="methodinsertCommentEntry"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method insertCommentEntry</strong> (line <span class="linenumber">446</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></i> <strong>insertCommentEntry(
+<a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a>
+$comment, [
+$uri = null], string
+$url)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Create a new comment from a CommentEntry.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a> $comment</strong>: The comment entry to           insert.</li>
+			<li><strong>string $url</strong>: The URI where the comment should be uploaded to.           Alternatively, a PhotoEntry can be provided and           the comment will be added to that photo.</li>
+			<li><strong> $uri</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The inserted comment entry           as returned by the server.</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodinsertPhotoEntry" id="methodinsertPhotoEntry"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method insertPhotoEntry</strong> (line <span class="linenumber">393</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></i> <strong>insertPhotoEntry(
+<a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a>
+$photo, [
+$uri = null], string
+$url)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Create a new photo from a PhotoEntry.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a> $photo</strong>: The photo to insert.</li>
+			<li><strong>string $url</strong>: The URI that the photo should be uploaded           to. Alternatively, an AlbumEntry can be provided and the           photo will be added to that album.</li>
+			<li><strong> $uri</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The inserted photo entry           as returned by the server.</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodinsertTagEntry" id="methodinsertTagEntry"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method insertTagEntry</strong> (line <span class="linenumber">419</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></i> <strong>insertTagEntry(
+<a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a>
+$tag, [
+$uri = null], string
+$url)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Create a new tag from a TagEntry.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a> $tag</strong>: The tag entry to insert.</li>
+			<li><strong>string $url</strong>: The URI where the tag should be           uploaded to. Alternatively, a PhotoEntry can be provided and           the tag will be added to that photo.</li>
+			<li><strong> $uri</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The inserted tag entry as returned           by the server.</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html">Zend_Gdata</a></h4>
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_defaultPostUri">Zend_Gdata::$_defaultPostUri</a></strong> - Default URI to which to POST.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_httpClient">Zend_Gdata::$_httpClient</a></strong> - Client object used to communicate
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_registeredPackages">Zend_Gdata::$_registeredPackages</a></strong> - Packages to search for classes when using magic __call method, in order.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_staticHttpClient">Zend_Gdata::$_staticHttpClient</a></strong> - Client object used to communicate in static context
+	</h4> 
+			<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a></h4>
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_gzipEnabled">Zend_Gdata_App::$_gzipEnabled</a></strong> - Enable gzipped responses?
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_httpMethodOverride">Zend_Gdata_App::$_httpMethodOverride</a></strong> - Override HTTP PUT and DELETE request methods?
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_majorProtocolVersion">Zend_Gdata_App::$_majorProtocolVersion</a></strong> - Indicates the major protocol version that should be used.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_maxRedirects">Zend_Gdata_App::$_maxRedirects</a></strong> - Maximum number of redirects to follow during HTTP operations
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_minorProtocolVersion">Zend_Gdata_App::$_minorProtocolVersion</a></strong> - Indicates the minor protocol version that should be used. Can be set  to either an integer &gt;= 0, or NULL if no minor version should be sent  to the server.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_useObjectMapping">Zend_Gdata_App::$_useObjectMapping</a></strong> - Whether we want to use XML to object mapping when fetching data.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_verboseExceptionMessages">Zend_Gdata_App::$_verboseExceptionMessages</a></strong> - Use verbose exception messages.  In the case of HTTP errors,  use the body of the HTTP response in the exception message.
+	</h4> 
 		</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html">Zend_Gdata</a></h4>
+				<h4>
+<img src="../../media/images/Constructor.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#method__construct">Zend_Gdata::__construct()</a></strong> - Create Gdata object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodgetEntry">Zend_Gdata::getEntry()</a></strong> - Retrieve entry as string or object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodgetFeed">Zend_Gdata::getFeed()</a></strong> - Retrieve feed as string or object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodimport">Zend_Gdata::import()</a></strong> - Imports a feed located at $uri.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodisAuthenticated">Zend_Gdata::isAuthenticated()</a></strong> - Determines whether service object is authenticated.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodperformHttpRequest">Zend_Gdata::performHttpRequest()</a></strong> - Performs a HTTP request using the specified method.
+		</h4> 
+
+				<br />
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a></h4>
+				<h4>
+<img src="../../media/images/Constructor.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#method__construct">Zend_Gdata_App::__construct()</a></strong> - Create Gdata object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methoddelete">Zend_Gdata_App::delete()</a></strong> - DELETE entry with client object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodenableRequestDebugLogging">Zend_Gdata_App::enableRequestDebugLogging()</a></strong> - This method enables logging of requests by changing the  Zend_Http_Client_Adapter used for performing the requests.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgenerateIfMatchHeaderData">Zend_Gdata_App::generateIfMatchHeaderData()</a></strong> - Returns the data for an If-Match header based on the current Etag  property. If Etags are not supported by the server or cannot be  extracted from the data, then null will be returned.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodget">Zend_Gdata_App::get()</a></strong> - GET a URI using client object.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetEntry">Zend_Gdata_App::getEntry()</a></strong> - Retrieve entry as string or object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetFeed">Zend_Gdata_App::getFeed()</a></strong> - Retrieve feed as string or object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetGzipEnabled">Zend_Gdata_App::getGzipEnabled()</a></strong> - Get the HTTP override state
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetHttpClient">Zend_Gdata_App::getHttpClient()</a></strong> - Get the Zend_Http_Client object used for communication
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetHttpMethodOverride">Zend_Gdata_App::getHttpMethodOverride()</a></strong> - Get the HTTP override state
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMajorProtocolVersion">Zend_Gdata_App::getMajorProtocolVersion()</a></strong> - Get the major protocol version that is in use.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMaxRedirects">Zend_Gdata_App::getMaxRedirects()</a></strong> - Get the maximum number of redirects to follow during HTTP operations
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMinorProtocolVersion">Zend_Gdata_App::getMinorProtocolVersion()</a></strong> - Get the minor protocol version that is in use.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetNextFeed">Zend_Gdata_App::getNextFeed()</a></strong> - Retrieve next set of results based on a given feed.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetPreviousFeed">Zend_Gdata_App::getPreviousFeed()</a></strong> - Retrieve previous set of results based on a given feed.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetStaticHttpClient">Zend_Gdata_App::getStaticHttpClient()</a></strong> - Gets the HTTP client object. If none is set, a new Zend_Http_Client will be used.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetVerboseExceptionMessages">Zend_Gdata_App::getVerboseExceptionMessages()</a></strong> - Get whether to use verbose exception messages
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimport">Zend_Gdata_App::import()</a></strong> - Imports a feed located at $uri.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportFile">Zend_Gdata_App::importFile()</a></strong> - Imports a feed from a file located at $filename.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportString">Zend_Gdata_App::importString()</a></strong> - Imports a feed represented by $string.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportUrl">Zend_Gdata_App::importUrl()</a></strong> - Imports the specified URL (non-statically).
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodinsertEntry">Zend_Gdata_App::insertEntry()</a></strong> - Inserts an entry to a given URI and returns the response as a  fully formed Entry.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodperformHttpRequest">Zend_Gdata_App::performHttpRequest()</a></strong> - Performs a HTTP request using the specified method
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodpost">Zend_Gdata_App::post()</a></strong> - POST data with client object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodprepareRequest">Zend_Gdata_App::prepareRequest()</a></strong> - Provides pre-processing for HTTP requests to APP services.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodput">Zend_Gdata_App::put()</a></strong> - PUT data with client object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodregisterPackage">Zend_Gdata_App::registerPackage()</a></strong> - Adds a Zend Framework package to the $_registeredPackages array.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodretrieveAllEntriesForFeed">Zend_Gdata_App::retrieveAllEntriesForFeed()</a></strong> - Retrieve all entries for a feed, iterating through pages as necessary.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetGzipEnabled">Zend_Gdata_App::setGzipEnabled()</a></strong> - Toggle requesting gzip encoded responses
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetHttpClient">Zend_Gdata_App::setHttpClient()</a></strong> - Set the Zend_Http_Client object used for communication
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetHttpMethodOverride">Zend_Gdata_App::setHttpMethodOverride()</a></strong> - Toggle using POST instead of PUT and DELETE HTTP methods
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMajorProtocolVersion">Zend_Gdata_App::setMajorProtocolVersion()</a></strong> - Set the major protocol version that should be used. Values &lt; 1 will  cause a Zend_Gdata_App_InvalidArgumentException to be thrown.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMaxRedirects">Zend_Gdata_App::setMaxRedirects()</a></strong> - Set the maximum number of redirects to follow during HTTP operations
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMinorProtocolVersion">Zend_Gdata_App::setMinorProtocolVersion()</a></strong> - Set the minor protocol version that should be used. If set to NULL, no  minor protocol version will be sent to the server. Values &lt; 0 will  cause a Zend_Gdata_App_InvalidArgumentException to be thrown.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetStaticHttpClient">Zend_Gdata_App::setStaticHttpClient()</a></strong> - Set the static HTTP client instance
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetVerboseExceptionMessages">Zend_Gdata_App::setVerboseExceptionMessages()</a></strong> - Set whether to use verbose exception messages
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodupdateEntry">Zend_Gdata_App::updateEntry()</a></strong> - Update an entry
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methoduseObjectMapping">Zend_Gdata_App::useObjectMapping()</a></strong> - Enable/disable the use of XML to object mapping.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodusingObjectMapping">Zend_Gdata_App::usingObjectMapping()</a></strong> - Determine whether service object is using XML to object mapping.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#method__call">Zend_Gdata_App::__call()</a></strong> - Provides a magic factory method to instantiate new objects with
+		</h4> 
+
+				<br />
 	</div>
-
-	<a name="sec-var-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variable Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
-							| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<div class="var-summary">
-												<div class="var-title">
-					static <span class="var-type">array</span>
-					<a href="#$namespaces" title="details" class="var-name">$namespaces</a>
-				</div>
-																							</div>
-		</div>
-	</div>
-
-	<a name="sec-method-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Method Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-				 
-				|
-						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
-		</div>
-		<div class="info-box-body">			
-			<div class="method-summary">
-																																																																																																																																												
-												<div class="method-definition">
-											<span class="method-result">Zend_Gdata_Photos</span>
-										<a href="#__construct" title="details" class="method-name">__construct</a>
-											([<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$applicationId</span> = <span class="var-default">'MyCompany-MyApp-1.0'</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result">void.</span>
-										<a href="#deleteAlbumEntry" title="details" class="method-name">deleteAlbumEntry</a>
-											(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></span>&nbsp;<span class="var-name">$album</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$catch</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">void.</span>
-										<a href="#deleteCommentEntry" title="details" class="method-name">deleteCommentEntry</a>
-											(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></span>&nbsp;<span class="var-name">$comment</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$catch</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">void.</span>
-										<a href="#deletePhotoEntry" title="details" class="method-name">deletePhotoEntry</a>
-											(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></span>&nbsp;<span class="var-name">$photo</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$catch</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">void.</span>
-										<a href="#deleteTagEntry" title="details" class="method-name">deleteTagEntry</a>
-											(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></span>&nbsp;<span class="var-name">$tag</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$catch</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></span>
-										<a href="#getAlbumEntry" title="details" class="method-name">getAlbumEntry</a>
-											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumFeed.html">Zend_Gdata_Photos_AlbumFeed</a></span>
-										<a href="#getAlbumFeed" title="details" class="method-name">getAlbumFeed</a>
-											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></span>
-										<a href="#getCommentEntry" title="details" class="method-name">getCommentEntry</a>
-											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></span>
-										<a href="#getPhotoEntry" title="details" class="method-name">getPhotoEntry</a>
-											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoFeed.html">Zend_Gdata_Photos_PhotoFeed</a></span>
-										<a href="#getPhotoFeed" title="details" class="method-name">getPhotoFeed</a>
-											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></span>
-										<a href="#getTagEntry" title="details" class="method-name">getTagEntry</a>
-											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_UserEntry.html">Zend_Gdata_Photos_UserEntry</a></span>
-										<a href="#getUserEntry" title="details" class="method-name">getUserEntry</a>
-											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_UserFeed.html">Zend_Gdata_Photos_UserFeed</a></span>
-										<a href="#getUserFeed" title="details" class="method-name">getUserFeed</a>
-											([<span class="var-type">string</span>&nbsp;<span class="var-name">$userName</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></span>
-										<a href="#insertAlbumEntry" title="details" class="method-name">insertAlbumEntry</a>
-											(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></span>&nbsp;<span class="var-name">$album</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></span>
-										<a href="#insertCommentEntry" title="details" class="method-name">insertCommentEntry</a>
-											(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></span>&nbsp;<span class="var-name">$comment</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></span>
-										<a href="#insertPhotoEntry" title="details" class="method-name">insertPhotoEntry</a>
-											(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></span>&nbsp;<span class="var-name">$photo</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></span>
-										<a href="#insertTagEntry" title="details" class="method-name">insertTagEntry</a>
-											(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></span>&nbsp;<span class="var-name">$tag</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
-									</div>
-								</div>
-		</div>
-	</div>		
-
-	<a name="sec-vars"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variables</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
-						
-			
-												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-										| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<a name="var$namespaces" id="$namespaces"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			static <span class="var-type">array</span>
-			<span class="var-name">$namespaces</span>
-			 = <span class="var-default">array(<br />        array('gphoto', 'http://schemas.google.com/photos/2007', 1, 0),array('photo','http://www.pheed.com/pheed/',1,0),array('exif','http://schemas.google.com/photos/exif/2007',1,0),array('georss','http://www.georss.org/georss',1,0),array('gml','http://www.opengis.net/gml',1,0),array('media','http://search.yahoo.com/mrss/',1,0))</span>			(line <span class="line-number">115</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Namespaces used for Zend_Gdata_Photos</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-			<hr class="separator" />
-		<div class="notes">Redefinition of:</div>
-		<dl>
-			<dt><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$namespaces">Zend_Gdata::$namespaces</a></dt>
-						<dd>Namespaces used for Gdata data</dd>
-					</dl>
-		
-		
-
 </div>
-							<h4>Inherited Variables</h4>
-				<A NAME='inherited_vars'><!-- --></A>
-									<p>Inherited from <span class="classname"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html">Zend_Gdata</a></span></p>
-					<blockquote>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_defaultPostUri">Zend_Gdata::$_defaultPostUri</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_httpClient">Zend_Gdata::$_httpClient</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_registeredPackages">Zend_Gdata::$_registeredPackages</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_staticHttpClient">Zend_Gdata::$_staticHttpClient</a></span><br>
-							</span>
-											</blockquote> 
-									<p>Inherited from <span class="classname"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a></span></p>
-					<blockquote>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_gzipEnabled">Zend_Gdata_App::$_gzipEnabled</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_httpMethodOverride">Zend_Gdata_App::$_httpMethodOverride</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_majorProtocolVersion">Zend_Gdata_App::$_majorProtocolVersion</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_maxRedirects">Zend_Gdata_App::$_maxRedirects</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_minorProtocolVersion">Zend_Gdata_App::$_minorProtocolVersion</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_useObjectMapping">Zend_Gdata_App::$_useObjectMapping</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_verboseExceptionMessages">Zend_Gdata_App::$_verboseExceptionMessages</a></span><br>
-							</span>
-											</blockquote> 
-										
-		</div>
-	</div>
-	
-	<a name="sec-methods"></a>
-	<div class="info-box">
-		<div class="info-box-title">Methods</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
-						
-		</div>
-		<div class="info-box-body">
-			<A NAME='method_detail'></A>
+<script type="text/javascript">
+//<![CDATA[
 
-<a name="method__construct" id="__construct"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">131</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Create Zend_Gdata_Photos object</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">Zend_Gdata_Photos</span>
-		<span class="method-name">
-			__construct
-		</span>
-					([<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$applicationId</span> = <span class="var-default">'MyCompany-MyApp-1.0'</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
-				<span class="var-name">$client</span><span class="var-description">: (optional) The HTTP client to use when           when communicating with the servers.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$applicationId</span><span class="var-description">: The identity of the app in the form of Company-AppName-Version</span>			</li>
-				</ul>
-		
-			<hr class="separator" />
-		<div class="notes">Redefinition of:</div>
-		<dl>
-			<dt><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#method__construct">Zend_Gdata::__construct()</a></dt>
-						<dd>Create Gdata object</dd>
-					</dl>
-			
-	</div>
-<a name="methoddeleteAlbumEntry" id="deleteAlbumEntry"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">deleteAlbumEntry</span> (line <span class="line-number">471</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Delete an AlbumEntry.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void.</span>
-		<span class="method-name">
-			deleteAlbumEntry
-		</span>
-					(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></span>&nbsp;<span class="var-name">$album</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$catch</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></span>
-				<span class="var-name">$album</span><span class="var-description">: The album entry to           delete.</span>			</li>
-					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$catch</span><span class="var-description">: Whether to catch an exception when             modified and re-delete or throw</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methoddeleteCommentEntry" id="deleteCommentEntry"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">deleteCommentEntry</span> (line <span class="line-number">529</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Delete a CommentEntry.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void.</span>
-		<span class="method-name">
-			deleteCommentEntry
-		</span>
-					(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></span>&nbsp;<span class="var-name">$comment</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$catch</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></span>
-				<span class="var-name">$comment</span><span class="var-description">: The comment entry to           delete.</span>			</li>
-					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$catch</span><span class="var-description">: Whether to catch an exception when             modified and re-delete or throw</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methoddeletePhotoEntry" id="deletePhotoEntry"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">deletePhotoEntry</span> (line <span class="line-number">500</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Delete a PhotoEntry.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void.</span>
-		<span class="method-name">
-			deletePhotoEntry
-		</span>
-					(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></span>&nbsp;<span class="var-name">$photo</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$catch</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></span>
-				<span class="var-name">$photo</span><span class="var-description">: The photo entry to           delete.</span>			</li>
-					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$catch</span><span class="var-description">: Whether to catch an exception when             modified and re-delete or throw</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methoddeleteTagEntry" id="deleteTagEntry"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">deleteTagEntry</span> (line <span class="line-number">558</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Delete a TagEntry.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void.</span>
-		<span class="method-name">
-			deleteTagEntry
-		</span>
-					(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></span>&nbsp;<span class="var-name">$tag</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$catch</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></span>
-				<span class="var-name">$tag</span><span class="var-description">: The tag entry to           delete.</span>			</li>
-					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$catch</span><span class="var-description">: Whether to catch an exception when             modified and re-delete or throw</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetAlbumEntry" id="getAlbumEntry"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getAlbumEntry</span> (line <span class="line-number">265</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Retreive a single AlbumEntry object.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></span>
-		<span class="method-name">
-			getAlbumEntry
-		</span>
-					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$location</span><span class="var-description">: The location for the feed, as a URL or Query.</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetAlbumFeed" id="getAlbumFeed"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getAlbumFeed</span> (line <span class="line-number">187</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Retreive AlbumFeed object containing multiple PhotoEntry or TagEntry  objects.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumFeed.html">Zend_Gdata_Photos_AlbumFeed</a></span>
-		<span class="method-name">
-			getAlbumFeed
-		</span>
-					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$location</span><span class="var-description">: (optional) The location for the feed, as a URL or Query.</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetCommentEntry" id="getCommentEntry"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getCommentEntry</span> (line <span class="line-number">340</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Retreive a single CommentEntry object.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></span>
-		<span class="method-name">
-			getCommentEntry
-		</span>
-					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$location</span><span class="var-description">: The location for the feed, as a URL or Query.</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetPhotoEntry" id="getPhotoEntry"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getPhotoEntry</span> (line <span class="line-number">290</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Retreive a single PhotoEntry object.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></span>
-		<span class="method-name">
-			getPhotoEntry
-		</span>
-					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$location</span><span class="var-description">: The location for the feed, as a URL or Query.</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetPhotoFeed" id="getPhotoFeed"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getPhotoFeed</span> (line <span class="line-number">215</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Retreive PhotoFeed object containing comments and tags associated  with a given photo.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoFeed.html">Zend_Gdata_Photos_PhotoFeed</a></span>
-		<span class="method-name">
-			getPhotoFeed
-		</span>
-					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$location</span><span class="var-description">: (optional) The location for the feed, as a URL           or Query. If not specified, the community search feed will           be returned instead.</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetTagEntry" id="getTagEntry"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getTagEntry</span> (line <span class="line-number">315</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Retreive a single TagEntry object.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></span>
-		<span class="method-name">
-			getTagEntry
-		</span>
-					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$location</span><span class="var-description">: The location for the feed, as a URL or Query.</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetUserEntry" id="getUserEntry"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getUserEntry</span> (line <span class="line-number">240</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Retreive a single UserEntry object.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_UserEntry.html">Zend_Gdata_Photos_UserEntry</a></span>
-		<span class="method-name">
-			getUserEntry
-		</span>
-					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$location</span><span class="var-description">: The location for the feed, as a URL or Query.</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetUserFeed" id="getUserFeed"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getUserFeed</span> (line <span class="line-number">150</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Retrieve a UserFeed containing AlbumEntries, PhotoEntries and  TagEntries associated with a given user.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_UserFeed.html">Zend_Gdata_Photos_UserFeed</a></span>
-		<span class="method-name">
-			getUserFeed
-		</span>
-					([<span class="var-type">string</span>&nbsp;<span class="var-name">$userName</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$userName</span><span class="var-description">: The userName of interest</span>			</li>
-					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$location</span><span class="var-description">: (optional) The location for the feed, as a URL           or Query. If not provided, a default URL will be used instead.</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodinsertAlbumEntry" id="insertAlbumEntry"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">insertAlbumEntry</span> (line <span class="line-number">370</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Create a new album from a AlbumEntry.</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> The inserted album entry as           returned by the server.</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></span>
-		<span class="method-name">
-			insertAlbumEntry
-		</span>
-					(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></span>&nbsp;<span class="var-name">$album</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumEntry.html">Zend_Gdata_Photos_AlbumEntry</a></span>
-				<span class="var-name">$album</span><span class="var-description">: The album entry to           insert.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$url</span><span class="var-description">: (optional) The URI that the album should be           uploaded to. If null, the default album creation URI for           this domain will be used.</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$uri</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodinsertCommentEntry" id="insertCommentEntry"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">insertCommentEntry</span> (line <span class="line-number">446</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Create a new comment from a CommentEntry.</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> The inserted comment entry           as returned by the server.</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></span>
-		<span class="method-name">
-			insertCommentEntry
-		</span>
-					(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></span>&nbsp;<span class="var-name">$comment</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_CommentEntry.html">Zend_Gdata_Photos_CommentEntry</a></span>
-				<span class="var-name">$comment</span><span class="var-description">: The comment entry to           insert.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$url</span><span class="var-description">: The URI where the comment should be uploaded to.           Alternatively, a PhotoEntry can be provided and           the comment will be added to that photo.</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$uri</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodinsertPhotoEntry" id="insertPhotoEntry"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">insertPhotoEntry</span> (line <span class="line-number">393</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Create a new photo from a PhotoEntry.</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> The inserted photo entry           as returned by the server.</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></span>
-		<span class="method-name">
-			insertPhotoEntry
-		</span>
-					(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></span>&nbsp;<span class="var-name">$photo</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoEntry.html">Zend_Gdata_Photos_PhotoEntry</a></span>
-				<span class="var-name">$photo</span><span class="var-description">: The photo to insert.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$url</span><span class="var-description">: The URI that the photo should be uploaded           to. Alternatively, an AlbumEntry can be provided and the           photo will be added to that album.</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$uri</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodinsertTagEntry" id="insertTagEntry"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">insertTagEntry</span> (line <span class="line-number">419</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Create a new tag from a TagEntry.</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> The inserted tag entry as returned           by the server.</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></span>
-		<span class="method-name">
-			insertTagEntry
-		</span>
-					(<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></span>&nbsp;<span class="var-name">$tag</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_TagEntry.html">Zend_Gdata_Photos_TagEntry</a></span>
-				<span class="var-name">$tag</span><span class="var-description">: The tag entry to insert.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$url</span><span class="var-description">: The URI where the tag should be           uploaded to. Alternatively, a PhotoEntry can be provided and           the tag will be added to that photo.</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$uri</span>			</li>
-				</ul>
-		
-			
-	</div>
-							<h4>Inherited Methods</h4>
-				<a name='inherited_methods'><!-- --></a>	
-									<!-- =========== Summary =========== -->
-					<p>Inherited From <span class="classname"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html">Zend_Gdata</a></span></p>
-					<blockquote>
-													<span class="method-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#method__construct">Zend_Gdata::__construct()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodgetEntry">Zend_Gdata::getEntry()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodgetFeed">Zend_Gdata::getFeed()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodimport">Zend_Gdata::import()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodisAuthenticated">Zend_Gdata::isAuthenticated()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodperformHttpRequest">Zend_Gdata::performHttpRequest()</a></span><br>
-											</blockquote>
-									<!-- =========== Summary =========== -->
-					<p>Inherited From <span class="classname"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a></span></p>
-					<blockquote>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#method__construct">Zend_Gdata_App::__construct()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methoddelete">Zend_Gdata_App::delete()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodenableRequestDebugLogging">Zend_Gdata_App::enableRequestDebugLogging()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgenerateIfMatchHeaderData">Zend_Gdata_App::generateIfMatchHeaderData()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodget">Zend_Gdata_App::get()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetEntry">Zend_Gdata_App::getEntry()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetFeed">Zend_Gdata_App::getFeed()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetGzipEnabled">Zend_Gdata_App::getGzipEnabled()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetHttpClient">Zend_Gdata_App::getHttpClient()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetHttpMethodOverride">Zend_Gdata_App::getHttpMethodOverride()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMajorProtocolVersion">Zend_Gdata_App::getMajorProtocolVersion()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMaxRedirects">Zend_Gdata_App::getMaxRedirects()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMinorProtocolVersion">Zend_Gdata_App::getMinorProtocolVersion()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetNextFeed">Zend_Gdata_App::getNextFeed()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetPreviousFeed">Zend_Gdata_App::getPreviousFeed()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetStaticHttpClient">Zend_Gdata_App::getStaticHttpClient()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetVerboseExceptionMessages">Zend_Gdata_App::getVerboseExceptionMessages()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimport">Zend_Gdata_App::import()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportFile">Zend_Gdata_App::importFile()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportString">Zend_Gdata_App::importString()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportUrl">Zend_Gdata_App::importUrl()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodinsertEntry">Zend_Gdata_App::insertEntry()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodperformHttpRequest">Zend_Gdata_App::performHttpRequest()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodpost">Zend_Gdata_App::post()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodprepareRequest">Zend_Gdata_App::prepareRequest()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodput">Zend_Gdata_App::put()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodregisterPackage">Zend_Gdata_App::registerPackage()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodretrieveAllEntriesForFeed">Zend_Gdata_App::retrieveAllEntriesForFeed()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetGzipEnabled">Zend_Gdata_App::setGzipEnabled()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetHttpClient">Zend_Gdata_App::setHttpClient()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetHttpMethodOverride">Zend_Gdata_App::setHttpMethodOverride()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMajorProtocolVersion">Zend_Gdata_App::setMajorProtocolVersion()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMaxRedirects">Zend_Gdata_App::setMaxRedirects()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMinorProtocolVersion">Zend_Gdata_App::setMinorProtocolVersion()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetStaticHttpClient">Zend_Gdata_App::setStaticHttpClient()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetVerboseExceptionMessages">Zend_Gdata_App::setVerboseExceptionMessages()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodupdateEntry">Zend_Gdata_App::updateEntry()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methoduseObjectMapping">Zend_Gdata_App::useObjectMapping()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodusingObjectMapping">Zend_Gdata_App::usingObjectMapping()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#method__call">Zend_Gdata_App::__call()</a></span><br>
-											</blockquote>
-										
-		</div>
-	</div>
+setupAllTabs();
 
-	<a name="sec-consts"></a>
-	<div class="info-box">
-		<div class="info-box-title">Class Constants</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
-						
-			
-												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-														| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<a name="constALBUM_PATH" id="ALBUM_PATH"><!-- --></A>
-<div class="evenrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">ALBUM_PATH</span>
-			 = <span class="const-default"> 'albumid'</span>
-			(line <span class="line-number">88</span>)
-		</span>
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 16:18:41 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Path to album feeds on the Picasa server.</p>
-	
-	
-</div>
-<a name="constAUTH_SERVICE_NAME" id="AUTH_SERVICE_NAME"><!-- --></A>
-<div class="oddrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">AUTH_SERVICE_NAME</span>
-			 = <span class="const-default"> 'lh2'</span>
-			(line <span class="line-number">63</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	
-	
-</div>
-<a name="constCOMMUNITY_SEARCH_PATH" id="COMMUNITY_SEARCH_PATH"><!-- --></A>
-<div class="evenrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">COMMUNITY_SEARCH_PATH</span>
-			 = <span class="const-default"> 'all'</span>
-			(line <span class="line-number">98</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">The path to the community search feed on the Picasa server.</p>
-	
-	
-</div>
-<a name="constDEFAULT_PROJECTION" id="DEFAULT_PROJECTION"><!-- --></A>
-<div class="oddrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">DEFAULT_PROJECTION</span>
-			 = <span class="const-default"> 'api'</span>
-			(line <span class="line-number">68</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Default projection when interacting with the Picasa server.</p>
-	
-	
-</div>
-<a name="constDEFAULT_USER" id="DEFAULT_USER"><!-- --></A>
-<div class="evenrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">DEFAULT_USER</span>
-			 = <span class="const-default"> 'default'</span>
-			(line <span class="line-number">78</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">The default user to retrieve feeds for.</p>
-	
-	
-</div>
-<a name="constDEFAULT_VISIBILITY" id="DEFAULT_VISIBILITY"><!-- --></A>
-<div class="oddrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">DEFAULT_VISIBILITY</span>
-			 = <span class="const-default"> 'all'</span>
-			(line <span class="line-number">73</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">The default visibility to filter events by.</p>
-	
-	
-</div>
-<a name="constFEED_LINK_PATH" id="FEED_LINK_PATH"><!-- --></A>
-<div class="evenrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">FEED_LINK_PATH</span>
-			 = <span class="const-default"> 'http://schemas.google.com/g/2005#feed'</span>
-			(line <span class="line-number">103</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">The path to use for finding links to feeds within entries</p>
-	
-	
-</div>
-<a name="constKIND_PATH" id="KIND_PATH"><!-- --></A>
-<div class="oddrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">KIND_PATH</span>
-			 = <span class="const-default"> 'http://schemas.google.com/g/2005#kind'</span>
-			(line <span class="line-number">108</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">The path to use for the determining type of an entry</p>
-	
-	
-</div>
-<a name="constPHOTO_PATH" id="PHOTO_PATH"><!-- --></A>
-<div class="evenrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">PHOTO_PATH</span>
-			 = <span class="const-default"> 'photoid'</span>
-			(line <span class="line-number">93</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Path to photo feeds on the Picasa server.</p>
-	
-	
-</div>
-<a name="constPICASA_BASE_FEED_URI" id="PICASA_BASE_FEED_URI"><!-- --></A>
-<div class="oddrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">PICASA_BASE_FEED_URI</span>
-			 = <span class="const-default"> 'https://picasaweb.google.com/data/feed'</span>
-			(line <span class="line-number">62</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	
-	
-</div>
-<a name="constPICASA_BASE_URI" id="PICASA_BASE_URI"><!-- --></A>
-<div class="evenrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">PICASA_BASE_URI</span>
-			 = <span class="const-default"> 'https://picasaweb.google.com/data'</span>
-			(line <span class="line-number">61</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	
-	
-</div>
-<a name="constUSER_PATH" id="USER_PATH"><!-- --></A>
-<div class="oddrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">USER_PATH</span>
-			 = <span class="const-default"> 'user'</span>
-			(line <span class="line-number">83</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Path to the user feed on the Picasa server.</p>
-	
-	
-</div>
-							<h4>Inherited Constants</h4>
-				<A NAME='inherited_vars'><!-- --></A>
-									<p>Inherited from <span class="classname"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html">Zend_Gdata</a></span></p>
-					<blockquote>
-													<img src="../../media/images/Variable.png" />
-							<span class="const-title">
-								<span class="const-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#constAUTH_SERVICE_NAME">Zend_Gdata::AUTH_SERVICE_NAME</a></span><br>
-							</span>
-											</blockquote> 
-									<p>Inherited from <span class="classname"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a></span></p>
-					<blockquote>
-													<img src="../../media/images/Variable.png" />
-							<span class="const-title">
-								<span class="const-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#constDEFAULT_MAJOR_PROTOCOL_VERSION">Zend_Gdata_App::DEFAULT_MAJOR_PROTOCOL_VERSION</a></span><br>
-							</span>
-													<img src="../../media/images/Variable.png" />
-							<span class="const-title">
-								<span class="const-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#constDEFAULT_MINOR_PROTOCOL_VERSION">Zend_Gdata_App::DEFAULT_MINOR_PROTOCOL_VERSION</a></span><br>
-							</span>
-											</blockquote> 
-										
-		</div>
-	</div>
-
-	<p class="notes" id="credit">
-		Documentation generated on Tue, 24 May 2011 16:30:39 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
-	</p>
-	</div></body>
+</body>
 </html>

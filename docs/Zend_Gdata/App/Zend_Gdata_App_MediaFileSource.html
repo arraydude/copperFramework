@@ -1,428 +1,402 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<!-- template designed by Marco Von Ballmoos -->
-			<title>Docs For Class Zend_Gdata_App_MediaFileSource</title>
-			<link rel="stylesheet" href="../../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
-		<body>
-			<div class="page-body">			
-<h2 class="class-name">Class Zend_Gdata_App_MediaFileSource</h2>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Gdata_App_MediaFileSource</title>
+  <link rel="stylesheet" href="../../media/stylesheet.css" />
+  <script src="../../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../../media/images/plus.gif";
+	imgMinus.src = "../../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Gdata_App_MediaFileSource
+</h2> (line <span class="linenumber">38</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
 
-<a name="sec-description"></a>
-<div class="info-box">
-	<div class="info-box-title">Description</div>
-	<div class="nav-bar">
-					<span class="disabled">Description</span> |
-													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-						
-					</div>
-	<div class="info-box-body">
-        		<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Concrete class to use a file handle as an attachment within a MediaEntry.</p>
-	<ul class="tags">
-				<li><span class="field">copyright:</span> Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
-				<li><span class="field">license:</span> <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
-			</ul>
-		<p class="notes">
-			Located in <a class="field" href="_includes---lib---youtube---library---Zend---Gdata---App---MediaFileSource.php.html">/includes/lib/youtube/library/Zend/Gdata/App/MediaFileSource.php</a> (line <span class="field">38</span>)
-		</p>
-		
-				
-		<pre><a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html">Zend_Gdata_App_BaseMediaSource</a>
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+<a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html">Zend_Gdata_App_BaseMediaSource</a>
    |
    --Zend_Gdata_App_MediaFileSource</pre>
-	
-			</div>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Gdata---App---MediaFileSource.php.html">/includes/lib/youtube/library/Zend/Gdata/App/MediaFileSource.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Concrete class to use a file handle as an attachment within a MediaEntry.</h5>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
 </div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
 
-
-
-	<a name="sec-var-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variable Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
-							| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-								</div>
-		<div class="info-box-body">
-			<div class="var-summary">
-																																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$_contentType" title="details" class="var-name">$_contentType</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$_filename" title="details" class="var-name">$_filename</a>
-				</div>
-											</div>
-		</div>
-	</div>
-
-	<a name="sec-method-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Method Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-				 
-				|
-						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
-		</div>
-		<div class="info-box-body">			
-			<div class="method-summary">
-																																																												
-												<div class="method-definition">
-											<span class="method-result">Zend_Gdata_App_MediaFileSource</span>
-										<a href="#__construct" title="details" class="method-name">__construct</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#encode" title="details" class="method-name">encode</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getContentType" title="details" class="method-name">getContentType</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getFilename" title="details" class="method-name">getFilename</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/App/Zend_Gdata_App_MediaFileSource.html">Zend_Gdata_App_MediaFileSource</a></span>
-										<a href="#setContentType" title="details" class="method-name">setContentType</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/App/Zend_Gdata_App_MediaFileSource.html">Zend_Gdata_App_MediaFileSource</a></span>
-										<a href="#setFilename" title="details" class="method-name">setFilename</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#__toString" title="details" class="method-name">__toString</a>
-										()
-									</div>
-								</div>
-		</div>
-	</div>		
-
-	<a name="sec-vars"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variables</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
-						
-			
-										| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<a name="var$_contentType" id="$_contentType"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$_contentType</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number">52</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">The content type for the file attached (example image/png)</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-			<hr class="separator" />
-		<div class="notes">Redefinition of:</div>
-		<dl>
-			<dt><a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#var$_contentType">Zend_Gdata_App_BaseMediaSource::$_contentType</a></dt>
-						<dd>The content type for the attached file (example image/png)</dd>
-					</dl>
-		
-		
-
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_contentType" title="details" class="property"><strong>$_contentType</strong></a>
 </div>
-<a name="var$_filename" id="$_filename"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$_filename</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number">45</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">The filename which is represented</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-		
-		
-
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_filename" title="details" class="property"><strong>$_filename</strong></a>
 </div>
-							<h4>Inherited Variables</h4>
-				<A NAME='inherited_vars'><!-- --></A>
-									<p>Inherited from <span class="classname"><a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html">Zend_Gdata_App_BaseMediaSource</a></span></p>
-					<blockquote>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#var$_slug">Zend_Gdata_App_BaseMediaSource::$_slug</a></span><br>
-							</span>
-											</blockquote> 
-										
-		</div>
-	</div>
-	
-	<a name="sec-methods"></a>
-	<div class="info-box">
-		<div class="info-box-title">Methods</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
-						
-		</div>
-		<div class="info-box-body">
-			<A NAME='method_detail'></A>
+<hr />
+<a name="var$_contentType" id="var$_contentType"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_contentType =  null</strong> (line <span class="linenumber">52</span>)
+ </h4>
+<h4>Data type : string</h4>
+<p><strong>Overrides:</strong> Array<br></p><!-- ========== Info from phpDoc block ========= -->
+<h5>The content type for the file attached (example image/png)</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_filename" id="var$_filename"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_filename =  null</strong> (line <span class="linenumber">45</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>The filename which is represented</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
 
-<a name="method__construct" id="__construct"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">59</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Create a new Zend_Gdata_App_MediaFileSource object.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">Zend_Gdata_App_MediaFileSource</span>
-		<span class="method-name">
-			__construct
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$filename</span><span class="var-description">: The name of the file to read from.</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodencode" id="encode"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">encode</span> (line <span class="line-number">70</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Return the MIME multipart representation of this MediaEntry.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Gdata_App_IOException</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			encode
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetContentType" id="getContentType"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getContentType</span> (line <span class="line-number">119</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">The content type for the file attached (example image/png)</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> The content type</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getContentType
-		</span>
-				()
-			</div>
-	
-		
-			<hr class="separator" />
-		<div class="notes">Redefinition of:</div>
-		<dl>
-			<dt><a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#methodgetContentType">Zend_Gdata_App_BaseMediaSource::getContentType()</a></dt>
-						<dd>The content type for the attached file (example image/png)</dd>
-					</dl>
-			
-	</div>
-<a name="methodgetFilename" id="getFilename"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getFilename</span> (line <span class="line-number">97</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Get the filename associated with this reader.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getFilename
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodsetContentType" id="setContentType"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">setContentType</span> (line <span class="line-number">130</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Set the content type for the file attached (example image/png)</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> Provides a fluent interface</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/App/Zend_Gdata_App_MediaFileSource.html">Zend_Gdata_App_MediaFileSource</a></span>
-		<span class="method-name">
-			setContentType
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$value</span><span class="var-description">: The content type</span>			</li>
-				</ul>
-		
-			<hr class="separator" />
-		<div class="notes">Redefinition of:</div>
-		<dl>
-			<dt><a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#methodsetContentType">Zend_Gdata_App_BaseMediaSource::setContentType()</a></dt>
-						<dd>Set the content type for the file attached (example image/png)</dd>
-					</dl>
-			
-	</div>
-<a name="methodsetFilename" id="setFilename"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">setFilename</span> (line <span class="line-number">108</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Set the filename which is to be read.</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> Provides a fluent interface.</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/App/Zend_Gdata_App_MediaFileSource.html">Zend_Gdata_App_MediaFileSource</a></span>
-		<span class="method-name">
-			setFilename
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$value</span><span class="var-description">: The desired file handle.</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="method__toString" id="__toString"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">__toString</span> (line <span class="line-number">141</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Alias for getFilename().</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			__toString
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-							<h4>Inherited Methods</h4>
-				<a name='inherited_methods'><!-- --></a>	
-									<!-- =========== Summary =========== -->
-					<p>Inherited From <span class="classname"><a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html">Zend_Gdata_App_BaseMediaSource</a></span></p>
-					<blockquote>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#methodgetContentType">Zend_Gdata_App_BaseMediaSource::getContentType()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#methodgetSlug">Zend_Gdata_App_BaseMediaSource::getSlug()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#methodsetContentType">Zend_Gdata_App_BaseMediaSource::setContentType()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#methodsetSlug">Zend_Gdata_App_BaseMediaSource::setSlug()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#method__get">Zend_Gdata_App_BaseMediaSource::__get()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#method__isset">Zend_Gdata_App_BaseMediaSource::__isset()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#method__set">Zend_Gdata_App_BaseMediaSource::__set()</a></span><br>
-											</blockquote>
-										
-		</div>
-	</div>
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+            <span class="method-result">Zend_Gdata_App_MediaFileSource</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodencode" title="details" class="method-name">encode</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetContentType" title="details" class="method-name">getContentType</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetFilename" title="details" class="method-name">getFilename</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/App/Zend_Gdata_App_MediaFileSource.html">Zend_Gdata_App_MediaFileSource</a></span>
+        <a href="#methodsetContentType" title="details" class="method-name">setContentType</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/App/Zend_Gdata_App_MediaFileSource.html">Zend_Gdata_App_MediaFileSource</a></span>
+        <a href="#methodsetFilename" title="details" class="method-name">setFilename</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#method__toString" title="details" class="method-name">__toString</a>
+        ()
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
 
 
-	<p class="notes" id="credit">
-		Documentation generated on Tue, 24 May 2011 16:30:30 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
-	</p>
-	</div></body>
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">59</span>)
+ </h4> 
+<h4><i>Zend_Gdata_App_MediaFileSource</i> <strong>__construct(
+string
+$filename)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Create a new Zend_Gdata_App_MediaFileSource object.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $filename</strong>: The name of the file to read from.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodencode" id="methodencode"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method encode</strong> (line <span class="linenumber">70</span>)
+ </h4> 
+<h4><i>string</i> <strong>encode(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Return the MIME multipart representation of this MediaEntry.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Gdata_App_IOException</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetContentType" id="methodgetContentType"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getContentType</strong> (line <span class="linenumber">119</span>)
+ </h4> 
+<h4><i>string</i> <strong>getContentType(
+)</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#methodgetContentType">Zend_Gdata_App_BaseMediaSource::getContentType()</a> The content type for the attached file (example image/png)</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>The content type for the file attached (example image/png)</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The content type</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetFilename" id="methodgetFilename"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getFilename</strong> (line <span class="linenumber">97</span>)
+ </h4> 
+<h4><i>string</i> <strong>getFilename(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Get the filename associated with this reader.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetContentType" id="methodsetContentType"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setContentType</strong> (line <span class="linenumber">130</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/App/Zend_Gdata_App_MediaFileSource.html">Zend_Gdata_App_MediaFileSource</a></i> <strong>setContentType(
+string
+$value)</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#methodsetContentType">Zend_Gdata_App_BaseMediaSource::setContentType()</a> Set the content type for the file attached (example image/png)</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Set the content type for the file attached (example image/png)</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: The content type</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetFilename" id="methodsetFilename"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setFilename</strong> (line <span class="linenumber">108</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/App/Zend_Gdata_App_MediaFileSource.html">Zend_Gdata_App_MediaFileSource</a></i> <strong>setFilename(
+string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Set the filename which is to be read.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: The desired file handle.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface.</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="method__toString" id="method__toString"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method __toString</strong> (line <span class="linenumber">141</span>)
+ </h4> 
+<h4><i>string</i> <strong>__toString(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Alias for getFilename().</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html">Zend_Gdata_App_BaseMediaSource</a></h4>
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#var$_slug">Zend_Gdata_App_BaseMediaSource::$_slug</a></strong> - The slug header value representing the attached file title, or null if  no slug should be used.  The slug header is only necessary in some cases,  usually when a multipart upload is not being performed.
+	</h4> 
+		</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html">Zend_Gdata_App_BaseMediaSource</a></h4>
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#methodgetContentType">Zend_Gdata_App_BaseMediaSource::getContentType()</a></strong> - The content type for the attached file (example image/png)
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#methodgetSlug">Zend_Gdata_App_BaseMediaSource::getSlug()</a></strong> - Returns the Slug header value.  Used by some services to determine the  title for the uploaded file.  Returns null if no slug should be used.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#methodsetContentType">Zend_Gdata_App_BaseMediaSource::setContentType()</a></strong> - Set the content type for the file attached (example image/png)
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#methodsetSlug">Zend_Gdata_App_BaseMediaSource::setSlug()</a></strong> - Sets the Slug header value.  Used by some services to determine the  title for the uploaded file.  A null value indicates no slug header.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#method__get">Zend_Gdata_App_BaseMediaSource::__get()</a></strong> - Magic getter to allow acces like $source-&gt;foo to call $source-&gt;getFoo()  Alternatively, if no getFoo() is defined, but a $_foo protected variable  is defined, this is returned.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#method__isset">Zend_Gdata_App_BaseMediaSource::__isset()</a></strong> - Magic __isset method
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_BaseMediaSource.html#method__set">Zend_Gdata_App_BaseMediaSource::__set()</a></strong> - Magic setter to allow acces like $source-&gt;foo='bar' to call  $source-&gt;setFoo('bar') automatically.
+		</h4> 
+
+				<br />
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 16:18:32 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
 </html>

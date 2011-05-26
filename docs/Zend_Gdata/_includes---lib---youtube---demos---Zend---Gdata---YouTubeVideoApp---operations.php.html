@@ -1,604 +1,527 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<!-- template designed by Marco Von Ballmoos -->
-			<title>Docs for page operations.php</title>
-			<link rel="stylesheet" href="../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
-		<body>
-			<div class="page-body">			
-<h2 class="file-name">/includes/lib/youtube/demos/Zend/Gdata/YouTubeVideoApp/operations.php</h2>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs for page operations.php</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><h2>File: /includes/lib/youtube/demos/Zend/Gdata/YouTubeVideoApp/operations.php</h2>
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ) );
+</script>
 
-<a name="sec-description"></a>
-<div class="info-box">
-	<div class="info-box-title">Description</div>
-	<div class="nav-bar">
-					<span class="disabled">Description</span> |
-									<a href="#sec-includes">Includes</a>
-			|											<a href="#sec-functions">Functions</a>
-			</div>
-	<div class="info-box-body">	
-		<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Zend Framework</p>
-<p class="description"><p>LICENSE</p><p>This source file is subject to the new BSD license that is bundled  with this package in the file LICENSE.txt.  It is also available through the world-wide-web at this URL:  http://framework.zend.com/license/new-bsd  If you did not receive a copy of the license and are unable to  obtain it through the world-wide-web, please send an email  to license@zend.com so we can send you a copy immediately.</p></p>
-	<ul class="tags">
-				<li><span class="field">copyright:</span> Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
-				<li><span class="field">license:</span> <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
-			</ul>
-		
-			</div>
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Zend Framework</h5>
+<div class="desc"><p>LICENSE</p><p>This source file is subject to the new BSD license that is bundled  with this package in the file LICENSE.txt.  It is also available through the world-wide-web at this URL:  http://framework.zend.com/license/new-bsd  If you did not receive a copy of the license and are unable to  obtain it through the world-wide-web, please send an email  to license@zend.com so we can send you a copy immediately.</p></div>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<!-- =========== Used Classes =========== -->
+<A NAME='classes_summary'><!-- --></A>
+<h3>Classes defined in this file</h3>
+
+<TABLE CELLPADDING='3' CELLSPACING='0' WIDTH='100%' CLASS="border">
+	<THEAD>
+		<TR><TD STYLE="width:20%"><h4>CLASS NAME</h4></TD><TD STYLE="width: 80%"><h4>DESCRIPTION</h4></TD></TR>
+	</THEAD>
+	<TBODY>
+			</TBODY>
+</TABLE>
 </div>
-		
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+<!-- ============ Includes DETAIL =========== -->
 
-	<a name="sec-includes"></a>	
-	<div class="info-box">
-		<div class="info-box-title">Includes</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Includes</span>
-			|													<a href="#sec-functions">Functions</a>
-					</div>
-		<div class="info-box-body">	
-			<a name="_Zend/Loader_php"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="include-title">
-			<span class="include-type">require_once</span>
-			(<span class="include-name">'Zend/Loader.php'</span>)
-			(line <span class="line-number">39</span>)
-		</span>
-	</div>
+<h2 class="tab">Include/Require Statements</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">PHP sample code for the YouTube data API.  Utilizes the Zend Framework  Zend_Gdata component to communicate with the YouTube data API.</p>
-<p class="description"><p>Requires the Zend Framework Zend_Gdata component and PHP &gt;= 5.1.4  This sample is run from within a web browser.  These files are required:  session_details.php - a script to view log output and session variables  operations.php - the main logic, which interfaces with the YouTube API  index.php - the HTML to represent the web UI, contains some PHP  video_app.css - the CSS to define the interface style  video_app.js - the JavaScript used to provide the video list AJAX interface</p><p>NOTE: If using in production, some additional precautions with regards  to filtering the input data should be used.  This code is designed only  for demonstration purposes.</p></p>
-	
+
+<a name="_Zend/Loader_php"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property">'Zend/Loader.php'</strong> (line <span class="linenumber">39</span>)
+ </h4> 
+<h4>require_once : 'Zend/Loader.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>PHP sample code for the YouTube data API.  Utilizes the Zend Framework  Zend_Gdata component to communicate with the YouTube data API.</h5>
+<div class="desc"><p>Requires the Zend Framework Zend_Gdata component and PHP &gt;= 5.1.4  This sample is run from within a web browser.  These files are required:  session_details.php - a script to view log output and session variables  operations.php - the main logic, which interfaces with the YouTube API  index.php - the HTML to represent the web UI, contains some PHP  video_app.css - the CSS to define the interface style  video_app.js - the JavaScript used to provide the video list AJAX interface</p><p>NOTE: If using in production, some additional precautions with regards  to filtering the input data should be used.  This code is designed only  for demonstration purposes.</p></div>
+<ul>
+	</ul>
 </div>
-		</div>
-	</div>
-	
-	
-	
-	<a name="sec-functions"></a>	
-	<div class="info-box">
-		<div class="info-box-title">Functions</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-										<a href="#sec-includes">Includes</a>
-				|												<span class="disabled">Functions</span>
-		</div>
-		<div class="info-box-body">	
-			<a name="functioncheckUpload" id="functioncheckUpload"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">checkUpload</span> (line <span class="line-number">245</span>)
-	</div> 
+</div>
+<div class="tab-page" id="tabPage2">
+<!-- ============ GLOBAL DETAIL =========== -->
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Check the upload status of a video</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> A message about the video's status.</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			checkUpload
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$videoId</span>)
-			</div>
+<h2 class="tab">Global Variables</h2>
 
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$videoId</span><span class="var-description">: The video to check.</span>			</li>
-				</ul>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script>
+
+</div>
+<div class="tab-page" id="tabPage3">
+<!-- ============ CONSTANT DETAIL =========== -->
+
+<A NAME='constant_detail'></A>
+<h2 class="tab">Constants</h2>
+
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage3" ) );</script>
+
+</div>
+<div class="tab-page" id="tabPage4">
+<!-- ============ FUNCTION DETAIL =========== -->
+
+<h2 class="tab">Functions</h2>
+
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage4" ) );</script>
+
+<a name="functioncheckUpload" id="functioncheckUpload"><!-- --></a>
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">checkUpload</strong> (line <span class="linenumber">245</span>)
+ </h4> 
+<h4><i>string</i> <strong>checkUpload(
+string $videoId)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Check the upload status of a video</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $videoId</strong>: The video to check.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - A message about the video's status.</li>
+		</ul>
 </div>
 <a name="functionclearSessionVar" id="functionclearSessionVar"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">clearSessionVar</span> (line <span class="line-number">569</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">clearSessionVar</strong> (line <span class="linenumber">569</span>)
+ </h4> 
+<h4><i>void</i> <strong>clearSessionVar(
+string $name)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Unset a specific session variable.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			clearSessionVar
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$name</span><span class="var-description">: Name of the session variable to delete.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Unset a specific session variable.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $name</strong>: Name of the session variable to delete.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functioncreatePlaylist" id="functioncreatePlaylist"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">createPlaylist</span> (line <span class="line-number">921</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">createPlaylist</strong> (line <span class="linenumber">921</span>)
+ </h4> 
+<h4><i>void</i> <strong>createPlaylist(
+string $playlistTitle, string $playlistDescription)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Create a new playlist for the currently authenticated user</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			createPlaylist
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$playlistTitle</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$playlistDescription</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$playlistTitle</span><span class="var-description">: Title of the new playlist</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$playlistDescription</span><span class="var-description">: Description for the new playlist</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Create a new playlist for the currently authenticated user</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $playlistTitle</strong>: Title of the new playlist</li>
+			<li><strong>string $playlistDescription</strong>: Description for the new playlist</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functioncreateUploadForm" id="functioncreateUploadForm"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">createUploadForm</span> (line <span class="line-number">417</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">createUploadForm</strong> (line <span class="linenumber">417</span>)
+ </h4> 
+<h4><i>void</i> <strong>createUploadForm(
+ $videoTitle,  $videoDescription,  $videoCategory,  $videoTags, [string $nextUrl = null], string $VideoTitle, string $VideoDescription, string $VideoCategory, string $VideoTags)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Create upload form by sending the incoming video meta-data to youtube and  retrieving a new entry. Prints form HTML to page.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			createUploadForm
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$videoTitle</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$videoDescription</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$videoCategory</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$videoTags</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$nextUrl</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$VideoTitle</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$VideoDescription</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$VideoCategory</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$VideoTags</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$VideoTitle</span><span class="var-description">: The title for the video entry.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$VideoDescription</span><span class="var-description">: The description for the video entry.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$VideoCategory</span><span class="var-description">: The category for the video entry.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$VideoTags</span><span class="var-description">: The set of tags for the video entry (whitespace separated).</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$nextUrl</span><span class="var-description">: (optional) The URL to redirect back to after form upload has completed.</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$videoTitle</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$videoDescription</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$videoCategory</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$videoTags</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Create upload form by sending the incoming video meta-data to youtube and  retrieving a new entry. Prints form HTML to page.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $VideoTitle</strong>: The title for the video entry.</li>
+			<li><strong>string $VideoDescription</strong>: The description for the video entry.</li>
+			<li><strong>string $VideoCategory</strong>: The category for the video entry.</li>
+			<li><strong>string $VideoTags</strong>: The set of tags for the video entry (whitespace separated).</li>
+			<li><strong>string $nextUrl</strong>: (optional) The URL to redirect back to after form upload has completed.</li>
+			<li><strong> $videoTitle</strong>: </li>
+			<li><strong> $videoDescription</strong>: </li>
+			<li><strong> $videoCategory</strong>: </li>
+			<li><strong> $videoTags</strong>: </li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functiondeletePlaylist" id="functiondeletePlaylist"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">deletePlaylist</span> (line <span class="line-number">974</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">deletePlaylist</strong> (line <span class="linenumber">974</span>)
+ </h4> 
+<h4><i>void</i> <strong>deletePlaylist(
+string $playlistTitle)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Delete a playlist</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			deletePlaylist
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$playlistTitle</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$playlistTitle</span><span class="var-description">: Title of the playlist to be deleted</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Delete a playlist</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $playlistTitle</strong>: Title of the playlist to be deleted</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functiondeleteVideo" id="functiondeleteVideo"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">deleteVideo</span> (line <span class="line-number">482</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">deleteVideo</strong> (line <span class="linenumber">482</span>)
+ </h4> 
+<h4><i>void</i> <strong>deleteVideo(
+string $videoId)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Deletes a Video.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			deleteVideo
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$videoId</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$videoId</span><span class="var-description">: Id of the video to be deleted.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Deletes a Video.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $videoId</strong>: Id of the video to be deleted.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functioneditVideoData" id="functioneditVideoData"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">editVideoData</span> (line <span class="line-number">337</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">editVideoData</strong> (line <span class="linenumber">337</span>)
+ </h4> 
+<h4><i>void</i> <strong>editVideoData(
+string $newVideoTitle, string $newVideoDescription, string $newVideoCategory, string $newVideoTags, string $videoId)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Update an existing video's meta-data.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			editVideoData
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$newVideoTitle</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$newVideoDescription</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$newVideoCategory</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$newVideoTags</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$videoId</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$newVideoTitle</span><span class="var-description">: The new title for the video entry.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$newVideoDescription</span><span class="var-description">: The new description for the video entry.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$newVideoCategory</span><span class="var-description">: The new category for the video entry.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$newVideoTags</span><span class="var-description">: The new set of tags for the video entry (whitespace separated).</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$videoId</span><span class="var-description">: The video id for the video to be edited.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Update an existing video's meta-data.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $newVideoTitle</strong>: The new title for the video entry.</li>
+			<li><strong>string $newVideoDescription</strong>: The new description for the video entry.</li>
+			<li><strong>string $newVideoCategory</strong>: The new category for the video entry.</li>
+			<li><strong>string $newVideoTags</strong>: The new set of tags for the video entry (whitespace separated).</li>
+			<li><strong>string $videoId</strong>: The video id for the video to be edited.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functiongenerateAuthSubRequestLink" id="functiongenerateAuthSubRequestLink"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">generateAuthSubRequestLink</span> (line <span class="line-number">583</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">generateAuthSubRequestLink</strong> (line <span class="linenumber">583</span>)
+ </h4> 
+<h4><i>void</i> <strong>generateAuthSubRequestLink(
+[string $nextUrl = null])</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Generate an AuthSub request Link and print it to the page.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			generateAuthSubRequestLink
-		</span>
-					([<span class="var-type">string</span>&nbsp;<span class="var-name">$nextUrl</span> = <span class="var-default">null</span>])
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$nextUrl</span><span class="var-description">: URL to redirect to after performing the authentication.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Generate an AuthSub request Link and print it to the page.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $nextUrl</strong>: URL to redirect to after performing the authentication.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functiongenerateUrlInformation" id="functiongenerateUrlInformation"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">generateUrlInformation</span> (line <span class="line-number">286</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">generateUrlInformation</strong> (line <span class="linenumber">286</span>)
+ </h4> 
+<h4><i>void</i> <strong>generateUrlInformation(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Store location of the demo application into session variables.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			generateUrlInformation
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Store location of the demo application into session variables.</h5>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionloggingEnabled" id="functionloggingEnabled"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">loggingEnabled</span> (line <span class="line-number">556</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">loggingEnabled</strong> (line <span class="linenumber">556</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>loggingEnabled(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Check whether logging is enabled.</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> Return true if session variable for logging is set to 'on'.</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">boolean</span>
-		<span class="method-name">
-			loggingEnabled
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Check whether logging is enabled.</h5>
 		
-	
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Return true if session variable for logging is set to 'on'.</li>
+		</ul>
 </div>
 <a name="functionlogMessage" id="functionlogMessage"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">logMessage</span> (line <span class="line-number">305</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">logMessage</strong> (line <span class="linenumber">305</span>)
+ </h4> 
+<h4><i>void</i> <strong>logMessage(
+string $message, string $messageType)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Log a message to the session variable array.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			logMessage
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$messageType</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$message</span><span class="var-description">: The message to log.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$messageType</span><span class="var-description">: The type of message to log.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Log a message to the session variable array.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $message</strong>: The message to log.</li>
+			<li><strong>string $messageType</strong>: The type of message to log.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionprintCacheWarning" id="functionprintCacheWarning"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">printCacheWarning</span> (line <span class="line-number">853</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">printCacheWarning</strong> (line <span class="linenumber">853</span>)
+ </h4> 
+<h4><i>string</i> <strong>printCacheWarning(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Print message about YouTube caching.</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> A message</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			printCacheWarning
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Print message about YouTube caching.</h5>
 		
-	
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - A message</li>
+		</ul>
 </div>
 <a name="functionretrievePlaylists" id="functionretrievePlaylists"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">retrievePlaylists</span> (line <span class="line-number">865</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">retrievePlaylists</strong> (line <span class="linenumber">865</span>)
+ </h4> 
+<h4><i>void</i> <strong>retrievePlaylists(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Retrieve playlists for the currently authenticated user and print.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			retrievePlaylists
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Retrieve playlists for the currently authenticated user and print.</h5>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionsearchVideos" id="functionsearchVideos"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">searchVideos</span> (line <span class="line-number">149</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">searchVideos</strong> (line <span class="linenumber">149</span>)
+ </h4> 
+<h4><i>void</i> <strong>searchVideos(
+string $searchType, string $searchTerm, string $startIndex, string $maxResults)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Perform a search on youtube. Passes the result feed to echoVideoList.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			searchVideos
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$searchType</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$searchTerm</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$startIndex</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$maxResults</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$searchType</span><span class="var-description">: The type of search to perform.  If set to 'owner' then attempt to authenticate.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$searchTerm</span><span class="var-description">: The term to search on.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$startIndex</span><span class="var-description">: Start retrieving search results from this index.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$maxResults</span><span class="var-description">: The number of results to retrieve.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Perform a search on youtube. Passes the result feed to echoVideoList.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $searchType</strong>: The type of search to perform.  If set to 'owner' then attempt to authenticate.</li>
+			<li><strong>string $searchTerm</strong>: The term to search on.</li>
+			<li><strong>string $startIndex</strong>: Start retrieving search results from this index.</li>
+			<li><strong>string $maxResults</strong>: The number of results to retrieve.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionsetLogging" id="functionsetLogging"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">setLogging</span> (line <span class="line-number">536</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">setLogging</strong> (line <span class="linenumber">536</span>)
+ </h4> 
+<h4><i>void</i> <strong>setLogging(
+string $loggingOption, [integer|null $maxLogItems = 10])</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Enables logging.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			setLogging
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$loggingOption</span>, [<span class="var-type">integer|null</span>&nbsp;<span class="var-name">$maxLogItems</span> = <span class="var-default">10</span>])
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$loggingOption</span><span class="var-description">: 'on' to turn logging on, 'off' to turn logging off.</span>			</li>
-					<li>
-				<span class="var-type">integer|null</span>
-				<span class="var-name">$maxLogItems</span><span class="var-description">: Maximum items to log, default is 10.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Enables logging.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $loggingOption</strong>: 'on' to turn logging on, 'off' to turn logging off.</li>
+			<li><strong>integer|null $maxLogItems</strong>: Maximum items to log, default is 10.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionunsupportedOperation" id="functionunsupportedOperation"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">unsupportedOperation</span> (line <span class="line-number">1088</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">unsupportedOperation</strong> (line <span class="linenumber">1088</span>)
+ </h4> 
+<h4><i>void</i> <strong>unsupportedOperation(
+ $_POST, array $post)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Helper function if an unsupported operation is passed into this files main loop.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			unsupportedOperation
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$_POST</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$post</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">array</span>
-				<span class="var-name">$post</span><span class="var-description">: (Optional) The post variables that accompanied the operation, if available.</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$_POST</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Helper function if an unsupported operation is passed into this files main loop.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>array $post</strong>: (Optional) The post variables that accompanied the operation, if available.</li>
+			<li><strong> $_POST</strong>: </li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionupdateAuthSubToken" id="functionupdateAuthSubToken"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">updateAuthSubToken</span> (line <span class="line-number">605</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">updateAuthSubToken</strong> (line <span class="linenumber">605</span>)
+ </h4> 
+<h4><i>void</i> <strong>updateAuthSubToken(
+string $singleUseToken)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Upgrade the single-use token to a session token.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			updateAuthSubToken
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$singleUseToken</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$singleUseToken</span><span class="var-description">: A valid single use token that is upgradable to a session token.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Upgrade the single-use token to a session token.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $singleUseToken</strong>: A valid single use token that is upgradable to a session token.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionupdatePlaylist" id="functionupdatePlaylist"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">updatePlaylist</span> (line <span class="line-number">1031</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">updatePlaylist</strong> (line <span class="linenumber">1031</span>)
+ </h4> 
+<h4><i>void</i> <strong>updatePlaylist(
+ $newPlaylistTitle, string $newPlaylistDescription, string $oldPlaylistTitle, string $newplaylistTitle)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Delete a playlist</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			updatePlaylist
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$newPlaylistTitle</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$newPlaylistDescription</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$oldPlaylistTitle</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$newplaylistTitle</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$newplaylistTitle</span><span class="var-description">: New title for the playlist to be updated</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$newPlaylistDescription</span><span class="var-description">: New description for the playlist to be updated</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$oldPlaylistTitle</span><span class="var-description">: Title of the playlist to be updated</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$newPlaylistTitle</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Delete a playlist</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $newplaylistTitle</strong>: New title for the playlist to be updated</li>
+			<li><strong>string $newPlaylistDescription</strong>: New description for the playlist to be updated</li>
+			<li><strong>string $oldPlaylistTitle</strong>: Title of the playlist to be updated</li>
+			<li><strong> $newPlaylistTitle</strong>: </li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
-		</div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 16:18:38 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</div>
-	
-	<p class="notes" id="credit">
-		Documentation generated on Tue, 24 May 2011 16:30:36 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
-	</p>
-	</div></body>
+</body>
 </html>

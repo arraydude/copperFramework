@@ -1,1484 +1,1112 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<!-- template designed by Marco Von Ballmoos -->
-			<title>Docs For Class Zend_Uri_Http</title>
-			<link rel="stylesheet" href="../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
-		<body>
-			<div class="page-body">			
-<h2 class="class-name">Class Zend_Uri_Http</h2>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Uri_Http</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Uri_Http
+</h2> (line <span class="linenumber">41</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
 
-<a name="sec-description"></a>
-<div class="info-box">
-	<div class="info-box-title">Description</div>
-	<div class="nav-bar">
-					<span class="disabled">Description</span> |
-													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-						
-											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-						
-			</div>
-	<div class="info-box-body">
-        		<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">HTTP(S) URI handler</p>
-	<ul class="tags">
-				<li><span class="field">copyright:</span> Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
-				<li><span class="field">license:</span> <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
-				<li><span class="field">uses:</span> <a href="../Zend_Uri/Zend_Uri.html">Zend_Uri</a></li>
-			</ul>
-		<p class="notes">
-			Located in <a class="field" href="_includes---lib---youtube---library---Zend---Uri---Http.php.html">/includes/lib/youtube/library/Zend/Uri/Http.php</a> (line <span class="field">41</span>)
-		</p>
-		
-				
-		<pre><a href="../Zend_Uri/Zend_Uri.html">Zend_Uri</a>
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+<a href="../Zend_Uri/Zend_Uri.html">Zend_Uri</a>
    |
    --Zend_Uri_Http</pre>
-	
-			</div>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Uri---Http.php.html">/includes/lib/youtube/library/Zend/Uri/Http.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>HTTP(S) URI handler</h5>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+		<li><strong>uses:</strong> - <a href="../Zend_Uri/Zend_Uri.html">Zend_Uri</a></li>
+	</ul>
+<br /><hr />
 </div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_fragment" title="details" class="property"><strong>$_fragment</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_host" title="details" class="property"><strong>$_host</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_password" title="details" class="property"><strong>$_password</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_path" title="details" class="property"><strong>$_path</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_port" title="details" class="property"><strong>$_port</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_query" title="details" class="property"><strong>$_query</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$_regex" title="details" class="property"><strong>$_regex</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_username" title="details" class="property"><strong>$_username</strong></a>
+</div>
+<hr />
+<a name="var$_fragment" id="var$_fragment"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_fragment =  ''</strong> (line <span class="linenumber">99</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>HTTP fragment</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_host" id="var$_host"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_host =  ''</strong> (line <span class="linenumber">71</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>HTTP host</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_password" id="var$_password"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_password =  ''</strong> (line <span class="linenumber">64</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>HTTP password</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_path" id="var$_path"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_path =  ''</strong> (line <span class="linenumber">85</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>HTTP part</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_port" id="var$_port"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_port =  ''</strong> (line <span class="linenumber">78</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>HTTP post</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_query" id="var$_query"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_query =  ''</strong> (line <span class="linenumber">92</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>HTTP query</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_regex" id="var$_regex"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_regex = array()</strong> (line <span class="linenumber">106</span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Regular expression grammar rules for validation; values added by constructor</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_username" id="var$_username"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_username =  ''</strong> (line <span class="linenumber">57</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>HTTP username</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="const-title">
+    <a href="#constCHAR_ALNUM" title="details" class="property"><strong>CHAR_ALNUM</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constCHAR_MARK" title="details" class="property"><strong>CHAR_MARK</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constCHAR_RESERVED" title="details" class="property"><strong>CHAR_RESERVED</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constCHAR_SEGMENT" title="details" class="property"><strong>CHAR_SEGMENT</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constCHAR_UNWISE" title="details" class="property"><strong>CHAR_UNWISE</strong></a>
+</div>
+<hr />
+<a name="constCHAR_ALNUM" id="constCHAR_ALNUM"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/Constant.gif" border="0" /> <strong class="property">CHAR_ALNUM =  'A-Za-z0-9'</strong> (line <span class="linenumber">46</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Character classes for validation regular expressions</h5>
+<ul>
+	</ul>
+</div>
+<a name="constCHAR_MARK" id="constCHAR_MARK"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/Constant.gif" border="0" /> <strong class="property">CHAR_MARK =  '-_.!~*\'()\[\]'</strong> (line <span class="linenumber">47</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="constCHAR_RESERVED" id="constCHAR_RESERVED"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/Constant.gif" border="0" /> <strong class="property">CHAR_RESERVED =  ';\/?:@&amp;=+$,'</strong> (line <span class="linenumber">48</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="constCHAR_SEGMENT" id="constCHAR_SEGMENT"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/Constant.gif" border="0" /> <strong class="property">CHAR_SEGMENT =  ':@&amp;=+$,;'</strong> (line <span class="linenumber">49</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="constCHAR_UNWISE" id="constCHAR_UNWISE"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/Constant.gif" border="0" /> <strong class="property">CHAR_UNWISE =  '{}|\\\\^`'</strong> (line <span class="linenumber">50</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+    static         <span class="method-result"><a href="../Zend_Uri/Zend_Uri_Http.html">Zend_Uri_Http</a></span>
+        <a href="#methodfromString" title="details" class="method-name">fromString</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">Zend_Uri_Http</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$scheme</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$schemeSpecific</span> = <span class="var-default">''</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodaddReplaceQueryParameters" title="details" class="method-name">addReplaceQueryParameters</a>
+        (<span class="var-type"></span>&nbsp;<span class="var-name">$queryParams</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string|false</span>
+        <a href="#methodgetFragment" title="details" class="method-name">getFragment</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetHost" title="details" class="method-name">getHost</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetPassword" title="details" class="method-name">getPassword</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetPath" title="details" class="method-name">getPath</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetPort" title="details" class="method-name">getPort</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetQuery" title="details" class="method-name">getQuery</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">array</span>
+        <a href="#methodgetQueryAsArray" title="details" class="method-name">getQueryAsArray</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetUri" title="details" class="method-name">getUri</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetUsername" title="details" class="method-name">getUsername</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodremoveQueryParameters" title="details" class="method-name">removeQueryParameters</a>
+        (<span class="var-type"></span>&nbsp;<span class="var-name">$queryParamKeys</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodsetFragment" title="details" class="method-name">setFragment</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$fragment</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodsetHost" title="details" class="method-name">setHost</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$host</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodsetPassword" title="details" class="method-name">setPassword</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodsetPath" title="details" class="method-name">setPath</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodsetPort" title="details" class="method-name">setPort</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$port</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodsetQuery" title="details" class="method-name">setQuery</a>
+        (<span class="var-type">string|array</span>&nbsp;<span class="var-name">$query</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodsetUsername" title="details" class="method-name">setUsername</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodvalid" title="details" class="method-name">valid</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodvalidateFragment" title="details" class="method-name">validateFragment</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$fragment</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodvalidateHost" title="details" class="method-name">validateHost</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$host</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodvalidatePassword" title="details" class="method-name">validatePassword</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$password</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodvalidatePath" title="details" class="method-name">validatePath</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodvalidatePort" title="details" class="method-name">validatePort</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$port</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodvalidateQuery" title="details" class="method-name">validateQuery</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodvalidateUsername" title="details" class="method-name">validateUsername</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#method_parseUri" title="details" class="method-name">_parseUri</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$schemeSpecific</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
 
 
-	<a name="sec-const-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Class Constant Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
-												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-				 
-				|
-										| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<div class="const-summary">
-								<div class="const-title">
-					<img src="../media/images/Constant.png" alt=" " />
-					<a href="#CHAR_ALNUM" title="details" class="const-name">CHAR_ALNUM</a> = 					<span class="var-type"> 'A-Za-z0-9'</span>
+<a name="methodfromString" id="methodfromString"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method fromString</strong> (line <span class="linenumber">170</span>)
+ </h4> 
+<h4><i><a href="../Zend_Uri/Zend_Uri_Http.html">Zend_Uri_Http</a></i> <strong>fromString(
+string
+$uri)</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../media/images/Constant.png" alt=" " />
-					<a href="#CHAR_MARK" title="details" class="const-name">CHAR_MARK</a> = 					<span class="var-type"> '-_.!~*\'()\[\]'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Creates a Zend_Uri_Http from the given string</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $uri</strong>: String to create URI from, must start with                      'http://' or 'https://'</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - InvalidArgumentException  When the given $uri is not a string or                                    does not start with http:// or https://</li>
+			<li><strong>throws</strong> - Zend_Uri_Exception        When the given $uri is invalid</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">116</span>)
+ </h4> 
+<h4><i>Zend_Uri_Http</i> <strong>__construct(
+string
+$scheme, [string
+$schemeSpecific = ''])</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../media/images/Constant.png" alt=" " />
-					<a href="#CHAR_RESERVED" title="details" class="const-name">CHAR_RESERVED</a> = 					<span class="var-type"> ';\/?:@&amp;=+$,'</span>
+<p><strong>Overrides :</strong> <a href="../Zend_Uri/Zend_Uri.html#method__construct">Zend_Uri::__construct()</a> Zend_Uri and its subclasses cannot be instantiated directly.</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Constructor accepts a string $scheme (e.g., http, https) and a scheme-specific part of the URI  (e.g., example.com/path/to/resource?query=param#fragment)</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $scheme</strong>: The scheme of the URI</li>
+			<li><strong>string $schemeSpecific</strong>: The scheme-specific part of the URI</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Uri_Exception When the URI is not valid</li>
+			<li><strong>access</strong> - protected</li>
+		</ul>
+</div>
+<a name="methodaddReplaceQueryParameters" id="methodaddReplaceQueryParameters"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method addReplaceQueryParameters</strong> (line <span class="linenumber">649</span>)
+ </h4> 
+<h4><i>string</i> <strong>addReplaceQueryParameters(
 
-				</div>
-								<div class="const-title">
-					<img src="../media/images/Constant.png" alt=" " />
-					<a href="#CHAR_SEGMENT" title="details" class="const-name">CHAR_SEGMENT</a> = 					<span class="var-type"> ':@&amp;=+$,;'</span>
+$queryParams)</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../media/images/Constant.png" alt=" " />
-					<a href="#CHAR_UNWISE" title="details" class="const-name">CHAR_UNWISE</a> = 					<span class="var-type"> '{}|\\\\^`'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Add or replace params in the query string for the current URI, and  return the old query.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>array $queryParams</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Old query string</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetFragment" id="methodgetFragment"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getFragment</strong> (line <span class="linenumber">714</span>)
+ </h4> 
+<h4><i>string|false</i> <strong>getFragment(
+)</strong></h4>
 
-				</div>
-							</div>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns the fragment portion of the URL (after #), or FALSE if none.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetHost" id="methodgetHost"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getHost</strong> (line <span class="linenumber">422</span>)
+ </h4> 
+<h4><i>string</i> <strong>getHost(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns the domain or host IP portion of the URL, or FALSE if none.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetPassword" id="methodgetPassword"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getPassword</strong> (line <span class="linenumber">355</span>)
+ </h4> 
+<h4><i>string</i> <strong>getPassword(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns the password portion of the URL, or FALSE if none.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetPath" id="methodgetPath"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getPath</strong> (line <span class="linenumber">529</span>)
+ </h4> 
+<h4><i>string</i> <strong>getPath(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns the path and filename portion of the URL.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetPort" id="methodgetPort"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getPort</strong> (line <span class="linenumber">477</span>)
+ </h4> 
+<h4><i>string</i> <strong>getPort(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns the TCP port, or FALSE if none.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetQuery" id="methodgetQuery"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getQuery</strong> (line <span class="linenumber">589</span>)
+ </h4> 
+<h4><i>string</i> <strong>getQuery(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns the query portion of the URL (after ?), or FALSE if none.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetQueryAsArray" id="methodgetQueryAsArray"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getQueryAsArray</strong> (line <span class="linenumber">601</span>)
+ </h4> 
+<h4><i>array</i> <strong>getQueryAsArray(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns the query portion of the URL (after ?) as a  key-value-array. If the query is empty an empty array  is returned</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetUri" id="methodgetUri"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getUri</strong> (line <span class="linenumber">247</span>)
+ </h4> 
+<h4><i>string</i> <strong>getUri(
+)</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../Zend_Uri/Zend_Uri.html#methodgetUri">Zend_Uri::getUri()</a> Return a string representation of this URI.</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns a URI based on current values of the instance variables. If any  part of the URI does not pass validation, then an exception is thrown.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Uri_Exception When one or more parts of the URI are invalid</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetUsername" id="methodgetUsername"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getUsername</strong> (line <span class="linenumber">293</span>)
+ </h4> 
+<h4><i>string</i> <strong>getUsername(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns the username portion of the URL, or FALSE if none.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodremoveQueryParameters" id="methodremoveQueryParameters"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method removeQueryParameters</strong> (line <span class="linenumber">662</span>)
+ </h4> 
+<h4><i>string</i> <strong>removeQueryParameters(
+
+$queryParamKeys)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Remove params in the query string for the current URI, and  return the old query.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>array $queryParamKeys</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Old query string</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetFragment" id="methodsetFragment"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setFragment</strong> (line <span class="linenumber">757</span>)
+ </h4> 
+<h4><i>string</i> <strong>setFragment(
+string
+$fragment)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the fragment for the current URI, and returns the old fragment</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $fragment</strong>: Fragment of the current URI</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Uri_Exception When $fragment is not a valid HTTP fragment</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetHost" id="methodsetHost"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setHost</strong> (line <span class="linenumber">459</span>)
+ </h4> 
+<h4><i>string</i> <strong>setHost(
+string
+$host)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the host for the current URI, and returns the old host</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $host</strong>: The HTTP host</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Uri_Exception When $host is nota valid HTTP host</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetPassword" id="methodsetPassword"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setPassword</strong> (line <span class="linenumber">404</span>)
+ </h4> 
+<h4><i>string</i> <strong>setPassword(
+string
+$password)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the password for the current URI, and returns the old password</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $password</strong>: The HTTP password</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Uri_Exception When $password is not a valid HTTP password</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetPath" id="methodsetPath"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setPath</strong> (line <span class="linenumber">571</span>)
+ </h4> 
+<h4><i>string</i> <strong>setPath(
+string
+$path)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the path for the current URI, and returns the old path</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $path</strong>: The HTTP path</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Uri_Exception When $path is not a valid HTTP path</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetPort" id="methodsetPort"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setPort</strong> (line <span class="linenumber">511</span>)
+ </h4> 
+<h4><i>string</i> <strong>setPort(
+string
+$port)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the port for the current URI, and returns the old port</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $port</strong>: The HTTP port</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Uri_Exception When $port is not a valid HTTP port</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetQuery" id="methodsetQuery"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setQuery</strong> (line <span class="linenumber">676</span>)
+ </h4> 
+<h4><i>string</i> <strong>setQuery(
+string|array
+$query)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Set the query string for the current URI, and return the old query  string This method accepts both strings and arrays.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string|array $query</strong>: The query string or array</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Old query string</li>
+			<li><strong>throws</strong> - Zend_Uri_Exception When $query is not a valid query string</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetUsername" id="methodsetUsername"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setUsername</strong> (line <span class="linenumber">337</span>)
+ </h4> 
+<h4><i>string</i> <strong>setUsername(
+string
+$username)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the username for the current URI, and returns the old username</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $username</strong>: The HTTP username</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Uri_Exception When $username is not a valid HTTP username</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodvalid" id="methodvalid"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method valid</strong> (line <span class="linenumber">276</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>valid(
+)</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../Zend_Uri/Zend_Uri.html#methodvalid">Zend_Uri::valid()</a> Returns TRUE if this URI is valid, or FALSE otherwise.</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Validate the current URI from the instance variables. Returns true if and only if all  parts pass validation.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodvalidateFragment" id="methodvalidateFragment"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method validateFragment</strong> (line <span class="linenumber">728</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>validateFragment(
+[string
+$fragment = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns true if and only if the fragment passes validation. If no fragment is passed,  then the fragment contained in the instance variable is used.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $fragment</strong>: Fragment of an URI</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>link</strong> - <a href="http://www.faqs.org/rfcs/rfc2396.html">http://www.faqs.org/rfcs/rfc2396.html</a></li>
+			<li><strong>throws</strong> - Zend_Uri_Exception When fragment validation fails</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodvalidateHost" id="methodvalidateHost"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method validateHost</strong> (line <span class="linenumber">435</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>validateHost(
+[string
+$host = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns true if and only if the host string passes validation. If no host is passed,  then the host contained in the instance variable is used.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $host</strong>: The HTTP host</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+			<li><strong>uses</strong> - Zend_Filter</li>
+		</ul>
+</div>
+<a name="methodvalidatePassword" id="methodvalidatePassword"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method validatePassword</strong> (line <span class="linenumber">369</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>validatePassword(
+[string
+$password = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns true if and only if the password passes validation. If no password is passed,  then the password contained in the instance variable is used.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $password</strong>: The HTTP password</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>link</strong> - <a href="http://www.faqs.org/rfcs/rfc2396.html">http://www.faqs.org/rfcs/rfc2396.html</a></li>
+			<li><strong>throws</strong> - Zend_Uri_Exception When password validation fails</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodvalidatePath" id="methodvalidatePath"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method validatePath</strong> (line <span class="linenumber">542</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>validatePath(
+[string
+$path = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns true if and only if the path string passes validation. If no path is passed,  then the path contained in the instance variable is used.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $path</strong>: The HTTP path</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Uri_Exception When path validation fails</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodvalidatePort" id="methodvalidatePort"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method validatePort</strong> (line <span class="linenumber">489</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>validatePort(
+[string
+$port = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns true if and only if the TCP port string passes validation. If no port is passed,  then the port contained in the instance variable is used.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $port</strong>: The HTTP port</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodvalidateQuery" id="methodvalidateQuery"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method validateQuery</strong> (line <span class="linenumber">620</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>validateQuery(
+[string
+$query = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns true if and only if the query string passes validation. If no query is passed,  then the query string contained in the instance variable is used.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $query</strong>: The query to validate</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>link</strong> - <a href="http://www.faqs.org/rfcs/rfc2396.html">http://www.faqs.org/rfcs/rfc2396.html</a></li>
+			<li><strong>throws</strong> - Zend_Uri_Exception When query validation fails</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodvalidateUsername" id="methodvalidateUsername"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method validateUsername</strong> (line <span class="linenumber">307</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>validateUsername(
+[string
+$username = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns true if and only if the username passes validation. If no username is passed,  then the username contained in the instance variable is used.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $username</strong>: The HTTP username</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>link</strong> - <a href="http://www.faqs.org/rfcs/rfc2396.html">http://www.faqs.org/rfcs/rfc2396.html</a></li>
+			<li><strong>throws</strong> - Zend_Uri_Exception When username validation fails</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="method_parseUri" id="method_parseUri"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _parseUri</strong> (line <span class="linenumber">198</span>)
+ </h4> 
+<h4><i>void</i> <strong>_parseUri(
+string
+$schemeSpecific)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Parse the scheme-specific portion of the URI and place its parts into instance variables.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $schemeSpecific</strong>: The scheme-specific portion to parse</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Uri_Exception When authority decomposition fails</li>
+			<li><strong>throws</strong> - Zend_Uri_Exception When scheme-specific decoposition fails</li>
+			<li><strong>access</strong> - protected</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../Zend_Uri/Zend_Uri.html">Zend_Uri</a></h4>
+		<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../Zend_Uri/Zend_Uri.html#var$_config">Zend_Uri::$_config</a></strong> - Global configuration array
+	</h4> 
+		<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../Zend_Uri/Zend_Uri.html#var$_scheme">Zend_Uri::$_scheme</a></strong> - Scheme of this URI (http, ftp, etc.)
+	</h4> 
 		</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../Zend_Uri/Zend_Uri.html">Zend_Uri</a></h4>
+				<h4>
+<img src="../media/images/Constructor.gif" border="0" /><strong class="method"> <a href="../Zend_Uri/Zend_Uri.html#method__construct">Zend_Uri::__construct()</a></strong> - Zend_Uri and its subclasses cannot be instantiated directly.
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Uri/Zend_Uri.html#methodcheck">Zend_Uri::check()</a></strong> - Convenience function, checks that a $uri string is well-formed  by validating it but not returning an object.  Returns TRUE if  $uri is a well-formed URI, or FALSE otherwise.
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Uri/Zend_Uri.html#methodfactory">Zend_Uri::factory()</a></strong> - Create a new Zend_Uri object for a URI.  If building a new URI, then $uri should contain  only the scheme (http, ftp, etc).  Otherwise, supply $uri with the complete URI.
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Uri/Zend_Uri.html#methodgetScheme">Zend_Uri::getScheme()</a></strong> - Get the URI's scheme
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Uri/Zend_Uri.html#methodgetUri">Zend_Uri::getUri()</a></strong> - Return a string representation of this URI.
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Uri/Zend_Uri.html#methodsetConfig">Zend_Uri::setConfig()</a></strong> - Set global configuration options
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Uri/Zend_Uri.html#methodvalid">Zend_Uri::valid()</a></strong> - Returns TRUE if this URI is valid, or FALSE otherwise.
+		</h4> 
+
+				<h4>
+<img src="../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../Zend_Uri/Zend_Uri.html#method__toString">Zend_Uri::__toString()</a></strong> - Return a string representation of this URI.
+		</h4> 
+
+				<br />
 	</div>
-
-	<a name="sec-var-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variable Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
-							| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<div class="var-summary">
-																																																																																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$_fragment" title="details" class="var-name">$_fragment</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$_host" title="details" class="var-name">$_host</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$_password" title="details" class="var-name">$_password</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$_path" title="details" class="var-name">$_path</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$_port" title="details" class="var-name">$_port</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$_query" title="details" class="var-name">$_query</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">array</span>
-					<a href="#$_regex" title="details" class="var-name">$_regex</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$_username" title="details" class="var-name">$_username</a>
-				</div>
-											</div>
-		</div>
-	</div>
-
-	<a name="sec-method-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Method Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-				 
-				|
-						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
-		</div>
-		<div class="info-box-body">			
-			<div class="method-summary">
-																												<div class="method-definition">
-					static 						<span class="method-result"><a href="../Zend_Uri/Zend_Uri_Http.html">Zend_Uri_Http</a></span>
-										<a href="#fromString" title="details" class="method-name">fromString</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span>)
-									</div>
-																																																																																																																																																																																																																								
-												<div class="method-definition">
-											<span class="method-result">Zend_Uri_Http</span>
-										<a href="#__construct" title="details" class="method-name">__construct</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$scheme</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$schemeSpecific</span> = <span class="var-default">''</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#addReplaceQueryParameters" title="details" class="method-name">addReplaceQueryParameters</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$queryParams</span>)
-									</div>
-																								<div class="method-definition">
-											<span class="method-result">string|false</span>
-										<a href="#getFragment" title="details" class="method-name">getFragment</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getHost" title="details" class="method-name">getHost</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getPassword" title="details" class="method-name">getPassword</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getPath" title="details" class="method-name">getPath</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getPort" title="details" class="method-name">getPort</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getQuery" title="details" class="method-name">getQuery</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">array</span>
-										<a href="#getQueryAsArray" title="details" class="method-name">getQueryAsArray</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getUri" title="details" class="method-name">getUri</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getUsername" title="details" class="method-name">getUsername</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#removeQueryParameters" title="details" class="method-name">removeQueryParameters</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$queryParamKeys</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#setFragment" title="details" class="method-name">setFragment</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$fragment</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#setHost" title="details" class="method-name">setHost</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$host</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#setPassword" title="details" class="method-name">setPassword</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#setPath" title="details" class="method-name">setPath</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#setPort" title="details" class="method-name">setPort</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$port</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#setQuery" title="details" class="method-name">setQuery</a>
-											(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$query</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#setUsername" title="details" class="method-name">setUsername</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">boolean</span>
-										<a href="#valid" title="details" class="method-name">valid</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">boolean</span>
-										<a href="#validateFragment" title="details" class="method-name">validateFragment</a>
-											([<span class="var-type">string</span>&nbsp;<span class="var-name">$fragment</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result">boolean</span>
-										<a href="#validateHost" title="details" class="method-name">validateHost</a>
-											([<span class="var-type">string</span>&nbsp;<span class="var-name">$host</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result">boolean</span>
-										<a href="#validatePassword" title="details" class="method-name">validatePassword</a>
-											([<span class="var-type">string</span>&nbsp;<span class="var-name">$password</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result">boolean</span>
-										<a href="#validatePath" title="details" class="method-name">validatePath</a>
-											([<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result">boolean</span>
-										<a href="#validatePort" title="details" class="method-name">validatePort</a>
-											([<span class="var-type">string</span>&nbsp;<span class="var-name">$port</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result">boolean</span>
-										<a href="#validateQuery" title="details" class="method-name">validateQuery</a>
-											([<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result">boolean</span>
-										<a href="#validateUsername" title="details" class="method-name">validateUsername</a>
-											([<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result">void</span>
-										<a href="#_parseUri" title="details" class="method-name">_parseUri</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$schemeSpecific</span>)
-									</div>
-								</div>
-		</div>
-	</div>		
-
-	<a name="sec-vars"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variables</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
-						
-			
-												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-										| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<a name="var$_fragment" id="$_fragment"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$_fragment</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">99</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">HTTP fragment</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-		
-		
-
 </div>
-<a name="var$_host" id="$_host"><!-- --></A>
-<div class="evenrow">
+<script type="text/javascript">
+//<![CDATA[
 
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$_host</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">71</span>)
-		</span>
-	</div>
+setupAllTabs();
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">HTTP host</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$_password" id="$_password"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$_password</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">64</span>)
-		</span>
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 16:18:22 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">HTTP password</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$_path" id="$_path"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$_path</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">85</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">HTTP part</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$_port" id="$_port"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$_port</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">78</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">HTTP post</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$_query" id="$_query"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$_query</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">92</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">HTTP query</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$_regex" id="$_regex"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">array</span>
-			<span class="var-name">$_regex</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number">106</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Regular expression grammar rules for validation; values added by constructor</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$_username" id="$_username"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$_username</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">57</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">HTTP username</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-							<h4>Inherited Variables</h4>
-				<A NAME='inherited_vars'><!-- --></A>
-									<p>Inherited from <span class="classname"><a href="../Zend_Uri/Zend_Uri.html">Zend_Uri</a></span></p>
-					<blockquote>
-													<span class="var-title">
-								<span class="var-name"><a href="../Zend_Uri/Zend_Uri.html#var$_config">Zend_Uri::$_config</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../Zend_Uri/Zend_Uri.html#var$_scheme">Zend_Uri::$_scheme</a></span><br>
-							</span>
-											</blockquote> 
-										
-		</div>
-	</div>
-	
-	<a name="sec-methods"></a>
-	<div class="info-box">
-		<div class="info-box-title">Methods</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
-						
-		</div>
-		<div class="info-box-body">
-			<A NAME='method_detail'></A>
-<a name="methodfromString" id="fromString"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">static method fromString</span> (line <span class="line-number">170</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Creates a Zend_Uri_Http from the given string</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> InvalidArgumentException  When the given $uri is not a string or                                    does not start with http:// or https://</li>
-				<li><span class="field">throws:</span> Zend_Uri_Exception        When the given $uri is invalid</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-	    static
-		<span class="method-result"><a href="../Zend_Uri/Zend_Uri_Http.html">Zend_Uri_Http</a></span>
-		<span class="method-name">
-			fromString
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$uri</span><span class="var-description">: String to create URI from, must start with                      'http://' or 'https://'</span>			</li>
-				</ul>
-		
-			
-	</div>
-
-<a name="method__construct" id="__construct"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">116</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Constructor accepts a string $scheme (e.g., http, https) and a scheme-specific part of the URI  (e.g., example.com/path/to/resource?query=param#fragment)</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Uri_Exception When the URI is not valid</li>
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">Zend_Uri_Http</span>
-		<span class="method-name">
-			__construct
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$scheme</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$schemeSpecific</span> = <span class="var-default">''</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$scheme</span><span class="var-description">: The scheme of the URI</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$schemeSpecific</span><span class="var-description">: The scheme-specific part of the URI</span>			</li>
-				</ul>
-		
-			<hr class="separator" />
-		<div class="notes">Redefinition of:</div>
-		<dl>
-			<dt><a href="../Zend_Uri/Zend_Uri.html#method__construct">Zend_Uri::__construct()</a></dt>
-						<dd>Zend_Uri and its subclasses cannot be instantiated directly.</dd>
-					</dl>
-			
-	</div>
-<a name="methodaddReplaceQueryParameters" id="addReplaceQueryParameters"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">addReplaceQueryParameters</span> (line <span class="line-number">649</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Add or replace params in the query string for the current URI, and  return the old query.</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> Old query string</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			addReplaceQueryParameters
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$queryParams</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">array</span>
-				<span class="var-name">$queryParams</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetFragment" id="getFragment"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getFragment</span> (line <span class="line-number">714</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the fragment portion of the URL (after #), or FALSE if none.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string|false</span>
-		<span class="method-name">
-			getFragment
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetHost" id="getHost"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getHost</span> (line <span class="line-number">422</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the domain or host IP portion of the URL, or FALSE if none.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getHost
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetPassword" id="getPassword"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getPassword</span> (line <span class="line-number">355</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the password portion of the URL, or FALSE if none.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getPassword
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetPath" id="getPath"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getPath</span> (line <span class="line-number">529</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the path and filename portion of the URL.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getPath
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetPort" id="getPort"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getPort</span> (line <span class="line-number">477</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the TCP port, or FALSE if none.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getPort
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetQuery" id="getQuery"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getQuery</span> (line <span class="line-number">589</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the query portion of the URL (after ?), or FALSE if none.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getQuery
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetQueryAsArray" id="getQueryAsArray"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getQueryAsArray</span> (line <span class="line-number">601</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the query portion of the URL (after ?) as a  key-value-array. If the query is empty an empty array  is returned</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">array</span>
-		<span class="method-name">
-			getQueryAsArray
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetUri" id="getUri"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getUri</span> (line <span class="line-number">247</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns a URI based on current values of the instance variables. If any  part of the URI does not pass validation, then an exception is thrown.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Uri_Exception When one or more parts of the URI are invalid</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getUri
-		</span>
-				()
-			</div>
-	
-		
-			<hr class="separator" />
-		<div class="notes">Redefinition of:</div>
-		<dl>
-			<dt><a href="../Zend_Uri/Zend_Uri.html#methodgetUri">Zend_Uri::getUri()</a></dt>
-						<dd>Return a string representation of this URI.</dd>
-					</dl>
-			
-	</div>
-<a name="methodgetUsername" id="getUsername"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getUsername</span> (line <span class="line-number">293</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the username portion of the URL, or FALSE if none.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getUsername
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodremoveQueryParameters" id="removeQueryParameters"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">removeQueryParameters</span> (line <span class="line-number">662</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Remove params in the query string for the current URI, and  return the old query.</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> Old query string</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			removeQueryParameters
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$queryParamKeys</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">array</span>
-				<span class="var-name">$queryParamKeys</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetFragment" id="setFragment"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">setFragment</span> (line <span class="line-number">757</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Sets the fragment for the current URI, and returns the old fragment</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Uri_Exception When $fragment is not a valid HTTP fragment</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			setFragment
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$fragment</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$fragment</span><span class="var-description">: Fragment of the current URI</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetHost" id="setHost"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">setHost</span> (line <span class="line-number">459</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Sets the host for the current URI, and returns the old host</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Uri_Exception When $host is nota valid HTTP host</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			setHost
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$host</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$host</span><span class="var-description">: The HTTP host</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetPassword" id="setPassword"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">setPassword</span> (line <span class="line-number">404</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Sets the password for the current URI, and returns the old password</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Uri_Exception When $password is not a valid HTTP password</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			setPassword
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$password</span><span class="var-description">: The HTTP password</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetPath" id="setPath"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">setPath</span> (line <span class="line-number">571</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Sets the path for the current URI, and returns the old path</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Uri_Exception When $path is not a valid HTTP path</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			setPath
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$path</span><span class="var-description">: The HTTP path</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetPort" id="setPort"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">setPort</span> (line <span class="line-number">511</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Sets the port for the current URI, and returns the old port</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Uri_Exception When $port is not a valid HTTP port</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			setPort
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$port</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$port</span><span class="var-description">: The HTTP port</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetQuery" id="setQuery"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">setQuery</span> (line <span class="line-number">676</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Set the query string for the current URI, and return the old query  string This method accepts both strings and arrays.</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> Old query string</li>
-				<li><span class="field">throws:</span> Zend_Uri_Exception When $query is not a valid query string</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			setQuery
-		</span>
-					(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$query</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string|array</span>
-				<span class="var-name">$query</span><span class="var-description">: The query string or array</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetUsername" id="setUsername"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">setUsername</span> (line <span class="line-number">337</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Sets the username for the current URI, and returns the old username</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Uri_Exception When $username is not a valid HTTP username</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			setUsername
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$username</span><span class="var-description">: The HTTP username</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodvalid" id="valid"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">valid</span> (line <span class="line-number">276</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Validate the current URI from the instance variables. Returns true if and only if all  parts pass validation.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">boolean</span>
-		<span class="method-name">
-			valid
-		</span>
-				()
-			</div>
-	
-		
-			<hr class="separator" />
-		<div class="notes">Redefinition of:</div>
-		<dl>
-			<dt><a href="../Zend_Uri/Zend_Uri.html#methodvalid">Zend_Uri::valid()</a></dt>
-						<dd>Returns TRUE if this URI is valid, or FALSE otherwise.</dd>
-					</dl>
-			
-	</div>
-<a name="methodvalidateFragment" id="validateFragment"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">validateFragment</span> (line <span class="line-number">728</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns true if and only if the fragment passes validation. If no fragment is passed,  then the fragment contained in the instance variable is used.</p>
-	<ul class="tags">
-				<li><span class="field">link:</span> <a href="http://www.faqs.org/rfcs/rfc2396.html">http://www.faqs.org/rfcs/rfc2396.html</a></li>
-				<li><span class="field">throws:</span> Zend_Uri_Exception When fragment validation fails</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">boolean</span>
-		<span class="method-name">
-			validateFragment
-		</span>
-					([<span class="var-type">string</span>&nbsp;<span class="var-name">$fragment</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$fragment</span><span class="var-description">: Fragment of an URI</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodvalidateHost" id="validateHost"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">validateHost</span> (line <span class="line-number">435</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns true if and only if the host string passes validation. If no host is passed,  then the host contained in the instance variable is used.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-				<li><span class="field">uses:</span> Zend_Filter</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">boolean</span>
-		<span class="method-name">
-			validateHost
-		</span>
-					([<span class="var-type">string</span>&nbsp;<span class="var-name">$host</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$host</span><span class="var-description">: The HTTP host</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodvalidatePassword" id="validatePassword"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">validatePassword</span> (line <span class="line-number">369</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns true if and only if the password passes validation. If no password is passed,  then the password contained in the instance variable is used.</p>
-	<ul class="tags">
-				<li><span class="field">link:</span> <a href="http://www.faqs.org/rfcs/rfc2396.html">http://www.faqs.org/rfcs/rfc2396.html</a></li>
-				<li><span class="field">throws:</span> Zend_Uri_Exception When password validation fails</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">boolean</span>
-		<span class="method-name">
-			validatePassword
-		</span>
-					([<span class="var-type">string</span>&nbsp;<span class="var-name">$password</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$password</span><span class="var-description">: The HTTP password</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodvalidatePath" id="validatePath"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">validatePath</span> (line <span class="line-number">542</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns true if and only if the path string passes validation. If no path is passed,  then the path contained in the instance variable is used.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Uri_Exception When path validation fails</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">boolean</span>
-		<span class="method-name">
-			validatePath
-		</span>
-					([<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$path</span><span class="var-description">: The HTTP path</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodvalidatePort" id="validatePort"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">validatePort</span> (line <span class="line-number">489</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns true if and only if the TCP port string passes validation. If no port is passed,  then the port contained in the instance variable is used.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">boolean</span>
-		<span class="method-name">
-			validatePort
-		</span>
-					([<span class="var-type">string</span>&nbsp;<span class="var-name">$port</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$port</span><span class="var-description">: The HTTP port</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodvalidateQuery" id="validateQuery"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">validateQuery</span> (line <span class="line-number">620</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns true if and only if the query string passes validation. If no query is passed,  then the query string contained in the instance variable is used.</p>
-	<ul class="tags">
-				<li><span class="field">link:</span> <a href="http://www.faqs.org/rfcs/rfc2396.html">http://www.faqs.org/rfcs/rfc2396.html</a></li>
-				<li><span class="field">throws:</span> Zend_Uri_Exception When query validation fails</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">boolean</span>
-		<span class="method-name">
-			validateQuery
-		</span>
-					([<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$query</span><span class="var-description">: The query to validate</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodvalidateUsername" id="validateUsername"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">validateUsername</span> (line <span class="line-number">307</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns true if and only if the username passes validation. If no username is passed,  then the username contained in the instance variable is used.</p>
-	<ul class="tags">
-				<li><span class="field">link:</span> <a href="http://www.faqs.org/rfcs/rfc2396.html">http://www.faqs.org/rfcs/rfc2396.html</a></li>
-				<li><span class="field">throws:</span> Zend_Uri_Exception When username validation fails</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">boolean</span>
-		<span class="method-name">
-			validateUsername
-		</span>
-					([<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$username</span><span class="var-description">: The HTTP username</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="method_parseUri" id="_parseUri"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">_parseUri</span> (line <span class="line-number">198</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Parse the scheme-specific portion of the URI and place its parts into instance variables.</p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Uri_Exception When authority decomposition fails</li>
-				<li><span class="field">throws:</span> Zend_Uri_Exception When scheme-specific decoposition fails</li>
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			_parseUri
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$schemeSpecific</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$schemeSpecific</span><span class="var-description">: The scheme-specific portion to parse</span>			</li>
-				</ul>
-		
-			
-	</div>
-							<h4>Inherited Methods</h4>
-				<a name='inherited_methods'><!-- --></a>	
-									<!-- =========== Summary =========== -->
-					<p>Inherited From <span class="classname"><a href="../Zend_Uri/Zend_Uri.html">Zend_Uri</a></span></p>
-					<blockquote>
-													<span class="method-name"><a href="../Zend_Uri/Zend_Uri.html#method__construct">Zend_Uri::__construct()</a></span><br>
-													<span class="method-name"><a href="../Zend_Uri/Zend_Uri.html#methodcheck">Zend_Uri::check()</a></span><br>
-													<span class="method-name"><a href="../Zend_Uri/Zend_Uri.html#methodfactory">Zend_Uri::factory()</a></span><br>
-													<span class="method-name"><a href="../Zend_Uri/Zend_Uri.html#methodgetScheme">Zend_Uri::getScheme()</a></span><br>
-													<span class="method-name"><a href="../Zend_Uri/Zend_Uri.html#methodgetUri">Zend_Uri::getUri()</a></span><br>
-													<span class="method-name"><a href="../Zend_Uri/Zend_Uri.html#methodsetConfig">Zend_Uri::setConfig()</a></span><br>
-													<span class="method-name"><a href="../Zend_Uri/Zend_Uri.html#methodvalid">Zend_Uri::valid()</a></span><br>
-													<span class="method-name"><a href="../Zend_Uri/Zend_Uri.html#method__toString">Zend_Uri::__toString()</a></span><br>
-											</blockquote>
-										
-		</div>
-	</div>
-
-	<a name="sec-consts"></a>
-	<div class="info-box">
-		<div class="info-box-title">Class Constants</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
-						
-			
-												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-														| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<a name="constCHAR_ALNUM" id="CHAR_ALNUM"><!-- --></A>
-<div class="evenrow">
-
-	<div class="const-header">
-		<img src="../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">CHAR_ALNUM</span>
-			 = <span class="const-default"> 'A-Za-z0-9'</span>
-			(line <span class="line-number">46</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Character classes for validation regular expressions</p>
-	
-	
-</div>
-<a name="constCHAR_MARK" id="CHAR_MARK"><!-- --></A>
-<div class="oddrow">
-
-	<div class="const-header">
-		<img src="../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">CHAR_MARK</span>
-			 = <span class="const-default"> '-_.!~*\'()\[\]'</span>
-			(line <span class="line-number">47</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	
-	
-</div>
-<a name="constCHAR_RESERVED" id="CHAR_RESERVED"><!-- --></A>
-<div class="evenrow">
-
-	<div class="const-header">
-		<img src="../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">CHAR_RESERVED</span>
-			 = <span class="const-default"> ';\/?:@&amp;=+$,'</span>
-			(line <span class="line-number">48</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	
-	
-</div>
-<a name="constCHAR_SEGMENT" id="CHAR_SEGMENT"><!-- --></A>
-<div class="oddrow">
-
-	<div class="const-header">
-		<img src="../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">CHAR_SEGMENT</span>
-			 = <span class="const-default"> ':@&amp;=+$,;'</span>
-			(line <span class="line-number">49</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	
-	
-</div>
-<a name="constCHAR_UNWISE" id="CHAR_UNWISE"><!-- --></A>
-<div class="evenrow">
-
-	<div class="const-header">
-		<img src="../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">CHAR_UNWISE</span>
-			 = <span class="const-default"> '{}|\\\\^`'</span>
-			(line <span class="line-number">50</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	
-	
-</div>
-						
-		</div>
-	</div>
-
-	<p class="notes" id="credit">
-		Documentation generated on Tue, 24 May 2011 16:30:20 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
-	</p>
-	</div></body>
+</body>
 </html>

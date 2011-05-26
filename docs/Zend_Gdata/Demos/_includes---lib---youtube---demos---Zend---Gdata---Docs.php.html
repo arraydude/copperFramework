@@ -1,670 +1,587 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<!-- template designed by Marco Von Ballmoos -->
-			<title>Docs for page Docs.php</title>
-			<link rel="stylesheet" href="../../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
-		<body>
-			<div class="page-body">			
-<h2 class="file-name">/includes/lib/youtube/demos/Zend/Gdata/Docs.php</h2>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs for page Docs.php</title>
+  <link rel="stylesheet" href="../../media/stylesheet.css" />
+  <script src="../../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../../media/images/plus.gif";
+	imgMinus.src = "../../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><h2>File: /includes/lib/youtube/demos/Zend/Gdata/Docs.php</h2>
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ) );
+</script>
 
-<a name="sec-description"></a>
-<div class="info-box">
-	<div class="info-box-title">Description</div>
-	<div class="nav-bar">
-					<span class="disabled">Description</span> |
-									<a href="#sec-includes">Includes</a>
-			|											<a href="#sec-functions">Functions</a>
-			</div>
-	<div class="info-box-body">	
-		<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Zend Framework</p>
-<p class="description"><p>LICENSE</p><p>This source file is subject to the new BSD license that is bundled  with this package in the file LICENSE.txt.  It is also available through the world-wide-web at this URL:  http://framework.zend.com/license/new-bsd  If you did not receive a copy of the license and are unable to  obtain it through the world-wide-web, please send an email  to license@zend.com so we can send you a copy immediately.</p></p>
-	<ul class="tags">
-				<li><span class="field">copyright:</span> Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
-				<li><span class="field">license:</span> <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
-			</ul>
-		
-			</div>
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Zend Framework</h5>
+<div class="desc"><p>LICENSE</p><p>This source file is subject to the new BSD license that is bundled  with this package in the file LICENSE.txt.  It is also available through the world-wide-web at this URL:  http://framework.zend.com/license/new-bsd  If you did not receive a copy of the license and are unable to  obtain it through the world-wide-web, please send an email  to license@zend.com so we can send you a copy immediately.</p></div>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<!-- =========== Used Classes =========== -->
+<A NAME='classes_summary'><!-- --></A>
+<h3>Classes defined in this file</h3>
+
+<TABLE CELLPADDING='3' CELLSPACING='0' WIDTH='100%' CLASS="border">
+	<THEAD>
+		<TR><TD STYLE="width:20%"><h4>CLASS NAME</h4></TD><TD STYLE="width: 80%"><h4>DESCRIPTION</h4></TD></TR>
+	</THEAD>
+	<TBODY>
+			</TBODY>
+</TABLE>
 </div>
-		
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+<!-- ============ Includes DETAIL =========== -->
 
-	<a name="sec-includes"></a>	
-	<div class="info-box">
-		<div class="info-box-title">Includes</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Includes</span>
-			|													<a href="#sec-functions">Functions</a>
-					</div>
-		<div class="info-box-body">	
-			<a name="_Zend/Loader_php"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="include-title">
-			<span class="include-type">require_once</span>
-			(<span class="include-name">'Zend/Loader.php'</span>)
-			(line <span class="line-number">50</span>)
-		</span>
-	</div>
+<h2 class="tab">Include/Require Statements</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
 
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">see:</span> <a href="../../Zend_Loader/Zend_Loader.html">Zend_Loader</a></li>
-			</ul>
-	
+
+<a name="_Zend/Loader_php"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/file.png" border="0" /> <strong class="Property">'Zend/Loader.php'</strong> (line <span class="linenumber">50</span>)
+ </h4> 
+<h4>require_once : 'Zend/Loader.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>see:</strong> - <a href="../../Zend_Loader/Zend_Loader.html">Zend_Loader</a></li>
+	</ul>
 </div>
-		</div>
-	</div>
-	
-	
-	
-	<a name="sec-functions"></a>	
-	<div class="info-box">
-		<div class="info-box-title">Functions</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-										<a href="#sec-includes">Includes</a>
-				|												<span class="disabled">Functions</span>
-		</div>
-		<div class="info-box-body">	
-			<a name="functiondisplayAuthenticationFailedNotice" id="functiondisplayAuthenticationFailedNotice"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">displayAuthenticationFailedNotice</span> (line <span class="line-number">575</span>)
-	</div> 
+</div>
+<div class="tab-page" id="tabPage2">
+<!-- ============ GLOBAL DETAIL =========== -->
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Displays a notice indicating that authentication to Google Apps failed.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			displayAuthenticationFailedNotice
-		</span>
-				()
-			</div>
+<h2 class="tab">Global Variables</h2>
 
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script>
+
+</div>
+<div class="tab-page" id="tabPage3">
+<!-- ============ CONSTANT DETAIL =========== -->
+
+<A NAME='constant_detail'></A>
+<h2 class="tab">Constants</h2>
+
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage3" ) );</script>
+
+</div>
+<div class="tab-page" id="tabPage4">
+<!-- ============ FUNCTION DETAIL =========== -->
+
+<h2 class="tab">Functions</h2>
+
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage4" ) );</script>
+
+<a name="functiondisplayAuthenticationFailedNotice" id="functiondisplayAuthenticationFailedNotice"><!-- --></a>
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">displayAuthenticationFailedNotice</strong> (line <span class="linenumber">575</span>)
+ </h4> 
+<h4><i>void</i> <strong>displayAuthenticationFailedNotice(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Displays a notice indicating that authentication to Google Apps failed.</h5>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functiondisplayHelp" id="functiondisplayHelp"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">displayHelp</span> (line <span class="line-number">95</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">displayHelp</strong> (line <span class="linenumber">95</span>)
+ </h4> 
+<h4><i>void</i> <strong>displayHelp(
+string $executable)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Display list of valid commands.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			displayHelp
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$executable</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$executable</span><span class="var-description">: The name of the current script. This is usually available as $argv[0].</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Display list of valid commands.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $executable</strong>: The name of the current script. This is usually available as $argv[0].</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functiondisplayListMenu" id="functiondisplayListMenu"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">displayListMenu</span> (line <span class="line-number">844</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">displayListMenu</strong> (line <span class="linenumber">844</span>)
+ </h4> 
+<h4><i>void</i> <strong>displayListMenu(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Display the menu for running in a web browser.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			displayListMenu
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Display the menu for running in a web browser.</h5>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functiondisplayMenu" id="functiondisplayMenu"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">displayMenu</span> (line <span class="line-number">685</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">displayMenu</strong> (line <span class="linenumber">685</span>)
+ </h4> 
+<h4><i>void</i> <strong>displayMenu(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Display the main menu for running in a web browser.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			displayMenu
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Display the main menu for running in a web browser.</h5>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functiondisplayPasswordNotSetNotice" id="functiondisplayPasswordNotSetNotice"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">displayPasswordNotSetNotice</span> (line <span class="line-number">555</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">displayPasswordNotSetNotice</strong> (line <span class="linenumber">555</span>)
+ </h4> 
+<h4><i>void</i> <strong>displayPasswordNotSetNotice(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Displays a notice indicating that a login password needs to be  set before continuing.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			displayPasswordNotSetNotice
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Displays a notice indicating that a login password needs to be  set before continuing.</h5>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functiondisplayQueryMenu" id="functiondisplayQueryMenu"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">displayQueryMenu</span> (line <span class="line-number">883</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">displayQueryMenu</strong> (line <span class="linenumber">883</span>)
+ </h4> 
+<h4><i>void</i> <strong>displayQueryMenu(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Display the menu for running in a web browser.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			displayQueryMenu
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Display the menu for running in a web browser.</h5>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functiondisplayUploadMenu" id="functiondisplayUploadMenu"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">displayUploadMenu</span> (line <span class="line-number">906</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">displayUploadMenu</strong> (line <span class="linenumber">906</span>)
+ </h4> 
+<h4><i>void</i> <strong>displayUploadMenu(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Display the menu for running in a web browser.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			displayUploadMenu
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Display the menu for running in a web browser.</h5>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionendHTML" id="functionendHTML"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">endHTML</span> (line <span class="line-number">535</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">endHTML</strong> (line <span class="linenumber">535</span>)
+ </h4> 
+<h4><i>void</i> <strong>endHTML(
+[boolean $displayBackButton = false])</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Writes the HTML epilogue for this app and exit.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			endHTML
-		</span>
-					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$displayBackButton</span> = <span class="var-default">false</span>])
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$displayBackButton</span><span class="var-description">: (optional) If true, displays a link to go back at the bottom                                     of the page. Defaults to false.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Writes the HTML epilogue for this app and exit.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>boolean $displayBackButton</strong>: (optional) If true, displays a link to go back at the bottom                                     of the page. Defaults to false.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionfullTextSearch" id="functionfullTextSearch"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">fullTextSearch</span> (line <span class="line-number">312</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">fullTextSearch</strong> (line <span class="linenumber">312</span>)
+ </h4> 
+<h4><i>void</i> <strong>fullTextSearch(
+<a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a> $client, boolean $html, string $query)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Obtain a list of all of a user's docs.google.com documents  which match the specified search criteria and print the titles to the  command line.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			fullTextSearch
-		</span>
-					(<span class="var-type"><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$html</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a></span>
-				<span class="var-name">$client</span><span class="var-description">: The service object to use for communicating with the Google                                  Documents server.</span>			</li>
-					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$html</span><span class="var-description">: True if output should be formatted for display in a web browser.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$query</span><span class="var-description">: The search query to use</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Obtain a list of all of a user's docs.google.com documents  which match the specified search criteria and print the titles to the  command line.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a> $client</strong>: The service object to use for communicating with the Google                                  Documents server.</li>
+			<li><strong>boolean $html</strong>: True if output should be formatted for display in a web browser.</li>
+			<li><strong>string $query</strong>: The search query to use</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functiongetAuthSubHttpClient" id="functiongetAuthSubHttpClient"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">getAuthSubHttpClient</span> (line <span class="line-number">632</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">getAuthSubHttpClient</strong> (line <span class="linenumber">632</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></i> <strong>getAuthSubHttpClient(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns a HTTP client object with the appropriate headers for communicating  with Google using AuthSub authentication.</p>
-<p class="description"><p>Uses the $_SESSION['sessionToken'] to store the AuthSub session token after  it is obtained.  The single use token supplied in the URL when redirected  after the user succesfully authenticated to Google is retrieved from the  $_GET['token'] variable.</p></p>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
-		<span class="method-name">
-			getAuthSubHttpClient
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns a HTTP client object with the appropriate headers for communicating  with Google using AuthSub authentication.</h5>
+<div class="desc"><p>Uses the $_SESSION['sessionToken'] to store the AuthSub session token after  it is obtained.  The single use token supplied in the URL when redirected  after the user succesfully authenticated to Google is retrieved from the  $_GET['token'] variable.</p></div>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functiongetAuthSubUrl" id="functiongetAuthSubUrl"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">getAuthSubUrl</span> (line <span class="line-number">611</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">getAuthSubUrl</strong> (line <span class="linenumber">611</span>)
+ </h4> 
+<h4><i>string</i> <strong>getAuthSubUrl(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the AuthSub URL which the user must visit to authenticate requests  from this application.</p>
-<p class="description"><p>Uses getCurrentUrl() to get the next URL which the user will be redirected  to after successfully authenticating with the Google service.</p></p>
-	<ul class="tags">
-				<li><span class="field">return:</span> AuthSub URL</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getAuthSubUrl
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns the AuthSub URL which the user must visit to authenticate requests  from this application.</h5>
+<div class="desc"><p>Uses getCurrentUrl() to get the next URL which the user will be redirected  to after successfully authenticating with the Google service.</p></div>
 		
-	
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - AuthSub URL</li>
+		</ul>
 </div>
 <a name="functiongetClientLoginHttpClient" id="functiongetClientLoginHttpClient"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">getClientLoginHttpClient</span> (line <span class="line-number">80</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">getClientLoginHttpClient</strong> (line <span class="linenumber">80</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></i> <strong>getClientLoginHttpClient(
+string $user, string $pass)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns a HTTP client object with the appropriate headers for communicating  with Google using the ClientLogin credentials supplied.</p>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
-		<span class="method-name">
-			getClientLoginHttpClient
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$pass</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$user</span><span class="var-description">: The username, in e-mail address format, to authenticate</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$pass</span><span class="var-description">: The password for the user specified</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns a HTTP client object with the appropriate headers for communicating  with Google using the ClientLogin credentials supplied.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $user</strong>: The username, in e-mail address format, to authenticate</li>
+			<li><strong>string $pass</strong>: The password for the user specified</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functiongetCurrentUrl" id="functiongetCurrentUrl"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">getCurrentUrl</span> (line <span class="line-number">654</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">getCurrentUrl</strong> (line <span class="linenumber">654</span>)
+ </h4> 
+<h4><i>string</i> <strong>getCurrentUrl(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the full URL of the current page, based upon env variables</p>
-<p class="description"><p>Env variables used:  $_SERVER['HTTPS'] = (on|off|)  $_SERVER['HTTP_HOST'] = value of the Host: header  $_SERVER['SERVER_PORT'] = port number (only used if not http/80,https/443)  $_SERVER['REQUEST_URI'] = the URI after the method of the HTTP request</p></p>
-	<ul class="tags">
-				<li><span class="field">return:</span> Current URL</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getCurrentUrl
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns the full URL of the current page, based upon env variables</h5>
+<div class="desc"><p>Env variables used:  $_SERVER['HTTPS'] = (on|off|)  $_SERVER['HTTP_HOST'] = value of the Host: header  $_SERVER['SERVER_PORT'] = port number (only used if not http/80,https/443)  $_SERVER['REQUEST_URI'] = the URI after the method of the HTTP request</p></div>
 		
-	
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Current URL</li>
+		</ul>
 </div>
 <a name="functionlogout" id="functionlogout"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">logout</span> (line <span class="line-number">709</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">logout</strong> (line <span class="linenumber">709</span>)
+ </h4> 
+<h4><i>void</i> <strong>logout(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Log the current user out of the application.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			logout
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Log the current user out of the application.</h5>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionprintDocumentsFeed" id="functionprintDocumentsFeed"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">printDocumentsFeed</span> (line <span class="line-number">217</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">printDocumentsFeed</strong> (line <span class="linenumber">217</span>)
+ </h4> 
+<h4><i>void</i> <strong>printDocumentsFeed(
+<a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs_DocumentListFeed.html">Zend_Gdata_Docs_DocumentListFeed</a> $feed, boolean $html)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Displays the titles for the Google Documents entries in the feed. In HTML  mode, the titles are links which point to the HTML version of the document.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			printDocumentsFeed
-		</span>
-					(<span class="var-type"><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs_DocumentListFeed.html">Zend_Gdata_Docs_DocumentListFeed</a></span>&nbsp;<span class="var-name">$feed</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$html</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs_DocumentListFeed.html">Zend_Gdata_Docs_DocumentListFeed</a></span>
-				<span class="var-name">$feed</span>			</li>
-					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$html</span><span class="var-description">: True if output should be formatted for display in                                           a web browser</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Displays the titles for the Google Documents entries in the feed. In HTML  mode, the titles are links which point to the HTML version of the document.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs_DocumentListFeed.html">Zend_Gdata_Docs_DocumentListFeed</a> $feed</strong>: </li>
+			<li><strong>boolean $html</strong>: True if output should be formatted for display in                                           a web browser</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionrequestUserLogin" id="functionrequestUserLogin"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">requestUserLogin</span> (line <span class="line-number">596</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">requestUserLogin</strong> (line <span class="linenumber">596</span>)
+ </h4> 
+<h4><i>void</i> <strong>requestUserLogin(
+string $linkText)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Outputs a request to the user to login to their Google account, including  a link to the AuthSub URL.</p>
-<p class="description"><p>Uses getAuthSubUrl() to get the URL which the user must visit to authenticate</p></p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			requestUserLogin
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$linkText</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$linkText</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Outputs a request to the user to login to their Google account, including  a link to the AuthSub URL.</h5>
+<div class="desc"><p>Uses getAuthSubUrl() to get the URL which the user must visit to authenticate</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $linkText</strong>: </li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionretrieveAllDocuments" id="functionretrieveAllDocuments"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">retrieveAllDocuments</span> (line <span class="line-number">254</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">retrieveAllDocuments</strong> (line <span class="linenumber">254</span>)
+ </h4> 
+<h4><i>void</i> <strong>retrieveAllDocuments(
+<a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a> $client, boolean $html)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Obtain a list of all of a user's docs.google.com documents and print the  titles to the command line.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			retrieveAllDocuments
-		</span>
-					(<span class="var-type"><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$html</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a></span>
-				<span class="var-name">$client</span><span class="var-description">: The service object to use for communicating with the Google                                  Documents server.</span>			</li>
-					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$html</span><span class="var-description">: True if output should be formatted for display in a web browser.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Obtain a list of all of a user's docs.google.com documents and print the  titles to the command line.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a> $client</strong>: The service object to use for communicating with the Google                                  Documents server.</li>
+			<li><strong>boolean $html</strong>: True if output should be formatted for display in a web browser.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionretrieveSpreadsheets" id="functionretrieveSpreadsheets"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">retrieveSpreadsheets</span> (line <span class="line-number">291</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">retrieveSpreadsheets</strong> (line <span class="linenumber">291</span>)
+ </h4> 
+<h4><i>void</i> <strong>retrieveSpreadsheets(
+<a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a> $client, boolean $html)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Obtain a list of all of a user's docs.google.com spreadsheets  documents and print the titles to the command line.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			retrieveSpreadsheets
-		</span>
-					(<span class="var-type"><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$html</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a></span>
-				<span class="var-name">$client</span><span class="var-description">: The service object to use for communicating with the Google                                  Documents server.</span>			</li>
-					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$html</span><span class="var-description">: True if output should be formatted for display in a web browser.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Obtain a list of all of a user's docs.google.com spreadsheets  documents and print the titles to the command line.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a> $client</strong>: The service object to use for communicating with the Google                                  Documents server.</li>
+			<li><strong>boolean $html</strong>: True if output should be formatted for display in a web browser.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionretrieveWPDocs" id="functionretrieveWPDocs"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">retrieveWPDocs</span> (line <span class="line-number">272</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">retrieveWPDocs</strong> (line <span class="linenumber">272</span>)
+ </h4> 
+<h4><i>void</i> <strong>retrieveWPDocs(
+<a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a> $client, boolean $html)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Obtain a list of all of a user's docs.google.com word processing  documents and print the titles to the command line.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			retrieveWPDocs
-		</span>
-					(<span class="var-type"><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$html</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a></span>
-				<span class="var-name">$client</span><span class="var-description">: The service object to use for communicating with the Google                                  Documents server.</span>			</li>
-					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$html</span><span class="var-description">: True if output should be formatted for display in a web browser.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Obtain a list of all of a user's docs.google.com word processing  documents and print the titles to the command line.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a> $client</strong>: The service object to use for communicating with the Google                                  Documents server.</li>
+			<li><strong>boolean $html</strong>: True if output should be formatted for display in a web browser.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionrunCLIVersion" id="functionrunCLIVersion"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">runCLIVersion</span> (line <span class="line-number">118</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">runCLIVersion</strong> (line <span class="linenumber">118</span>)
+ </h4> 
+<h4><i>void</i> <strong>runCLIVersion(
+array $argv, integer $argc)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Parse command line arguments and execute appropriate function when  running from the command line.</p>
-<p class="description"><p>If no arguments are provided, usage information will be provided.</p></p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			runCLIVersion
-		</span>
-					(<span class="var-type">array</span>&nbsp;<span class="var-name">$argv</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$argc</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">array</span>
-				<span class="var-name">$argv</span><span class="var-description">: The array of command line arguments provided by PHP.                        $argv[0] should be the current executable name or '-' if not available.</span>			</li>
-					<li>
-				<span class="var-type">integer</span>
-				<span class="var-name">$argc</span><span class="var-description">: The size of $argv.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Parse command line arguments and execute appropriate function when  running from the command line.</h5>
+<div class="desc"><p>If no arguments are provided, usage information will be provided.</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>array $argv</strong>: The array of command line arguments provided by PHP.                        $argv[0] should be the current executable name or '-' if not available.</li>
+			<li><strong>integer $argc</strong>: The size of $argv.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionrunWWWVersion" id="functionrunWWWVersion"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">runWWWVersion</span> (line <span class="line-number">729</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">runWWWVersion</strong> (line <span class="linenumber">729</span>)
+ </h4> 
+<h4><i>void</i> <strong>runWWWVersion(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Processes loading of this sample code through a web browser.</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			runWWWVersion
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Processes loading of this sample code through a web browser.</h5>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionstartHTML" id="functionstartHTML"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<span class="method-title">startHTML</span> (line <span class="line-number">386</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">startHTML</strong> (line <span class="linenumber">386</span>)
+ </h4> 
+<h4><i>void</i> <strong>startHTML(
+[boolean $displayMenu = true])</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Writes the HTML prologue for this app.</p>
-<p class="description"><p>NOTE: We would normally keep the HTML/CSS markup separate from the business        logic above, but have decided to include it here for simplicity of        having a single-file sample.</p></p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			startHTML
-		</span>
-					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$displayMenu</span> = <span class="var-default">true</span>])
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$displayMenu</span><span class="var-description">: (optional) If set to true, a navigation menu is displayed at the top                               of the page. Default is true.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Writes the HTML prologue for this app.</h5>
+<div class="desc"><p>NOTE: We would normally keep the HTML/CSS markup separate from the business        logic above, but have decided to include it here for simplicity of        having a single-file sample.</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>boolean $displayMenu</strong>: (optional) If set to true, a navigation menu is displayed at the top                               of the page. Default is true.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionuploadDocument" id="functionuploadDocument"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<span class="method-title">uploadDocument</span> (line <span class="line-number">342</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">uploadDocument</strong> (line <span class="linenumber">342</span>)
+ </h4> 
+<h4><i>void</i> <strong>uploadDocument(
+<a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a> $docs, boolean $html, string $originalFileName, string $temporaryFileLocation)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Upload the specified document</p>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			uploadDocument
-		</span>
-					(<span class="var-type"><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a></span>&nbsp;<span class="var-name">$docs</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$html</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$originalFileName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$temporaryFileLocation</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a></span>
-				<span class="var-name">$docs</span><span class="var-description">: The service object to use for communicating with                                                 the Google Documents server.</span>			</li>
-					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$html</span><span class="var-description">: True if output should be formatted for display in                                                 a web browser.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$originalFileName</span><span class="var-description">: The name of the file to be uploaded. The mime type                                                 of the file is determined from the extension on                                                 this file name. For example, test.csv is uploaded                                                 as a comma seperated volume and converted into a                                                 spreadsheet.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$temporaryFileLocation</span><span class="var-description">: (optional) The file in which the data for the                                                 document is stored. This is used when the file has                                                 been uploaded from the client's machine to the                                                 server and is stored in a temporary file which                                                 does not have an extension. If this parameter is                                                 null, the file is read from the originalFileName.</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Upload the specified document</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a> $docs</strong>: The service object to use for communicating with                                                 the Google Documents server.</li>
+			<li><strong>boolean $html</strong>: True if output should be formatted for display in                                                 a web browser.</li>
+			<li><strong>string $originalFileName</strong>: The name of the file to be uploaded. The mime type                                                 of the file is determined from the extension on                                                 this file name. For example, test.csv is uploaded                                                 as a comma seperated volume and converted into a                                                 spreadsheet.</li>
+			<li><strong>string $temporaryFileLocation</strong>: (optional) The file in which the data for the                                                 document is stored. This is used when the file has                                                 been uploaded from the client's machine to the                                                 server and is stored in a temporary file which                                                 does not have an extension. If this parameter is                                                 null, the file is read from the originalFileName.</li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
-		</div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 16:18:03 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</div>
-	
-	<p class="notes" id="credit">
-		Documentation generated on Tue, 24 May 2011 16:30:01 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
-	</p>
-	</div></body>
+</body>
 </html>

@@ -1,774 +1,720 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<!-- template designed by Marco Von Ballmoos -->
-			<title>Docs For Class Zend_Gdata_Health</title>
-			<link rel="stylesheet" href="../../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
-		<body>
-			<div class="page-body">			
-<h2 class="class-name">Class Zend_Gdata_Health</h2>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Gdata_Health</title>
+  <link rel="stylesheet" href="../../media/stylesheet.css" />
+  <script src="../../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../../media/images/plus.gif";
+	imgMinus.src = "../../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Gdata_Health
+</h2> (line <span class="linenumber">60</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
 
-<a name="sec-description"></a>
-<div class="info-box">
-	<div class="info-box-title">Description</div>
-	<div class="nav-bar">
-					<span class="disabled">Description</span> |
-													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-						
-											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-						
-			</div>
-	<div class="info-box-body">
-        		<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Service class for interacting with the Google Health Data API</p>
-	<ul class="tags">
-				<li><span class="field">copyright:</span> Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
-				<li><span class="field">link:</span> <a href="http://code.google.com/apis/health">http://code.google.com/apis/health</a></li>
-				<li><span class="field">license:</span> <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
-			</ul>
-		<p class="notes">
-			Located in <a class="field" href="_includes---lib---youtube---library---Zend---Gdata---Health.php.html">/includes/lib/youtube/library/Zend/Gdata/Health.php</a> (line <span class="field">60</span>)
-		</p>
-		
-				
-		<pre><a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a>
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+<a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a>
    |
    --<a href="../../Zend_Gdata/Gdata/Zend_Gdata.html">Zend_Gdata</a>
       |
       --Zend_Gdata_Health</pre>
-	
-			</div>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Gdata---Health.php.html">/includes/lib/youtube/library/Zend/Gdata/Health.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Service class for interacting with the Google Health Data API</h5>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>link:</strong> - <a href="http://code.google.com/apis/health">http://code.google.com/apis/health</a></li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
 </div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    static <span class="var-type">mixed</span>
+    <a href="#var$namespaces" title="details" class="property"><strong>$namespaces</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_profileID" title="details" class="property"><strong>$_profileID</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">bool</span>
+    <a href="#var$_useH9Sandbox" title="details" class="property"><strong>$_useH9Sandbox</strong></a>
+</div>
+<hr />
+<a name="var$namespaces" id="var$namespaces"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">static $namespaces = array('ccr' =&gt; 'urn:astm-org:CCR',<br />              'batch' =&gt; 'http://schemas.google.com/gdata/batch',<br />              'h9m' =&gt; 'http://schemas.google.com/health/metadata',<br />              'gAcl' =&gt; 'http://schemas.google.com/acl/2007',<br />              'gd' =&gt; 'http://schemas.google.com/g/2005')</strong> (line <span class="linenumber">102</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<p><strong>Overrides:</strong> Array<br></p><!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$_profileID" id="var$_profileID"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_profileID =  null</strong> (line <span class="linenumber">92</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Profile ID used for all API interactions.  This can only be set when  using ClientLogin for authentication.</h5>
+<ul>
+		<li><strong>access:</strong> - private</li>
+	</ul>
+</div>
+<a name="var$_useH9Sandbox" id="var$_useH9Sandbox"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_useH9Sandbox =  false</strong> (line <span class="linenumber">100</span>)
+ </h4>
+<h4>Data type : bool</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>True if API calls should be made to the H9 developer sandbox at /h9  rather than /health</h5>
+<ul>
+		<li><strong>access:</strong> - private</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="const-title">
+    <a href="#constAUTHSUB_PROFILE_FEED_URI" title="details" class="property"><strong>AUTHSUB_PROFILE_FEED_URI</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constAUTHSUB_REGISTER_FEED_URI" title="details" class="property"><strong>AUTHSUB_REGISTER_FEED_URI</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constCLIENTLOGIN_PROFILELIST_FEED_URI" title="details" class="property"><strong>CLIENTLOGIN_PROFILELIST_FEED_URI</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constCLIENTLOGIN_PROFILE_FEED_URI" title="details" class="property"><strong>CLIENTLOGIN_PROFILE_FEED_URI</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constCLIENTLOGIN_REGISTER_FEED_URI" title="details" class="property"><strong>CLIENTLOGIN_REGISTER_FEED_URI</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constH9_SANDBOX_SERVICE_NAME" title="details" class="property"><strong>H9_SANDBOX_SERVICE_NAME</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constHEALTH_SERVICE_NAME" title="details" class="property"><strong>HEALTH_SERVICE_NAME</strong></a>
+</div>
+<hr />
+<a name="constAUTHSUB_PROFILE_FEED_URI" id="constAUTHSUB_PROFILE_FEED_URI"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">AUTHSUB_PROFILE_FEED_URI = <br />        'https://www.google.com/health/feeds/profile/default'</strong> (line <span class="linenumber">65</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>URIs of the AuthSub/OAuth feeds.</h5>
+<ul>
+	</ul>
+</div>
+<a name="constAUTHSUB_REGISTER_FEED_URI" id="constAUTHSUB_REGISTER_FEED_URI"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">AUTHSUB_REGISTER_FEED_URI = <br />        'https://www.google.com/health/feeds/register/default'</strong> (line <span class="linenumber">67</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="constCLIENTLOGIN_PROFILELIST_FEED_URI" id="constCLIENTLOGIN_PROFILELIST_FEED_URI"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">CLIENTLOGIN_PROFILELIST_FEED_URI = <br />        'https://www.google.com/health/feeds/profile/list'</strong> (line <span class="linenumber">73</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>URIs of the ClientLogin feeds.</h5>
+<ul>
+	</ul>
+</div>
+<a name="constCLIENTLOGIN_PROFILE_FEED_URI" id="constCLIENTLOGIN_PROFILE_FEED_URI"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">CLIENTLOGIN_PROFILE_FEED_URI = <br />        'https://www.google.com/health/feeds/profile/ui'</strong> (line <span class="linenumber">75</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="constCLIENTLOGIN_REGISTER_FEED_URI" id="constCLIENTLOGIN_REGISTER_FEED_URI"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">CLIENTLOGIN_REGISTER_FEED_URI = <br />        'https://www.google.com/health/feeds/register/ui'</strong> (line <span class="linenumber">77</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="constH9_SANDBOX_SERVICE_NAME" id="constH9_SANDBOX_SERVICE_NAME"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">H9_SANDBOX_SERVICE_NAME =  'weaver'</strong> (line <span class="linenumber">84</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="constHEALTH_SERVICE_NAME" id="constHEALTH_SERVICE_NAME"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">HEALTH_SERVICE_NAME =  'health'</strong> (line <span class="linenumber">83</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Authentication service names for Google Health and the H9 Sandbox.</h5>
+<ul>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+            <span class="method-result">Zend_Gdata_Health</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        ([<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$applicationId</span> = <span class="var-default">'MyCompany-MyApp-1.0'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$useH9Sandbox</span> = <span class="var-default">false</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_ProfileEntry.html">Zend_Gdata_Health_ProfileEntry</a></span>
+        <a href="#methodgetHealthProfileEntry" title="details" class="method-name">getHealthProfileEntry</a>
+        ([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_ProfileFeed.html">Zend_Gdata_Health_ProfileFeed</a></span>
+        <a href="#methodgetHealthProfileFeed" title="details" class="method-name">getHealthProfileFeed</a>
+        ([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html">Zend_Gdata_Feed</a></span>
+        <a href="#methodgetHealthProfileListFeed" title="details" class="method-name">getHealthProfileListFeed</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetProfileID" title="details" class="method-name">getProfileID</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_ProfileEntry.html">Zend_Gdata_Health_ProfileEntry</a></span>
+        <a href="#methodsendHealthNotice" title="details" class="method-name">sendHealthNotice</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$bodyType</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ccrXML</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Health/Zend_Gdata_Health.html">Zend_Gdata_Health</a></span>
+        <a href="#methodsetProfileID" title="details" class="method-name">setProfileID</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
 
 
-	<a name="sec-const-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Class Constant Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
-												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-				 
-				|
-										| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<div class="const-summary">
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#AUTHSUB_PROFILE_FEED_URI" title="details" class="const-name">AUTHSUB_PROFILE_FEED_URI</a> = 					<span class="var-type">
-        'https://www.google.com/health/feeds/profile/default'</span>
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">119</span>)
+ </h4> 
+<h4><i>Zend_Gdata_Health</i> <strong>__construct(
+[<a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a>
+$client = null], [string
+$applicationId = 'MyCompany-MyApp-1.0'], [bool
+$useH9Sandbox = false])</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#AUTHSUB_REGISTER_FEED_URI" title="details" class="const-name">AUTHSUB_REGISTER_FEED_URI</a> = 					<span class="var-type">
-        'https://www.google.com/health/feeds/register/default'</span>
+<p><strong>Overrides :</strong> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#method__construct">Zend_Gdata::__construct()</a> Create Gdata object</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Create Zend_Gdata_Health object</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a> $client</strong>: (optional) The HTTP client to use when      when communicating with the Google Health servers.</li>
+			<li><strong>string $applicationId</strong>: The identity of the application in the form      of Company-AppName-Version</li>
+			<li><strong>bool $useH9Sandbox</strong>: True if the H9 Developer's Sandbox should be      used instead of production Google Health.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetHealthProfileEntry" id="methodgetHealthProfileEntry"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getHealthProfileEntry</strong> (line <span class="linenumber">221</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_ProfileEntry.html">Zend_Gdata_Health_ProfileEntry</a></i> <strong>getHealthProfileEntry(
+[mixed
+$query = null])</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#CLIENTLOGIN_PROFILELIST_FEED_URI" title="details" class="const-name">CLIENTLOGIN_PROFILELIST_FEED_URI</a> = 					<span class="var-type">
-        'https://www.google.com/health/feeds/profile/list'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retrieve a profile entry object</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $query</strong>: The query for the feed, as a URL or Query</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetHealthProfileFeed" id="methodgetHealthProfileFeed"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getHealthProfileFeed</strong> (line <span class="linenumber">187</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_ProfileFeed.html">Zend_Gdata_Health_ProfileFeed</a></i> <strong>getHealthProfileFeed(
+[mixed
+$query = null])</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#CLIENTLOGIN_PROFILE_FEED_URI" title="details" class="const-name">CLIENTLOGIN_PROFILE_FEED_URI</a> = 					<span class="var-type">
-        'https://www.google.com/health/feeds/profile/ui'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retrieve a user's profile as a feed object.  If ClientLogin is used, the  profile associated with $this-&gt;_profileID is returned, otherwise  the profile associated with the AuthSub token is read.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $query</strong>: The query for the feed, as a URL or Query</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetHealthProfileListFeed" id="methodgetHealthProfileListFeed"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getHealthProfileListFeed</strong> (line <span class="linenumber">155</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html">Zend_Gdata_Feed</a></i> <strong>getHealthProfileListFeed(
+[string
+$query = null])</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#CLIENTLOGIN_REGISTER_FEED_URI" title="details" class="const-name">CLIENTLOGIN_REGISTER_FEED_URI</a> = 					<span class="var-type">
-        'https://www.google.com/health/feeds/register/ui'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retrieves the list of profiles associated with the user's ClientLogin  credentials.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $query</strong>: The query of the feed as a URL or Query object</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetProfileID" id="methodgetProfileID"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getProfileID</strong> (line <span class="linenumber">132</span>)
+ </h4> 
+<h4><i>string</i> <strong>getProfileID(
+)</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#H9_SANDBOX_SERVICE_NAME" title="details" class="const-name">H9_SANDBOX_SERVICE_NAME</a> = 					<span class="var-type"> 'weaver'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Gets the id of the user's profile</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The profile id</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsendHealthNotice" id="methodsendHealthNotice"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method sendHealthNotice</strong> (line <span class="linenumber">246</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_ProfileEntry.html">Zend_Gdata_Health_ProfileEntry</a></i> <strong>sendHealthNotice(
+string
+$subject, string
+$body, [string
+$bodyType = null], [string
+$ccrXML = null])</strong></h4>
 
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#HEALTH_SERVICE_NAME" title="details" class="const-name">HEALTH_SERVICE_NAME</a> = 					<span class="var-type"> 'health'</span>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Posts a new notice using the register feed.  This function constructs  the atom profile entry.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $subject</strong>: The subject line of the notice</li>
+			<li><strong>string $body</strong>: The message body of the notice</li>
+			<li><strong>string $bodyType</strong>: The (optional) type of message body      (text, xhtml, html, etc.)</li>
+			<li><strong>string $ccrXML</strong>: The (optional) CCR to add to the user's profile</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetProfileID" id="methodsetProfileID"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setProfileID</strong> (line <span class="linenumber">143</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Health/Zend_Gdata_Health.html">Zend_Gdata_Health</a></i> <strong>setProfileID(
+string
+$id)</strong></h4>
 
-				</div>
-							</div>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets which of the user's profiles will be used</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $id</strong>: The profile ID</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html">Zend_Gdata</a></h4>
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_defaultPostUri">Zend_Gdata::$_defaultPostUri</a></strong> - Default URI to which to POST.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_httpClient">Zend_Gdata::$_httpClient</a></strong> - Client object used to communicate
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_registeredPackages">Zend_Gdata::$_registeredPackages</a></strong> - Packages to search for classes when using magic __call method, in order.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_staticHttpClient">Zend_Gdata::$_staticHttpClient</a></strong> - Client object used to communicate in static context
+	</h4> 
+			<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a></h4>
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_gzipEnabled">Zend_Gdata_App::$_gzipEnabled</a></strong> - Enable gzipped responses?
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_httpMethodOverride">Zend_Gdata_App::$_httpMethodOverride</a></strong> - Override HTTP PUT and DELETE request methods?
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_majorProtocolVersion">Zend_Gdata_App::$_majorProtocolVersion</a></strong> - Indicates the major protocol version that should be used.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_maxRedirects">Zend_Gdata_App::$_maxRedirects</a></strong> - Maximum number of redirects to follow during HTTP operations
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_minorProtocolVersion">Zend_Gdata_App::$_minorProtocolVersion</a></strong> - Indicates the minor protocol version that should be used. Can be set  to either an integer &gt;= 0, or NULL if no minor version should be sent  to the server.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_useObjectMapping">Zend_Gdata_App::$_useObjectMapping</a></strong> - Whether we want to use XML to object mapping when fetching data.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_verboseExceptionMessages">Zend_Gdata_App::$_verboseExceptionMessages</a></strong> - Use verbose exception messages.  In the case of HTTP errors,  use the body of the HTTP response in the exception message.
+	</h4> 
 		</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html">Zend_Gdata</a></h4>
+				<h4>
+<img src="../../media/images/Constructor.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#method__construct">Zend_Gdata::__construct()</a></strong> - Create Gdata object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodgetEntry">Zend_Gdata::getEntry()</a></strong> - Retrieve entry as string or object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodgetFeed">Zend_Gdata::getFeed()</a></strong> - Retrieve feed as string or object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodimport">Zend_Gdata::import()</a></strong> - Imports a feed located at $uri.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodisAuthenticated">Zend_Gdata::isAuthenticated()</a></strong> - Determines whether service object is authenticated.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodperformHttpRequest">Zend_Gdata::performHttpRequest()</a></strong> - Performs a HTTP request using the specified method.
+		</h4> 
+
+				<br />
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a></h4>
+				<h4>
+<img src="../../media/images/Constructor.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#method__construct">Zend_Gdata_App::__construct()</a></strong> - Create Gdata object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methoddelete">Zend_Gdata_App::delete()</a></strong> - DELETE entry with client object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodenableRequestDebugLogging">Zend_Gdata_App::enableRequestDebugLogging()</a></strong> - This method enables logging of requests by changing the  Zend_Http_Client_Adapter used for performing the requests.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgenerateIfMatchHeaderData">Zend_Gdata_App::generateIfMatchHeaderData()</a></strong> - Returns the data for an If-Match header based on the current Etag  property. If Etags are not supported by the server or cannot be  extracted from the data, then null will be returned.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodget">Zend_Gdata_App::get()</a></strong> - GET a URI using client object.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetEntry">Zend_Gdata_App::getEntry()</a></strong> - Retrieve entry as string or object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetFeed">Zend_Gdata_App::getFeed()</a></strong> - Retrieve feed as string or object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetGzipEnabled">Zend_Gdata_App::getGzipEnabled()</a></strong> - Get the HTTP override state
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetHttpClient">Zend_Gdata_App::getHttpClient()</a></strong> - Get the Zend_Http_Client object used for communication
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetHttpMethodOverride">Zend_Gdata_App::getHttpMethodOverride()</a></strong> - Get the HTTP override state
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMajorProtocolVersion">Zend_Gdata_App::getMajorProtocolVersion()</a></strong> - Get the major protocol version that is in use.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMaxRedirects">Zend_Gdata_App::getMaxRedirects()</a></strong> - Get the maximum number of redirects to follow during HTTP operations
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMinorProtocolVersion">Zend_Gdata_App::getMinorProtocolVersion()</a></strong> - Get the minor protocol version that is in use.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetNextFeed">Zend_Gdata_App::getNextFeed()</a></strong> - Retrieve next set of results based on a given feed.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetPreviousFeed">Zend_Gdata_App::getPreviousFeed()</a></strong> - Retrieve previous set of results based on a given feed.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetStaticHttpClient">Zend_Gdata_App::getStaticHttpClient()</a></strong> - Gets the HTTP client object. If none is set, a new Zend_Http_Client will be used.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetVerboseExceptionMessages">Zend_Gdata_App::getVerboseExceptionMessages()</a></strong> - Get whether to use verbose exception messages
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimport">Zend_Gdata_App::import()</a></strong> - Imports a feed located at $uri.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportFile">Zend_Gdata_App::importFile()</a></strong> - Imports a feed from a file located at $filename.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportString">Zend_Gdata_App::importString()</a></strong> - Imports a feed represented by $string.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportUrl">Zend_Gdata_App::importUrl()</a></strong> - Imports the specified URL (non-statically).
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodinsertEntry">Zend_Gdata_App::insertEntry()</a></strong> - Inserts an entry to a given URI and returns the response as a  fully formed Entry.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodperformHttpRequest">Zend_Gdata_App::performHttpRequest()</a></strong> - Performs a HTTP request using the specified method
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodpost">Zend_Gdata_App::post()</a></strong> - POST data with client object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodprepareRequest">Zend_Gdata_App::prepareRequest()</a></strong> - Provides pre-processing for HTTP requests to APP services.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodput">Zend_Gdata_App::put()</a></strong> - PUT data with client object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodregisterPackage">Zend_Gdata_App::registerPackage()</a></strong> - Adds a Zend Framework package to the $_registeredPackages array.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodretrieveAllEntriesForFeed">Zend_Gdata_App::retrieveAllEntriesForFeed()</a></strong> - Retrieve all entries for a feed, iterating through pages as necessary.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetGzipEnabled">Zend_Gdata_App::setGzipEnabled()</a></strong> - Toggle requesting gzip encoded responses
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetHttpClient">Zend_Gdata_App::setHttpClient()</a></strong> - Set the Zend_Http_Client object used for communication
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetHttpMethodOverride">Zend_Gdata_App::setHttpMethodOverride()</a></strong> - Toggle using POST instead of PUT and DELETE HTTP methods
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMajorProtocolVersion">Zend_Gdata_App::setMajorProtocolVersion()</a></strong> - Set the major protocol version that should be used. Values &lt; 1 will  cause a Zend_Gdata_App_InvalidArgumentException to be thrown.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMaxRedirects">Zend_Gdata_App::setMaxRedirects()</a></strong> - Set the maximum number of redirects to follow during HTTP operations
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMinorProtocolVersion">Zend_Gdata_App::setMinorProtocolVersion()</a></strong> - Set the minor protocol version that should be used. If set to NULL, no  minor protocol version will be sent to the server. Values &lt; 0 will  cause a Zend_Gdata_App_InvalidArgumentException to be thrown.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetStaticHttpClient">Zend_Gdata_App::setStaticHttpClient()</a></strong> - Set the static HTTP client instance
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetVerboseExceptionMessages">Zend_Gdata_App::setVerboseExceptionMessages()</a></strong> - Set whether to use verbose exception messages
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodupdateEntry">Zend_Gdata_App::updateEntry()</a></strong> - Update an entry
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methoduseObjectMapping">Zend_Gdata_App::useObjectMapping()</a></strong> - Enable/disable the use of XML to object mapping.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodusingObjectMapping">Zend_Gdata_App::usingObjectMapping()</a></strong> - Determine whether service object is using XML to object mapping.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#method__call">Zend_Gdata_App::__call()</a></strong> - Provides a magic factory method to instantiate new objects with
+		</h4> 
+
+				<br />
 	</div>
-
-	<a name="sec-var-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variable Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
-							| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<div class="var-summary">
-												<div class="var-title">
-					static <span class="var-type">mixed</span>
-					<a href="#$namespaces" title="details" class="var-name">$namespaces</a>
-				</div>
-																																												<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$_profileID" title="details" class="var-name">$_profileID</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">bool</span>
-					<a href="#$_useH9Sandbox" title="details" class="var-name">$_useH9Sandbox</a>
-				</div>
-											</div>
-		</div>
-	</div>
-
-	<a name="sec-method-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Method Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-				 
-				|
-						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
-		</div>
-		<div class="info-box-body">			
-			<div class="method-summary">
-																																																												
-												<div class="method-definition">
-											<span class="method-result">Zend_Gdata_Health</span>
-										<a href="#__construct" title="details" class="method-name">__construct</a>
-											([<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$applicationId</span> = <span class="var-default">'MyCompany-MyApp-1.0'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$useH9Sandbox</span> = <span class="var-default">false</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_ProfileEntry.html">Zend_Gdata_Health_ProfileEntry</a></span>
-										<a href="#getHealthProfileEntry" title="details" class="method-name">getHealthProfileEntry</a>
-											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_ProfileFeed.html">Zend_Gdata_Health_ProfileFeed</a></span>
-										<a href="#getHealthProfileFeed" title="details" class="method-name">getHealthProfileFeed</a>
-											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html">Zend_Gdata_Feed</a></span>
-										<a href="#getHealthProfileListFeed" title="details" class="method-name">getHealthProfileListFeed</a>
-											([<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getProfileID" title="details" class="method-name">getProfileID</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_ProfileEntry.html">Zend_Gdata_Health_ProfileEntry</a></span>
-										<a href="#sendHealthNotice" title="details" class="method-name">sendHealthNotice</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$bodyType</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ccrXML</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Health/Zend_Gdata_Health.html">Zend_Gdata_Health</a></span>
-										<a href="#setProfileID" title="details" class="method-name">setProfileID</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>)
-									</div>
-								</div>
-		</div>
-	</div>		
-
-	<a name="sec-vars"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variables</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
-						
-			
-												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-										| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<a name="var$namespaces" id="$namespaces"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			static <span class="var-type">mixed</span>
-			<span class="var-name">$namespaces</span>
-			 = <span class="var-default">array('ccr' =&gt; 'urn:astm-org:CCR',<br />              'batch' =&gt; 'http://schemas.google.com/gdata/batch',<br />              'h9m' =&gt; 'http://schemas.google.com/health/metadata',<br />              'gAcl' =&gt; 'http://schemas.google.com/acl/2007',<br />              'gd' =&gt; 'http://schemas.google.com/g/2005')</span>			(line <span class="line-number">102</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-			<hr class="separator" />
-		<div class="notes">Redefinition of:</div>
-		<dl>
-			<dt><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$namespaces">Zend_Gdata::$namespaces</a></dt>
-						<dd>Namespaces used for Gdata data</dd>
-					</dl>
-		
-		
-
 </div>
-<a name="var$_profileID" id="$_profileID"><!-- --></A>
-<div class="evenrow">
+<script type="text/javascript">
+//<![CDATA[
 
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$_profileID</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number">92</span>)
-		</span>
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 16:18:21 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Profile ID used for all API interactions.  This can only be set when  using ClientLogin for authentication.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> private</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$_useH9Sandbox" id="$_useH9Sandbox"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">bool</span>
-			<span class="var-name">$_useH9Sandbox</span>
-			 = <span class="var-default"> false</span>			(line <span class="line-number">100</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">True if API calls should be made to the H9 developer sandbox at /h9  rather than /health</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> private</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-							<h4>Inherited Variables</h4>
-				<A NAME='inherited_vars'><!-- --></A>
-									<p>Inherited from <span class="classname"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html">Zend_Gdata</a></span></p>
-					<blockquote>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_defaultPostUri">Zend_Gdata::$_defaultPostUri</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_httpClient">Zend_Gdata::$_httpClient</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_registeredPackages">Zend_Gdata::$_registeredPackages</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#var$_staticHttpClient">Zend_Gdata::$_staticHttpClient</a></span><br>
-							</span>
-											</blockquote> 
-									<p>Inherited from <span class="classname"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a></span></p>
-					<blockquote>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_gzipEnabled">Zend_Gdata_App::$_gzipEnabled</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_httpMethodOverride">Zend_Gdata_App::$_httpMethodOverride</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_majorProtocolVersion">Zend_Gdata_App::$_majorProtocolVersion</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_maxRedirects">Zend_Gdata_App::$_maxRedirects</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_minorProtocolVersion">Zend_Gdata_App::$_minorProtocolVersion</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_useObjectMapping">Zend_Gdata_App::$_useObjectMapping</a></span><br>
-							</span>
-													<span class="var-title">
-								<span class="var-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_verboseExceptionMessages">Zend_Gdata_App::$_verboseExceptionMessages</a></span><br>
-							</span>
-											</blockquote> 
-										
-		</div>
-	</div>
-	
-	<a name="sec-methods"></a>
-	<div class="info-box">
-		<div class="info-box-title">Methods</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
-						
-		</div>
-		<div class="info-box-body">
-			<A NAME='method_detail'></A>
-
-<a name="method__construct" id="__construct"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">119</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Create Zend_Gdata_Health object</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">Zend_Gdata_Health</span>
-		<span class="method-name">
-			__construct
-		</span>
-					([<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$applicationId</span> = <span class="var-default">'MyCompany-MyApp-1.0'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$useH9Sandbox</span> = <span class="var-default">false</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
-				<span class="var-name">$client</span><span class="var-description">: (optional) The HTTP client to use when      when communicating with the Google Health servers.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$applicationId</span><span class="var-description">: The identity of the application in the form      of Company-AppName-Version</span>			</li>
-					<li>
-				<span class="var-type">bool</span>
-				<span class="var-name">$useH9Sandbox</span><span class="var-description">: True if the H9 Developer's Sandbox should be      used instead of production Google Health.</span>			</li>
-				</ul>
-		
-			<hr class="separator" />
-		<div class="notes">Redefinition of:</div>
-		<dl>
-			<dt><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#method__construct">Zend_Gdata::__construct()</a></dt>
-						<dd>Create Gdata object</dd>
-					</dl>
-			
-	</div>
-<a name="methodgetHealthProfileEntry" id="getHealthProfileEntry"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getHealthProfileEntry</span> (line <span class="line-number">221</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Retrieve a profile entry object</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_ProfileEntry.html">Zend_Gdata_Health_ProfileEntry</a></span>
-		<span class="method-name">
-			getHealthProfileEntry
-		</span>
-					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$query</span><span class="var-description">: The query for the feed, as a URL or Query</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetHealthProfileFeed" id="getHealthProfileFeed"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getHealthProfileFeed</span> (line <span class="line-number">187</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Retrieve a user's profile as a feed object.  If ClientLogin is used, the  profile associated with $this-&gt;_profileID is returned, otherwise  the profile associated with the AuthSub token is read.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_ProfileFeed.html">Zend_Gdata_Health_ProfileFeed</a></span>
-		<span class="method-name">
-			getHealthProfileFeed
-		</span>
-					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$query</span><span class="var-description">: The query for the feed, as a URL or Query</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetHealthProfileListFeed" id="getHealthProfileListFeed"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getHealthProfileListFeed</span> (line <span class="line-number">155</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Retrieves the list of profiles associated with the user's ClientLogin  credentials.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html">Zend_Gdata_Feed</a></span>
-		<span class="method-name">
-			getHealthProfileListFeed
-		</span>
-					([<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$query</span><span class="var-description">: The query of the feed as a URL or Query object</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetProfileID" id="getProfileID"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getProfileID</span> (line <span class="line-number">132</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Gets the id of the user's profile</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> The profile id</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getProfileID
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodsendHealthNotice" id="sendHealthNotice"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">sendHealthNotice</span> (line <span class="line-number">246</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Posts a new notice using the register feed.  This function constructs  the atom profile entry.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_ProfileEntry.html">Zend_Gdata_Health_ProfileEntry</a></span>
-		<span class="method-name">
-			sendHealthNotice
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$bodyType</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ccrXML</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$subject</span><span class="var-description">: The subject line of the notice</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$body</span><span class="var-description">: The message body of the notice</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$bodyType</span><span class="var-description">: The (optional) type of message body      (text, xhtml, html, etc.)</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$ccrXML</span><span class="var-description">: The (optional) CCR to add to the user's profile</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetProfileID" id="setProfileID"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">setProfileID</span> (line <span class="line-number">143</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Sets which of the user's profiles will be used</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> Provides a fluent interface</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Health/Zend_Gdata_Health.html">Zend_Gdata_Health</a></span>
-		<span class="method-name">
-			setProfileID
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$id</span><span class="var-description">: The profile ID</span>			</li>
-				</ul>
-		
-			
-	</div>
-							<h4>Inherited Methods</h4>
-				<a name='inherited_methods'><!-- --></a>	
-									<!-- =========== Summary =========== -->
-					<p>Inherited From <span class="classname"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html">Zend_Gdata</a></span></p>
-					<blockquote>
-													<span class="method-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#method__construct">Zend_Gdata::__construct()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodgetEntry">Zend_Gdata::getEntry()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodgetFeed">Zend_Gdata::getFeed()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodimport">Zend_Gdata::import()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodisAuthenticated">Zend_Gdata::isAuthenticated()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#methodperformHttpRequest">Zend_Gdata::performHttpRequest()</a></span><br>
-											</blockquote>
-									<!-- =========== Summary =========== -->
-					<p>Inherited From <span class="classname"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a></span></p>
-					<blockquote>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#method__construct">Zend_Gdata_App::__construct()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methoddelete">Zend_Gdata_App::delete()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodenableRequestDebugLogging">Zend_Gdata_App::enableRequestDebugLogging()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgenerateIfMatchHeaderData">Zend_Gdata_App::generateIfMatchHeaderData()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodget">Zend_Gdata_App::get()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetEntry">Zend_Gdata_App::getEntry()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetFeed">Zend_Gdata_App::getFeed()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetGzipEnabled">Zend_Gdata_App::getGzipEnabled()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetHttpClient">Zend_Gdata_App::getHttpClient()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetHttpMethodOverride">Zend_Gdata_App::getHttpMethodOverride()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMajorProtocolVersion">Zend_Gdata_App::getMajorProtocolVersion()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMaxRedirects">Zend_Gdata_App::getMaxRedirects()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMinorProtocolVersion">Zend_Gdata_App::getMinorProtocolVersion()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetNextFeed">Zend_Gdata_App::getNextFeed()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetPreviousFeed">Zend_Gdata_App::getPreviousFeed()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetStaticHttpClient">Zend_Gdata_App::getStaticHttpClient()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetVerboseExceptionMessages">Zend_Gdata_App::getVerboseExceptionMessages()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimport">Zend_Gdata_App::import()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportFile">Zend_Gdata_App::importFile()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportString">Zend_Gdata_App::importString()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportUrl">Zend_Gdata_App::importUrl()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodinsertEntry">Zend_Gdata_App::insertEntry()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodperformHttpRequest">Zend_Gdata_App::performHttpRequest()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodpost">Zend_Gdata_App::post()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodprepareRequest">Zend_Gdata_App::prepareRequest()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodput">Zend_Gdata_App::put()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodregisterPackage">Zend_Gdata_App::registerPackage()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodretrieveAllEntriesForFeed">Zend_Gdata_App::retrieveAllEntriesForFeed()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetGzipEnabled">Zend_Gdata_App::setGzipEnabled()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetHttpClient">Zend_Gdata_App::setHttpClient()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetHttpMethodOverride">Zend_Gdata_App::setHttpMethodOverride()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMajorProtocolVersion">Zend_Gdata_App::setMajorProtocolVersion()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMaxRedirects">Zend_Gdata_App::setMaxRedirects()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMinorProtocolVersion">Zend_Gdata_App::setMinorProtocolVersion()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetStaticHttpClient">Zend_Gdata_App::setStaticHttpClient()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetVerboseExceptionMessages">Zend_Gdata_App::setVerboseExceptionMessages()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodupdateEntry">Zend_Gdata_App::updateEntry()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methoduseObjectMapping">Zend_Gdata_App::useObjectMapping()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodusingObjectMapping">Zend_Gdata_App::usingObjectMapping()</a></span><br>
-													<span class="method-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#method__call">Zend_Gdata_App::__call()</a></span><br>
-											</blockquote>
-										
-		</div>
-	</div>
-
-	<a name="sec-consts"></a>
-	<div class="info-box">
-		<div class="info-box-title">Class Constants</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
-						
-			
-												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-														| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<a name="constAUTHSUB_PROFILE_FEED_URI" id="AUTHSUB_PROFILE_FEED_URI"><!-- --></A>
-<div class="oddrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">AUTHSUB_PROFILE_FEED_URI</span>
-			 = <span class="const-default"><br />        'https://www.google.com/health/feeds/profile/default'</span>
-			(line <span class="line-number">65</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">URIs of the AuthSub/OAuth feeds.</p>
-	
-	
-</div>
-<a name="constAUTHSUB_REGISTER_FEED_URI" id="AUTHSUB_REGISTER_FEED_URI"><!-- --></A>
-<div class="evenrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">AUTHSUB_REGISTER_FEED_URI</span>
-			 = <span class="const-default"><br />        'https://www.google.com/health/feeds/register/default'</span>
-			(line <span class="line-number">67</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	
-	
-</div>
-<a name="constCLIENTLOGIN_PROFILELIST_FEED_URI" id="CLIENTLOGIN_PROFILELIST_FEED_URI"><!-- --></A>
-<div class="oddrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">CLIENTLOGIN_PROFILELIST_FEED_URI</span>
-			 = <span class="const-default"><br />        'https://www.google.com/health/feeds/profile/list'</span>
-			(line <span class="line-number">73</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">URIs of the ClientLogin feeds.</p>
-	
-	
-</div>
-<a name="constCLIENTLOGIN_PROFILE_FEED_URI" id="CLIENTLOGIN_PROFILE_FEED_URI"><!-- --></A>
-<div class="evenrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">CLIENTLOGIN_PROFILE_FEED_URI</span>
-			 = <span class="const-default"><br />        'https://www.google.com/health/feeds/profile/ui'</span>
-			(line <span class="line-number">75</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	
-	
-</div>
-<a name="constCLIENTLOGIN_REGISTER_FEED_URI" id="CLIENTLOGIN_REGISTER_FEED_URI"><!-- --></A>
-<div class="oddrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">CLIENTLOGIN_REGISTER_FEED_URI</span>
-			 = <span class="const-default"><br />        'https://www.google.com/health/feeds/register/ui'</span>
-			(line <span class="line-number">77</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	
-	
-</div>
-<a name="constH9_SANDBOX_SERVICE_NAME" id="H9_SANDBOX_SERVICE_NAME"><!-- --></A>
-<div class="evenrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">H9_SANDBOX_SERVICE_NAME</span>
-			 = <span class="const-default"> 'weaver'</span>
-			(line <span class="line-number">84</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	
-	
-</div>
-<a name="constHEALTH_SERVICE_NAME" id="HEALTH_SERVICE_NAME"><!-- --></A>
-<div class="oddrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">HEALTH_SERVICE_NAME</span>
-			 = <span class="const-default"> 'health'</span>
-			(line <span class="line-number">83</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Authentication service names for Google Health and the H9 Sandbox.</p>
-	
-	
-</div>
-							<h4>Inherited Constants</h4>
-				<A NAME='inherited_vars'><!-- --></A>
-									<p>Inherited from <span class="classname"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html">Zend_Gdata</a></span></p>
-					<blockquote>
-													<img src="../../media/images/Variable.png" />
-							<span class="const-title">
-								<span class="const-name"><a href="../../Zend_Gdata/Gdata/Zend_Gdata.html#constAUTH_SERVICE_NAME">Zend_Gdata::AUTH_SERVICE_NAME</a></span><br>
-							</span>
-											</blockquote> 
-									<p>Inherited from <span class="classname"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a></span></p>
-					<blockquote>
-													<img src="../../media/images/Variable.png" />
-							<span class="const-title">
-								<span class="const-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#constDEFAULT_MAJOR_PROTOCOL_VERSION">Zend_Gdata_App::DEFAULT_MAJOR_PROTOCOL_VERSION</a></span><br>
-							</span>
-													<img src="../../media/images/Variable.png" />
-							<span class="const-title">
-								<span class="const-name"><a href="../../Zend_Gdata/App/Zend_Gdata_App.html#constDEFAULT_MINOR_PROTOCOL_VERSION">Zend_Gdata_App::DEFAULT_MINOR_PROTOCOL_VERSION</a></span><br>
-							</span>
-											</blockquote> 
-										
-		</div>
-	</div>
-
-	<p class="notes" id="credit">
-		Documentation generated on Tue, 24 May 2011 16:30:19 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
-	</p>
-	</div></body>
+</body>
 </html>

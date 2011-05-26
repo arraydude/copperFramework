@@ -1,154 +1,227 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<!-- template designed by Marco Von Ballmoos -->
-			<title>Docs For Class Zend_Gdata_App_Util</title>
-			<link rel="stylesheet" href="../../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
-		<body>
-			<div class="page-body">			
-<h2 class="class-name">Class Zend_Gdata_App_Util</h2>
-
-<a name="sec-description"></a>
-<div class="info-box">
-	<div class="info-box-title">Description</div>
-	<div class="nav-bar">
-					<span class="disabled">Description</span> |
-															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-						
-					</div>
-	<div class="info-box-body">
-        		<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Utility class for static functions needed by Zend_Gdata_App</p>
-	<ul class="tags">
-				<li><span class="field">copyright:</span> Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
-				<li><span class="field">license:</span> <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
-			</ul>
-		<p class="notes">
-			Located in <a class="field" href="_includes---lib---youtube---library---Zend---Gdata---App---Util.php.html">/includes/lib/youtube/library/Zend/Gdata/App/Util.php</a> (line <span class="field">33</span>)
-		</p>
-		
-				
-		<pre></pre>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Gdata_App_Util</title>
+  <link rel="stylesheet" href="../../media/stylesheet.css" />
+  <script src="../../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../../media/images/plus.gif";
+	imgMinus.src = "../../media/images/minus.gif";
 	
-			</div>
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Gdata_App_Util
+</h2> (line <span class="linenumber">33</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Gdata---App---Util.php.html">/includes/lib/youtube/library/Zend/Gdata/App/Util.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Utility class for static functions needed by Zend_Gdata_App</h5>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
 </div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+    static         <span class="method-result">mixed</span>
+        <a href="#methodfindGreatestBoundedValue" title="details" class="method-name">findGreatestBoundedValue</a>
+        (<span class="var-type">integer|null</span>&nbsp;<span class="var-name">$maximumKey</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$collection</span>)
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">void</span>
+        <a href="#methodformatTimestamp" title="details" class="method-name">formatTimestamp</a>
+        (<span class="var-type">int</span>&nbsp;<span class="var-name">$timestamp</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
 
 
+<a name="methodfindGreatestBoundedValue" id="methodfindGreatestBoundedValue"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method findGreatestBoundedValue</strong> (line <span class="linenumber">73</span>)
+ </h4> 
+<h4><i>mixed</i> <strong>findGreatestBoundedValue(
+integer|null
+$maximumKey, array
+$collection)</strong></h4>
 
-
-	<a name="sec-method-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Method Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
-		</div>
-		<div class="info-box-body">			
-			<div class="method-summary">
-												<div class="method-definition">
-					static 						<span class="method-result">mixed</span>
-										<a href="#findGreatestBoundedValue" title="details" class="method-name">findGreatestBoundedValue</a>
-											(<span class="var-type">integer|null</span>&nbsp;<span class="var-name">$maximumKey</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$collection</span>)
-									</div>
-																<div class="method-definition">
-					static 						<span class="method-result">void</span>
-										<a href="#formatTimestamp" title="details" class="method-name">formatTimestamp</a>
-											(<span class="var-type">int</span>&nbsp;<span class="var-name">$timestamp</span>)
-									</div>
-								
-																				</div>
-		</div>
-	</div>		
-
-	
-	<a name="sec-methods"></a>
-	<div class="info-box">
-		<div class="info-box-title">Methods</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
-						
-		</div>
-		<div class="info-box-body">
-			<A NAME='method_detail'></A>
-<a name="methodfindGreatestBoundedValue" id="findGreatestBoundedValue"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">static method findGreatestBoundedValue</span> (line <span class="line-number">73</span>)
-	</div> 
-	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Find the greatest key that is less than or equal to a given upper  bound, and return the value associated with that key.</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> The value corresponding to the located key.</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_Exception Thrown if $collection is empty.</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-	    static
-		<span class="method-result">mixed</span>
-		<span class="method-name">
-			findGreatestBoundedValue
-		</span>
-					(<span class="var-type">integer|null</span>&nbsp;<span class="var-name">$maximumKey</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$collection</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">integer|null</span>
-				<span class="var-name">$maximumKey</span><span class="var-description">: The upper bound for keys. If null, the         maxiumum valued key will be found.</span>			</li>
-					<li>
-				<span class="var-type">array</span>
-				<span class="var-name">$collection</span><span class="var-description">: An two-dimensional array of key/value pairs         to search through.</span>			</li>
-				</ul>
+<h5>Find the greatest key that is less than or equal to a given upper  bound, and return the value associated with that key.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>integer|null $maximumKey</strong>: The upper bound for keys. If null, the         maxiumum valued key will be found.</li>
+			<li><strong>array $collection</strong>: An two-dimensional array of key/value pairs         to search through.</li>
+		</ul>
 		
-			
-	</div>
-<a name="methodformatTimestamp" id="formatTimestamp"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">static method formatTimestamp</span> (line <span class="line-number">43</span>)
-	</div> 
-	
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The value corresponding to the located key.</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception Thrown if $collection is empty.</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodformatTimestamp" id="methodformatTimestamp"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method formatTimestamp</strong> (line <span class="linenumber">43</span>)
+ </h4> 
+<h4><i>void</i> <strong>formatTimestamp(
+int
+$timestamp)</strong></h4>
+
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Convert timestamp into RFC 3339 date string.</p>
-<p class="description"><p>2005-04-19T15:30:00</p></p>
-	<ul class="tags">
-				<li><span class="field">throws:</span> Zend_Gdata_App_InvalidArgumentException</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-	    static
-		<span class="method-result">void</span>
-		<span class="method-name">
-			formatTimestamp
-		</span>
-					(<span class="var-type">int</span>&nbsp;<span class="var-name">$timestamp</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">int</span>
-				<span class="var-name">$timestamp</span>			</li>
-				</ul>
+<h5>Convert timestamp into RFC 3339 date string.</h5>
+<div class="desc"><p>2005-04-19T15:30:00</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>int $timestamp</strong>: </li>
+		</ul>
 		
-			
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Gdata_App_InvalidArgumentException</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
 	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
 
-						
-		</div>
 	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
 
+setupAllTabs();
 
-	<p class="notes" id="credit">
-		Documentation generated on Tue, 24 May 2011 16:30:59 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
-	</p>
-	</div></body>
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 16:19:01 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
 </html>

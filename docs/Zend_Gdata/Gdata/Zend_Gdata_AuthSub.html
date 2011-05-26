@@ -1,412 +1,372 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<!-- template designed by Marco Von Ballmoos -->
-			<title>Docs For Class Zend_Gdata_AuthSub</title>
-			<link rel="stylesheet" href="../../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
-		<body>
-			<div class="page-body">			
-<h2 class="class-name">Class Zend_Gdata_AuthSub</h2>
-
-<a name="sec-description"></a>
-<div class="info-box">
-	<div class="info-box-title">Description</div>
-	<div class="nav-bar">
-					<span class="disabled">Description</span> |
-															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-						
-											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-						
-			</div>
-	<div class="info-box-body">
-        		<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Wrapper around Zend_Http_Client to facilitate Google's &quot;Account Authentication  Proxy for Web-Based Applications&quot;.</p>
-	<ul class="tags">
-				<li><span class="field">copyright:</span> Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
-				<li><span class="field">see:</span> <a href="http://code.google.com/apis/accounts/AuthForWebApps.html">http://code.google.com/apis/accounts/AuthForWebApps.html</a></li>
-				<li><span class="field">license:</span> <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
-			</ul>
-		<p class="notes">
-			Located in <a class="field" href="_includes---lib---youtube---library---Zend---Gdata---AuthSub.php.html">/includes/lib/youtube/library/Zend/Gdata/AuthSub.php</a> (line <span class="field">46</span>)
-		</p>
-		
-				
-		<pre></pre>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Gdata_AuthSub</title>
+  <link rel="stylesheet" href="../../media/stylesheet.css" />
+  <script src="../../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../../media/images/plus.gif";
+	imgMinus.src = "../../media/images/minus.gif";
 	
-			</div>
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Gdata_AuthSub
+</h2> (line <span class="linenumber">46</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Gdata---AuthSub.php.html">/includes/lib/youtube/library/Zend/Gdata/AuthSub.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Wrapper around Zend_Http_Client to facilitate Google's &quot;Account Authentication  Proxy for Web-Based Applications&quot;.</h5>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>see:</strong> - <a href="http://code.google.com/apis/accounts/AuthForWebApps.html">http://code.google.com/apis/accounts/AuthForWebApps.html</a></li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
 </div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
 
-
-	<a name="sec-const-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Class Constant Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
-										| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<div class="const-summary">
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#AUTHSUB_REQUEST_URI" title="details" class="const-name">AUTHSUB_REQUEST_URI</a> = 					<span class="var-type"> 'https://www.google.com/accounts/AuthSubRequest'</span>
-
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#AUTHSUB_REVOKE_TOKEN_URI" title="details" class="const-name">AUTHSUB_REVOKE_TOKEN_URI</a> = 					<span class="var-type"> 'https://www.google.com/accounts/AuthSubRevokeToken'</span>
-
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#AUTHSUB_SESSION_TOKEN_URI" title="details" class="const-name">AUTHSUB_SESSION_TOKEN_URI</a> = 					<span class="var-type"> 'https://www.google.com/accounts/AuthSubSessionToken'</span>
-
-				</div>
-								<div class="const-title">
-					<img src="../../media/images/Constant.png" alt=" " />
-					<a href="#AUTHSUB_TOKEN_INFO_URI" title="details" class="const-name">AUTHSUB_TOKEN_INFO_URI</a> = 					<span class="var-type"> 'https://www.google.com/accounts/AuthSubTokenInfo'</span>
-
-				</div>
-							</div>
-		</div>
-	</div>
-
-
-	<a name="sec-method-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Method Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-									<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
-		</div>
-		<div class="info-box-body">			
-			<div class="method-summary">
-												<div class="method-definition">
-					static 						<span class="method-result">boolean</span>
-										<a href="#AuthSubRevokeToken" title="details" class="method-name">AuthSubRevokeToken</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>, [<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$request_uri</span> = <span class="var-default">self::AUTHSUB_REVOKE_TOKEN_URI</span>])
-									</div>
-																<div class="method-definition">
-					static 						<span class="method-result">string</span>
-										<a href="#getAuthSubSessionToken" title="details" class="method-name">getAuthSubSessionToken</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>, [<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$request_uri</span> = <span class="var-default">self::AUTHSUB_SESSION_TOKEN_URI</span>])
-									</div>
-																<div class="method-definition">
-					static 						<span class="method-result">void</span>
-										<a href="#getAuthSubTokenInfo" title="details" class="method-name">getAuthSubTokenInfo</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>, [<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$request_uri</span> = <span class="var-default">self::AUTHSUB_TOKEN_INFO_URI</span>])
-									</div>
-																<div class="method-definition">
-					static 						<span class="method-result">void</span>
-										<a href="#getAuthSubTokenUri" title="details" class="method-name">getAuthSubTokenUri</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$next</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$scope</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$secure</span> = <span class="var-default">0</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$session</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$request_uri</span> = <span class="var-default">self::AUTHSUB_REQUEST_URI</span>])
-									</div>
-																<div class="method-definition">
-					static 						<span class="method-result">void</span>
-										<a href="#getHttpClient" title="details" class="method-name">getHttpClient</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>, [<span class="var-type"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_HttpClient.html">Zend_Gdata_HttpClient</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>])
-									</div>
-								
-																																												</div>
-		</div>
-	</div>		
-
-	
-	<a name="sec-methods"></a>
-	<div class="info-box">
-		<div class="info-box-title">Methods</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-																		<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
-							
-										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
-						
-		</div>
-		<div class="info-box-body">
-			<A NAME='method_detail'></A>
-<a name="methodAuthSubRevokeToken" id="AuthSubRevokeToken"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">static method AuthSubRevokeToken</span> (line <span class="line-number">152</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Revoke a token</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> Whether the revokation was successful</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-	    static
-		<span class="method-result">boolean</span>
-		<span class="method-name">
-			AuthSubRevokeToken
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>, [<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$request_uri</span> = <span class="var-default">self::AUTHSUB_REVOKE_TOKEN_URI</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$token</span><span class="var-description">: The token to revoke</span>			</li>
-					<li>
-				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
-				<span class="var-name">$client</span><span class="var-description">: (optional) HTTP client to use to make the request</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$request_uri</span><span class="var-description">: (optional) URI to which to direct the revokation request</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetAuthSubSessionToken" id="getAuthSubSessionToken"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">static method getAuthSubSessionToken</span> (line <span class="line-number">102</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Upgrades a single use token to a session token</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> The upgraded token value</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_AuthException</li>
-				<li><span class="field">throws:</span> Zend_Gdata_App_HttpException</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-	    static
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getAuthSubSessionToken
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>, [<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$request_uri</span> = <span class="var-default">self::AUTHSUB_SESSION_TOKEN_URI</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$token</span><span class="var-description">: The single use token which is to be upgraded</span>			</li>
-					<li>
-				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
-				<span class="var-name">$client</span><span class="var-description">: (optional) HTTP client to use to                                  make the request</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$request_uri</span><span class="var-description">: (optional) URI to which to direct                             the session token upgrade</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetAuthSubTokenInfo" id="getAuthSubTokenInfo"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">static method getAuthSubTokenInfo</span> (line <span class="line-number">194</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">get token information</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-	    static
-		<span class="method-result">void</span>
-		<span class="method-name">
-			getAuthSubTokenInfo
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>, [<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$request_uri</span> = <span class="var-default">self::AUTHSUB_TOKEN_INFO_URI</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$token</span><span class="var-description">: The token to retrieve information about</span>			</li>
-					<li>
-				<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>
-				<span class="var-name">$client</span><span class="var-description">: (optional) HTTP client to use to                                  make the request</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$request_uri</span><span class="var-description">: (optional) URI to which to direct                             the information request</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetAuthSubTokenUri" id="getAuthSubTokenUri"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">static method getAuthSubTokenUri</span> (line <span class="line-number">79</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Creates a URI to request a single-use AuthSub token.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-	    static
-		<span class="method-result">void</span>
-		<span class="method-name">
-			getAuthSubTokenUri
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$next</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$scope</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$secure</span> = <span class="var-default">0</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$session</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$request_uri</span> = <span class="var-default">self::AUTHSUB_REQUEST_URI</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$next</span><span class="var-description">: (required) URL identifying the service to be                      accessed.   The resulting token will enable access to the specified service only.   Some services may limit scope further, such as read-only access.</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$scope</span><span class="var-description">: (required) URL identifying the service to be                       accessed.  The resulting token will enable                       access to the specified service only.                       Some services may limit scope further, such                       as read-only access.</span>			</li>
-					<li>
-				<span class="var-type">int</span>
-				<span class="var-name">$secure</span><span class="var-description">: (optional) Boolean flag indicating whether the                     authentication transaction should issue a secure                     token (1) or a non-secure token (0). Secure tokens                     are available to registered applications only.</span>			</li>
-					<li>
-				<span class="var-type">int</span>
-				<span class="var-name">$session</span><span class="var-description">: (optional) Boolean flag indicating whether                      the one-time-use  token may be exchanged for                      a session token (1) or not (0).</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$request_uri</span><span class="var-description">: (optional) URI to which to direct the                             authentication request.</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetHttpClient" id="getHttpClient"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">static method getHttpClient</span> (line <span class="line-number">227</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Retrieve a HTTP client object with AuthSub credentials attached  as the Authorization header</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-	    static
-		<span class="method-result">void</span>
-		<span class="method-name">
-			getHttpClient
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>, [<span class="var-type"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_HttpClient.html">Zend_Gdata_HttpClient</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$token</span><span class="var-description">: The token to retrieve information about</span>			</li>
-					<li>
-				<span class="var-type"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_HttpClient.html">Zend_Gdata_HttpClient</a></span>
-				<span class="var-name">$client</span><span class="var-description">: (optional) HTTP client to use to make the request</span>			</li>
-				</ul>
-		
-			
-	</div>
-
-						
-		</div>
-	</div>
-
-	<a name="sec-consts"></a>
-	<div class="info-box">
-		<div class="info-box-title">Class Constants</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
-						
-			
-										| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<a name="constAUTHSUB_REQUEST_URI" id="AUTHSUB_REQUEST_URI"><!-- --></A>
-<div class="evenrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">AUTHSUB_REQUEST_URI</span>
-			 = <span class="const-default"> 'https://www.google.com/accounts/AuthSubRequest'</span>
-			(line <span class="line-number">49</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	
-	
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
 </div>
-<a name="constAUTHSUB_REVOKE_TOKEN_URI" id="AUTHSUB_REVOKE_TOKEN_URI"><!-- --></A>
-<div class="oddrow">
+<div class="tab-page" id="constantsTabpage">
 
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">AUTHSUB_REVOKE_TOKEN_URI</span>
-			 = <span class="const-default"> 'https://www.google.com/accounts/AuthSubRevokeToken'</span>
-			(line <span class="line-number">53</span>)
-		</span>
-	</div>
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="const-title">
+    <a href="#constAUTHSUB_REQUEST_URI" title="details" class="property"><strong>AUTHSUB_REQUEST_URI</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constAUTHSUB_REVOKE_TOKEN_URI" title="details" class="property"><strong>AUTHSUB_REVOKE_TOKEN_URI</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constAUTHSUB_SESSION_TOKEN_URI" title="details" class="property"><strong>AUTHSUB_SESSION_TOKEN_URI</strong></a>
+</div>
+<div class="const-title">
+    <a href="#constAUTHSUB_TOKEN_INFO_URI" title="details" class="property"><strong>AUTHSUB_TOKEN_INFO_URI</strong></a>
+</div>
+<hr />
+<a name="constAUTHSUB_REQUEST_URI" id="constAUTHSUB_REQUEST_URI"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">AUTHSUB_REQUEST_URI =  'https://www.google.com/accounts/AuthSubRequest'</strong> (line <span class="linenumber">49</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="constAUTHSUB_REVOKE_TOKEN_URI" id="constAUTHSUB_REVOKE_TOKEN_URI"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">AUTHSUB_REVOKE_TOKEN_URI =  'https://www.google.com/accounts/AuthSubRevokeToken'</strong> (line <span class="linenumber">53</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="constAUTHSUB_SESSION_TOKEN_URI" id="constAUTHSUB_SESSION_TOKEN_URI"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">AUTHSUB_SESSION_TOKEN_URI =  'https://www.google.com/accounts/AuthSubSessionToken'</strong> (line <span class="linenumber">51</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="constAUTHSUB_TOKEN_INFO_URI" id="constAUTHSUB_TOKEN_INFO_URI"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">AUTHSUB_TOKEN_INFO_URI =  'https://www.google.com/accounts/AuthSubTokenInfo'</strong> (line <span class="linenumber">55</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+    static         <span class="method-result">boolean</span>
+        <a href="#methodAuthSubRevokeToken" title="details" class="method-name">AuthSubRevokeToken</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>, [<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$request_uri</span> = <span class="var-default">self::AUTHSUB_REVOKE_TOKEN_URI</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">string</span>
+        <a href="#methodgetAuthSubSessionToken" title="details" class="method-name">getAuthSubSessionToken</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>, [<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$request_uri</span> = <span class="var-default">self::AUTHSUB_SESSION_TOKEN_URI</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">void</span>
+        <a href="#methodgetAuthSubTokenInfo" title="details" class="method-name">getAuthSubTokenInfo</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>, [<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$request_uri</span> = <span class="var-default">self::AUTHSUB_TOKEN_INFO_URI</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">void</span>
+        <a href="#methodgetAuthSubTokenUri" title="details" class="method-name">getAuthSubTokenUri</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$next</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$scope</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$secure</span> = <span class="var-default">0</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$session</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$request_uri</span> = <span class="var-default">self::AUTHSUB_REQUEST_URI</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">void</span>
+        <a href="#methodgetHttpClient" title="details" class="method-name">getHttpClient</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>, [<span class="var-type"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_HttpClient.html">Zend_Gdata_HttpClient</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>])
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="methodAuthSubRevokeToken" id="methodAuthSubRevokeToken"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method AuthSubRevokeToken</strong> (line <span class="linenumber">152</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>AuthSubRevokeToken(
+string
+$token, [<a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a>
+$client = null], [string
+$request_uri = self::AUTHSUB_REVOKE_TOKEN_URI])</strong></h4>
 
 	<!-- ========== Info from phpDoc block ========= -->
-	
-	
+<h5>Revoke a token</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $token</strong>: The token to revoke</li>
+			<li><strong><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a> $client</strong>: (optional) HTTP client to use to make the request</li>
+			<li><strong>string $request_uri</strong>: (optional) URI to which to direct the revokation request</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Whether the revokation was successful</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
 </div>
-<a name="constAUTHSUB_SESSION_TOKEN_URI" id="AUTHSUB_SESSION_TOKEN_URI"><!-- --></A>
-<div class="evenrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">AUTHSUB_SESSION_TOKEN_URI</span>
-			 = <span class="const-default"> 'https://www.google.com/accounts/AuthSubSessionToken'</span>
-			(line <span class="line-number">51</span>)
-		</span>
-	</div>
+<a name="methodgetAuthSubSessionToken" id="methodgetAuthSubSessionToken"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method getAuthSubSessionToken</strong> (line <span class="linenumber">102</span>)
+ </h4> 
+<h4><i>string</i> <strong>getAuthSubSessionToken(
+string
+$token, [<a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a>
+$client = null], [string
+$request_uri = self::AUTHSUB_SESSION_TOKEN_URI])</strong></h4>
 
 	<!-- ========== Info from phpDoc block ========= -->
-	
-	
+<h5>Upgrades a single use token to a session token</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $token</strong>: The single use token which is to be upgraded</li>
+			<li><strong><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a> $client</strong>: (optional) HTTP client to use to                                  make the request</li>
+			<li><strong>string $request_uri</strong>: (optional) URI to which to direct                             the session token upgrade</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The upgraded token value</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_AuthException</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_HttpException</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
 </div>
-<a name="constAUTHSUB_TOKEN_INFO_URI" id="AUTHSUB_TOKEN_INFO_URI"><!-- --></A>
-<div class="oddrow">
-
-	<div class="const-header">
-		<img src="../../media/images/Variable.png" />
-		<span class="const-title">
-			<span class="const-name">AUTHSUB_TOKEN_INFO_URI</span>
-			 = <span class="const-default"> 'https://www.google.com/accounts/AuthSubTokenInfo'</span>
-			(line <span class="line-number">55</span>)
-		</span>
-	</div>
+<a name="methodgetAuthSubTokenInfo" id="methodgetAuthSubTokenInfo"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method getAuthSubTokenInfo</strong> (line <span class="linenumber">194</span>)
+ </h4> 
+<h4><i>void</i> <strong>getAuthSubTokenInfo(
+string
+$token, [<a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a>
+$client = null], [string
+$request_uri = self::AUTHSUB_TOKEN_INFO_URI])</strong></h4>
 
 	<!-- ========== Info from phpDoc block ========= -->
-	
-	
+<h5>get token information</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $token</strong>: The token to retrieve information about</li>
+			<li><strong><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a> $client</strong>: (optional) HTTP client to use to                                  make the request</li>
+			<li><strong>string $request_uri</strong>: (optional) URI to which to direct                             the information request</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
 </div>
-						
-		</div>
-	</div>
+<a name="methodgetAuthSubTokenUri" id="methodgetAuthSubTokenUri"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method getAuthSubTokenUri</strong> (line <span class="linenumber">79</span>)
+ </h4> 
+<h4><i>void</i> <strong>getAuthSubTokenUri(
+string
+$next, string
+$scope, [int
+$secure = 0], [int
+$session = 0], [string
+$request_uri = self::AUTHSUB_REQUEST_URI])</strong></h4>
 
-	<p class="notes" id="credit">
-		Documentation generated on Tue, 24 May 2011 16:29:50 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
-	</p>
-	</div></body>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Creates a URI to request a single-use AuthSub token.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $next</strong>: (required) URL identifying the service to be                      accessed.   The resulting token will enable access to the specified service only.   Some services may limit scope further, such as read-only access.</li>
+			<li><strong>string $scope</strong>: (required) URL identifying the service to be                       accessed.  The resulting token will enable                       access to the specified service only.                       Some services may limit scope further, such                       as read-only access.</li>
+			<li><strong>int $secure</strong>: (optional) Boolean flag indicating whether the                     authentication transaction should issue a secure                     token (1) or a non-secure token (0). Secure tokens                     are available to registered applications only.</li>
+			<li><strong>int $session</strong>: (optional) Boolean flag indicating whether                      the one-time-use  token may be exchanged for                      a session token (1) or not (0).</li>
+			<li><strong>string $request_uri</strong>: (optional) URI to which to direct the                             authentication request.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetHttpClient" id="methodgetHttpClient"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method getHttpClient</strong> (line <span class="linenumber">227</span>)
+ </h4> 
+<h4><i>void</i> <strong>getHttpClient(
+string
+$token, [<a href="../../Zend_Gdata/Gdata/Zend_Gdata_HttpClient.html">Zend_Gdata_HttpClient</a>
+$client = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retrieve a HTTP client object with AuthSub credentials attached  as the Authorization header</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $token</strong>: The token to retrieve information about</li>
+			<li><strong><a href="../../Zend_Gdata/Gdata/Zend_Gdata_HttpClient.html">Zend_Gdata_HttpClient</a> $client</strong>: (optional) HTTP client to use to make the request</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 16:17:50 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
 </html>

@@ -1,1416 +1,1090 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<!-- template designed by Marco Von Ballmoos -->
-			<title>Docs For Class Zend_Gdata_Query</title>
-			<link rel="stylesheet" href="../../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
-		<body>
-			<div class="page-body">			
-<h2 class="class-name">Class Zend_Gdata_Query</h2>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Gdata_Query</title>
+  <link rel="stylesheet" href="../../media/stylesheet.css" />
+  <script src="../../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../../media/images/plus.gif";
+	imgMinus.src = "../../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Gdata_Query
+</h2> (line <span class="linenumber">40</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
 
-<a name="sec-description"></a>
-<div class="info-box">
-	<div class="info-box-title">Description</div>
-	<div class="nav-bar">
-					<span class="disabled">Description</span> |
-							<a href="#sec-descendents">Descendents</a>
-			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-						
-					</div>
-	<div class="info-box-body">
-        		<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Provides a mechanism to build a query URL for Gdata services.</p>
-<p class="description"><p>Queries are not defined for APP, but are provided by Gdata services  as an extension.</p></p>
-	<ul class="tags">
-				<li><span class="field">copyright:</span> Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
-				<li><span class="field">license:</span> <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
-			</ul>
-		<p class="notes">
-			Located in <a class="field" href="_includes---lib---youtube---library---Zend---Gdata---Query.php.html">/includes/lib/youtube/library/Zend/Gdata/Query.php</a> (line <span class="field">40</span>)
-		</p>
-		
-				
-		<pre></pre>
-	
-			</div>
-</div>
-
-	<a name="sec-descendents"></a>
-	<div class="info-box">
-		<div class="info-box-title">Direct descendents</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-			<span class="disabled">Descendents</span>
-			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-								</div>
-		<div class="info-box-body">
-			<table cellpadding="2" cellspacing="0" class="class-table">
-				<tr>
-					<th class="class-table-header">Class</th>
-					<th class="class-table-header">Description</th>
-				</tr>
-								<tr>
-					<td style="padding-right: 2em"><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_Query.html">Zend_Gdata_Gapps_Query</a></td>
-					<td>
-											Assists in constructing queries for Google Apps entries. This class  provides common methods used by all other Google Apps query classes.
-										</td>
-				</tr>
-								<tr>
-					<td style="padding-right: 2em"><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_DocumentQuery.html">Zend_Gdata_Spreadsheets_DocumentQuery</a></td>
-					<td>
-											Assists in constructing queries for Google Spreadsheets documents
-										</td>
-				</tr>
-								<tr>
-					<td style="padding-right: 2em"><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_ListQuery.html">Zend_Gdata_Spreadsheets_ListQuery</a></td>
-					<td>
-											Assists in constructing queries for Google Spreadsheets lists
-										</td>
-				</tr>
-								<tr>
-					<td style="padding-right: 2em"><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_CellQuery.html">Zend_Gdata_Spreadsheets_CellQuery</a></td>
-					<td>
-											Assists in constructing queries for Google Spreadsheets cells
-										</td>
-				</tr>
-								<tr>
-					<td style="padding-right: 2em"><a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase_Query.html">Zend_Gdata_Gbase_Query</a></td>
-					<td>
-											Assists in constructing queries for Google Base
-										</td>
-				</tr>
-								<tr>
-					<td style="padding-right: 2em"><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></td>
-					<td>
-											Assists in constructing queries for YouTube videos
-										</td>
-				</tr>
-								<tr>
-					<td style="padding-right: 2em"><a href="../../Zend_Gdata/Calendar/Zend_Gdata_Calendar_EventQuery.html">Zend_Gdata_Calendar_EventQuery</a></td>
-					<td>
-											Assists in constructing queries for Google Calendar events
-										</td>
-				</tr>
-								<tr>
-					<td style="padding-right: 2em"><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_UserQuery.html">Zend_Gdata_Photos_UserQuery</a></td>
-					<td>
-											Assists in constructing queries for user entries.
-										</td>
-				</tr>
-								<tr>
-					<td style="padding-right: 2em"><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs_Query.html">Zend_Gdata_Docs_Query</a></td>
-					<td>
-											Assists in constructing queries for Google Document List documents
-										</td>
-				</tr>
-								<tr>
-					<td style="padding-right: 2em"><a href="../../Zend_Gdata/Books/Zend_Gdata_Books_VolumeQuery.html">Zend_Gdata_Books_VolumeQuery</a></td>
-					<td>
-											Assists in constructing queries for Books volumes
-										</td>
-				</tr>
-								<tr>
-					<td style="padding-right: 2em"><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_Query.html">Zend_Gdata_Health_Query</a></td>
-					<td>
-											Assists in constructing queries for Google Health
-										</td>
-				</tr>
-							</table>
-		</div>
-	</div>
-
-
-	<a name="sec-var-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variable Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-							<a href="#sec-descendents">Descendents</a> |
-						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
-							| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-								</div>
-		<div class="info-box-body">
-			<div class="var-summary">
-																																																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$_category" title="details" class="var-name">$_category</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$_defaultFeedUri" title="details" class="var-name">$_defaultFeedUri</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">array</span>
-					<a href="#$_params" title="details" class="var-name">$_params</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$_url" title="details" class="var-name">$_url</a>
-				</div>
-											</div>
-		</div>
-	</div>
-
-	<a name="sec-method-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Method Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-							<a href="#sec-descendents">Descendents</a> |
-																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-				 
-				|
-						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
-		</div>
-		<div class="info-box-body">			
-			<div class="method-summary">
-																																																																																																																																																																																																																																				
-												<div class="method-definition">
-											<span class="method-result">Zend_Gdata_Query</span>
-										<a href="#__construct" title="details" class="method-name">__construct</a>
-											([<span class="var-type"></span>&nbsp;<span class="var-name">$url</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getAlt" title="details" class="method-name">getAlt</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getAuthor" title="details" class="method-name">getAuthor</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">void</span>
-										<a href="#getCategory" title="details" class="method-name">getCategory</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">int</span>
-										<a href="#getMaxResults" title="details" class="method-name">getMaxResults</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">void</span>
-										<a href="#getParam" title="details" class="method-name">getParam</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getPublishedMax" title="details" class="method-name">getPublishedMax</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getPublishedMin" title="details" class="method-name">getPublishedMin</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getQuery" title="details" class="method-name">getQuery</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getQueryString" title="details" class="method-name">getQueryString</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getQueryUrl" title="details" class="method-name">getQueryUrl</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">int</span>
-										<a href="#getStartIndex" title="details" class="method-name">getStartIndex</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getUpdatedMax" title="details" class="method-name">getUpdatedMax</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getUpdatedMin" title="details" class="method-name">getUpdatedMin</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">void</span>
-										<a href="#resetParameters" title="details" class="method-name">resetParameters</a>
-										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-										<a href="#setAlt" title="details" class="method-name">setAlt</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-										<a href="#setAuthor" title="details" class="method-name">setAuthor</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-										<a href="#setCategory" title="details" class="method-name">setCategory</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-										<a href="#setMaxResults" title="details" class="method-name">setMaxResults</a>
-											(<span class="var-type">int</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-										<a href="#setParam" title="details" class="method-name">setParam</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-										<a href="#setPublishedMax" title="details" class="method-name">setPublishedMax</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-										<a href="#setPublishedMin" title="details" class="method-name">setPublishedMin</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-										<a href="#setQuery" title="details" class="method-name">setQuery</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-										<a href="#setStartIndex" title="details" class="method-name">setStartIndex</a>
-											(<span class="var-type">int</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-										<a href="#setUpdatedMax" title="details" class="method-name">setUpdatedMax</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-										<a href="#setUpdatedMin" title="details" class="method-name">setUpdatedMin</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">void</span>
-										<a href="#__get" title="details" class="method-name">__get</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">void</span>
-										<a href="#__set" title="details" class="method-name">__set</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$val</span>)
-									</div>
-								</div>
-		</div>
-	</div>		
-
-	<a name="sec-vars"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variables</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-							<a href="#sec-descendents">Descendents</a> |
-										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
-						
-			
-										| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			<a name="var$_category" id="$_category"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$_category</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number">70</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Category for the query</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$_defaultFeedUri" id="$_defaultFeedUri"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$_defaultFeedUri</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number">55</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Default URL</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-		
-			<hr class="separator" />
-		<div class="notes">Redefined in descendants as:</div>
-		<ul class="redefinitions">
-					<li>
-				<a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_DocumentQuery.html#var$_defaultFeedUri">Zend_Gdata_Spreadsheets_DocumentQuery::$_defaultFeedUri</a>
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_ListQuery.html#var$_defaultFeedUri">Zend_Gdata_Spreadsheets_ListQuery::$_defaultFeedUri</a>
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_CellQuery.html#var$_defaultFeedUri">Zend_Gdata_Spreadsheets_CellQuery::$_defaultFeedUri</a>
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase_Query.html#var$_defaultFeedUri">Zend_Gdata_Gbase_Query::$_defaultFeedUri</a>
-								: The default URI for POST methods
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase_SnippetQuery.html#var$_defaultFeedUri">Zend_Gdata_Gbase_SnippetQuery::$_defaultFeedUri</a>
-								: The default URI for POST methods
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase_ItemQuery.html#var$_defaultFeedUri">Zend_Gdata_Gbase_ItemQuery::$_defaultFeedUri</a>
-								: The default URI for POST methods
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Calendar/Zend_Gdata_Calendar_EventQuery.html#var$_defaultFeedUri">Zend_Gdata_Calendar_EventQuery::$_defaultFeedUri</a>
-								: The default URI used for feeds.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs_Query.html#var$_defaultFeedUri">Zend_Gdata_Docs_Query::$_defaultFeedUri</a>
-								: The generic base URL used by some inherited methods
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Health/Zend_Gdata_Health_Query.html#var$_defaultFeedUri">Zend_Gdata_Health_Query::$_defaultFeedUri</a>
-								: The default URI for POST methods
-							</li>
-				</ul>
-		
-
-</div>
-<a name="var$_params" id="$_params"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">array</span>
-			<span class="var-name">$_params</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number">48</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Query parameters.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$_url" id="$_url"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$_url</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number">63</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Base URL  TODO: Add setters and getters</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> protected</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-						
-		</div>
-	</div>
-	
-	<a name="sec-methods"></a>
-	<div class="info-box">
-		<div class="info-box-title">Methods</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-							<a href="#sec-descendents">Descendents</a> |
-															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
-						
-		</div>
-		<div class="info-box-body">
-			<A NAME='method_detail'></A>
-
-<a name="method__construct" id="__construct"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">75</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Create Gdata_Query object</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">Zend_Gdata_Query</span>
-		<span class="method-name">
-			__construct
-		</span>
-					([<span class="var-type"></span>&nbsp;<span class="var-name">$url</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$url</span>			</li>
-				</ul>
-		
-			
-			<hr class="separator" />
-		<div class="notes">Redefined in descendants as:</div>
-		<ul class="redefinitions">
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_Query.html#method__construct">Zend_Gdata_Gapps_Query::__construct()</a>
-								: Create a new instance.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_MemberQuery.html#method__construct">Zend_Gdata_Gapps_MemberQuery::__construct()</a>
-								: Create a new instance.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_OwnerQuery.html#method__construct">Zend_Gdata_Gapps_OwnerQuery::__construct()</a>
-								: Create a new instance.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_EmailListQuery.html#method__construct">Zend_Gdata_Gapps_EmailListQuery::__construct()</a>
-								: Create a new instance.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_NicknameQuery.html#method__construct">Zend_Gdata_Gapps_NicknameQuery::__construct()</a>
-								: Create a new instance.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_UserQuery.html#method__construct">Zend_Gdata_Gapps_UserQuery::__construct()</a>
-								: Create a new instance.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_GroupQuery.html#method__construct">Zend_Gdata_Gapps_GroupQuery::__construct()</a>
-								: Create a new instance.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_EmailListRecipientQuery.html#method__construct">Zend_Gdata_Gapps_EmailListRecipientQuery::__construct()</a>
-								: Create a new instance.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_DocumentQuery.html#method__construct">Zend_Gdata_Spreadsheets_DocumentQuery::__construct()</a>
-								: Constructs a new Zend_Gdata_Spreadsheets_DocumentQuery object.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_ListQuery.html#method__construct">Zend_Gdata_Spreadsheets_ListQuery::__construct()</a>
-								: Constructs a new Zend_Gdata_Spreadsheets_ListQuery object.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_CellQuery.html#method__construct">Zend_Gdata_Spreadsheets_CellQuery::__construct()</a>
-								: Constructs a new Zend_Gdata_Spreadsheets_CellQuery object.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html#method__construct">Zend_Gdata_YouTube_VideoQuery::__construct()</a>
-								: Create Gdata_YouTube_VideoQuery object
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Calendar/Zend_Gdata_Calendar_EventQuery.html#method__construct">Zend_Gdata_Calendar_EventQuery::__construct()</a>
-								: Create Gdata_Calendar_EventQuery object.  If a URL is provided,
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_UserQuery.html#method__construct">Zend_Gdata_Photos_UserQuery::__construct()</a>
-								: Create a new Query object with default values.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs_Query.html#method__construct">Zend_Gdata_Docs_Query::__construct()</a>
-								: Constructs a new instance of a Zend_Gdata_Docs_Query object.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Books/Zend_Gdata_Books_VolumeQuery.html#method__construct">Zend_Gdata_Books_VolumeQuery::__construct()</a>
-								: Create Gdata_Books_VolumeQuery object
-							</li>
-				</ul>
-	</div>
-<a name="methodgetAlt" id="getAlt"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getAlt</span> (line <span class="line-number">272</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> rss or atom</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getAlt
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetAuthor" id="getAuthor"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getAuthor</span> (line <span class="line-number">368</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> author</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getAuthor
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetCategory" id="getCategory"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getCategory</span> (line <span class="line-number">390</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			getCategory
-		</span>
-				()
-			</div>
-	
-		
-			
-			<hr class="separator" />
-		<div class="notes">Redefined in descendants as:</div>
-		<ul class="redefinitions">
-					<li>
-				<a href="../../Zend_Gdata/Health/Zend_Gdata_Health_Query.html#methodgetCategory">Zend_Gdata_Health_Query::getCategory()</a>
-								: Returns the query object's category.
-							</li>
-				</ul>
-	</div>
-<a name="methodgetMaxResults" id="getMaxResults"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getMaxResults</span> (line <span class="line-number">284</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> maxResults</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">int</span>
-		<span class="method-name">
-			getMaxResults
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetParam" id="getParam"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getParam</span> (line <span class="line-number">138</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			getParam
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$name</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetPublishedMax" id="getPublishedMax"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getPublishedMax</span> (line <span class="line-number">344</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> publishedMax</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getPublishedMax
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetPublishedMin" id="getPublishedMin"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getPublishedMin</span> (line <span class="line-number">356</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> publishedMin</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getPublishedMin
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetQuery" id="getQuery"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getQuery</span> (line <span class="line-number">296</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> query</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getQuery
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetQueryString" id="getQueryString"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getQueryString</span> (line <span class="line-number">83</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> querystring</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getQueryString
-		</span>
-				()
-			</div>
-	
-		
-			
-			<hr class="separator" />
-		<div class="notes">Redefined in descendants as:</div>
-		<ul class="redefinitions">
-					<li>
-				<a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_DocumentQuery.html#methodgetQueryString">Zend_Gdata_Spreadsheets_DocumentQuery::getQueryString()</a>
-								: Gets the attribute query string for this query.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_ListQuery.html#methodgetQueryString">Zend_Gdata_Spreadsheets_ListQuery::getQueryString()</a>
-								: Gets the attribute query string for this query.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_CellQuery.html#methodgetQueryString">Zend_Gdata_Spreadsheets_CellQuery::getQueryString()</a>
-								: Gets the attribute query string for this query.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html#methodgetQueryString">Zend_Gdata_YouTube_VideoQuery::getQueryString()</a>
-								: Generate the query string from the URL parameters, optionally modifying  them based on protocol version.
-							</li>
-				</ul>
-	</div>
-<a name="methodgetQueryUrl" id="getQueryUrl"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getQueryUrl</span> (line <span class="line-number">110</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> url</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getQueryUrl
-		</span>
-				()
-			</div>
-	
-		
-			
-			<hr class="separator" />
-		<div class="notes">Redefined in descendants as:</div>
-		<ul class="redefinitions">
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_MemberQuery.html#methodgetQueryUrl">Zend_Gdata_Gapps_MemberQuery::getQueryUrl()</a>
-								: Returns the query URL generated by this query instance.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_OwnerQuery.html#methodgetQueryUrl">Zend_Gdata_Gapps_OwnerQuery::getQueryUrl()</a>
-								: Returns the query URL generated by this query instance.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_EmailListQuery.html#methodgetQueryUrl">Zend_Gdata_Gapps_EmailListQuery::getQueryUrl()</a>
-								: Returns the URL generated for this query, based on it's current  parameters.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_NicknameQuery.html#methodgetQueryUrl">Zend_Gdata_Gapps_NicknameQuery::getQueryUrl()</a>
-								: Returns the URL generated for this query, based on it's current  parameters.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_UserQuery.html#methodgetQueryUrl">Zend_Gdata_Gapps_UserQuery::getQueryUrl()</a>
-								: Returns the query URL generated by this query instance.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_GroupQuery.html#methodgetQueryUrl">Zend_Gdata_Gapps_GroupQuery::getQueryUrl()</a>
-								: Returns the query URL generated by this query instance.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_EmailListRecipientQuery.html#methodgetQueryUrl">Zend_Gdata_Gapps_EmailListRecipientQuery::getQueryUrl()</a>
-								: Returns the URL generated for this query, based on it's current  parameters.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_DocumentQuery.html#methodgetQueryUrl">Zend_Gdata_Spreadsheets_DocumentQuery::getQueryUrl()</a>
-								: Gets the full query URL for this query.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_ListQuery.html#methodgetQueryUrl">Zend_Gdata_Spreadsheets_ListQuery::getQueryUrl()</a>
-								: Gets the full query URL for this query.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_CellQuery.html#methodgetQueryUrl">Zend_Gdata_Spreadsheets_CellQuery::getQueryUrl()</a>
-								: Gets the full query URL for this query.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase_SnippetQuery.html#methodgetQueryUrl">Zend_Gdata_Gbase_SnippetQuery::getQueryUrl()</a>
-								: Returns the query URL generated by this query instance.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase_ItemQuery.html#methodgetQueryUrl">Zend_Gdata_Gbase_ItemQuery::getQueryUrl()</a>
-								: Returns the query URL generated by this query instance.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html#methodgetQueryUrl">Zend_Gdata_YouTube_VideoQuery::getQueryUrl()</a>
-								: Returns the generated full query URL, optionally modifying it based on  the protocol version.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Calendar/Zend_Gdata_Calendar_EventQuery.html#methodgetQueryUrl">Zend_Gdata_Calendar_EventQuery::getQueryUrl()</a>
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_UserQuery.html#methodgetQueryUrl">Zend_Gdata_Photos_UserQuery::getQueryUrl()</a>
-								: Returns the URL generated for this query, based on it's current  parameters.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumQuery.html#methodgetQueryUrl">Zend_Gdata_Photos_AlbumQuery::getQueryUrl()</a>
-								: Returns the URL generated for this query, based on it's current  parameters.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoQuery.html#methodgetQueryUrl">Zend_Gdata_Photos_PhotoQuery::getQueryUrl()</a>
-								: Returns the URL generated for this query, based on it's current  parameters.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs_Query.html#methodgetQueryUrl">Zend_Gdata_Docs_Query::getQueryUrl()</a>
-								: Gets the full query URL for this query.
-							</li>
-					<li>
-				<a href="../../Zend_Gdata/Books/Zend_Gdata_Books_VolumeQuery.html#methodgetQueryUrl">Zend_Gdata_Books_VolumeQuery::getQueryUrl()</a>
-								: Returns the generated full query URL
-							</li>
-				</ul>
-	</div>
-<a name="methodgetStartIndex" id="getStartIndex"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getStartIndex</span> (line <span class="line-number">308</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> startIndex</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">int</span>
-		<span class="method-name">
-			getStartIndex
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetUpdatedMax" id="getUpdatedMax"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getUpdatedMax</span> (line <span class="line-number">320</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> updatedMax</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getUpdatedMax
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetUpdatedMin" id="getUpdatedMin"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getUpdatedMin</span> (line <span class="line-number">332</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> updatedMin</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getUpdatedMin
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodresetParameters" id="resetParameters"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">resetParameters</span> (line <span class="line-number">102</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			resetParameters
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodsetAlt" id="setAlt"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">setAlt</span> (line <span class="line-number">147</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> Provides a fluent interface</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-		<span class="method-name">
-			setAlt
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$value</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetAuthor" id="setAuthor"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">setAuthor</span> (line <span class="line-number">259</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> Provides a fluent interface</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-		<span class="method-name">
-			setAuthor
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$value</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetCategory" id="setCategory"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">setCategory</span> (line <span class="line-number">381</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> Provides a fluent interface</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-		<span class="method-name">
-			setCategory
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$value</span>			</li>
-				</ul>
-		
-			
-			<hr class="separator" />
-		<div class="notes">Redefined in descendants as:</div>
-		<ul class="redefinitions">
-					<li>
-				<a href="../../Zend_Gdata/Health/Zend_Gdata_Health_Query.html#methodsetCategory">Zend_Gdata_Health_Query::setCategory()</a>
-								: Setter for category queries.
-							</li>
-				</ul>
-	</div>
-<a name="methodsetMaxResults" id="setMaxResults"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">setMaxResults</span> (line <span class="line-number">161</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> Provides a fluent interface</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-		<span class="method-name">
-			setMaxResults
-		</span>
-					(<span class="var-type">int</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">int</span>
-				<span class="var-name">$value</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetParam" id="setParam"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">setParam</span> (line <span class="line-number">129</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> Provides a fluent interface</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-		<span class="method-name">
-			setParam
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$name</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$value</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetPublishedMax" id="setPublishedMax"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">setPublishedMax</span> (line <span class="line-number">231</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> Provides a fluent interface</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-		<span class="method-name">
-			setPublishedMax
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$value</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetPublishedMin" id="setPublishedMin"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">setPublishedMin</span> (line <span class="line-number">245</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> Provides a fluent interface</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-		<span class="method-name">
-			setPublishedMin
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$value</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetQuery" id="setQuery"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">setQuery</span> (line <span class="line-number">175</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> Provides a fluent interface</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-		<span class="method-name">
-			setQuery
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$value</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetStartIndex" id="setStartIndex"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">setStartIndex</span> (line <span class="line-number">189</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> Provides a fluent interface</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-		<span class="method-name">
-			setStartIndex
-		</span>
-					(<span class="var-type">int</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">int</span>
-				<span class="var-name">$value</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetUpdatedMax" id="setUpdatedMax"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">setUpdatedMax</span> (line <span class="line-number">203</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> Provides a fluent interface</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-		<span class="method-name">
-			setUpdatedMax
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$value</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodsetUpdatedMin" id="setUpdatedMin"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">setUpdatedMin</span> (line <span class="line-number">217</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">return:</span> Provides a fluent interface</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
-		<span class="method-name">
-			setUpdatedMin
-		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$value</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="method__get" id="__get"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">__get</span> (line <span class="line-number">396</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			__get
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$name</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="method__set" id="__set"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">__set</span> (line <span class="line-number">407</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			__set
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$val</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$name</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$val</span>			</li>
-				</ul>
-		
-			
-	</div>
-						
-		</div>
-	</div>
-
-
-	<p class="notes" id="credit">
-		Documentation generated on Tue, 24 May 2011 16:30:45 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Gdata---Query.php.html">/includes/lib/youtube/library/Zend/Gdata/Query.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Provides a mechanism to build a query URL for Gdata services.</h5>
+<div class="desc"><p>Queries are not defined for APP, but are provided by Gdata services  as an extension.</p></div>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
+<span class="type">Classes extended from Zend_Gdata_Query:</span>
+ 		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_Query.html">Zend_Gdata_Gapps_Query</a></dt>
+		<dd>Assists in constructing queries for Google Apps entries. This class  provides common methods used by all other Google Apps query classes.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_DocumentQuery.html">Zend_Gdata_Spreadsheets_DocumentQuery</a></dt>
+		<dd>Assists in constructing queries for Google Spreadsheets documents</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_ListQuery.html">Zend_Gdata_Spreadsheets_ListQuery</a></dt>
+		<dd>Assists in constructing queries for Google Spreadsheets lists</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_CellQuery.html">Zend_Gdata_Spreadsheets_CellQuery</a></dt>
+		<dd>Assists in constructing queries for Google Spreadsheets cells</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase_Query.html">Zend_Gdata_Gbase_Query</a></dt>
+		<dd>Assists in constructing queries for Google Base</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></dt>
+		<dd>Assists in constructing queries for YouTube videos</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Calendar/Zend_Gdata_Calendar_EventQuery.html">Zend_Gdata_Calendar_EventQuery</a></dt>
+		<dd>Assists in constructing queries for Google Calendar events</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_UserQuery.html">Zend_Gdata_Photos_UserQuery</a></dt>
+		<dd>Assists in constructing queries for user entries.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs_Query.html">Zend_Gdata_Docs_Query</a></dt>
+		<dd>Assists in constructing queries for Google Document List documents</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Books/Zend_Gdata_Books_VolumeQuery.html">Zend_Gdata_Books_VolumeQuery</a></dt>
+		<dd>Assists in constructing queries for Books volumes</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_Query.html">Zend_Gdata_Health_Query</a></dt>
+		<dd>Assists in constructing queries for Google Health</dd>
+	</dl>
 	</p>
-	</div></body>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_category" title="details" class="property"><strong>$_category</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_defaultFeedUri" title="details" class="property"><strong>$_defaultFeedUri</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$_params" title="details" class="property"><strong>$_params</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_url" title="details" class="property"><strong>$_url</strong></a>
+</div>
+<hr />
+<a name="var$_category" id="var$_category"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_category =  null</strong> (line <span class="linenumber">70</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Category for the query</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_defaultFeedUri" id="var$_defaultFeedUri"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_defaultFeedUri =  null</strong> (line <span class="linenumber">55</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Default URL</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_params" id="var$_params"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_params = array()</strong> (line <span class="linenumber">48</span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Query parameters.</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_url" id="var$_url"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_url =  null</strong> (line <span class="linenumber">63</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Base URL  TODO: Add setters and getters</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+            <span class="method-result">Zend_Gdata_Query</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        ([<span class="var-type"></span>&nbsp;<span class="var-name">$url</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetAlt" title="details" class="method-name">getAlt</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetAuthor" title="details" class="method-name">getAuthor</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodgetCategory" title="details" class="method-name">getCategory</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">int</span>
+        <a href="#methodgetMaxResults" title="details" class="method-name">getMaxResults</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodgetParam" title="details" class="method-name">getParam</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetPublishedMax" title="details" class="method-name">getPublishedMax</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetPublishedMin" title="details" class="method-name">getPublishedMin</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetQuery" title="details" class="method-name">getQuery</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetQueryString" title="details" class="method-name">getQueryString</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetQueryUrl" title="details" class="method-name">getQueryUrl</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">int</span>
+        <a href="#methodgetStartIndex" title="details" class="method-name">getStartIndex</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetUpdatedMax" title="details" class="method-name">getUpdatedMax</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetUpdatedMin" title="details" class="method-name">getUpdatedMin</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodresetParameters" title="details" class="method-name">resetParameters</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
+        <a href="#methodsetAlt" title="details" class="method-name">setAlt</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
+        <a href="#methodsetAuthor" title="details" class="method-name">setAuthor</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
+        <a href="#methodsetCategory" title="details" class="method-name">setCategory</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
+        <a href="#methodsetMaxResults" title="details" class="method-name">setMaxResults</a>
+        (<span class="var-type">int</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
+        <a href="#methodsetParam" title="details" class="method-name">setParam</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
+        <a href="#methodsetPublishedMax" title="details" class="method-name">setPublishedMax</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
+        <a href="#methodsetPublishedMin" title="details" class="method-name">setPublishedMin</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
+        <a href="#methodsetQuery" title="details" class="method-name">setQuery</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
+        <a href="#methodsetStartIndex" title="details" class="method-name">setStartIndex</a>
+        (<span class="var-type">int</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
+        <a href="#methodsetUpdatedMax" title="details" class="method-name">setUpdatedMax</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></span>
+        <a href="#methodsetUpdatedMin" title="details" class="method-name">setUpdatedMin</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#method__get" title="details" class="method-name">__get</a>
+        (<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#method__set" title="details" class="method-name">__set</a>
+        (<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$val</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">75</span>)
+ </h4> 
+<h4><i>Zend_Gdata_Query</i> <strong>__construct(
+[
+$url = null])</strong></h4>
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_Query.html#method__construct">Zend_Gdata_Gapps_Query::__construct()</a></dt>
+		<dd>Create a new instance.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_MemberQuery.html#method__construct">Zend_Gdata_Gapps_MemberQuery::__construct()</a></dt>
+		<dd>Create a new instance.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_OwnerQuery.html#method__construct">Zend_Gdata_Gapps_OwnerQuery::__construct()</a></dt>
+		<dd>Create a new instance.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_EmailListQuery.html#method__construct">Zend_Gdata_Gapps_EmailListQuery::__construct()</a></dt>
+		<dd>Create a new instance.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_NicknameQuery.html#method__construct">Zend_Gdata_Gapps_NicknameQuery::__construct()</a></dt>
+		<dd>Create a new instance.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_UserQuery.html#method__construct">Zend_Gdata_Gapps_UserQuery::__construct()</a></dt>
+		<dd>Create a new instance.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_GroupQuery.html#method__construct">Zend_Gdata_Gapps_GroupQuery::__construct()</a></dt>
+		<dd>Create a new instance.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_EmailListRecipientQuery.html#method__construct">Zend_Gdata_Gapps_EmailListRecipientQuery::__construct()</a></dt>
+		<dd>Create a new instance.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_DocumentQuery.html#method__construct">Zend_Gdata_Spreadsheets_DocumentQuery::__construct()</a></dt>
+		<dd>Constructs a new Zend_Gdata_Spreadsheets_DocumentQuery object.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_ListQuery.html#method__construct">Zend_Gdata_Spreadsheets_ListQuery::__construct()</a></dt>
+		<dd>Constructs a new Zend_Gdata_Spreadsheets_ListQuery object.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_CellQuery.html#method__construct">Zend_Gdata_Spreadsheets_CellQuery::__construct()</a></dt>
+		<dd>Constructs a new Zend_Gdata_Spreadsheets_CellQuery object.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html#method__construct">Zend_Gdata_YouTube_VideoQuery::__construct()</a></dt>
+		<dd>Create Gdata_YouTube_VideoQuery object</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Calendar/Zend_Gdata_Calendar_EventQuery.html#method__construct">Zend_Gdata_Calendar_EventQuery::__construct()</a></dt>
+		<dd>Create Gdata_Calendar_EventQuery object.  If a URL is provided,</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_UserQuery.html#method__construct">Zend_Gdata_Photos_UserQuery::__construct()</a></dt>
+		<dd>Create a new Query object with default values.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs_Query.html#method__construct">Zend_Gdata_Docs_Query::__construct()</a></dt>
+		<dd>Constructs a new instance of a Zend_Gdata_Docs_Query object.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Books/Zend_Gdata_Books_VolumeQuery.html#method__construct">Zend_Gdata_Books_VolumeQuery::__construct()</a></dt>
+		<dd>Create Gdata_Books_VolumeQuery object</dd>
+	</dl>
+	</p>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Create Gdata_Query object</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $url</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetAlt" id="methodgetAlt"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getAlt</strong> (line <span class="linenumber">272</span>)
+ </h4> 
+<h4><i>string</i> <strong>getAlt(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - rss or atom</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetAuthor" id="methodgetAuthor"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getAuthor</strong> (line <span class="linenumber">368</span>)
+ </h4> 
+<h4><i>string</i> <strong>getAuthor(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - author</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetCategory" id="methodgetCategory"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getCategory</strong> (line <span class="linenumber">390</span>)
+ </h4> 
+<h4><i>void</i> <strong>getCategory(
+)</strong></h4>
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_Query.html#methodgetCategory">Zend_Gdata_Health_Query::getCategory()</a></dt>
+		<dd>Returns the query object's category.</dd>
+	</dl>
+	</p>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetMaxResults" id="methodgetMaxResults"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getMaxResults</strong> (line <span class="linenumber">284</span>)
+ </h4> 
+<h4><i>int</i> <strong>getMaxResults(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - maxResults</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetParam" id="methodgetParam"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getParam</strong> (line <span class="linenumber">138</span>)
+ </h4> 
+<h4><i>void</i> <strong>getParam(
+string
+$name)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $name</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetPublishedMax" id="methodgetPublishedMax"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getPublishedMax</strong> (line <span class="linenumber">344</span>)
+ </h4> 
+<h4><i>string</i> <strong>getPublishedMax(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - publishedMax</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetPublishedMin" id="methodgetPublishedMin"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getPublishedMin</strong> (line <span class="linenumber">356</span>)
+ </h4> 
+<h4><i>string</i> <strong>getPublishedMin(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - publishedMin</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetQuery" id="methodgetQuery"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getQuery</strong> (line <span class="linenumber">296</span>)
+ </h4> 
+<h4><i>string</i> <strong>getQuery(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - query</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetQueryString" id="methodgetQueryString"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getQueryString</strong> (line <span class="linenumber">83</span>)
+ </h4> 
+<h4><i>string</i> <strong>getQueryString(
+)</strong></h4>
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_DocumentQuery.html#methodgetQueryString">Zend_Gdata_Spreadsheets_DocumentQuery::getQueryString()</a></dt>
+		<dd>Gets the attribute query string for this query.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_ListQuery.html#methodgetQueryString">Zend_Gdata_Spreadsheets_ListQuery::getQueryString()</a></dt>
+		<dd>Gets the attribute query string for this query.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_CellQuery.html#methodgetQueryString">Zend_Gdata_Spreadsheets_CellQuery::getQueryString()</a></dt>
+		<dd>Gets the attribute query string for this query.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html#methodgetQueryString">Zend_Gdata_YouTube_VideoQuery::getQueryString()</a></dt>
+		<dd>Generate the query string from the URL parameters, optionally modifying  them based on protocol version.</dd>
+	</dl>
+	</p>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - querystring</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetQueryUrl" id="methodgetQueryUrl"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getQueryUrl</strong> (line <span class="linenumber">110</span>)
+ </h4> 
+<h4><i>string</i> <strong>getQueryUrl(
+)</strong></h4>
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_MemberQuery.html#methodgetQueryUrl">Zend_Gdata_Gapps_MemberQuery::getQueryUrl()</a></dt>
+		<dd>Returns the query URL generated by this query instance.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_OwnerQuery.html#methodgetQueryUrl">Zend_Gdata_Gapps_OwnerQuery::getQueryUrl()</a></dt>
+		<dd>Returns the query URL generated by this query instance.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_EmailListQuery.html#methodgetQueryUrl">Zend_Gdata_Gapps_EmailListQuery::getQueryUrl()</a></dt>
+		<dd>Returns the URL generated for this query, based on it's current  parameters.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_NicknameQuery.html#methodgetQueryUrl">Zend_Gdata_Gapps_NicknameQuery::getQueryUrl()</a></dt>
+		<dd>Returns the URL generated for this query, based on it's current  parameters.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_UserQuery.html#methodgetQueryUrl">Zend_Gdata_Gapps_UserQuery::getQueryUrl()</a></dt>
+		<dd>Returns the query URL generated by this query instance.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_GroupQuery.html#methodgetQueryUrl">Zend_Gdata_Gapps_GroupQuery::getQueryUrl()</a></dt>
+		<dd>Returns the query URL generated by this query instance.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps_EmailListRecipientQuery.html#methodgetQueryUrl">Zend_Gdata_Gapps_EmailListRecipientQuery::getQueryUrl()</a></dt>
+		<dd>Returns the URL generated for this query, based on it's current  parameters.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_DocumentQuery.html#methodgetQueryUrl">Zend_Gdata_Spreadsheets_DocumentQuery::getQueryUrl()</a></dt>
+		<dd>Gets the full query URL for this query.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_ListQuery.html#methodgetQueryUrl">Zend_Gdata_Spreadsheets_ListQuery::getQueryUrl()</a></dt>
+		<dd>Gets the full query URL for this query.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets_CellQuery.html#methodgetQueryUrl">Zend_Gdata_Spreadsheets_CellQuery::getQueryUrl()</a></dt>
+		<dd>Gets the full query URL for this query.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase_SnippetQuery.html#methodgetQueryUrl">Zend_Gdata_Gbase_SnippetQuery::getQueryUrl()</a></dt>
+		<dd>Returns the query URL generated by this query instance.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase_ItemQuery.html#methodgetQueryUrl">Zend_Gdata_Gbase_ItemQuery::getQueryUrl()</a></dt>
+		<dd>Returns the query URL generated by this query instance.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html#methodgetQueryUrl">Zend_Gdata_YouTube_VideoQuery::getQueryUrl()</a></dt>
+		<dd>Returns the generated full query URL, optionally modifying it based on  the protocol version.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Calendar/Zend_Gdata_Calendar_EventQuery.html#methodgetQueryUrl">Zend_Gdata_Calendar_EventQuery::getQueryUrl()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_UserQuery.html#methodgetQueryUrl">Zend_Gdata_Photos_UserQuery::getQueryUrl()</a></dt>
+		<dd>Returns the URL generated for this query, based on it's current  parameters.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_AlbumQuery.html#methodgetQueryUrl">Zend_Gdata_Photos_AlbumQuery::getQueryUrl()</a></dt>
+		<dd>Returns the URL generated for this query, based on it's current  parameters.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos_PhotoQuery.html#methodgetQueryUrl">Zend_Gdata_Photos_PhotoQuery::getQueryUrl()</a></dt>
+		<dd>Returns the URL generated for this query, based on it's current  parameters.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs_Query.html#methodgetQueryUrl">Zend_Gdata_Docs_Query::getQueryUrl()</a></dt>
+		<dd>Gets the full query URL for this query.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Books/Zend_Gdata_Books_VolumeQuery.html#methodgetQueryUrl">Zend_Gdata_Books_VolumeQuery::getQueryUrl()</a></dt>
+		<dd>Returns the generated full query URL</dd>
+	</dl>
+	</p>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - url</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetStartIndex" id="methodgetStartIndex"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getStartIndex</strong> (line <span class="linenumber">308</span>)
+ </h4> 
+<h4><i>int</i> <strong>getStartIndex(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - startIndex</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetUpdatedMax" id="methodgetUpdatedMax"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getUpdatedMax</strong> (line <span class="linenumber">320</span>)
+ </h4> 
+<h4><i>string</i> <strong>getUpdatedMax(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - updatedMax</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetUpdatedMin" id="methodgetUpdatedMin"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getUpdatedMin</strong> (line <span class="linenumber">332</span>)
+ </h4> 
+<h4><i>string</i> <strong>getUpdatedMin(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - updatedMin</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodresetParameters" id="methodresetParameters"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method resetParameters</strong> (line <span class="linenumber">102</span>)
+ </h4> 
+<h4><i>void</i> <strong>resetParameters(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetAlt" id="methodsetAlt"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setAlt</strong> (line <span class="linenumber">147</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></i> <strong>setAlt(
+string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetAuthor" id="methodsetAuthor"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setAuthor</strong> (line <span class="linenumber">259</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></i> <strong>setAuthor(
+string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetCategory" id="methodsetCategory"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setCategory</strong> (line <span class="linenumber">381</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></i> <strong>setCategory(
+string
+$value)</strong></h4>
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../../Zend_Gdata/Health/Zend_Gdata_Health_Query.html#methodsetCategory">Zend_Gdata_Health_Query::setCategory()</a></dt>
+		<dd>Setter for category queries.</dd>
+	</dl>
+	</p>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetMaxResults" id="methodsetMaxResults"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setMaxResults</strong> (line <span class="linenumber">161</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></i> <strong>setMaxResults(
+int
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>int $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetParam" id="methodsetParam"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setParam</strong> (line <span class="linenumber">129</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></i> <strong>setParam(
+string
+$name, string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $name</strong>: </li>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetPublishedMax" id="methodsetPublishedMax"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setPublishedMax</strong> (line <span class="linenumber">231</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></i> <strong>setPublishedMax(
+string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetPublishedMin" id="methodsetPublishedMin"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setPublishedMin</strong> (line <span class="linenumber">245</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></i> <strong>setPublishedMin(
+string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetQuery" id="methodsetQuery"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setQuery</strong> (line <span class="linenumber">175</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></i> <strong>setQuery(
+string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetStartIndex" id="methodsetStartIndex"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setStartIndex</strong> (line <span class="linenumber">189</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></i> <strong>setStartIndex(
+int
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>int $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetUpdatedMax" id="methodsetUpdatedMax"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setUpdatedMax</strong> (line <span class="linenumber">203</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></i> <strong>setUpdatedMax(
+string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetUpdatedMin" id="methodsetUpdatedMin"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setUpdatedMin</strong> (line <span class="linenumber">217</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></i> <strong>setUpdatedMin(
+string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="method__get" id="method__get"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method __get</strong> (line <span class="linenumber">396</span>)
+ </h4> 
+<h4><i>void</i> <strong>__get(
+
+$name)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $name</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="method__set" id="method__set"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method __set</strong> (line <span class="linenumber">407</span>)
+ </h4> 
+<h4><i>void</i> <strong>__set(
+
+$name, 
+$val)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $name</strong>: </li>
+			<li><strong> $val</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 16:18:47 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
 </html>

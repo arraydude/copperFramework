@@ -58,7 +58,7 @@ require_once copperConfig::get('lib') . '/phpmailer/class.phpmailer.php';
 
 require_once copperConfig::get('lib') . '/facebook/facebook.php';
 
-if(copperConfig::get('activateFacebook')){
+if(copperConfig::get('facebookActivate')){
   try {
     $fbInstance = copperFacebook::factory(array(), array('req_perms' => 'photo_upload,user_photos,email,friends_photos,user_photo_video_tags,friends_photo_video_tags'));
   } catch(Exception $e) {

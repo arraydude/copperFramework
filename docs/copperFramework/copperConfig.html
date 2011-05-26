@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class copperConfig</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class copperConfig
+</h2> (line <span class="linenumber">29</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: <a href="_includes---classes---copperConfig.php.html">/includes/classes/copperConfig.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>copperConfig</h5>
+<ul>
+		<li><strong>author:</strong> - Emilio Astarita</li>
+	</ul>
+<br /><hr />
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    static <span class="var-type">mixed</span>
+    <a href="#var$conf" title="details" class="property"><strong>$conf</strong></a>
+</div>
+<hr />
+<a name="var$conf" id="var$conf"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">static $conf</strong> (line <span class="linenumber">31</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - private</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+    static         <span class="method-result">bool</span>
+        <a href="#methoddoError" title="details" class="method-name">doError</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$append</span> = <span class="var-default">true</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">bool</span>
+        <a href="#methoddoLog" title="details" class="method-name">doLog</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$append</span> = <span class="var-default">true</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">mix</span>
+        <a href="#methodget" title="details" class="method-name">get</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type"><type></span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">NULL</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">void</span>
+        <a href="#methodinc" title="details" class="method-name">inc</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$fileName</span>)
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">true</span>
+        <a href="#methodincCss" title="details" class="method-name">incCss</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$fileName</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$external</span> = <span class="var-default">true</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">true</span>
+        <a href="#methodincJs" title="details" class="method-name">incJs</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$fileName</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$external</span> = <span class="var-default">true</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">void</span>
+        <a href="#methodincTemplate" title="details" class="method-name">incTemplate</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$fileName</span>)
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">void</span>
+        <a href="#methodinit" title="details" class="method-name">init</a>
+        (<span class="var-type"></span>&nbsp;<span class="var-name">$values</span>)
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">void</span>
+        <a href="#methodinitDb" title="details" class="method-name">initDb</a>
+        ()
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result"><type></span>
+        <a href="#methodlibPath" title="details" class="method-name">libPath</a>
+        ([<span class="var-type"><type></span>&nbsp;<span class="var-name">$fileName</span> = <span class="var-default">NULL</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">string</span>
+        <a href="#methodlink" title="details" class="method-name">link</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$l</span> = <span class="var-default">NULL</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">string</span>
+        <a href="#methodpub" title="details" class="method-name">pub</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$fileName</span>)
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result"><type></span>
+        <a href="#methodpublicPath" title="details" class="method-name">publicPath</a>
+        ([<span class="var-type"><type></span>&nbsp;<span class="var-name">$fileName</span> = <span class="var-default">NULL</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">string</span>
+        <a href="#methodpubUpload" title="details" class="method-name">pubUpload</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$fileName</span>)
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">mix</span>
+        <a href="#methodset" title="details" class="method-name">set</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mix</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">false</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result"><type></span>
+        <a href="#methodtemplatesPath" title="details" class="method-name">templatesPath</a>
+        ([<span class="var-type"><type></span>&nbsp;<span class="var-name">$fileName</span> = <span class="var-default">NULL</span>])
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="methoddoError" id="methoddoError"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method doError</strong> (line <span class="linenumber">82</span>)
+ </h4> 
+<h4><i>bool</i> <strong>doError(
+string
+$msg, [bool
+$append = true])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>doError</h5>
+<div class="desc"><p>Log an error</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $msg</strong>: </li>
+			<li><strong>bool $append</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methoddoLog" id="methoddoLog"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method doLog</strong> (line <span class="linenumber">58</span>)
+ </h4> 
+<h4><i>bool</i> <strong>doLog(
+string
+$msg, [bool
+$append = true])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>doLog</h5>
+<div class="desc"><p>log an message into log file</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $msg</strong>: </li>
+			<li><strong>bool $append</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodget" id="methodget"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method get</strong> (line <span class="linenumber">111</span>)
+ </h4> 
+<h4><i>mix</i> <strong>get(
+string
+$key, [<type>
+$default = NULL])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>get</h5>
+<div class="desc"><p>Get an global var</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $key</strong>: </li>
+			<li><strong><type> $default</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodinc" id="methodinc"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method inc</strong> (line <span class="linenumber">185</span>)
+ </h4> 
+<h4><i>void</i> <strong>inc(
+string
+$fileName)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>inc</h5>
+<div class="desc"><p>Include a lib file</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $fileName</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodincCss" id="methodincCss"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method incCss</strong> (line <span class="linenumber">207</span>)
+ </h4> 
+<h4><i>true</i> <strong>incCss(
+string
+$fileName, [bool
+$external = true])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>incCss</h5>
+<div class="desc"><p>Include a CSS file</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $fileName</strong>: </li>
+			<li><strong>bool $external</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodincJs" id="methodincJs"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method incJs</strong> (line <span class="linenumber">236</span>)
+ </h4> 
+<h4><i>true</i> <strong>incJs(
+string
+$fileName, [bool
+$external = true])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>incJs</h5>
+<div class="desc"><p>Include a JS file</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $fileName</strong>: </li>
+			<li><strong>bool $external</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodincTemplate" id="methodincTemplate"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method incTemplate</strong> (line <span class="linenumber">195</span>)
+ </h4> 
+<h4><i>void</i> <strong>incTemplate(
+string
+$fileName)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>incTemplate</h5>
+<div class="desc"><p>Include a template</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $fileName</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodinit" id="methodinit"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method init</strong> (line <span class="linenumber">33</span>)
+ </h4> 
+<h4><i>void</i> <strong>init(
+
+$values)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $values</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodinitDb" id="methodinitDb"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method initDb</strong> (line <span class="linenumber">38</span>)
+ </h4> 
+<h4><i>void</i> <strong>initDb(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - protected</li>
+		</ul>
+</div>
+<a name="methodlibPath" id="methodlibPath"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method libPath</strong> (line <span class="linenumber">125</span>)
+ </h4> 
+<h4><i><type></i> <strong>libPath(
+[<type>
+$fileName = NULL])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>libPath</h5>
+<div class="desc"><p>Get the libraries path</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><type> $fileName</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodlink" id="methodlink"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method link</strong> (line <span class="linenumber">171</span>)
+ </h4> 
+<h4><i>string</i> <strong>link(
+[string
+$l = NULL])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>link</h5>
+<div class="desc"><p>Generate a clean link</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $l</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodpub" id="methodpub"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method pub</strong> (line <span class="linenumber">262</span>)
+ </h4> 
+<h4><i>string</i> <strong>pub(
+string
+$fileName)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>pub</h5>
+<div class="desc"><p>Include a public file</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $fileName</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodpublicPath" id="methodpublicPath"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method publicPath</strong> (line <span class="linenumber">156</span>)
+ </h4> 
+<h4><i><type></i> <strong>publicPath(
+[<type>
+$fileName = NULL])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>publicPath</h5>
+<div class="desc"><p>Get the public path</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><type> $fileName</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodpubUpload" id="methodpubUpload"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method pubUpload</strong> (line <span class="linenumber">274</span>)
+ </h4> 
+<h4><i>string</i> <strong>pubUpload(
+string
+$fileName)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>pubUpload</h5>
+<div class="desc"><p>Return the path of an public upload</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $fileName</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodset" id="methodset"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method set</strong> (line <span class="linenumber">96</span>)
+ </h4> 
+<h4><i>mix</i> <strong>set(
+string
+$key, mix
+$value, [bool
+$overwrite = false])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>set</h5>
+<div class="desc"><p>Set an global var</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $key</strong>: </li>
+			<li><strong>mix $value</strong>: </li>
+			<li><strong>bool $overwrite</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodtemplatesPath" id="methodtemplatesPath"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method templatesPath</strong> (line <span class="linenumber">140</span>)
+ </h4> 
+<h4><i><type></i> <strong>templatesPath(
+[<type>
+$fileName = NULL])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>templatesPath</h5>
+<div class="desc"><p>Get the templates path</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><type> $fileName</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 18:15:37 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
+</html>

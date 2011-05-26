@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Gdata_YouTube_VideoQuery</title>
+  <link rel="stylesheet" href="../../media/stylesheet.css" />
+  <script src="../../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../../media/images/plus.gif";
+	imgMinus.src = "../../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Gdata_YouTube_VideoQuery
+</h2> (line <span class="linenumber">45</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+<a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a>
+   |
+   --Zend_Gdata_YouTube_VideoQuery</pre>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Gdata---YouTube---VideoQuery.php.html">/includes/lib/youtube/library/Zend/Gdata/YouTube/VideoQuery.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Assists in constructing queries for YouTube videos</h5>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>link:</strong> - <a href="http://code.google.com/apis/youtube/">http://code.google.com/apis/youtube/</a></li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+            <span class="method-result">Zend_Gdata_YouTube_VideoQuery</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        ([<span class="var-type"></span>&nbsp;<span class="var-name">$url</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string|null</span>
+        <a href="#methodgetFormat" title="details" class="method-name">getFormat</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string|null</span>
+        <a href="#methodgetLocation" title="details" class="method-name">getLocation</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string|null</span>
+        <a href="#methodgetLocationRadius" title="details" class="method-name">getLocationRadius</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string|null</span>
+        <a href="#methodgetOrderBy" title="details" class="method-name">getOrderBy</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetQueryString" title="details" class="method-name">getQueryString</a>
+        ([<span class="var-type">integer</span>&nbsp;<span class="var-name">$majorProtocolVersion</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$minorProtocolVersion</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetQueryUrl" title="details" class="method-name">getQueryUrl</a>
+        ([<span class="var-type">integer</span>&nbsp;<span class="var-name">$majorProtocolVersion</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$minorProtocolVersion</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string|null</span>
+        <a href="#methodgetRacy" title="details" class="method-name">getRacy</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string|null</span>
+        <a href="#methodgetSafeSearch" title="details" class="method-name">getSafeSearch</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string|null</span>
+        <a href="#methodgetTime" title="details" class="method-name">getTime</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string|null</span>
+        <a href="#methodgetVideoQuery" title="details" class="method-name">getVideoQuery</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodsetFeedType" title="details" class="method-name">setFeedType</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$feedType</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$videoId</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$entry</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></span>
+        <a href="#methodsetFormat" title="details" class="method-name">setFormat</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></span>
+        <a href="#methodsetLocation" title="details" class="method-name">setLocation</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></span>
+        <a href="#methodsetLocationRadius" title="details" class="method-name">setLocationRadius</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">Zend_Gdata_YouTube_Query</span>
+        <a href="#methodsetOrderBy" title="details" class="method-name">setOrderBy</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></span>
+        <a href="#methodsetRacy" title="details" class="method-name">setRacy</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></span>
+        <a href="#methodsetSafeSearch" title="details" class="method-name">setSafeSearch</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></span>
+        <a href="#methodsetTime" title="details" class="method-name">setTime</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></span>
+        <a href="#methodsetUploader" title="details" class="method-name">setUploader</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></span>
+        <a href="#methodsetVideoQuery" title="details" class="method-name">setVideoQuery</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">51</span>)
+ </h4> 
+<h4><i>Zend_Gdata_YouTube_VideoQuery</i> <strong>__construct(
+[
+$url = null])</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#method__construct">Zend_Gdata_Query::__construct()</a> Create Gdata_Query object</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Create Gdata_YouTube_VideoQuery object</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $url</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetFormat" id="methodgetFormat"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getFormat</strong> (line <span class="linenumber">393</span>)
+ </h4> 
+<h4><i>string|null</i> <strong>getFormat(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Return the value of the format parameter</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The value of format if it exists, null otherwise.</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetLocation" id="methodgetLocation"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getLocation</strong> (line <span class="linenumber">161</span>)
+ </h4> 
+<h4><i>string|null</i> <strong>getLocation(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Get the value of the location parameter</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Return the location if it exists, null otherwise.</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetLocationRadius" id="methodgetLocationRadius"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getLocationRadius</strong> (line <span class="linenumber">193</span>)
+ </h4> 
+<h4><i>string|null</i> <strong>getLocationRadius(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Get the value of the location-radius parameter</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Return the location-radius if it exists,  null otherwise.</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetOrderBy" id="methodgetOrderBy"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getOrderBy</strong> (line <span class="linenumber">436</span>)
+ </h4> 
+<h4><i>string|null</i> <strong>getOrderBy(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Return the value of the orderby parameter if it exists</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The value of orderby if it exists, null otherwise.</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetQueryString" id="methodgetQueryString"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getQueryString</strong> (line <span class="linenumber">454</span>)
+ </h4> 
+<h4><i>string</i> <strong>getQueryString(
+[integer
+$majorProtocolVersion = null], [integer
+$minorProtocolVersion = null])</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetQueryString">Zend_Gdata_Query::getQueryString()</a> parent method not documented</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Generate the query string from the URL parameters, optionally modifying  them based on protocol version.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>integer $majorProtocolVersion</strong>: The major protocol version</li>
+			<li><strong>integer $minorProtocolVersion</strong>: The minor protocol version</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - querystring</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_VersionException</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetQueryUrl" id="methodgetQueryUrl"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getQueryUrl</strong> (line <span class="linenumber">524</span>)
+ </h4> 
+<h4><i>string</i> <strong>getQueryUrl(
+[integer
+$majorProtocolVersion = null], [integer
+$minorProtocolVersion = null])</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetQueryUrl">Zend_Gdata_Query::getQueryUrl()</a> parent method not documented</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns the generated full query URL, optionally modifying it based on  the protocol version.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>integer $majorProtocolVersion</strong>: The major protocol version</li>
+			<li><strong>integer $minorProtocolVersion</strong>: The minor protocol version</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The URL</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetRacy" id="methodgetRacy"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getRacy</strong> (line <span class="linenumber">319</span>)
+ </h4> 
+<h4><i>string|null</i> <strong>getRacy(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Whether or not to include racy videos in the search results</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The value of racy if it exists, null otherwise.</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetSafeSearch" id="methodgetSafeSearch"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getSafeSearch</strong> (line <span class="linenumber">364</span>)
+ </h4> 
+<h4><i>string|null</i> <strong>getSafeSearch(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Return the value of the safeSearch parameter</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The value of the safeSearch parameter if it has been          set, null otherwise.</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetTime" id="methodgetTime"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getTime</strong> (line <span class="linenumber">422</span>)
+ </h4> 
+<h4><i>string|null</i> <strong>getTime(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Return the value of the time parameter</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The time parameter if it exists, null otherwise.</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetVideoQuery" id="methodgetVideoQuery"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getVideoQuery</strong> (line <span class="linenumber">408</span>)
+ </h4> 
+<h4><i>string|null</i> <strong>getVideoQuery(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Return the value of the video query that has been set</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The value of the video query if it exists,          null otherwise.</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetFeedType" id="methodsetFeedType"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setFeedType</strong> (line <span class="linenumber">63</span>)
+ </h4> 
+<h4><i>void</i> <strong>setFeedType(
+string
+$feedType, [string
+$videoId = null], [string
+$entry = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the type of feed this query should be used to search</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $feedType</strong>: The type of feed</li>
+			<li><strong>string $videoId</strong>: The ID of the video associated with this query</li>
+			<li><strong>string $entry</strong>: The ID of the entry associated with this query</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetFormat" id="methodsetFormat"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setFormat</strong> (line <span class="linenumber">282</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></i> <strong>setFormat(
+[string
+$value = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the param to return videos of a specific format</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetLocation" id="methodsetLocation"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setLocation</strong> (line <span class="linenumber">125</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></i> <strong>setLocation(
+string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the location parameter for the query</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_InvalidArgumentException</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetLocationRadius" id="methodsetLocationRadius"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setLocationRadius</strong> (line <span class="linenumber">177</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></i> <strong>setLocationRadius(
+string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the location-radius parameter for the query</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetOrderBy" id="methodsetOrderBy"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setOrderBy</strong> (line <span class="linenumber">378</span>)
+ </h4> 
+<h4><i>Zend_Gdata_YouTube_Query</i> <strong>setOrderBy(
+string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Set the value of the orderby parameter</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetRacy" id="methodsetRacy"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setRacy</strong> (line <span class="linenumber">298</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></i> <strong>setRacy(
+[string
+$value = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets whether or not to include racy videos in the search results</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetSafeSearch" id="methodsetSafeSearch"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setSafeSearch</strong> (line <span class="linenumber">336</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></i> <strong>setSafeSearch(
+string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Set the safeSearch parameter</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: The value of the parameter, currently only 'none',         'moderate' or 'strict' are allowed values.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_InvalidArgumentException</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetTime" id="methodsetTime"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setTime</strong> (line <span class="linenumber">209</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></i> <strong>setTime(
+[string
+$value = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the time period over which this query should apply</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_InvalidArgumentException</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetUploader" id="methodsetUploader"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setUploader</strong> (line <span class="linenumber">243</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></i> <strong>setUploader(
+[string
+$value = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the value of the uploader parameter</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: The value of the uploader parameter. Currently this         can only be set to the value of 'partner'.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_InvalidArgumentException</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetVideoQuery" id="methodsetVideoQuery"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setVideoQuery</strong> (line <span class="linenumber">266</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube_VideoQuery.html">Zend_Gdata_YouTube_VideoQuery</a></i> <strong>setVideoQuery(
+[string
+$value = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the formatted video query (vq) URL param value</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></h4>
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#var$_category">Zend_Gdata_Query::$_category</a></strong> - Category for the query
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#var$_defaultFeedUri">Zend_Gdata_Query::$_defaultFeedUri</a></strong> - Default URL
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#var$_params">Zend_Gdata_Query::$_params</a></strong> - Query parameters.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#var$_url">Zend_Gdata_Query::$_url</a></strong> - Base URL  TODO: Add setters and getters
+	</h4> 
+		</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html">Zend_Gdata_Query</a></h4>
+				<h4>
+<img src="../../media/images/Constructor.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#method__construct">Zend_Gdata_Query::__construct()</a></strong> - Create Gdata_Query object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetAlt">Zend_Gdata_Query::getAlt()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetAuthor">Zend_Gdata_Query::getAuthor()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetCategory">Zend_Gdata_Query::getCategory()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetMaxResults">Zend_Gdata_Query::getMaxResults()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetParam">Zend_Gdata_Query::getParam()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetPublishedMax">Zend_Gdata_Query::getPublishedMax()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetPublishedMin">Zend_Gdata_Query::getPublishedMin()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetQuery">Zend_Gdata_Query::getQuery()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetQueryString">Zend_Gdata_Query::getQueryString()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetQueryUrl">Zend_Gdata_Query::getQueryUrl()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetStartIndex">Zend_Gdata_Query::getStartIndex()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetUpdatedMax">Zend_Gdata_Query::getUpdatedMax()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodgetUpdatedMin">Zend_Gdata_Query::getUpdatedMin()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodresetParameters">Zend_Gdata_Query::resetParameters()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodsetAlt">Zend_Gdata_Query::setAlt()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodsetAuthor">Zend_Gdata_Query::setAuthor()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodsetCategory">Zend_Gdata_Query::setCategory()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodsetMaxResults">Zend_Gdata_Query::setMaxResults()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodsetParam">Zend_Gdata_Query::setParam()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodsetPublishedMax">Zend_Gdata_Query::setPublishedMax()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodsetPublishedMin">Zend_Gdata_Query::setPublishedMin()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodsetQuery">Zend_Gdata_Query::setQuery()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodsetStartIndex">Zend_Gdata_Query::setStartIndex()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodsetUpdatedMax">Zend_Gdata_Query::setUpdatedMax()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#methodsetUpdatedMin">Zend_Gdata_Query::setUpdatedMin()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#method__get">Zend_Gdata_Query::__get()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Query.html#method__set">Zend_Gdata_Query::__set()</a></strong> - 
+		</h4> 
+
+				<br />
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 18:16:41 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
+</html>

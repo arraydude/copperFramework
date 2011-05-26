@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Gdata_YouTube_SubscriptionFeed</title>
+  <link rel="stylesheet" href="../../media/stylesheet.css" />
+  <script src="../../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../../media/images/plus.gif";
+	imgMinus.src = "../../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Gdata_YouTube_SubscriptionFeed
+</h2> (line <span class="linenumber">45</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+<a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html">Zend_Gdata_App_Base</a>
+   |
+   --<a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html">Zend_Gdata_App_FeedEntryParent</a>
+      |
+      --<a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html">Zend_Gdata_App_FeedSourceParent</a>
+         |
+         --<a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>
+            |
+            --<a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html">Zend_Gdata_Feed</a>
+               |
+               --<a href="../../Zend_Gdata/Media/Zend_Gdata_Media_Feed.html">Zend_Gdata_Media_Feed</a>
+                  |
+                  --Zend_Gdata_YouTube_SubscriptionFeed</pre>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Gdata---YouTube---SubscriptionFeed.php.html">/includes/lib/youtube/library/Zend/Gdata/YouTube/SubscriptionFeed.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>The YouTube video subscription list flavor of an Atom Feed with media support  Represents a list of individual subscriptions, where each contained entry is  a subscription.</h5>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_entryClassName" title="details" class="property"><strong>$_entryClassName</strong></a>
+</div>
+<hr />
+<a name="var$_entryClassName" id="var$_entryClassName"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_entryClassName =  'Zend_Gdata_YouTube_SubscriptionEntry'</strong> (line <span class="linenumber">53</span>)
+ </h4>
+<h4>Data type : string</h4>
+<p><strong>Overrides:</strong> Array<br></p><!-- ========== Info from phpDoc block ========= -->
+<h5>The classname for individual feed elements.</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+            <span class="method-result">Zend_Gdata_YouTube_SubscriptionFeed</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        ([<span class="var-type">DOMElement</span>&nbsp;<span class="var-name">$element</span> = <span class="var-default">null</span>])
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">62</span>)
+ </h4> 
+<h4><i>Zend_Gdata_YouTube_SubscriptionFeed</i> <strong>__construct(
+[DOMElement
+$element = null])</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Gdata/Media/Zend_Gdata_Media_Feed.html#method__construct">Zend_Gdata_Media_Feed::__construct()</a> Create a new instance.</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Creates a Subscription feed, representing a list of subscriptions,  usually associated with an individual user.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>DOMElement $element</strong>: (optional) DOMElement from which this           object should be constructed.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html">Zend_Gdata_Feed</a></h4>
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html#var$_itemsPerPage">Zend_Gdata_Feed::$_itemsPerPage</a></strong> - The openSearch:itemsPerPage element
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html#var$_startIndex">Zend_Gdata_Feed::$_startIndex</a></strong> - The openSearch:startIndex element
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html#var$_totalResults">Zend_Gdata_Feed::$_totalResults</a></strong> - The openSearch:totalResults element
+	</h4> 
+			<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a></h4>
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#var$_entry">Zend_Gdata_App_Feed::$_entry</a></strong> - Cache of feed entries.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#var$_entryIndex">Zend_Gdata_App_Feed::$_entryIndex</a></strong> - Current location in $_entry array
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#var$_rootElement">Zend_Gdata_App_Feed::$_rootElement</a></strong> - The root xml element of this data element
+	</h4> 
+			<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html">Zend_Gdata_App_FeedSourceParent</a></h4>
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#var$_generator">Zend_Gdata_App_FeedSourceParent::$_generator</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#var$_icon">Zend_Gdata_App_FeedSourceParent::$_icon</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#var$_logo">Zend_Gdata_App_FeedSourceParent::$_logo</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#var$_subtitle">Zend_Gdata_App_FeedSourceParent::$_subtitle</a></strong> - 
+	</h4> 
+			<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html">Zend_Gdata_App_FeedEntryParent</a></h4>
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#var$_author">Zend_Gdata_App_FeedEntryParent::$_author</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#var$_category">Zend_Gdata_App_FeedEntryParent::$_category</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#var$_contributor">Zend_Gdata_App_FeedEntryParent::$_contributor</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#var$_etag">Zend_Gdata_App_FeedEntryParent::$_etag</a></strong> - The HTTP ETag associated with this entry. Used for optimistic  concurrency in protoco v2 or greater.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#var$_id">Zend_Gdata_App_FeedEntryParent::$_id</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#var$_link">Zend_Gdata_App_FeedEntryParent::$_link</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#var$_majorProtocolVersion">Zend_Gdata_App_FeedEntryParent::$_majorProtocolVersion</a></strong> - Indicates the major protocol version that should be used.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#var$_minorProtocolVersion">Zend_Gdata_App_FeedEntryParent::$_minorProtocolVersion</a></strong> - Indicates the minor protocol version that should be used. Can be set  to either an integer &gt;= 0, or NULL if no minor version should be sent  to the server.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#var$_rights">Zend_Gdata_App_FeedEntryParent::$_rights</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#var$_service">Zend_Gdata_App_FeedEntryParent::$_service</a></strong> - Service instance used to make network requests.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#var$_title">Zend_Gdata_App_FeedEntryParent::$_title</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#var$_updated">Zend_Gdata_App_FeedEntryParent::$_updated</a></strong> - 
+	</h4> 
+			<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html">Zend_Gdata_App_Base</a></h4>
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#var$_extensionAttributes">Zend_Gdata_App_Base::$_extensionAttributes</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#var$_extensionElements">Zend_Gdata_App_Base::$_extensionElements</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#var$_namespaceLookupCache">Zend_Gdata_App_Base::$_namespaceLookupCache</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#var$_namespaces">Zend_Gdata_App_Base::$_namespaces</a></strong> - List of namespaces, as a three-dimensional array. The first dimension  represents the namespace prefix, the second dimension represents the  minimum major protocol version, and the third dimension is the minimum  minor protocol version. Null keys are NOT allowed.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#var$_rootNamespace">Zend_Gdata_App_Base::$_rootNamespace</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#var$_rootNamespaceURI">Zend_Gdata_App_Base::$_rootNamespaceURI</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#var$_text">Zend_Gdata_App_Base::$_text</a></strong> - 
+	</h4> 
+		</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/Media/Zend_Gdata_Media_Feed.html">Zend_Gdata_Media_Feed</a></h4>
+				<h4>
+<img src="../../media/images/Constructor.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Media/Zend_Gdata_Media_Feed.html#method__construct">Zend_Gdata_Media_Feed::__construct()</a></strong> - Create a new instance.
+		</h4> 
+
+				<br />
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html">Zend_Gdata_Feed</a></h4>
+				<h4>
+<img src="../../media/images/Constructor.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html#method__construct">Zend_Gdata_Feed::__construct()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html#methodgetDOM">Zend_Gdata_Feed::getDOM()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html#methodgetItemsPerPage">Zend_Gdata_Feed::getItemsPerPage()</a></strong> - Get the value of the itemsPerPage property.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html#methodgetStartIndex">Zend_Gdata_Feed::getStartIndex()</a></strong> - Get the value of the startIndex property.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html#methodgetTotalResults">Zend_Gdata_Feed::getTotalResults()</a></strong> - Get the value of the totalResults property.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html#methodsetItemsPerPage">Zend_Gdata_Feed::setItemsPerPage()</a></strong> - Set the itemsPerPage property.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html#methodsetStartIndex">Zend_Gdata_Feed::setStartIndex()</a></strong> - Set the start index property for feed paging.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html#methodsetTotalResults">Zend_Gdata_Feed::setTotalResults()</a></strong> - Set the value of the totalResults property.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html#methodtakeAttributeFromDOM">Zend_Gdata_Feed::takeAttributeFromDOM()</a></strong> - Given a DOMNode representing an attribute, tries to map the data into  instance members.  If no mapping is defined, the name and value are  stored in an array.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html#methodtakeChildFromDOM">Zend_Gdata_Feed::takeChildFromDOM()</a></strong> - Creates individual Entry objects of the appropriate type and  stores them in the $_entry array based upon DOM data.
+		</h4> 
+
+				<br />
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a></h4>
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodaddEntry">Zend_Gdata_App_Feed::addEntry()</a></strong> - Adds an entry representation to the array of entries  contained within this feed
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodcount">Zend_Gdata_App_Feed::count()</a></strong> - Get the number of entries in this feed object.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodcurrent">Zend_Gdata_App_Feed::current()</a></strong> - Required by the Iterator interface.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodgetDOM">Zend_Gdata_App_Feed::getDOM()</a></strong> - Retrieves the DOM model representing this object and all children
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodgetEntry">Zend_Gdata_App_Feed::getEntry()</a></strong> - Gets the array of atom:entry elements contained within this  atom:feed representation
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodgetNextFeed">Zend_Gdata_App_Feed::getNextFeed()</a></strong> - Retrieve the next set of results from this feed.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodgetPreviousFeed">Zend_Gdata_App_Feed::getPreviousFeed()</a></strong> - Retrieve the previous set of results from this feed.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodkey">Zend_Gdata_App_Feed::key()</a></strong> - Required by the Iterator interface.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodnext">Zend_Gdata_App_Feed::next()</a></strong> - Required by the Iterator interface.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodoffsetExists">Zend_Gdata_App_Feed::offsetExists()</a></strong> - Required by the ArrayAccess interface
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodoffsetGet">Zend_Gdata_App_Feed::offsetGet()</a></strong> - Required by the ArrayAccess interface
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodoffsetSet">Zend_Gdata_App_Feed::offsetSet()</a></strong> - Required by the ArrayAccess interface
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodoffsetUnset">Zend_Gdata_App_Feed::offsetUnset()</a></strong> - Required by the ArrayAccess interface
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodrewind">Zend_Gdata_App_Feed::rewind()</a></strong> - Required by the Iterator interface.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodsetEntry">Zend_Gdata_App_Feed::setEntry()</a></strong> - Sets the array of atom:entry elements contained within this  atom:feed representation
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodsetMajorProtocolVersion">Zend_Gdata_App_Feed::setMajorProtocolVersion()</a></strong> - Set the major protocol version that should be used. Values &lt; 1 will  cause a Zend_Gdata_App_InvalidArgumentException to be thrown.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodsetMinorProtocolVersion">Zend_Gdata_App_Feed::setMinorProtocolVersion()</a></strong> - Set the minor protocol version that should be used. If set to NULL, no  minor protocol version will be sent to the server. Values &lt; 0 will  cause a Zend_Gdata_App_InvalidArgumentException to be thrown.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodtakeChildFromDOM">Zend_Gdata_App_Feed::takeChildFromDOM()</a></strong> - Creates individual Entry objects of the appropriate type and  stores them in the $_entry array based upon DOM data.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#methodvalid">Zend_Gdata_App_Feed::valid()</a></strong> - Required by the Iterator interface.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html#method__get">Zend_Gdata_App_Feed::__get()</a></strong> - Make accessing some individual elements of the feed easier.
+		</h4> 
+
+				<br />
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html">Zend_Gdata_App_FeedSourceParent</a></h4>
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#methodgetDOM">Zend_Gdata_App_FeedSourceParent::getDOM()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#methodgetGenerator">Zend_Gdata_App_FeedSourceParent::getGenerator()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#methodgetIcon">Zend_Gdata_App_FeedSourceParent::getIcon()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#methodgetlogo">Zend_Gdata_App_FeedSourceParent::getlogo()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#methodgetSubtitle">Zend_Gdata_App_FeedSourceParent::getSubtitle()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#methodsetGenerator">Zend_Gdata_App_FeedSourceParent::setGenerator()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#methodsetHttpClient">Zend_Gdata_App_FeedSourceParent::setHttpClient()</a></strong> - Set the HTTP client instance
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#methodsetIcon">Zend_Gdata_App_FeedSourceParent::setIcon()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#methodsetlogo">Zend_Gdata_App_FeedSourceParent::setlogo()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#methodsetService">Zend_Gdata_App_FeedSourceParent::setService()</a></strong> - Set the active service instance for this feed and all enclosed entries.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#methodsetSubtitle">Zend_Gdata_App_FeedSourceParent::setSubtitle()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#methodtakeChildFromDOM">Zend_Gdata_App_FeedSourceParent::takeChildFromDOM()</a></strong> - Creates individual Entry objects of the appropriate type and  stores them in the $_entry array based upon DOM data.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedSourceParent.html#method__get">Zend_Gdata_App_FeedSourceParent::__get()</a></strong> - Make accessing some individual elements of the feed easier.
+		</h4> 
+
+				<br />
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html">Zend_Gdata_App_FeedEntryParent</a></h4>
+				<h4>
+<img src="../../media/images/Constructor.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#method__construct">Zend_Gdata_App_FeedEntryParent::__construct()</a></strong> - Constructs a Feed or Entry
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetAlternateLink">Zend_Gdata_App_FeedEntryParent::getAlternateLink()</a></strong> - Returns the Zend_Gdata_App_Extension_Link element which represents
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetAuthor">Zend_Gdata_App_FeedEntryParent::getAuthor()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetCategory">Zend_Gdata_App_FeedEntryParent::getCategory()</a></strong> - Returns the array of categories that classify this feed/entry.  Each  category is represented in an atom feed by an atom:category element.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetContributor">Zend_Gdata_App_FeedEntryParent::getContributor()</a></strong> - Returns the array of contributors to this feed/entry.  Each contributor  is represented in an atom feed by an atom:contributor XML element
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetDOM">Zend_Gdata_App_FeedEntryParent::getDOM()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetEditLink">Zend_Gdata_App_FeedEntryParent::getEditLink()</a></strong> - Returns the Zend_Gdata_App_Extension_Link element which represents  the URL used to edit this resource.  This link is in the atom feed/entry  as an atom:link with a rel attribute value of 'edit'.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetEtag">Zend_Gdata_App_FeedEntryParent::getEtag()</a></strong> - Return the Etag for the current entry, or null if not set.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetHttpClient">Zend_Gdata_App_FeedEntryParent::getHttpClient()</a></strong> - Gets the HTTP client object. If none is set, a new Zend_Http_Client  will be used.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetId">Zend_Gdata_App_FeedEntryParent::getId()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetLicenseLink">Zend_Gdata_App_FeedEntryParent::getLicenseLink()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetLink">Zend_Gdata_App_FeedEntryParent::getLink()</a></strong> - Given a particular 'rel' value, this method returns a matching
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetMajorProtocolVersion">Zend_Gdata_App_FeedEntryParent::getMajorProtocolVersion()</a></strong> - Get the major protocol version that is in use.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetMinorProtocolVersion">Zend_Gdata_App_FeedEntryParent::getMinorProtocolVersion()</a></strong> - Get the minor protocol version that is in use.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetNextLink">Zend_Gdata_App_FeedEntryParent::getNextLink()</a></strong> - Returns the Zend_Gdata_App_Extension_Link element which represents  the URL used to retrieve the next chunk of results when paging through  a feed.  This link is in the atom feed as an atom:link with a  rel attribute value of 'next'.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetPreviousLink">Zend_Gdata_App_FeedEntryParent::getPreviousLink()</a></strong> - Returns the Zend_Gdata_App_Extension_Link element which represents  the URL used to retrieve the previous chunk of results when paging  through a feed.  This link is in the atom feed as an atom:link with a  rel attribute value of 'previous'.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetRights">Zend_Gdata_App_FeedEntryParent::getRights()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetSelfLink">Zend_Gdata_App_FeedEntryParent::getSelfLink()</a></strong> - Returns the Zend_Gdata_App_Extension_Link element which represents  the URL used to retrieve the entry or feed represented by this object  This link is in the atom feed/entry as an atom:link with a  rel attribute value of 'self'.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetService">Zend_Gdata_App_FeedEntryParent::getService()</a></strong> - Get the active service instance for this object. This will be used to  perform network requests, such as when calling save() and delete().
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetTitle">Zend_Gdata_App_FeedEntryParent::getTitle()</a></strong> - Returns the title of this feed or entry.  The title is an extremely  short textual representation of this resource and is found as  an atom:title element in a feed or entry
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetTitleValue">Zend_Gdata_App_FeedEntryParent::getTitleValue()</a></strong> - Returns a string representation of the title of this feed or entry.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodgetUpdated">Zend_Gdata_App_FeedEntryParent::getUpdated()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodlookupNamespace">Zend_Gdata_App_FeedEntryParent::lookupNamespace()</a></strong> - Get the full version of a namespace prefix
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodsetAuthor">Zend_Gdata_App_FeedEntryParent::setAuthor()</a></strong> - Sets the list of the authors of this feed/entry.  In an atom feed, each  author is represented by an atom:author element
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodsetCategory">Zend_Gdata_App_FeedEntryParent::setCategory()</a></strong> - Sets the array of categories that classify this feed/entry.  Each  category is represented in an atom feed by an atom:category element.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodsetContributor">Zend_Gdata_App_FeedEntryParent::setContributor()</a></strong> - Sets the array of contributors to this feed/entry.  Each contributor  is represented in an atom feed by an atom:contributor XML element
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodsetEtag">Zend_Gdata_App_FeedEntryParent::setEtag()</a></strong> - Set the Etag for the current entry to $value. Setting $value to null  unsets the Etag.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodsetHttpClient">Zend_Gdata_App_FeedEntryParent::setHttpClient()</a></strong> - Set the HTTP client instance
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodsetId">Zend_Gdata_App_FeedEntryParent::setId()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodsetLink">Zend_Gdata_App_FeedEntryParent::setLink()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodsetMajorProtocolVersion">Zend_Gdata_App_FeedEntryParent::setMajorProtocolVersion()</a></strong> - Set the major protocol version that should be used. Values &lt; 1  (excluding NULL) will cause a Zend_Gdata_App_InvalidArgumentException  to be thrown.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodsetMinorProtocolVersion">Zend_Gdata_App_FeedEntryParent::setMinorProtocolVersion()</a></strong> - Set the minor protocol version that should be used. If set to NULL, no  minor protocol version will be sent to the server. Values &lt; 0 will  cause a Zend_Gdata_App_InvalidArgumentException to be thrown.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodsetRights">Zend_Gdata_App_FeedEntryParent::setRights()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodsetService">Zend_Gdata_App_FeedEntryParent::setService()</a></strong> - Set the active service instance for this object. This will be used to  perform network requests, such as when calling save() and delete().
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodsetTitle">Zend_Gdata_App_FeedEntryParent::setTitle()</a></strong> - Returns the title of this feed or entry.  The title is an extremely  short textual representation of this resource and is found as  an atom:title element in a feed or entry
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodsetUpdated">Zend_Gdata_App_FeedEntryParent::setUpdated()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_FeedEntryParent.html#methodtakeChildFromDOM">Zend_Gdata_App_FeedEntryParent::takeChildFromDOM()</a></strong> - 
+		</h4> 
+
+				<br />
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html">Zend_Gdata_App_Base</a></h4>
+				<h4>
+<img src="../../media/images/Constructor.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#method__construct">Zend_Gdata_App_Base::__construct()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodencode">Zend_Gdata_App_Base::encode()</a></strong> - Alias for saveXML()
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodflushNamespaceLookupCache">Zend_Gdata_App_Base::flushNamespaceLookupCache()</a></strong> - Flush namespace lookup cache.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodgetDOM">Zend_Gdata_App_Base::getDOM()</a></strong> - Retrieves a DOMElement which corresponds to this element and all  child properties.  This is used to build an entry back into a DOM  and eventually XML text for sending to the server upon updates, or  for application storage/persistence.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodgetExtensionAttributes">Zend_Gdata_App_Base::getExtensionAttributes()</a></strong> - Returns an array of all extension attributes not transformed into data
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodgetExtensionElements">Zend_Gdata_App_Base::getExtensionElements()</a></strong> - Returns an array of all elements not matched to data model classes  during the parsing of the XML
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodgetText">Zend_Gdata_App_Base::getText()</a></strong> - Returns the child text node of this element  This represents any raw text contained within the XML element
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodgetXML">Zend_Gdata_App_Base::getXML()</a></strong> - Alias for saveXML() returns XML content for this element and all  children
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodlookupNamespace">Zend_Gdata_App_Base::lookupNamespace()</a></strong> - Get the full version of a namespace prefix
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodregisterAllNamespaces">Zend_Gdata_App_Base::registerAllNamespaces()</a></strong> - Add an array of namespaces to the registered list.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodregisterNamespace">Zend_Gdata_App_Base::registerNamespace()</a></strong> - Add a namespace and prefix to the registered list
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodsaveXML">Zend_Gdata_App_Base::saveXML()</a></strong> - Converts this element and all children into XML text using getDOM()
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodsetExtensionAttributes">Zend_Gdata_App_Base::setExtensionAttributes()</a></strong> - Sets an array of all extension attributes not transformed into data
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodsetExtensionElements">Zend_Gdata_App_Base::setExtensionElements()</a></strong> - Sets an array of all elements not matched to data model classes  during the parsing of the XML.  This method can be used to add arbitrary  child XML elements to any data model class.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodsetText">Zend_Gdata_App_Base::setText()</a></strong> - Sets the child text node of this element  This represents any raw text contained within the XML element
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodtakeAttributeFromDOM">Zend_Gdata_App_Base::takeAttributeFromDOM()</a></strong> - Given a DOMNode representing an attribute, tries to map the data into  instance members.  If no mapping is defined, the name and value are  stored in an array.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodtakeChildFromDOM">Zend_Gdata_App_Base::takeChildFromDOM()</a></strong> - Given a child DOMNode, tries to determine how to map the data into  object instance members.  If no mapping is defined, Extension_Element  objects are created and stored in an array.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodtransferFromDOM">Zend_Gdata_App_Base::transferFromDOM()</a></strong> - Transfers each child and attribute into member variables.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodtransferFromXML">Zend_Gdata_App_Base::transferFromXML()</a></strong> - Parses the provided XML text and generates data model classes for
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#method__get">Zend_Gdata_App_Base::__get()</a></strong> - Magic getter to allow access like $entry-&gt;foo to call $entry-&gt;getFoo()  Alternatively, if no getFoo() is defined, but a $_foo protected variable  is defined, this is returned.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#method__isset">Zend_Gdata_App_Base::__isset()</a></strong> - Magic __isset method
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#method__set">Zend_Gdata_App_Base::__set()</a></strong> - Magic setter to allow acces like $entry-&gt;foo='bar' to call  $entry-&gt;setFoo('bar') automatically.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#method__toString">Zend_Gdata_App_Base::__toString()</a></strong> - Magic toString method allows using this directly via echo  Works best in PHP &gt;= 4.2.0
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#method__unset">Zend_Gdata_App_Base::__unset()</a></strong> - Magic __unset method
+		</h4> 
+
+				<br />
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 18:16:33 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Http_Client_Adapter_Curl</title>
+  <link rel="stylesheet" href="../../media/stylesheet.css" />
+  <script src="../../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../../media/images/plus.gif";
+	imgMinus.src = "../../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Http_Client_Adapter_Curl
+</h2> (line <span class="linenumber">48</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Http---Client---Adapter---Curl.php.html">/includes/lib/youtube/library/Zend/Http/Client/Adapter/Curl.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>An adapter class for Zend_Http_Client based on the curl extension.</h5>
+<div class="desc"><p>Curl requires libcurl. See for full requirements the PHP manual: http://php.net/curl</p></div>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    <span class="var-type">resource</span>
+    <a href="#var$out_stream" title="details" class="property"><strong>$out_stream</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$_config" title="details" class="property"><strong>$_config</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$_connected_to" title="details" class="property"><strong>$_connected_to</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">resource|null</span>
+    <a href="#var$_curl" title="details" class="property"><strong>$_curl</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$_invalidOverwritableCurlOptions" title="details" class="property"><strong>$_invalidOverwritableCurlOptions</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_response" title="details" class="property"><strong>$_response</strong></a>
+</div>
+<hr />
+<a name="var$out_stream" id="var$out_stream"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$out_stream</strong> (line <span class="linenumber">90</span>)
+ </h4>
+<h4>Data type : resource</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Stream for storing output</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_config" id="var$_config"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_config = array()</strong> (line <span class="linenumber">55</span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Parameters array</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_connected_to" id="var$_connected_to"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_connected_to = array(null, null)</strong> (line <span class="linenumber">62</span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>What host/port are we connected to?</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_curl" id="var$_curl"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_curl =  null</strong> (line <span class="linenumber">69</span>)
+ </h4>
+<h4>Data type : resource|null</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>The curl session handle</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_invalidOverwritableCurlOptions" id="var$_invalidOverwritableCurlOptions"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_invalidOverwritableCurlOptions</strong> (line <span class="linenumber">76</span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>List of cURL options that should never be overwritten</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_response" id="var$_response"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_response =  null</strong> (line <span class="linenumber">83</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Response gotten from server</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodclose" title="details" class="method-name">close</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodconnect" title="details" class="method-name">connect</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$host</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$port</span> = <span class="var-default">80</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$secure</span> = <span class="var-default">false</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">array</span>
+        <a href="#methodgetConfig" title="details" class="method-name">getConfig</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">resource</span>
+        <a href="#methodgetHandle" title="details" class="method-name">getHandle</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodread" title="details" class="method-name">read</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">int</span>
+        <a href="#methodreadHeader" title="details" class="method-name">readHeader</a>
+        (<span class="var-type">resource</span>&nbsp;<span class="var-name">$curl</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$header</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Http/Client_Adapter/Zend_Http_Client_Adapter_Curl.html">Zend_Http_Client_Adapter_Curl</a></span>
+        <a href="#methodsetConfig" title="details" class="method-name">setConfig</a>
+        ([<span class="var-type">Zend_Config</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">Zend_Http_Adapter_Curl</span>
+        <a href="#methodsetCurlOption" title="details" class="method-name">setCurlOption</a>
+        (<span class="var-type">string|int</span>&nbsp;<span class="var-name">$option</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Http/Client_Adapter/Zend_Http_Client_Adapter_Socket.html">Zend_Http_Client_Adapter_Socket</a></span>
+        <a href="#methodsetOutputStream" title="details" class="method-name">setOutputStream</a>
+        (<span class="var-type">resource</span>&nbsp;<span class="var-name">$stream</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodwrite" title="details" class="method-name">write</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span>, <span class="var-type"><a href="../../Zend_Uri/Zend_Uri_Http.html">Zend_Uri_Http</a></span>&nbsp;<span class="var-name">$uri</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$httpVersion</span> = <span class="var-default">1.1</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$headers</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$body</span> = <span class="var-default">''</span>], <span class="var-type">float</span>&nbsp;<span class="var-name">$http_ver</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">100</span>)
+ </h4> 
+<h4><i>void</i> <strong>__construct(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Adapter constructor</h5>
+<div class="desc"><p>Config is set using setConfig()</p></div>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Http_Client_Adapter_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodclose" id="methodclose"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method close</strong> (line <span class="linenumber">464</span>)
+ </h4> 
+<h4><i>void</i> <strong>close(
+)</strong></h4>
+
+			<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../Zend_Http/Client_Adapter/Zend_Http_Client_Adapter_Interface.html#methodclose">Zend_Http_Client_Adapter_Interface::close()</a></dt>
+						<dd>Close the connection to the server</dd>
+					</dl>
+		<!-- ========== Info from phpDoc block ========= -->
+<h5>Close the connection to the server</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodconnect" id="methodconnect"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method connect</strong> (line <span class="linenumber">202</span>)
+ </h4> 
+<h4><i>void</i> <strong>connect(
+string
+$host, [int
+$port = 80], [boolean
+$secure = false])</strong></h4>
+
+			<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../Zend_Http/Client_Adapter/Zend_Http_Client_Adapter_Interface.html#methodconnect">Zend_Http_Client_Adapter_Interface::connect()</a></dt>
+						<dd>Connect to the remote server</dd>
+					</dl>
+		<!-- ========== Info from phpDoc block ========= -->
+<h5>Initialize curl</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $host</strong>: </li>
+			<li><strong>int $port</strong>: </li>
+			<li><strong>boolean $secure</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Http_Client_Adapter_Exception if unable to connect</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetConfig" id="methodgetConfig"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getConfig</strong> (line <span class="linenumber">172</span>)
+ </h4> 
+<h4><i>array</i> <strong>getConfig(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retrieve the array of all configuration options</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetHandle" id="methodgetHandle"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getHandle</strong> (line <span class="linenumber">478</span>)
+ </h4> 
+<h4><i>resource</i> <strong>getHandle(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Get cUrl Handle</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodread" id="methodread"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method read</strong> (line <span class="linenumber">455</span>)
+ </h4> 
+<h4><i>string</i> <strong>read(
+)</strong></h4>
+
+			<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../Zend_Http/Client_Adapter/Zend_Http_Client_Adapter_Interface.html#methodread">Zend_Http_Client_Adapter_Interface::read()</a></dt>
+						<dd>Read response from server</dd>
+					</dl>
+		<!-- ========== Info from phpDoc block ========= -->
+<h5>Return read response from server</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodreadHeader" id="methodreadHeader"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method readHeader</strong> (line <span class="linenumber">502</span>)
+ </h4> 
+<h4><i>int</i> <strong>readHeader(
+resource
+$curl, string
+$header)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Header reader function for CURL</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>resource $curl</strong>: </li>
+			<li><strong>string $header</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetConfig" id="methodsetConfig"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setConfig</strong> (line <span class="linenumber">132</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Http/Client_Adapter/Zend_Http_Client_Adapter_Curl.html">Zend_Http_Client_Adapter_Curl</a></i> <strong>setConfig(
+[Zend_Config
+$config = array()])</strong></h4>
+
+			<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../Zend_Http/Client_Adapter/Zend_Http_Client_Adapter_Interface.html#methodsetConfig">Zend_Http_Client_Adapter_Interface::setConfig()</a></dt>
+						<dd>Set the configuration array for the adapter</dd>
+					</dl>
+		<!-- ========== Info from phpDoc block ========= -->
+<h5>Set the configuration array for the adapter</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>Zend_Config $config</strong>: | array $config</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Http_Client_Adapter_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetCurlOption" id="methodsetCurlOption"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setCurlOption</strong> (line <span class="linenumber">184</span>)
+ </h4> 
+<h4><i>Zend_Http_Adapter_Curl</i> <strong>setCurlOption(
+string|int
+$option, mixed
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Direct setter for cURL adapter related options.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string|int $option</strong>: </li>
+			<li><strong>mixed $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetOutputStream" id="methodsetOutputStream"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setOutputStream</strong> (line <span class="linenumber">489</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Http/Client_Adapter/Zend_Http_Client_Adapter_Socket.html">Zend_Http_Client_Adapter_Socket</a></i> <strong>setOutputStream(
+resource
+$stream)</strong></h4>
+
+			<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../Zend_Http/Client_Adapter/Zend_Http_Client_Adapter_Stream.html#methodsetOutputStream">Zend_Http_Client_Adapter_Stream::setOutputStream()</a></dt>
+						<dd>Set output stream</dd>
+					</dl>
+		<!-- ========== Info from phpDoc block ========= -->
+<h5>Set output stream for the response</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>resource $stream</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodwrite" id="methodwrite"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method write</strong> (line <span class="linenumber">262</span>)
+ </h4> 
+<h4><i>string</i> <strong>write(
+string
+$method, <a href="../../Zend_Uri/Zend_Uri_Http.html">Zend_Uri_Http</a>
+$uri, [
+$httpVersion = 1.1], [array
+$headers = array()], [string
+$body = ''], float
+$http_ver)</strong></h4>
+
+			<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../Zend_Http/Client_Adapter/Zend_Http_Client_Adapter_Interface.html#methodwrite">Zend_Http_Client_Adapter_Interface::write()</a></dt>
+						<dd>Send request to the remote server</dd>
+					</dl>
+		<!-- ========== Info from phpDoc block ========= -->
+<h5>Send request to the remote server</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $method</strong>: </li>
+			<li><strong><a href="../../Zend_Uri/Zend_Uri_Http.html">Zend_Uri_Http</a> $uri</strong>: </li>
+			<li><strong>float $http_ver</strong>: </li>
+			<li><strong>array $headers</strong>: </li>
+			<li><strong>string $body</strong>: </li>
+			<li><strong> $httpVersion</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Http_Client_Adapter_Exception If connection fails, connected to wrong host, no PUT file defined, unsupported method, or unsupported cURL option</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 18:15:38 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
+</html>

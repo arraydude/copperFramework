@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Gdata</title>
+  <link rel="stylesheet" href="../../media/stylesheet.css" />
+  <script src="../../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../../media/images/plus.gif";
+	imgMinus.src = "../../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Gdata
+</h2> (line <span class="linenumber">44</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+<a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a>
+   |
+   --Zend_Gdata</pre>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Gdata.php.html">/includes/lib/youtube/library/Zend/Gdata.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Provides functionality to interact with Google data APIs  Subclasses exist to implement service-specific features</h5>
+<div class="desc"><p>As the Google data API protocol is based upon the Atom Publishing Protocol  (APP), Gdata functionality extends the appropriate Zend_Gdata_App classes</p></div>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>link:</strong> - <a href="http://code.google.com/apis/gdata/overview.html">http://code.google.com/apis/gdata/overview.html</a></li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
+<span class="type">Classes extended from Zend_Gdata:</span>
+ 		<dl>
+	<dt><a href="../../Zend_Gdata/Media/Zend_Gdata_Media.html">Zend_Gdata_Media</a></dt>
+		<dd>Service class for interacting with the services which use the media extensions</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets.html">Zend_Gdata_Spreadsheets</a></dt>
+		<dd>Gdata Spreadsheets</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html">Zend_Gdata_Docs</a></dt>
+		<dd>Service class for interacting with the Google Document List data API</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Exif/Zend_Gdata_Exif.html">Zend_Gdata_Exif</a></dt>
+		<dd>Service class for interacting with the services which use the EXIF extensions</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Health/Zend_Gdata_Health.html">Zend_Gdata_Health</a></dt>
+		<dd>Service class for interacting with the Google Health Data API</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps.html">Zend_Gdata_Gapps</a></dt>
+		<dd>Service class for interacting with the Google Apps Provisioning API.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Books/Zend_Gdata_Books.html">Zend_Gdata_Books</a></dt>
+		<dd>Service class for interacting with the Books service</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Geo/Zend_Gdata_Geo.html">Zend_Gdata_Geo</a></dt>
+		<dd>Service class for interacting with the services which use the  GeoRSS + GML extensions.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/DublinCore/Zend_Gdata_DublinCore.html">Zend_Gdata_DublinCore</a></dt>
+		<dd>Service class for interacting with the services which use the  DublinCore extensions.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos.html">Zend_Gdata_Photos</a></dt>
+		<dd>Service class for interacting with the Google Photos Data API.</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase.html">Zend_Gdata_Gbase</a></dt>
+		<dd>Service class for interacting with the Google Base data API</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Calendar/Zend_Gdata_Calendar.html">Zend_Gdata_Calendar</a></dt>
+		<dd>Service class for interacting with the Google Calendar data API</dd>
+	</dl>
+	</p>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    static <span class="var-type">array</span>
+    <a href="#var$namespaces" title="details" class="property"><strong>$namespaces</strong></a>
+</div>
+<div class="var-title">
+    static <span class="var-type"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_HttpClient.html">Zend_Gdata_HttpClient</a></span>
+    <a href="#var$_staticHttpClient" title="details" class="property"><strong>$_staticHttpClient</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_defaultPostUri" title="details" class="property"><strong>$_defaultPostUri</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type"><a href="../../Zend_Gdata/Gdata/Zend_Gdata_HttpClient.html">Zend_Gdata_HttpClient</a></span>
+    <a href="#var$_httpClient" title="details" class="property"><strong>$_httpClient</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$_registeredPackages" title="details" class="property"><strong>$_registeredPackages</strong></a>
+</div>
+<hr />
+<a name="var$namespaces" id="var$namespaces"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">static $namespaces = array(<br />        array('gd', 'http://schemas.google.com/g/2005', 1, 0),array('openSearch','http://a9.com/-/spec/opensearchrss/1.0/',1,0),array('openSearch','http://a9.com/-/spec/opensearch/1.1/',2,0),array('rss','http://blogs.law.harvard.edu/tech/rss',1,0))</strong> (line <span class="linenumber">78</span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Namespaces used for Gdata data</h5>
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$_staticHttpClient" id="var$_staticHttpClient"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">static $_staticHttpClient =  null</strong> (line <span class="linenumber">97</span>)
+ </h4>
+<h4>Data type : <a href="../../Zend_Gdata/Gdata/Zend_Gdata_HttpClient.html">Zend_Gdata_HttpClient</a></h4>
+<p><strong>Overrides:</strong> Array<br></p><!-- ========== Info from phpDoc block ========= -->
+<h5>Client object used to communicate in static context</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_defaultPostUri" id="var$_defaultPostUri"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_defaultPostUri =  null</strong> (line <span class="linenumber">59</span>)
+ </h4>
+<h4>Data type : string</h4>
+<p><strong>Overrides:</strong> Array<br></p><!-- ========== Info from phpDoc block ========= -->
+<h5>Default URI to which to POST.</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_httpClient" id="var$_httpClient"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_httpClient</strong> (line <span class="linenumber">90</span>)
+ </h4>
+<h4>Data type : <a href="../../Zend_Gdata/Gdata/Zend_Gdata_HttpClient.html">Zend_Gdata_HttpClient</a></h4>
+<p><strong>Overrides:</strong> Array<br></p><!-- ========== Info from phpDoc block ========= -->
+<h5>Client object used to communicate</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_registeredPackages" id="var$_registeredPackages"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_registeredPackages = array(<br />            'Zend_Gdata_Kind',<br />            'Zend_Gdata_Extension',<br />            'Zend_Gdata',<br />            'Zend_Gdata_App_Extension',<br />            'Zend_Gdata_App')</strong> (line <span class="linenumber">66</span>)
+ </h4>
+<h4>Data type : array</h4>
+<p><strong>Overrides:</strong> Array<br></p><!-- ========== Info from phpDoc block ========= -->
+<h5>Packages to search for classes when using magic __call method, in order.</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="const-title">
+    <a href="#constAUTH_SERVICE_NAME" title="details" class="property"><strong>AUTH_SERVICE_NAME</strong></a>
+</div>
+<hr />
+<a name="constAUTH_SERVICE_NAME" id="constAUTH_SERVICE_NAME"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/Constant.gif" border="0" /> <strong class="property">AUTH_SERVICE_NAME =  'xapi'</strong> (line <span class="linenumber">52</span>)
+ </h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Service name for use with Google's authentication mechanisms</h5>
+<ul>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+    static         <span class="method-result">string|<a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a></span>
+        <a href="#methodimport" title="details" class="method-name">import</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span>, [<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$className</span> = <span class="var-default">'Zend_Gdata_Feed'</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">Zend_Gdata</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        ([<span class="var-type"><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$applicationId</span> = <span class="var-default">'MyCompany-MyApp-1.0'</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string|<a href="../../Zend_Gdata/App/Zend_Gdata_App_Entry.html">Zend_Gdata_App_Entry</a></span>
+        <a href="#methodgetEntry" title="details" class="method-name">getEntry</a>
+        (<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$className</span> = <span class="var-default">'Zend_Gdata_Entry'</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string|<a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a></span>
+        <a href="#methodgetFeed" title="details" class="method-name">getFeed</a>
+        (<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$className</span> = <span class="var-default">'Zend_Gdata_Feed'</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodisAuthenticated" title="details" class="method-name">isAuthenticated</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Http/Response/Zend_Http_Response.html">Zend_Http_Response</a></span>
+        <a href="#methodperformHttpRequest" title="details" class="method-name">performHttpRequest</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$headers</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$body</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$contentType</span> = <span class="var-default">null</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$remainingRedirects</span> = <span class="var-default">null</span>])
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="methodimport" id="methodimport"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method import</strong> (line <span class="linenumber">123</span>)
+ </h4> 
+<h4><i>string|<a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a></i> <strong>import(
+string
+$uri, [<a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a>
+$client = null], [string
+$className = 'Zend_Gdata_Feed'])</strong></h4>
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps.html#methodimport">Zend_Gdata_Gapps::import()</a></dt>
+		<dd>Imports a feed located at $uri.</dd>
+	</dl>
+	</p>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimport">Zend_Gdata_App::import()</a> Imports a feed located at $uri.</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Imports a feed located at $uri.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $uri</strong>: </li>
+			<li><strong><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a> $client</strong>: The client used for communication</li>
+			<li><strong>string $className</strong>: The class which is used as the return type</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Returns string only if the object                                     mapping has been disabled explicitly                                     by passing false to the                                     useObjectMapping() function.</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">106</span>)
+ </h4> 
+<h4><i>Zend_Gdata</i> <strong>__construct(
+[<a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a>
+$client = null], [string
+$applicationId = 'MyCompany-MyApp-1.0'])</strong></h4>
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../../Zend_Gdata/Media/Zend_Gdata_Media.html#method__construct">Zend_Gdata_Media::__construct()</a></dt>
+		<dd>Create Gdata_Media object</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/YouTube/Zend_Gdata_YouTube.html#method__construct">Zend_Gdata_YouTube::__construct()</a></dt>
+		<dd>Create Zend_Gdata_YouTube object</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Spreadsheets/Zend_Gdata_Spreadsheets.html#method__construct">Zend_Gdata_Spreadsheets::__construct()</a></dt>
+		<dd>Create Gdata_Spreadsheets object</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Docs/Zend_Gdata_Docs.html#method__construct">Zend_Gdata_Docs::__construct()</a></dt>
+		<dd>Create Gdata_Docs object</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Exif/Zend_Gdata_Exif.html#method__construct">Zend_Gdata_Exif::__construct()</a></dt>
+		<dd>Create Zend_Gdata_Exif object</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Health/Zend_Gdata_Health.html#method__construct">Zend_Gdata_Health::__construct()</a></dt>
+		<dd>Create Zend_Gdata_Health object</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gapps/Zend_Gdata_Gapps.html#method__construct">Zend_Gdata_Gapps::__construct()</a></dt>
+		<dd>Create Gdata_Gapps object</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Books/Zend_Gdata_Books.html#method__construct">Zend_Gdata_Books::__construct()</a></dt>
+		<dd>Create Zend_Gdata_Books object</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Geo/Zend_Gdata_Geo.html#method__construct">Zend_Gdata_Geo::__construct()</a></dt>
+		<dd>Create Zend_Gdata_Geo object</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/DublinCore/Zend_Gdata_DublinCore.html#method__construct">Zend_Gdata_DublinCore::__construct()</a></dt>
+		<dd>Create Zend_Gdata_DublinCore object</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Photos/Zend_Gdata_Photos.html#method__construct">Zend_Gdata_Photos::__construct()</a></dt>
+		<dd>Create Zend_Gdata_Photos object</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Gbase/Zend_Gdata_Gbase.html#method__construct">Zend_Gdata_Gbase::__construct()</a></dt>
+		<dd>Create Zend_Gdata_Gbase object</dd>
+	</dl>
+		<dl>
+	<dt><a href="../../Zend_Gdata/Calendar/Zend_Gdata_Calendar.html#method__construct">Zend_Gdata_Calendar::__construct()</a></dt>
+		<dd>Create Gdata_Calendar object</dd>
+	</dl>
+	</p>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#method__construct">Zend_Gdata_App::__construct()</a> Create Gdata object</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Create Gdata object</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Http/Client/Zend_Http_Client.html">Zend_Http_Client</a> $client</strong>: </li>
+			<li><strong>string $applicationId</strong>: The identity of the app in the form of           Company-AppName-Version</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetEntry" id="methodgetEntry"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getEntry</strong> (line <span class="linenumber">175</span>)
+ </h4> 
+<h4><i>string|<a href="../../Zend_Gdata/App/Zend_Gdata_App_Entry.html">Zend_Gdata_App_Entry</a></i> <strong>getEntry(
+mixed
+$location, [
+$className = 'Zend_Gdata_Entry'])</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetEntry">Zend_Gdata_App::getEntry()</a> Retrieve entry as string or object</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retrieve entry as string or object</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $location</strong>: The location as string or Zend_Gdata_Query</li>
+			<li><strong> $className</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Returns string only if the object                                      mapping has been disabled explicitly                                      by passing false to the                                      useObjectMapping() function.</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_InvalidArgumentException</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetFeed" id="methodgetFeed"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getFeed</strong> (line <span class="linenumber">150</span>)
+ </h4> 
+<h4><i>string|<a href="../../Zend_Gdata/App/Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a></i> <strong>getFeed(
+mixed
+$location, [string
+$className = 'Zend_Gdata_Feed'])</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetFeed">Zend_Gdata_App::getFeed()</a> Retrieve feed as string or object</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retrieve feed as string or object</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $location</strong>: The location as string or Zend_Gdata_Query</li>
+			<li><strong>string $className</strong>: The class type to use for returning the feed</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Returns string only if the object                                     mapping has been disabled explicitly                                     by passing false to the                                     useObjectMapping() function.</li>
+			<li><strong>throws</strong> - Zend_Gdata_App_InvalidArgumentException</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodisAuthenticated" id="methodisAuthenticated"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method isAuthenticated</strong> (line <span class="linenumber">230</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>isAuthenticated(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Determines whether service object is authenticated.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - True if service object is authenticated, false otherwise.</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodperformHttpRequest" id="methodperformHttpRequest"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method performHttpRequest</strong> (line <span class="linenumber">210</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Http/Response/Zend_Http_Response.html">Zend_Http_Response</a></i> <strong>performHttpRequest(
+string
+$method, string
+$url, [array
+$headers = array()], [string
+$body = null], [string
+$contentType = null], [int
+$remainingRedirects = null])</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodperformHttpRequest">Zend_Gdata_App::performHttpRequest()</a> Performs a HTTP request using the specified method</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Performs a HTTP request using the specified method.</h5>
+<div class="desc"><p>Overrides the definition in the parent (Zend_Gdata_App)  and uses the Zend_Gdata_HttpClient functionality  to filter the HTTP requests and responses.</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $method</strong>: The HTTP method for the request -                        'GET', 'POST', 'PUT', 'DELETE'</li>
+			<li><strong>string $url</strong>: The URL to which this request is being performed,                     or null if found in $data</li>
+			<li><strong>array $headers</strong>: An associative array of HTTP headers                        for this request</li>
+			<li><strong>string $body</strong>: The body of the HTTP request</li>
+			<li><strong>string $contentType</strong>: The value for the content type of the                             request body</li>
+			<li><strong>int $remainingRedirects</strong>: Number of redirects to follow                                 if requests results in one</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - The response object</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a></h4>
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_gzipEnabled">Zend_Gdata_App::$_gzipEnabled</a></strong> - Enable gzipped responses?
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_httpMethodOverride">Zend_Gdata_App::$_httpMethodOverride</a></strong> - Override HTTP PUT and DELETE request methods?
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_majorProtocolVersion">Zend_Gdata_App::$_majorProtocolVersion</a></strong> - Indicates the major protocol version that should be used.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_maxRedirects">Zend_Gdata_App::$_maxRedirects</a></strong> - Maximum number of redirects to follow during HTTP operations
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_minorProtocolVersion">Zend_Gdata_App::$_minorProtocolVersion</a></strong> - Indicates the minor protocol version that should be used. Can be set  to either an integer &gt;= 0, or NULL if no minor version should be sent  to the server.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_useObjectMapping">Zend_Gdata_App::$_useObjectMapping</a></strong> - Whether we want to use XML to object mapping when fetching data.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#var$_verboseExceptionMessages">Zend_Gdata_App::$_verboseExceptionMessages</a></strong> - Use verbose exception messages.  In the case of HTTP errors,  use the body of the HTTP response in the exception message.
+	</h4> 
+		</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App.html">Zend_Gdata_App</a></h4>
+				<h4>
+<img src="../../media/images/Constructor.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#method__construct">Zend_Gdata_App::__construct()</a></strong> - Create Gdata object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methoddelete">Zend_Gdata_App::delete()</a></strong> - DELETE entry with client object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodenableRequestDebugLogging">Zend_Gdata_App::enableRequestDebugLogging()</a></strong> - This method enables logging of requests by changing the  Zend_Http_Client_Adapter used for performing the requests.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgenerateIfMatchHeaderData">Zend_Gdata_App::generateIfMatchHeaderData()</a></strong> - Returns the data for an If-Match header based on the current Etag  property. If Etags are not supported by the server or cannot be  extracted from the data, then null will be returned.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodget">Zend_Gdata_App::get()</a></strong> - GET a URI using client object.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetEntry">Zend_Gdata_App::getEntry()</a></strong> - Retrieve entry as string or object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetFeed">Zend_Gdata_App::getFeed()</a></strong> - Retrieve feed as string or object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetGzipEnabled">Zend_Gdata_App::getGzipEnabled()</a></strong> - Get the HTTP override state
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetHttpClient">Zend_Gdata_App::getHttpClient()</a></strong> - Get the Zend_Http_Client object used for communication
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetHttpMethodOverride">Zend_Gdata_App::getHttpMethodOverride()</a></strong> - Get the HTTP override state
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMajorProtocolVersion">Zend_Gdata_App::getMajorProtocolVersion()</a></strong> - Get the major protocol version that is in use.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMaxRedirects">Zend_Gdata_App::getMaxRedirects()</a></strong> - Get the maximum number of redirects to follow during HTTP operations
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetMinorProtocolVersion">Zend_Gdata_App::getMinorProtocolVersion()</a></strong> - Get the minor protocol version that is in use.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetNextFeed">Zend_Gdata_App::getNextFeed()</a></strong> - Retrieve next set of results based on a given feed.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetPreviousFeed">Zend_Gdata_App::getPreviousFeed()</a></strong> - Retrieve previous set of results based on a given feed.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetStaticHttpClient">Zend_Gdata_App::getStaticHttpClient()</a></strong> - Gets the HTTP client object. If none is set, a new Zend_Http_Client will be used.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodgetVerboseExceptionMessages">Zend_Gdata_App::getVerboseExceptionMessages()</a></strong> - Get whether to use verbose exception messages
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimport">Zend_Gdata_App::import()</a></strong> - Imports a feed located at $uri.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportFile">Zend_Gdata_App::importFile()</a></strong> - Imports a feed from a file located at $filename.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportString">Zend_Gdata_App::importString()</a></strong> - Imports a feed represented by $string.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodimportUrl">Zend_Gdata_App::importUrl()</a></strong> - Imports the specified URL (non-statically).
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodinsertEntry">Zend_Gdata_App::insertEntry()</a></strong> - Inserts an entry to a given URI and returns the response as a  fully formed Entry.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodperformHttpRequest">Zend_Gdata_App::performHttpRequest()</a></strong> - Performs a HTTP request using the specified method
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodpost">Zend_Gdata_App::post()</a></strong> - POST data with client object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodprepareRequest">Zend_Gdata_App::prepareRequest()</a></strong> - Provides pre-processing for HTTP requests to APP services.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodput">Zend_Gdata_App::put()</a></strong> - PUT data with client object
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodregisterPackage">Zend_Gdata_App::registerPackage()</a></strong> - Adds a Zend Framework package to the $_registeredPackages array.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodretrieveAllEntriesForFeed">Zend_Gdata_App::retrieveAllEntriesForFeed()</a></strong> - Retrieve all entries for a feed, iterating through pages as necessary.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetGzipEnabled">Zend_Gdata_App::setGzipEnabled()</a></strong> - Toggle requesting gzip encoded responses
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetHttpClient">Zend_Gdata_App::setHttpClient()</a></strong> - Set the Zend_Http_Client object used for communication
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetHttpMethodOverride">Zend_Gdata_App::setHttpMethodOverride()</a></strong> - Toggle using POST instead of PUT and DELETE HTTP methods
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMajorProtocolVersion">Zend_Gdata_App::setMajorProtocolVersion()</a></strong> - Set the major protocol version that should be used. Values &lt; 1 will  cause a Zend_Gdata_App_InvalidArgumentException to be thrown.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMaxRedirects">Zend_Gdata_App::setMaxRedirects()</a></strong> - Set the maximum number of redirects to follow during HTTP operations
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetMinorProtocolVersion">Zend_Gdata_App::setMinorProtocolVersion()</a></strong> - Set the minor protocol version that should be used. If set to NULL, no  minor protocol version will be sent to the server. Values &lt; 0 will  cause a Zend_Gdata_App_InvalidArgumentException to be thrown.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetStaticHttpClient">Zend_Gdata_App::setStaticHttpClient()</a></strong> - Set the static HTTP client instance
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodsetVerboseExceptionMessages">Zend_Gdata_App::setVerboseExceptionMessages()</a></strong> - Set whether to use verbose exception messages
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodupdateEntry">Zend_Gdata_App::updateEntry()</a></strong> - Update an entry
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methoduseObjectMapping">Zend_Gdata_App::useObjectMapping()</a></strong> - Enable/disable the use of XML to object mapping.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#methodusingObjectMapping">Zend_Gdata_App::usingObjectMapping()</a></strong> - Determine whether service object is using XML to object mapping.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App.html#method__call">Zend_Gdata_App::__call()</a></strong> - Provides a magic factory method to instantiate new objects with
+		</h4> 
+
+				<br />
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 18:15:56 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
+</html>

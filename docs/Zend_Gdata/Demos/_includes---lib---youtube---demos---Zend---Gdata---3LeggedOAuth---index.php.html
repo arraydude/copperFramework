@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs for page index.php</title>
+  <link rel="stylesheet" href="../../media/stylesheet.css" />
+  <script src="../../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../../media/images/plus.gif";
+	imgMinus.src = "../../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><h2>File: /includes/lib/youtube/demos/Zend/Gdata/3LeggedOAuth/index.php</h2>
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ) );
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Zend Framework</h5>
+<div class="desc"><p>LICENSE</p><p>This source file is subject to the new BSD license that is bundled  with this package in the file LICENSE.txt.  It is also available through the world-wide-web at this URL:  http://framework.zend.com/license/new-bsd  If you did not receive a copy of the license and are unable to  obtain it through the world-wide-web, please send an email  to license@zend.com so we can send you a copy immediately.</p></div>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<!-- =========== Used Classes =========== -->
+<A NAME='classes_summary'><!-- --></A>
+<h3>Classes defined in this file</h3>
+
+<TABLE CELLPADDING='3' CELLSPACING='0' WIDTH='100%' CLASS="border">
+	<THEAD>
+		<TR><TD STYLE="width:20%"><h4>CLASS NAME</h4></TD><TD STYLE="width: 80%"><h4>DESCRIPTION</h4></TD></TR>
+	</THEAD>
+	<TBODY>
+			</TBODY>
+</TABLE>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+<!-- ============ Includes DETAIL =========== -->
+
+<h2 class="tab">Include/Require Statements</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+
+
+<a name="_Zend/Gdata/Spreadsheets_php"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/file.png" border="0" /> <strong class="Property">'Zend/Gdata/Spreadsheets.php'</strong> (line <span class="linenumber">32</span>)
+ </h4> 
+<h4>require_once : 'Zend/Gdata/Spreadsheets.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="_Gdata_OAuth_Helper_php"><!-- --></a>
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/file.png" border="0" /> <strong class="Property"><a href="../../Zend_Gdata/Demos/_includes---lib---youtube---demos---Zend---Gdata---3LeggedOAuth---Gdata_OAuth_Helper.php.html">'Gdata_OAuth_Helper.php'</a></strong> (line <span class="linenumber">34</span>)
+ </h4> 
+<h4>require_once : <a href="../../Zend_Gdata/Demos/_includes---lib---youtube---demos---Zend---Gdata---3LeggedOAuth---Gdata_OAuth_Helper.php.html">'Gdata_OAuth_Helper.php'</a></h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="_Zend/Gdata/Docs_php"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/file.png" border="0" /> <strong class="Property">'Zend/Gdata/Docs.php'</strong> (line <span class="linenumber">31</span>)
+ </h4> 
+<h4>require_once : 'Zend/Gdata/Docs.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Sample code to demonstrate accessing a Google Data feed using OAuth for  authorization.  Utilizes the Zend Framework Zend_OAuth components to  communicate with the API(s).</h5>
+<div class="desc"><p>NOTE: As this is sample code, not all of the functions do full error  handling.</p></div>
+<ul>
+	</ul>
+</div>
+</div>
+<div class="tab-page" id="tabPage2">
+<!-- ============ GLOBAL DETAIL =========== -->
+
+<h2 class="tab">Global Variables</h2>
+
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script>
+
+</div>
+<div class="tab-page" id="tabPage3">
+<!-- ============ CONSTANT DETAIL =========== -->
+
+<A NAME='constant_detail'></A>
+<h2 class="tab">Constants</h2>
+
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage3" ) );</script>
+
+</div>
+<div class="tab-page" id="tabPage4">
+<!-- ============ FUNCTION DETAIL =========== -->
+
+<h2 class="tab">Functions</h2>
+
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage4" ) );</script>
+
+<a name="functiongetAppURL" id="functiongetAppURL"><!-- --></a>
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">getAppURL</strong> (line <span class="linenumber">92</span>)
+ </h4> 
+<h4><i>string</i> <strong>getAppURL(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns a the base URL of the current running web app.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="functionprintFeed" id="functionprintFeed"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">printFeed</strong> (line <span class="linenumber">137</span>)
+ </h4> 
+<h4><i>void</i> <strong>printFeed(
+<a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html">Zend_Gdata_Feed</a> $feed)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Prints basic properties of a Google Data feed.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../../Zend_Gdata/Gdata/Zend_Gdata_Feed.html">Zend_Gdata_Feed</a> $feed</strong>: A feed object to print.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="functionprintToken" id="functionprintToken"><!-- --></a>
+<div style="background='#ffffff'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">printToken</strong> (line <span class="linenumber">126</span>)
+ </h4> 
+<h4><i>void</i> <strong>printToken(
+Zend_OAuth_Token $token)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Prints the token string and secret of the token passed in.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>Zend_OAuth_Token $token</strong>: An access or request token object to print.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="functionrenderHTML" id="functionrenderHTML"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">renderHTML</strong> (line <span class="linenumber">159</span>)
+ </h4> 
+<h4><i>void</i> <strong>renderHTML(
+[Zend_OAuth_Token $token = null], [array $feeds = null])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Renders the page's HTML.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>Zend_OAuth_Token $token</strong>: (optional) The user's current OAuth token.</li>
+			<li><strong>array $feeds</strong>: (optional) An array of Zend_Gdata_Feed to print      information for.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 18:16:02 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
+</html>

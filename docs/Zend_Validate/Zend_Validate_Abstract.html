@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Validate_Abstract</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Validate_Abstract
+</h2> (line <span class="linenumber">33</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Validate---Abstract.php.html">/includes/lib/youtube/library/Zend/Validate/Abstract.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>abstract:</strong> - </li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
+<span class="type">Classes extended from Zend_Validate_Abstract:</span>
+ 		<dl>
+	<dt><a href="../Zend_Validate/Zend_Validate_Ip.html">Zend_Validate_Ip</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Zend_Validate/Zend_Validate_Hostname.html">Zend_Validate_Hostname</a></dt>
+		<dd>Please note there are two standalone test scripts for testing IDN characters due to problems  with file encoding.</dd>
+	</dl>
+	</p>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    static <span class="var-type">Zend_Translate</span>
+    <a href="#var$_defaultTranslator" title="details" class="property"><strong>$_defaultTranslator</strong></a>
+</div>
+<div class="var-title">
+    static <span class="var-type">Integer</span>
+    <a href="#var$_messageLength" title="details" class="property"><strong>$_messageLength</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$_errors" title="details" class="property"><strong>$_errors</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$_messages" title="details" class="property"><strong>$_messages</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$_messageTemplates" title="details" class="property"><strong>$_messageTemplates</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$_messageVariables" title="details" class="property"><strong>$_messageVariables</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">bool</span>
+    <a href="#var$_obscureValue" title="details" class="property"><strong>$_obscureValue</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">Zend_Translate</span>
+    <a href="#var$_translator" title="details" class="property"><strong>$_translator</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">Boolean</span>
+    <a href="#var$_translatorDisabled" title="details" class="property"><strong>$_translatorDisabled</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$_value" title="details" class="property"><strong>$_value</strong></a>
+</div>
+<hr />
+<a name="var$_defaultTranslator" id="var$_defaultTranslator"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">static $_defaultTranslator</strong> (line <span class="linenumber">88</span>)
+ </h4>
+<h4>Data type : Zend_Translate</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Default translation object for all validate objects</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_messageLength" id="var$_messageLength"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">static $_messageLength =  -1</strong> (line <span class="linenumber">101</span>)
+ </h4>
+<h4>Data type : Integer</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Limits the maximum returned length of a error message</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_errors" id="var$_errors"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_errors = array()</strong> (line <span class="linenumber">76</span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Array of validation failure message codes</h5>
+<ul>
+		<li><strong>deprecated:</strong> - Since 1.5.0</li>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_messages" id="var$_messages"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_messages = array()</strong> (line <span class="linenumber">61</span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Array of validation failure messages</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_messageTemplates" id="var$_messageTemplates"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_messageTemplates = array()</strong> (line <span class="linenumber">54</span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Validation failure message template definitions</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_messageVariables" id="var$_messageVariables"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_messageVariables = array()</strong> (line <span class="linenumber">47</span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Additional variables available for validation failure messages</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_obscureValue" id="var$_obscureValue"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_obscureValue =  false</strong> (line <span class="linenumber">68</span>)
+ </h4>
+<h4>Data type : bool</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Flag indidcating whether or not value should be obfuscated in error</h5>
+<div class="desc"><p>messages</p></div>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_translator" id="var$_translator"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_translator</strong> (line <span class="linenumber">82</span>)
+ </h4>
+<h4>Data type : Zend_Translate</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Translation object</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_translatorDisabled" id="var$_translatorDisabled"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_translatorDisabled =  false</strong> (line <span class="linenumber">94</span>)
+ </h4>
+<h4>Data type : Boolean</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Is translation disabled?</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_value" id="var$_value"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_value</strong> (line <span class="linenumber">40</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>The value to be validated</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+    static         <span class="method-result">Zend_Translate_Adapter|null</span>
+        <a href="#methodgetDefaultTranslator" title="details" class="method-name">getDefaultTranslator</a>
+        ()
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">integer</span>
+        <a href="#methodgetMessageLength" title="details" class="method-name">getMessageLength</a>
+        ()
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">boolean</span>
+        <a href="#methodhasDefaultTranslator" title="details" class="method-name">hasDefaultTranslator</a>
+        ()
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">void</span>
+        <a href="#methodsetDefaultTranslator" title="details" class="method-name">setDefaultTranslator</a>
+        ([<span class="var-type">Zend_Translate|Zend_Translate_Adapter|null</span>&nbsp;<span class="var-name">$translator</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">void</span>
+        <a href="#methodsetMessageLength" title="details" class="method-name">setMessageLength</a>
+        ([<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">-1</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">array</span>
+        <a href="#methodgetErrors" title="details" class="method-name">getErrors</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">array</span>
+        <a href="#methodgetMessages" title="details" class="method-name">getMessages</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">array</span>
+        <a href="#methodgetMessageTemplates" title="details" class="method-name">getMessageTemplates</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">array</span>
+        <a href="#methodgetMessageVariables" title="details" class="method-name">getMessageVariables</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">bool</span>
+        <a href="#methodgetObscureValue" title="details" class="method-name">getObscureValue</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">Zend_Translate_Adapter|null</span>
+        <a href="#methodgetTranslator" title="details" class="method-name">getTranslator</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">bool</span>
+        <a href="#methodhasTranslator" title="details" class="method-name">hasTranslator</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a></span>
+        <a href="#methodsetDisableTranslator" title="details" class="method-name">setDisableTranslator</a>
+        (<span class="var-type">bool</span>&nbsp;<span class="var-name">$flag</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a></span>
+        <a href="#methodsetMessage" title="details" class="method-name">setMessage</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$messageString</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$messageKey</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a></span>
+        <a href="#methodsetMessages" title="details" class="method-name">setMessages</a>
+        (<span class="var-type"></span>&nbsp;<span class="var-name">$messages</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a></span>
+        <a href="#methodsetObscureValue" title="details" class="method-name">setObscureValue</a>
+        (<span class="var-type">bool</span>&nbsp;<span class="var-name">$flag</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a></span>
+        <a href="#methodsetTranslator" title="details" class="method-name">setTranslator</a>
+        ([<span class="var-type">Zend_Translate|Zend_Translate_Adapter|null</span>&nbsp;<span class="var-name">$translator</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">bool</span>
+        <a href="#methodtranslatorIsDisabled" title="details" class="method-name">translatorIsDisabled</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#method_createMessage" title="details" class="method-name">_createMessage</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$messageKey</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#method_error" title="details" class="method-name">_error</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$messageKey</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#method_setValue" title="details" class="method-name">_setValue</a>
+        (<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">mixed</span>
+        <a href="#method__get" title="details" class="method-name">__get</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="methodgetDefaultTranslator" id="methodgetDefaultTranslator"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method getDefaultTranslator</strong> (line <span class="linenumber">388</span>)
+ </h4> 
+<h4><i>Zend_Translate_Adapter|null</i> <strong>getDefaultTranslator(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Get default translation object for all validate objects</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetMessageLength" id="methodgetMessageLength"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method getMessageLength</strong> (line <span class="linenumber">442</span>)
+ </h4> 
+<h4><i>integer</i> <strong>getMessageLength(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns the maximum allowed message length</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodhasDefaultTranslator" id="methodhasDefaultTranslator"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method hasDefaultTranslator</strong> (line <span class="linenumber">410</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>hasDefaultTranslator(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Is there a default translation object set?</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetDefaultTranslator" id="methodsetDefaultTranslator"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method setDefaultTranslator</strong> (line <span class="linenumber">371</span>)
+ </h4> 
+<h4><i>void</i> <strong>setDefaultTranslator(
+[Zend_Translate|Zend_Translate_Adapter|null
+$translator = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Set default translation object for all validate objects</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>Zend_Translate|Zend_Translate_Adapter|null $translator</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetMessageLength" id="methodsetMessageLength"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method setMessageLength</strong> (line <span class="linenumber">452</span>)
+ </h4> 
+<h4><i>void</i> <strong>setMessageLength(
+[integer
+$length = -1])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the maximum allowed message length</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>integer $length</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetErrors" id="methodgetErrors"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getErrors</strong> (line <span class="linenumber">290</span>)
+ </h4> 
+<h4><i>array</i> <strong>getErrors(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns array of validation failure message codes</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>deprecated</strong> - Since 1.5.0</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetMessages" id="methodgetMessages"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getMessages</strong> (line <span class="linenumber">108</span>)
+ </h4> 
+<h4><i>array</i> <strong>getMessages(
+)</strong></h4>
+
+			<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../Zend_Validate/Zend_Validate_Interface.html#methodgetMessages">Zend_Validate_Interface::getMessages()</a></dt>
+						<dd>Returns an array of messages that explain why the most recent isValid()  call returned false. The array keys are validation failure message identifiers,  and the array values are the corresponding human-readable message strings.</dd>
+					</dl>
+		<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns array of validation failure messages</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetMessageTemplates" id="methodgetMessageTemplates"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getMessageTemplates</strong> (line <span class="linenumber">128</span>)
+ </h4> 
+<h4><i>array</i> <strong>getMessageTemplates(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns the message templates from the validator</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetMessageVariables" id="methodgetMessageVariables"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getMessageVariables</strong> (line <span class="linenumber">118</span>)
+ </h4> 
+<h4><i>array</i> <strong>getMessageVariables(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns an array of the names of variables that are used in constructing validation failure messages</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetObscureValue" id="methodgetObscureValue"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getObscureValue</strong> (line <span class="linenumber">313</span>)
+ </h4> 
+<h4><i>bool</i> <strong>getObscureValue(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Retrieve flag indicating whether or not value should be obfuscated in  messages</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetTranslator" id="methodgetTranslator"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getTranslator</strong> (line <span class="linenumber">342</span>)
+ </h4> 
+<h4><i>Zend_Translate_Adapter|null</i> <strong>getTranslator(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Return translation object</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodhasTranslator" id="methodhasTranslator"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method hasTranslator</strong> (line <span class="linenumber">360</span>)
+ </h4> 
+<h4><i>bool</i> <strong>hasTranslator(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Does this validator have its own specific translator?</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetDisableTranslator" id="methodsetDisableTranslator"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setDisableTranslator</strong> (line <span class="linenumber">421</span>)
+ </h4> 
+<h4><i><a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a></i> <strong>setDisableTranslator(
+bool
+$flag)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Indicate whether or not translation should be disabled</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>bool $flag</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetMessage" id="methodsetMessage"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setMessage</strong> (line <span class="linenumber">141</span>)
+ </h4> 
+<h4><i><a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a></i> <strong>setMessage(
+string
+$messageString, [string
+$messageKey = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the validation failure message template for a particular key</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $messageString</strong>: </li>
+			<li><strong>string $messageKey</strong>: OPTIONAL</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Provides a fluent interface</li>
+			<li><strong>throws</strong> - Zend_Validate_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetMessages" id="methodsetMessages"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setMessages</strong> (line <span class="linenumber">167</span>)
+ </h4> 
+<h4><i><a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a></i> <strong>setMessages(
+
+$messages)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets validation failure message templates given as an array, where the array keys are the message keys,  and the array values are the message template strings.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>array $messages</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetObscureValue" id="methodsetObscureValue"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setObscureValue</strong> (line <span class="linenumber">301</span>)
+ </h4> 
+<h4><i><a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a></i> <strong>setObscureValue(
+bool
+$flag)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Set flag indicating whether or not value should be obfuscated in messages</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>bool $flag</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetTranslator" id="methodsetTranslator"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setTranslator</strong> (line <span class="linenumber">324</span>)
+ </h4> 
+<h4><i><a href="../Zend_Validate/Zend_Validate_Abstract.html">Zend_Validate_Abstract</a></i> <strong>setTranslator(
+[Zend_Translate|Zend_Translate_Adapter|null
+$translator = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Set translation object</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>Zend_Translate|Zend_Translate_Adapter|null $translator</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodtranslatorIsDisabled" id="methodtranslatorIsDisabled"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method translatorIsDisabled</strong> (line <span class="linenumber">432</span>)
+ </h4> 
+<h4><i>bool</i> <strong>translatorIsDisabled(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Is translation disabled?</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="method_createMessage" id="method_createMessage"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _createMessage</strong> (line <span class="linenumber">210</span>)
+ </h4> 
+<h4><i>string</i> <strong>_createMessage(
+string
+$messageKey, string
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Constructs and returns a validation failure message with the given message key and value.</h5>
+<div class="desc"><p>Returns null if and only if $messageKey does not correspond to an existing template.</p><p>If a translator is available and a translation exists for $messageKey,  the translation will be used.</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $messageKey</strong>: </li>
+			<li><strong>string $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - protected</li>
+		</ul>
+</div>
+<a name="method_error" id="method_error"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _error</strong> (line <span class="linenumber">258</span>)
+ </h4> 
+<h4><i>void</i> <strong>_error(
+string
+$messageKey, [string
+$value = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $messageKey</strong>: </li>
+			<li><strong>string $value</strong>: OPTIONAL</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - protected</li>
+		</ul>
+</div>
+<a name="method_setValue" id="method_setValue"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _setValue</strong> (line <span class="linenumber">277</span>)
+ </h4> 
+<h4><i>void</i> <strong>_setValue(
+mixed
+$value)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the value to be validated and clears the messages and errors arrays</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>mixed $value</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - protected</li>
+		</ul>
+</div>
+<a name="method__get" id="method__get"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method __get</strong> (line <span class="linenumber">183</span>)
+ </h4> 
+<h4><i>mixed</i> <strong>__get(
+string
+$property)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Magic function returns the value of the requested property, if and only if it is the value or a  message variable.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $property</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Validate_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 18:15:22 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
+</html>

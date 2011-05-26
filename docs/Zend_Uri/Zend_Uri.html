@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Uri</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Uri
+</h2> (line <span class="linenumber">30</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Uri.php.html">/includes/lib/youtube/library/Zend/Uri.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Abstract class for all Zend_Uri handlers</h5>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>abstract:</strong> - </li>
+		<li><strong>usedby:</strong> - <a href="../Zend_Uri/Zend_Uri_Http.html">Zend_Uri_Http</a></li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
+<span class="type">Classes extended from Zend_Uri:</span>
+ 		<dl>
+	<dt><a href="../Zend_Uri/Zend_Uri_Http.html">Zend_Uri_Http</a></dt>
+		<dd>HTTP(S) URI handler</dd>
+	</dl>
+	</p>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    static <span class="var-type">array</span>
+    <a href="#var$_config" title="details" class="property"><strong>$_config</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$_scheme" title="details" class="property"><strong>$_scheme</strong></a>
+</div>
+<hr />
+<a name="var$_config" id="var$_config"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">static $_config = array(<br />        'allow_unwise' =&gt; false<br />    )</strong> (line <span class="linenumber">44</span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Global configuration array</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_scheme" id="var$_scheme"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_scheme =  ''</strong> (line <span class="linenumber">37</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Scheme of this URI (http, ftp, etc.)</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+    static         <span class="method-result">boolean</span>
+        <a href="#methodcheck" title="details" class="method-name">check</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span>)
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result"><a href="../Zend_Uri/Zend_Uri.html">Zend_Uri</a></span>
+        <a href="#methodfactory" title="details" class="method-name">factory</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">'http'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$className</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">void</span>
+        <a href="#methodsetConfig" title="details" class="method-name">setConfig</a>
+        (<span class="var-type">Zend_Config|array</span>&nbsp;<span class="var-name">$config</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">Zend_Uri</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$scheme</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$schemeSpecific</span> = <span class="var-default">''</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string|false</span>
+        <a href="#methodgetScheme" title="details" class="method-name">getScheme</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetUri" title="details" class="method-name">getUri</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodvalid" title="details" class="method-name">valid</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#method__toString" title="details" class="method-name">__toString</a>
+        ()
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="methodcheck" id="methodcheck"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method check</strong> (line <span class="linenumber">72</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>check(
+string
+$uri)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Convenience function, checks that a $uri string is well-formed  by validating it but not returning an object.  Returns TRUE if  $uri is a well-formed URI, or FALSE otherwise.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $uri</strong>: The URI to check</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodfactory" id="methodfactory"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method factory</strong> (line <span class="linenumber">96</span>)
+ </h4> 
+<h4><i><a href="../Zend_Uri/Zend_Uri.html">Zend_Uri</a></i> <strong>factory(
+[string
+$uri = 'http'], [string
+$className = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Create a new Zend_Uri object for a URI.  If building a new URI, then $uri should contain  only the scheme (http, ftp, etc).  Otherwise, supply $uri with the complete URI.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $uri</strong>: The URI form which a Zend_Uri instance is created</li>
+			<li><strong>string $className</strong>: The name of the class to use in order to manipulate URI</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>link</strong> - <a href="http://www.faqs.org/rfcs/rfc2396.html">http://www.faqs.org/rfcs/rfc2396.html</a></li>
+			<li><strong>throws</strong> - Zend_Uri_Exception When $className doesn't exist or doesn't implements Zend_Uri</li>
+			<li><strong>throws</strong> - Zend_Uri_Exception When an empty string was supplied for the scheme</li>
+			<li><strong>throws</strong> - Zend_Uri_Exception When an illegal scheme is supplied</li>
+			<li><strong>throws</strong> - Zend_Uri_Exception When the scheme is not supported</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetConfig" id="methodsetConfig"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method setConfig</strong> (line <span class="linenumber">172</span>)
+ </h4> 
+<h4><i>void</i> <strong>setConfig(
+Zend_Config|array
+$config)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Set global configuration options</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>Zend_Config|array $config</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">192</span>)
+ </h4> 
+<h4><i>Zend_Uri</i> <strong>__construct(
+string
+$scheme, [string
+$schemeSpecific = ''])</strong></h4>
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Zend_Uri/Zend_Uri_Http.html#method__construct">Zend_Uri_Http::__construct()</a></dt>
+		<dd>Constructor accepts a string $scheme (e.g., http, https) and a scheme-specific part of the URI  (e.g., example.com/path/to/resource?query=param#fragment)</dd>
+	</dl>
+	</p>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Zend_Uri and its subclasses cannot be instantiated directly.</h5>
+<div class="desc"><p>Use Zend_Uri::factory() to return a new Zend_Uri object.</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $scheme</strong>: The scheme of the URI</li>
+			<li><strong>string $schemeSpecific</strong>: The scheme-specific part of the URI</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>abstract</strong> - </li>
+			<li><strong>access</strong> - protected</li>
+		</ul>
+</div>
+<a name="methodgetScheme" id="methodgetScheme"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getScheme</strong> (line <span class="linenumber">158</span>)
+ </h4> 
+<h4><i>string|false</i> <strong>getScheme(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Get the URI's scheme</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Scheme or false if no scheme is set.</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetUri" id="methodgetUri"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getUri</strong> (line <span class="linenumber">199</span>)
+ </h4> 
+<h4><i>string</i> <strong>getUri(
+)</strong></h4>
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Zend_Uri/Zend_Uri_Http.html#methodgetUri">Zend_Uri_Http::getUri()</a></dt>
+		<dd>Returns a URI based on current values of the instance variables. If any  part of the URI does not pass validation, then an exception is thrown.</dd>
+	</dl>
+	</p>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Return a string representation of this URI.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>abstract</strong> - </li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodvalid" id="methodvalid"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method valid</strong> (line <span class="linenumber">206</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>valid(
+)</strong></h4>
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Zend_Uri/Zend_Uri_Http.html#methodvalid">Zend_Uri_Http::valid()</a></dt>
+		<dd>Validate the current URI from the instance variables. Returns true if and only if all  parts pass validation.</dd>
+	</dl>
+	</p>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns TRUE if this URI is valid, or FALSE otherwise.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>abstract</strong> - </li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="method__toString" id="method__toString"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method __toString</strong> (line <span class="linenumber">54</span>)
+ </h4> 
+<h4><i>string</i> <strong>__toString(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Return a string representation of this URI.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>see</strong> - <a href="../Zend_Uri/Zend_Uri.html#methodgetUri">Zend_Uri::getUri()</a></li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 18:16:36 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Loader</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Loader
+</h2> (line <span class="linenumber">30</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Loader.php.html">/includes/lib/youtube/library/Zend/Loader.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Static methods for loading classes and files.</h5>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+    static         <span class="method-result">string|false</span>
+        <a href="#methodautoload" title="details" class="method-name">autoload</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>)
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">array</span>
+        <a href="#methodexplodeIncludePath" title="details" class="method-name">explodeIncludePath</a>
+        ([<span class="var-type">string|null</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">boolean</span>
+        <a href="#methodisReadable" title="details" class="method-name">isReadable</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">void</span>
+        <a href="#methodloadClass" title="details" class="method-name">loadClass</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>, [<span class="var-type">string|array</span>&nbsp;<span class="var-name">$dirs</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">boolean</span>
+        <a href="#methodloadFile" title="details" class="method-name">loadFile</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">string|array</span>&nbsp;<span class="var-name">$dirs</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$once</span> = <span class="var-default">false</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">void</span>
+        <a href="#methodregisterAutoload" title="details" class="method-name">registerAutoload</a>
+        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">'Zend_Loader'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$enabled</span> = <span class="var-default">true</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">boolean</span>
+        <a href="#method_includeFile" title="details" class="method-name">_includeFile</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$filespec</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$once</span> = <span class="var-default">false</span>])
+        </div>
+    <div class="method-definition">
+    static         <span class="method-result">void</span>
+        <a href="#method_securityCheck" title="details" class="method-name">_securityCheck</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="methodautoload" id="methodautoload"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method autoload</strong> (line <span class="linenumber">243</span>)
+ </h4> 
+<h4><i>string|false</i> <strong>autoload(
+string
+$class)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>spl_autoload() suitable implementation for supporting class autoloading.</h5>
+<div class="desc"><p>Attach to spl_autoload() using the following:  <div class="src-code"><ol><li><div class="src-line">&nbsp;<a href="http://www.php.net/spl_autoload_register">spl_autoload_register</a><strong>(</strong>array<strong>(</strong><font color="#66cccc">'Zend_Loader'</font><strong>,&nbsp;</strong><font color="#66cccc">'autoload'</font><strong>))</strong><strong>;</strong></div></li>
+</ol></div></p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $class</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Class name on success; false on failure</li>
+			<li><strong>deprecated</strong> - Since 1.8.0</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodexplodeIncludePath" id="methodexplodeIncludePath"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method explodeIncludePath</strong> (line <span class="linenumber">214</span>)
+ </h4> 
+<h4><i>array</i> <strong>explodeIncludePath(
+[string|null
+$path = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Explode an include path into an array</h5>
+<div class="desc"><p>If no path provided, uses current include_path. Works around issues that  occur when the path includes stream schemas.</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string|null $path</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodisReadable" id="methodisReadable"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method isReadable</strong> (line <span class="linenumber">174</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>isReadable(
+string
+$filename)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Returns TRUE if the $filename is readable, or FALSE otherwise.</h5>
+<div class="desc"><p>This function uses the PHP include_path, where PHP's is_readable()  does not.</p><p>Note from ZF-2900:  If you use custom error handler, please check whether return value   from error_reporting() is zero or not.  At mark of fopen() can not suppress warning if the handler is used.</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $filename</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodloadClass" id="methodloadClass"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method loadClass</strong> (line <span class="linenumber">52</span>)
+ </h4> 
+<h4><i>void</i> <strong>loadClass(
+string
+$class, [string|array
+$dirs = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Loads a class from a PHP file.  The filename must be formatted  as &quot;$class.php&quot;.</h5>
+<div class="desc"><p>If $dirs is a string or an array, it will search the directories  in the order supplied, and attempt to load the first matching file.</p><p>If $dirs is null, it will split the class name at underscores to  generate a path hierarchy (e.g., &quot;Zend_Example_Class&quot; will map  to &quot;Zend/Example/Class.php&quot;).</p><p>If the file was not found in the $dirs, or if no $dirs were specified,  it will attempt to load it from PHP's include_path.</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $class</strong>: <ul><li>The full class name of a Zend component.</li></ul></li>
+			<li><strong>string|array $dirs</strong>: - OPTIONAL Either a path or an array of paths                              to search.</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodloadFile" id="methodloadFile"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method loadFile</strong> (line <span class="linenumber">126</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>loadFile(
+string
+$filename, [string|array
+$dirs = null], [boolean
+$once = false])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Loads a PHP file.  This is a wrapper for PHP's include() function.</h5>
+<div class="desc"><p>$filename must be the complete filename, including any  extension such as &quot;.php&quot;.  Note that a security check is performed that  does not permit extended characters in the filename.  This method is  intended for loading Zend Framework files.</p><p>If $dirs is a string or an array, it will search the directories  in the order supplied, and attempt to load the first matching file.</p><p>If the file was not found in the $dirs, or if no $dirs were specified,  it will attempt to load it from PHP's include_path.</p><p>If $once is TRUE, it will use include_once() instead of include().</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $filename</strong>: </li>
+			<li><strong>string|array $dirs</strong>: - OPTIONAL either a path or array of paths                        to search.</li>
+			<li><strong>boolean $once</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodregisterAutoload" id="methodregisterAutoload"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method registerAutoload</strong> (line <span class="linenumber">264</span>)
+ </h4> 
+<h4><i>void</i> <strong>registerAutoload(
+[string
+$class = 'Zend_Loader'], [boolean
+$enabled = true])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Register autoload() with spl_autoload()</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $class</strong>: (optional)</li>
+			<li><strong>boolean $enabled</strong>: (optional)</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>deprecated</strong> - Since 1.8.0</li>
+			<li><strong>throws</strong> - Zend_Exception if spl_autoload() is not found  or if the specified class does not have an autoload() method.</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="method_includeFile" id="method_includeFile"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method _includeFile</strong> (line <span class="linenumber">321</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>_includeFile(
+string
+$filespec, [boolean
+$once = false])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Attempt to include() the file.</h5>
+<div class="desc"><p>include() is not prefixed with the @ operator because if  the file is loaded and contains a parse error, execution  will halt silently and this is difficult to debug.</p><p>Always set display_errors = Off on production servers!</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $filespec</strong>: </li>
+			<li><strong>boolean $once</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>deprecated</strong> - Since 1.5.0; use loadFile() instead</li>
+			<li><strong>access</strong> - protected</li>
+		</ul>
+</div>
+<a name="method_securityCheck" id="method_securityCheck"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method _securityCheck</strong> (line <span class="linenumber">296</span>)
+ </h4> 
+<h4><i>void</i> <strong>_securityCheck(
+string
+$filename)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Ensure that filename does not contain exploits</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $filename</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Exception</li>
+			<li><strong>access</strong> - protected</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 18:16:07 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
+</html>

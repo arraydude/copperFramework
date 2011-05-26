@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Http_Response_Stream</title>
+  <link rel="stylesheet" href="../../media/stylesheet.css" />
+  <script src="../../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../../media/images/plus.gif";
+	imgMinus.src = "../../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Http_Response_Stream
+</h2> (line <span class="linenumber">34</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+<a href="../../Zend_Http/Response/Zend_Http_Response.html">Zend_Http_Response</a>
+   |
+   --Zend_Http_Response_Stream</pre>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Http---Response---Stream.php.html">/includes/lib/youtube/library/Zend/Http/Response/Stream.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Zend_Http_Response represents an HTTP 1.0 / 1.1 response message. It  includes easy access to all the response's different elemts, as well as some  convenience methods for parsing and validating HTTP responses.</h5>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    <span class="var-type">resource</span>
+    <a href="#var$stream" title="details" class="property"><strong>$stream</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">string</span>
+    <a href="#var$stream_name" title="details" class="property"><strong>$stream_name</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">boolean</span>
+    <a href="#var$_cleanup" title="details" class="property"><strong>$_cleanup</strong></a>
+</div>
+<hr />
+<a name="var$stream" id="var$stream"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$stream</strong> (line <span class="linenumber">41</span>)
+ </h4>
+<h4>Data type : resource</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Response as stream</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$stream_name" id="var$stream_name"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$stream_name</strong> (line <span class="linenumber">50</span>)
+ </h4>
+<h4>Data type : string</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>The name of the file containing the stream</h5>
+<div class="desc"><p>Will be empty if stream is not file-based.</p></div>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_cleanup" id="var$_cleanup"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_cleanup</strong> (line <span class="linenumber">57</span>)
+ </h4>
+<h4>Data type : boolean</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Should we clean up the stream file when this response is closed?</h5>
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+    static         <span class="method-result"><a href="../../Zend_Http/Response/Zend_Http_Response_Stream.html">Zend_Http_Response_Stream</a></span>
+        <a href="#methodfromStream" title="details" class="method-name">fromStream</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$response_str</span>, <span class="var-type">resource</span>&nbsp;<span class="var-name">$stream</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">Zend_Http_Response_Stream</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        (<span class="var-type">int</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$headers</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$body</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$version</span> = <span class="var-default">'1.1'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#method__destruct" title="details" class="method-name">__destruct</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetBody" title="details" class="method-name">getBody</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodgetCleanup" title="details" class="method-name">getCleanup</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetRawBody" title="details" class="method-name">getRawBody</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">resourse</span>
+        <a href="#methodgetStream" title="details" class="method-name">getStream</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodgetStreamName" title="details" class="method-name">getStreamName</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">string</span>
+        <a href="#methodreadStream" title="details" class="method-name">readStream</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodsetCleanup" title="details" class="method-name">setCleanup</a>
+        ([<span class="var-type">bool</span>&nbsp;<span class="var-name">$cleanup</span> = <span class="var-default">true</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Http/Response/Zend_Http_Response_Stream.html">Zend_Http_Response_Stream</a></span>
+        <a href="#methodsetStream" title="details" class="method-name">setStream</a>
+        (<span class="var-type">resourse</span>&nbsp;<span class="var-name">$stream</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result"><a href="../../Zend_Http/Response/Zend_Http_Response_Stream.html">Zend_Http_Response_Stream</a></span>
+        <a href="#methodsetStreamName" title="details" class="method-name">setStreamName</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$stream_name</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="methodfromStream" id="methodfromStream"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Static Method fromStream</strong> (line <span class="linenumber">156</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Http/Response/Zend_Http_Response_Stream.html">Zend_Http_Response_Stream</a></i> <strong>fromStream(
+string
+$response_str, resource
+$stream)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Create a new Zend_Http_Response_Stream object from a string</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $response_str</strong>: </li>
+			<li><strong>resource $stream</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">139</span>)
+ </h4> 
+<h4><i>Zend_Http_Response_Stream</i> <strong>__construct(
+int
+$code, array
+$headers, [string
+$body = null], [string
+$version = '1.1'], [string
+$message = null])</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Http/Response/Zend_Http_Response.html#method__construct">Zend_Http_Response::__construct()</a> HTTP response constructor</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>HTTP response constructor</h5>
+<div class="desc"><p>In most cases, you would use Zend_Http_Response::fromString to parse an HTTP  response string and create a new Zend_Http_Response object.</p><p>NOTE: The constructor no longer accepts nulls or empty values for the code and  headers and will throw an exception if the passed values do not form a valid HTTP  responses.</p><p>If no message is passed, the message will be guessed according to the response code.</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>int $code</strong>: Response code (200, 404, ...)</li>
+			<li><strong>array $headers</strong>: Headers array</li>
+			<li><strong>string $body</strong>: Response body</li>
+			<li><strong>string $version</strong>: HTTP version</li>
+			<li><strong>string $message</strong>: Response code as text</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>throws</strong> - Zend_Http_Exception</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="method__destruct" id="method__destruct"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/Destructor.gif" border="0" /> <strong class="method">Destructor __destruct</strong> (line <span class="linenumber">224</span>)
+ </h4> 
+<h4><i>void</i> <strong>__destruct(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetBody" id="methodgetBody"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getBody</strong> (line <span class="linenumber">178</span>)
+ </h4> 
+<h4><i>string</i> <strong>getBody(
+)</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodgetBody">Zend_Http_Response::getBody()</a> Get the response body as string</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Get the response body as string</h5>
+<div class="desc"><p>This method returns the body of the HTTP response (the content), as it  should be in it's readable version - that is, after decoding it (if it  was decoded), deflating it (if it was gzip compressed), etc.</p><p>If you want to get the raw body (as transfered on wire) use  $this-&gt;getRawBody() instead.</p></div>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetCleanup" id="methodgetCleanup"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getCleanup</strong> (line <span class="linenumber">86</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>getCleanup(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Get the cleanup trigger</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetRawBody" id="methodgetRawBody"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getRawBody</strong> (line <span class="linenumber">194</span>)
+ </h4> 
+<h4><i>string</i> <strong>getRawBody(
+)</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodgetRawBody">Zend_Http_Response::getRawBody()</a> Get the raw response body (as transfered &quot;on wire&quot;) as string</p>
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Get the raw response body (as transfered &quot;on wire&quot;) as string</h5>
+<div class="desc"><p>If the body is encoded (with Transfer-Encoding, not content-encoding -  IE &quot;chunked&quot; body), gzip compressed, etc. it will not be decoded.</p></div>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetStream" id="methodgetStream"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getStream</strong> (line <span class="linenumber">64</span>)
+ </h4> 
+<h4><i>resourse</i> <strong>getStream(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Get the response as stream</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetStreamName" id="methodgetStreamName"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getStreamName</strong> (line <span class="linenumber">104</span>)
+ </h4> 
+<h4><i>string</i> <strong>getStreamName(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Get file name associated with the stream</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodreadStream" id="methodreadStream"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method readStream</strong> (line <span class="linenumber">209</span>)
+ </h4> 
+<h4><i>string</i> <strong>readStream(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Read stream content and return it as string</h5>
+<div class="desc"><p>Function reads the remainder of the body from the stream and closes the stream.</p></div>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - protected</li>
+		</ul>
+</div>
+<a name="methodsetCleanup" id="methodsetCleanup"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setCleanup</strong> (line <span class="linenumber">95</span>)
+ </h4> 
+<h4><i>void</i> <strong>setCleanup(
+[bool
+$cleanup = true])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Set the cleanup trigger</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>bool $cleanup</strong>: Set cleanup trigger</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetStream" id="methodsetStream"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setStream</strong> (line <span class="linenumber">75</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Http/Response/Zend_Http_Response_Stream.html">Zend_Http_Response_Stream</a></i> <strong>setStream(
+resourse
+$stream)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Set the response stream</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>resourse $stream</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodsetStreamName" id="methodsetStreamName"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setStreamName</strong> (line <span class="linenumber">114</span>)
+ </h4> 
+<h4><i><a href="../../Zend_Http/Response/Zend_Http_Response_Stream.html">Zend_Http_Response_Stream</a></i> <strong>setStreamName(
+string
+$stream_name)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<h5>Set file name associated with the stream</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $stream_name</strong>: Name to set</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Http/Response/Zend_Http_Response.html">Zend_Http_Response</a></h4>
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#var$body">Zend_Http_Response::$body</a></strong> - The HTTP response body
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#var$code">Zend_Http_Response::$code</a></strong> - The HTTP response code
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#var$headers">Zend_Http_Response::$headers</a></strong> - The HTTP response headers array
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#var$message">Zend_Http_Response::$message</a></strong> - The HTTP response code as string  (e.g. 'Not Found' for 404 or 'Internal Server Error' for 500)
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#var$messages">Zend_Http_Response::$messages</a></strong> - List of all known HTTP response codes - used by responseCodeAsText() to  translate numeric codes to messages.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#var$version">Zend_Http_Response::$version</a></strong> - The HTTP version (1.0, 1.1)
+	</h4> 
+		</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Http/Response/Zend_Http_Response.html">Zend_Http_Response</a></h4>
+				<h4>
+<img src="../../media/images/Constructor.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#method__construct">Zend_Http_Response::__construct()</a></strong> - HTTP response constructor
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodasString">Zend_Http_Response::asString()</a></strong> - Get the entire response as string
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methoddecodeChunkedBody">Zend_Http_Response::decodeChunkedBody()</a></strong> - Decode a &quot;chunked&quot; transfer-encoded body and return the decoded text
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methoddecodeDeflate">Zend_Http_Response::decodeDeflate()</a></strong> - Decode a zlib deflated message (when Content-encoding = deflate)
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methoddecodeGzip">Zend_Http_Response::decodeGzip()</a></strong> - Decode a gzip encoded message (when Content-encoding = gzip)
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodextractBody">Zend_Http_Response::extractBody()</a></strong> - Extract the body from a response string
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodextractCode">Zend_Http_Response::extractCode()</a></strong> - Extract the response code from a response string
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodextractHeaders">Zend_Http_Response::extractHeaders()</a></strong> - Extract the headers from a response string
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodextractMessage">Zend_Http_Response::extractMessage()</a></strong> - Extract the HTTP message from a response
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodextractVersion">Zend_Http_Response::extractVersion()</a></strong> - Extract the HTTP version from a response
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodfromString">Zend_Http_Response::fromString()</a></strong> - Create a new Zend_Http_Response object from a string
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodgetBody">Zend_Http_Response::getBody()</a></strong> - Get the response body as string
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodgetHeader">Zend_Http_Response::getHeader()</a></strong> - Get a specific header as string, or null if it is not set
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodgetHeaders">Zend_Http_Response::getHeaders()</a></strong> - Get the response headers
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodgetHeadersAsString">Zend_Http_Response::getHeadersAsString()</a></strong> - Get all headers as string
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodgetMessage">Zend_Http_Response::getMessage()</a></strong> - Return a message describing the HTTP response code  (Eg. &quot;OK&quot;, &quot;Not Found&quot;, &quot;Moved Permanently&quot;)
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodgetRawBody">Zend_Http_Response::getRawBody()</a></strong> - Get the raw response body (as transfered &quot;on wire&quot;) as string
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodgetStatus">Zend_Http_Response::getStatus()</a></strong> - Get the HTTP response status code
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodgetVersion">Zend_Http_Response::getVersion()</a></strong> - Get the HTTP version of the response
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodisError">Zend_Http_Response::isError()</a></strong> - Check whether the response is an error
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodisRedirect">Zend_Http_Response::isRedirect()</a></strong> - Check whether the response is a redirection
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodisSuccessful">Zend_Http_Response::isSuccessful()</a></strong> - Check whether the response in successful
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#methodresponseCodeAsText">Zend_Http_Response::responseCodeAsText()</a></strong> - A convenience function that returns a text representation of  HTTP response codes. Returns 'Unknown' for unknown codes.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Http/Response/Zend_Http_Response.html#method__toString">Zend_Http_Response::__toString()</a></strong> - Implements magic __toString()
+		</h4> 
+
+				<br />
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 18:16:32 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
+</html>

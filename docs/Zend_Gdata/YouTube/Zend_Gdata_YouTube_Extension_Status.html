@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Zend_Gdata_YouTube_Extension_Status</title>
+  <link rel="stylesheet" href="../../media/stylesheet.css" />
+  <script src="../../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../../media/images/plus.gif";
+	imgMinus.src = "../../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Zend_Gdata_YouTube_Extension_Status
+</h2> (line <span class="linenumber">38</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+<a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html">Zend_Gdata_App_Base</a>
+   |
+   --<a href="../../Zend_Gdata/App/Zend_Gdata_App_Extension.html">Zend_Gdata_App_Extension</a>
+      |
+      --<a href="../../Zend_Gdata/Gdata/Zend_Gdata_Extension.html">Zend_Gdata_Extension</a>
+         |
+         --Zend_Gdata_YouTube_Extension_Status</pre>
+<p>
+	<b><i>Located in File: <a href="_includes---lib---youtube---library---Zend---Gdata---YouTube---Extension---Status.php.html">/includes/lib/youtube/library/Zend/Gdata/YouTube/Extension/Status.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Represents the yt:status element</h5>
+<ul>
+		<li><strong>copyright:</strong> - Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)</li>
+		<li><strong>license:</strong> - <a href="http://framework.zend.com/license/new-bsd">New BSD License</a></li>
+	</ul>
+<br /><hr />
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$_rootElement" title="details" class="property"><strong>$_rootElement</strong></a>
+</div>
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$_rootNamespace" title="details" class="property"><strong>$_rootNamespace</strong></a>
+</div>
+<hr />
+<a name="var$_rootElement" id="var$_rootElement"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_rootElement =  'status'</strong> (line <span class="linenumber">41</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<p><strong>Overrides:</strong> Array<br></p><!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<a name="var$_rootNamespace" id="var$_rootNamespace"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_rootNamespace =  'yt'</strong> (line <span class="linenumber">42</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<p><strong>Overrides:</strong> Array<br></p><!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - protected</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
+
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+            <span class="method-result">Zend_Gdata_YouTube_Extension_Status</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        ([<span class="var-type"></span>&nbsp;<span class="var-name">$text</span> = <span class="var-default">null</span>])
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">44</span>)
+ </h4> 
+<h4><i>Zend_Gdata_YouTube_Extension_Status</i> <strong>__construct(
+[
+$text = null])</strong></h4>
+
+<p><strong>Overrides :</strong> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Extension.html#method__construct">Zend_Gdata_Extension::__construct()</a> parent method not documented</p>
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $text</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html">Zend_Gdata_App_Base</a></h4>
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#var$_extensionAttributes">Zend_Gdata_App_Base::$_extensionAttributes</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#var$_extensionElements">Zend_Gdata_App_Base::$_extensionElements</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#var$_namespaceLookupCache">Zend_Gdata_App_Base::$_namespaceLookupCache</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#var$_namespaces">Zend_Gdata_App_Base::$_namespaces</a></strong> - List of namespaces, as a three-dimensional array. The first dimension  represents the namespace prefix, the second dimension represents the  minimum major protocol version, and the third dimension is the minimum  minor protocol version. Null keys are NOT allowed.
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#var$_rootNamespaceURI">Zend_Gdata_App_Base::$_rootNamespaceURI</a></strong> - 
+	</h4> 
+		<h4>
+<img src="../../media/images/PublicProperty.gif" border="0" /><strong class="property"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#var$_text">Zend_Gdata_App_Base::$_text</a></strong> - 
+	</h4> 
+		</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Extension.html">Zend_Gdata_Extension</a></h4>
+				<h4>
+<img src="../../media/images/Constructor.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/Gdata/Zend_Gdata_Extension.html#method__construct">Zend_Gdata_Extension::__construct()</a></strong> - 
+		</h4> 
+
+				<br />
+		<!-- =========== Summary =========== -->
+	<h4>Inherited From Class <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html">Zend_Gdata_App_Base</a></h4>
+				<h4>
+<img src="../../media/images/Constructor.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#method__construct">Zend_Gdata_App_Base::__construct()</a></strong> - 
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodencode">Zend_Gdata_App_Base::encode()</a></strong> - Alias for saveXML()
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodflushNamespaceLookupCache">Zend_Gdata_App_Base::flushNamespaceLookupCache()</a></strong> - Flush namespace lookup cache.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodgetDOM">Zend_Gdata_App_Base::getDOM()</a></strong> - Retrieves a DOMElement which corresponds to this element and all  child properties.  This is used to build an entry back into a DOM  and eventually XML text for sending to the server upon updates, or  for application storage/persistence.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodgetExtensionAttributes">Zend_Gdata_App_Base::getExtensionAttributes()</a></strong> - Returns an array of all extension attributes not transformed into data
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodgetExtensionElements">Zend_Gdata_App_Base::getExtensionElements()</a></strong> - Returns an array of all elements not matched to data model classes  during the parsing of the XML
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodgetText">Zend_Gdata_App_Base::getText()</a></strong> - Returns the child text node of this element  This represents any raw text contained within the XML element
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodgetXML">Zend_Gdata_App_Base::getXML()</a></strong> - Alias for saveXML() returns XML content for this element and all  children
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodlookupNamespace">Zend_Gdata_App_Base::lookupNamespace()</a></strong> - Get the full version of a namespace prefix
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodregisterAllNamespaces">Zend_Gdata_App_Base::registerAllNamespaces()</a></strong> - Add an array of namespaces to the registered list.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodregisterNamespace">Zend_Gdata_App_Base::registerNamespace()</a></strong> - Add a namespace and prefix to the registered list
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodsaveXML">Zend_Gdata_App_Base::saveXML()</a></strong> - Converts this element and all children into XML text using getDOM()
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodsetExtensionAttributes">Zend_Gdata_App_Base::setExtensionAttributes()</a></strong> - Sets an array of all extension attributes not transformed into data
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodsetExtensionElements">Zend_Gdata_App_Base::setExtensionElements()</a></strong> - Sets an array of all elements not matched to data model classes  during the parsing of the XML.  This method can be used to add arbitrary  child XML elements to any data model class.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodsetText">Zend_Gdata_App_Base::setText()</a></strong> - Sets the child text node of this element  This represents any raw text contained within the XML element
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodtakeAttributeFromDOM">Zend_Gdata_App_Base::takeAttributeFromDOM()</a></strong> - Given a DOMNode representing an attribute, tries to map the data into  instance members.  If no mapping is defined, the name and value are  stored in an array.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodtakeChildFromDOM">Zend_Gdata_App_Base::takeChildFromDOM()</a></strong> - Given a child DOMNode, tries to determine how to map the data into  object instance members.  If no mapping is defined, Extension_Element  objects are created and stored in an array.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodtransferFromDOM">Zend_Gdata_App_Base::transferFromDOM()</a></strong> - Transfers each child and attribute into member variables.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#methodtransferFromXML">Zend_Gdata_App_Base::transferFromXML()</a></strong> - Parses the provided XML text and generates data model classes for
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#method__get">Zend_Gdata_App_Base::__get()</a></strong> - Magic getter to allow access like $entry-&gt;foo to call $entry-&gt;getFoo()  Alternatively, if no getFoo() is defined, but a $_foo protected variable  is defined, this is returned.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#method__isset">Zend_Gdata_App_Base::__isset()</a></strong> - Magic __isset method
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#method__set">Zend_Gdata_App_Base::__set()</a></strong> - Magic setter to allow acces like $entry-&gt;foo='bar' to call  $entry-&gt;setFoo('bar') automatically.
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#method__toString">Zend_Gdata_App_Base::__toString()</a></strong> - Magic toString method allows using this directly via echo  Works best in PHP &gt;= 4.2.0
+		</h4> 
+
+				<h4>
+<img src="../../media/images/PublicMethod.gif" border="0" /><strong class="method"> <a href="../../Zend_Gdata/App/Zend_Gdata_App_Base.html#method__unset">Zend_Gdata_App_Base::__unset()</a></strong> - Magic __unset method
+		</h4> 
+
+				<br />
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Thu, 26 May 2011 18:16:32 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
+</html>

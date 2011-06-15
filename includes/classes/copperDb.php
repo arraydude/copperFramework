@@ -63,5 +63,23 @@ class copperDb
     }
     return self::$instance;
   }
+  
+  /**
+   * Genera una cadena sql para las keys de un array
+   *
+   *  Ejemplo: field1=?, field2=?
+   * @param array $array
+   * @return string
+   */
+  static public function generateFieldsWithKeys(array $array){
+    $sqlFields = implode("=?,", array_keys($array));
 
+    return $sqlFields . "=?";
+  }
+
+  static public function generateValues(array &$array, $values){
+    foreach($values as $value){
+      array_push($array, $value);
+    }
+  }
 }

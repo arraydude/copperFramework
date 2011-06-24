@@ -11,7 +11,7 @@ class copperFacebook {
 
   private static function instance($facebook = null, $signedRequest = null, $session = null, $me = null) {
     $instance = new stdClass();
-    $instance->facebook = $facebook;
+    $instance->sdk = $facebook;
     $instance->signedRequest = $signedRequest;
     $instance->session = $session;
     $instance->me = $me;
@@ -40,9 +40,9 @@ class copperFacebook {
 
     $init = array_merge($init, $params);
 
-    $instance->facebook = new Facebook($init);
-    $instance->signedRequest = $instance->facebook->getSignedRequest();
-    $instance->fbSession = $instance->facebook->getSession();
+    $instance->sdk = new Facebook($init);
+    $instance->signedRequest = $instance->sdk->getSignedRequest();
+    $instance->session = $instance->sdk->getSession();
 
     $initLogin = array(
         "canvas" => 1,
@@ -52,9 +52,9 @@ class copperFacebook {
 	
     $initLogin = array_merge($initLogin, $loginParams);
     
-    $fbSession = $instance->facebook->getSession();
+    $fbSession = $instance->sdk->getSession();
     if (!$fbSession) {
-      copperUtils::redirectJs($instance->facebook->getLoginUrl($initLogin));
+      copperUtils::redirectJs($instance->sdk->getLoginUrl($initLogin));
       die();
     }
 
@@ -62,7 +62,7 @@ class copperFacebook {
     if(isset($_SESSION[$sessionIdx])) {
       $me = $_SESSION[$sessionIdx];
     } else {
-      $me = $_SESSION[$sessionIdx] = $instance->facebook->api("/me");
+      $me = $_SESSION[$sessionIdx] = $instance->sdk->api("/me");
     }
     $instance->me = $me;
     return $instance;

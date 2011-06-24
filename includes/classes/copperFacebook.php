@@ -83,5 +83,33 @@ class copperFacebook {
     return $deleted;
   }
   
+  /**
+   * getUidsFromRequestIds
+   * 
+   * Obtain the uids from a gived requestids.
+   * @param array $requestIds
+   * @return array $uids 
+   */
+  public static function getUidsFromRequestIds($requestIds){
+      $appid = copperConfig::get('appId');
+      $secret = copperConfig::get('appSecret');
+      $uids = array();
+      
+      if (copperUtils::valid($requestIds, false)) {
 
+          $app_token = file_get_contents('https://graph.facebook.com/oauth/access_token?client_id=' . $appid . '&client_secret=' . $secret . '&grant_type=client_credentials'); //Get application token
+
+          foreach ($requestIds as $key => $sent) {
+
+              $request = file_get_contents('https://graph.facebook.com/' . $sent . '?' . $app_token);
+
+              $request = json_decode($request);
+
+              $uids[] = $request->to->id;
+          }
+      }
+      
+      return $uids;
+  }
+  
 }

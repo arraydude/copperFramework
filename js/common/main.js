@@ -48,7 +48,7 @@ facebook.login = function(callback) {
           }
         }
       }, {
-        perms: 'photo_upload,user_photos,email,friends_photos,user_photo_video_tags,friends_photo_video_tags'
+        perms: FACEBOOK_PERMS
       });
     }
   });

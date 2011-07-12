@@ -10,12 +10,12 @@
  * @version 1.0
  * @todo This need a cleaning
  */
-
 ini_set('display_errors', '1');
 error_reporting(E_ALL);
 
 date_default_timezone_set("America/Buenos_Aires");
 
+session_start();
 
 $copperConfig = array(
     'appName' => 'copperFramework',
@@ -36,36 +36,40 @@ $copperConfig = array(
     'swfsVersion' => '0.02',
     'lang' => 'es',
     // youtube upload settings
-    'youtubeDeveloperKey' =>  '',
+    'youtubeDeveloperKey' => '',
     'youtubeUsername' => '',
     'youtubePassword' => '',
 );
 
 $customConfig = realpath('.') . DIRECTORY_SEPARATOR . 'config-custom.php';
+
 if (!file_exists($customConfig)) {
   die('Create the file `' . basename($customConfig) . '` from  the same file -template and put your custom configurations there.' . "\n");
 }
+
 require_once($customConfig);
+
 $copperConfig = array_merge($copperConfig, $copperConfigCustom);
-session_start();
+
 require_once(str_replace(array('///', '//'), "/", $copperConfig['classes'] . '/copperConfig.php'));
 copperConfig::init($copperConfig);
 unset($copperConfig, $customConfig);
+
 // warnings and error to log file.
-ini_set('error_log',copperConfig::get('log'));
+ini_set('error_log', copperConfig::get('log'));
 
 require_once copperConfig::get('lib') . '/phpmailer/class.phpmailer.php';
 
 require_once copperConfig::get('lib') . '/facebook/facebook.php';
 
-if(copperConfig::get('facebookActivate')){
+if (copperConfig::get('facebookActivate')) {
   try {
-    $fbInstance = copperFacebook::factory(array(), array('req_perms' => 'photo_upload,user_photos,email,friends_photos,user_photo_video_tags,friends_photo_video_tags'));
-  } catch(Exception $e) {
+    $fbInstance = copperFacebook::factory(array(), array('req_perms' => copperConfig::get('facebookPerms')));
+  } catch (Exception $e) {
     copperConfig::doError('Error cargando facebook: ' . $e->getMessage());
     copperConfig::doError($e->getTraceAsString());
-    if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-      echo json_encode(array('error' => true, 'msg'=>'Imposible cargar Session'));
+    if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+      echo json_encode(array('error' => true, 'msg' => 'Imposible cargar Session'));
     } else {
       copperConfig::incTemplate('head.php');
       copperConfig::incTemplate('bodys/error500.php');
@@ -78,3 +82,5 @@ if(copperConfig::get('facebookActivate')){
   $model = new copperModel($fbInstance);
   copperConfig::set('model', $model);
 }
+
+copperConfig::set('visibleVars', $copperConfigVisible);

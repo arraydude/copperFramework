@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><?php echo copperConfig::get('appName'); ?></title>
     <?php copperConfig::incCss('main.css'); ?>
+    <?php copperConfig::incJs('../jsVars.php'); ?>
     <?php
         $customsCss = copperUtils::valid(copperConfig::get('customsCss'), array());
         foreach($customsCss as $css){

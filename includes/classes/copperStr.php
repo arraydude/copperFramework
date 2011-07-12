@@ -84,7 +84,21 @@ class copperStr {
     return preg_replace_callback('/_([a-z])/', $func, $str);
   }
 
-  public static function sec2hms ($sec, $hideHours = false, $padHours = false) {
+  public static function revertCamelize($str) {
+    $newStr = "";
+
+    for ($i = 0; $i <= (strlen($str) - 1); $i++) {
+      if (ctype_upper($str[$i])) {
+        $newStr .= "_" . self::toLower($str[$i]);
+      } else {
+        $newStr .= $str[$i];
+      }
+    }
+
+    return $newStr;
+  }
+
+  public static function sec2hms($sec, $hideHours = false, $padHours = false) {
 
     // start with a blank string
     $hms = "";
@@ -95,10 +109,8 @@ class copperStr {
     $hours = intval(intval($sec) / 3600);
 
     // add hours to $hms (with a leading 0 if asked for)
-    if(!$hideHours) {
-    $hms .= ($padHours)
-          ? str_pad($hours, 2, "0", STR_PAD_LEFT). ":"
-          : $hours. ":";
+    if (!$hideHours) {
+      $hms .= ( $padHours) ? str_pad($hours, 2, "0", STR_PAD_LEFT) . ":" : $hours . ":";
     }
 
     // dividing the total seconds by 60 will give us the number of minutes
@@ -107,7 +119,7 @@ class copperStr {
     $minutes = intval(($sec / 60) % 60);
 
     // add minutes to $hms (with a leading 0 if needed)
-    $hms .= str_pad($minutes, 2, "0", STR_PAD_LEFT). ":";
+    $hms .= str_pad($minutes, 2, "0", STR_PAD_LEFT) . ":";
 
     // seconds past the minute are found by dividing the total number of seconds
     // by 60 and using the remainder
@@ -118,7 +130,6 @@ class copperStr {
 
     // done!
     return $hms;
-
   }
 
 }

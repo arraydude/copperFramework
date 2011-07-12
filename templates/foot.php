@@ -1,4 +1,4 @@
-    <?php if(copperConfig::get('facebookActivate')): ?>
+    <?php if(copperConfig::get('facebookJsActivate')): ?>
       <script type="text/javascript">
         window.fbAsyncInit = function() {
           FB.init({

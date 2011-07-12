@@ -1,16 +1,22 @@
 <?php
 
-$copperConfigCustom = array(
-    'facebookActivate' => false,
+$copperConfigVisible = array(
+    'facebookActivate' => FALSE,
+    'facebookJsActivate' => FALSE,
+    'facebookPerms' => 'photo_upload,user_photos,email,friends_photos,user_photo_video_tags,friends_photo_video_tags',
     'appId' => '151220508282096',
-    'apiKey' => '21b655c7184b8120c06ca8efb8873f50',
-    'appSecret' => 'e5706001a9bae30fa28d5bde42c90e11',
     'fanPageId' => '',
     'canvasUrl' => 'http://apps.facebook.com/copperframework/',
     'callbackUrl' => 'http://localhost/copperFramework/',
-    'tabUrl' => '',
+    'tabUrl' => ''
+);
+
+$copperConfigPrivate = array(
+    'appSecret' => 'e5706001a9bae30fa28d5bde42c90e11',
     'dbUser' => 'root',
     'dbPass' => 'notoques',
     'dbName' => 'mysql',
-    'dbHost' => 'localhost',
+    'dbHost' => 'localhost'
 );
+
+$copperConfigCustom = array_merge($copperConfigVisible, $copperConfigPrivate);

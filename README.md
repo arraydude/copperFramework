@@ -25,13 +25,13 @@ Example
 
       require_once 'config.php';
 
-      $head = new copperView('head.php', true);
+      new copperView('head.php', true);
 
       $body = new copperView('bodys/test.php');
       $body->welcome = 'Welcome, your copperFramework is succesful installed.';
       $body->render();
 
-      $foot = new copperView('foot.php', true);
+      new copperView('foot.php', true);
     ?>
 
 See this on the main controller ( index.php ).

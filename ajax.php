@@ -49,31 +49,6 @@ class Ajax {
     echo json_encode($message);
     return false;
   }
-
-  /**
-   * checkNewTeamMemberProct
-   *
-   * An example of use
-   *
-   * Example: http://localhost/ajax.php?method=check_new_team_member_proct&params=<json>
-   * 
-   * @param <type> $uid
-   * @return <type> 
-   */
-  protected function checkNewTeamMemberProct($uid) {
-    $team = $this->model->getTeam();
-    if (!$team) {
-      return $this->doAjaxError('No se logro obtener equipo. No hay session');
-    }
-    if ($this->model->alreadyMember($uid, $team['id'])) {
-      return $this->doAjaxError('El usuario ya es miembro del equipo.');
-    }
-    if ($this->model->isCaptain($uid)) {
-      return $this->doAjaxError('El usuario es capitan de otro equipo.');
-    }
-    return true;
-  }
-  
 }
 
 try {

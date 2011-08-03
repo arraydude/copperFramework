@@ -18,7 +18,7 @@ class copperStr {
    * @param bool $strip_html if html tags are to be stripped
    * @return string
    */
-  public static function trimText($input, $length, $ellipses = true, $strip_html = true) {
+  public static function trimText($input, int $length, bool $ellipses = true, bool $strip_html = true) {
     //strip tags, if desired
     if ($strip_html) {
       $input = strip_tags($input);
@@ -41,15 +41,15 @@ class copperStr {
     return $trimmed_text;
   }
 
-  public static function toLower($str) {
+  public static function toLower(string $str) {
     return mb_convert_case($str, MB_CASE_LOWER, 'UTF-8');
   }
 
-  public static function toUpper($str) {
+  public static function toUpper(string $str) {
     return mb_convert_case($str, MB_CASE_UPPER, 'UTF-8');
   }
 
-  public static function Ucasefirst($str) {
+  public static function Ucasefirst(string $str) {
     $ignore = '¿¡';
     $i = 0;
     while ($i < mb_strlen($str) && (mb_strpos($ignore, $str[$i]) !== FALSE)) {
@@ -59,12 +59,12 @@ class copperStr {
     return $str;
   }
 
-  public static function parseTwitterDate($str) {
+  public static function parseTwitterDate(string $str) {
     //$parsedDate = date_parse_from_format("D, d M Y H:m:s +0000", $tweet->created_at);
     return strtotime($str);
   }
 
-  public static function parseFacebookDate($str) {
+  public static function parseFacebookDate(string $str) {
     $exploded = explode("/", $str);
 
     if (count($exploded) !== 2) {
@@ -76,7 +76,7 @@ class copperStr {
     return $timestamp;
   }
 
-  public static function camelize($str, $capitalise_first_char = false) {
+  public static function camelize(string $str, $capitalise_first_char = false) {
     if ($capitalise_first_char) {
       $str[0] = strtoupper($str[0]);
     }
@@ -84,7 +84,7 @@ class copperStr {
     return preg_replace_callback('/_([a-z])/', $func, $str);
   }
 
-  public static function revertCamelize($str) {
+  public static function revertCamelize(string $str) {
     $newStr = "";
 
     for ($i = 0; $i <= (strlen($str) - 1); $i++) {
@@ -98,7 +98,7 @@ class copperStr {
     return $newStr;
   }
 
-  public static function sec2hms($sec, $hideHours = false, $padHours = false) {
+  public static function sec2hms($sec, bool $hideHours = false, bool $padHours = false) {
 
     // start with a blank string
     $hms = "";

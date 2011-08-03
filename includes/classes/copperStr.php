@@ -18,7 +18,7 @@ class copperStr {
    * @param bool $strip_html if html tags are to be stripped
    * @return string
    */
-  public static function trimText($input, int $length, bool $ellipses = true, bool $strip_html = true) {
+  public static function trimText($input, int $length, $ellipses = true, $strip_html = true) {
     //strip tags, if desired
     if ($strip_html) {
       $input = strip_tags($input);
@@ -41,15 +41,15 @@ class copperStr {
     return $trimmed_text;
   }
 
-  public static function toLower(string $str) {
+  public static function toLower($str) {
     return mb_convert_case($str, MB_CASE_LOWER, 'UTF-8');
   }
 
-  public static function toUpper(string $str) {
+  public static function toUpper($str) {
     return mb_convert_case($str, MB_CASE_UPPER, 'UTF-8');
   }
 
-  public static function Ucasefirst(string $str) {
+  public static function Ucasefirst($str) {
     $ignore = '¿¡';
     $i = 0;
     while ($i < mb_strlen($str) && (mb_strpos($ignore, $str[$i]) !== FALSE)) {
@@ -59,12 +59,12 @@ class copperStr {
     return $str;
   }
 
-  public static function parseTwitterDate(string $str) {
+  public static function parseTwitterDate($str) {
     //$parsedDate = date_parse_from_format("D, d M Y H:m:s +0000", $tweet->created_at);
     return strtotime($str);
   }
 
-  public static function parseFacebookDate(string $str) {
+  public static function parseFacebookDate($str) {
     $exploded = explode("/", $str);
 
     if (count($exploded) !== 2) {
@@ -84,21 +84,25 @@ class copperStr {
     return preg_replace_callback('/_([a-z])/', $func, $str);
   }
 
-  public static function revertCamelize(string $str) {
-    $newStr = "";
+  public static function revertCamelize($str) {
+    if (strlen($str) > 0) {
+      $newStr = "";
 
-    for ($i = 0; $i <= (strlen($str) - 1); $i++) {
-      if (ctype_upper($str[$i])) {
-        $newStr .= "_" . self::toLower($str[$i]);
-      } else {
-        $newStr .= $str[$i];
+      for ($i = 0; $i <= (strlen($str) - 1); $i++) {
+        if (ctype_upper($str[$i])) {
+          $newStr .= "_" . self::toLower($str[$i]);
+        } else {
+          $newStr .= $str[$i];
+        }
       }
-    }
 
-    return $newStr;
+      return $newStr;
+    }
+    
+    throw new Exception('The param must be an string');
   }
 
-  public static function sec2hms($sec, bool $hideHours = false, bool $padHours = false) {
+  public static function sec2hms($sec, $hideHours = false, $padHours = false) {
 
     // start with a blank string
     $hms = "";

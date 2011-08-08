@@ -21,10 +21,10 @@ $copperConfigVisible = array(
 );
 
 $copperConfigPrivate = array(
-    'appSecret' => 'e5706001a9bae30fa28d5bde42c90e11',
+    'appSecret' => '',
     'dbUser' => 'root',
-    'dbPass' => 'notoques',
-    'dbName' => 'mysql',
+    'dbPass' => '',
+    'dbName' => '',
     'dbHost' => 'localhost'
 );
 

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * copperFacebook
  *
@@ -9,11 +10,11 @@
  */
 class copperFacebook {
 
-  private static function instance($facebook = null, $signedRequest = null, $session = null, $me = null) {
+  private static function instance($facebook = null, $signedRequest = null, $user = null, $me = null) {
     $instance = new stdClass();
     $instance->sdk = $facebook;
     $instance->signedRequest = $signedRequest;
-    $instance->session = $session;
+    $instance->user = $user;
     $instance->me = $me;
 
     return $instance;
@@ -28,13 +29,11 @@ class copperFacebook {
    * @param <type> $loginParams
    * @return <type>
    */
-  public static function factory($params = array(), $loginParams = array()) {
+  public static function factory($params = array(), $needLogin = FALSE, $loginParams = array()) {
     $instance = self::instance();
     $init = array(
         'appId' => copperConfig::get('appId'),
-        'secret' => copperConfig::get('appSecret'),
-        'cookie' => true,
-        'domain' => copperConfig::get('canvasUrl')
+        'secret' => copperConfig::get('appSecret')
     );
 
 
@@ -42,29 +41,26 @@ class copperFacebook {
 
     $instance->sdk = new Facebook($init);
     $instance->signedRequest = $instance->sdk->getSignedRequest();
-    $instance->session = $instance->sdk->getSession();
+    $instance->user = $instance->sdk->getUser();
 
-    $initLogin = array(
-        "canvas" => 1,
-        "fbconnect" => 0,
-        "display" => "page"
-    );
-	
-    $initLogin = array_merge($initLogin, $loginParams);
-    
-    $fbSession = $instance->sdk->getSession();
-    if (!$fbSession) {
-      copperUtils::redirectJs($instance->sdk->getLoginUrl($initLogin));
-      die();
+
+    if ($needLogin) {
+      if (!$instance->user) {
+        copperUtils::redirectJs($instance->sdk->getLoginUrl($loginParams));
+        die();
+      }
     }
 
-    $sessionIdx = '__FB1212_' . $fbSession['uid'];
-    if(isset($_SESSION[$sessionIdx])) {
-      $me = $_SESSION[$sessionIdx];
-    } else {
-      $me = $_SESSION[$sessionIdx] = $instance->sdk->api("/me");
+    if ($instance->user) {
+      $sessionIdx = '__FB1212_' . $instance->user;
+      if (isset($_SESSION[$sessionIdx])) {
+        $me = $_SESSION[$sessionIdx];
+      } else {
+        $me = $_SESSION[$sessionIdx] = $instance->sdk->api("/me");
+      }
+      $instance->me = $me;
     }
-    $instance->me = $me;
+
     return $instance;
   }
 
@@ -77,12 +73,12 @@ class copperFacebook {
    * @param <type> $appToken
    * @return <type>
    */
-  public static function deleteRequest($requestId, $appToken){
+  public static function deleteRequest($requestId, $appToken) {
     $deleted = file_get_contents("https://graph.facebook.com/$requestId?access_token=$appToken&method=delete"); // Should return true on success
 
     return $deleted;
   }
-  
+
   /**
    * getUidsFromRequestIds
    * 
@@ -90,26 +86,26 @@ class copperFacebook {
    * @param array $requestIds
    * @return array $uids 
    */
-  public static function getUidsFromRequestIds($requestIds){
-      $appid = copperConfig::get('appId');
-      $secret = copperConfig::get('appSecret');
-      $uids = array();
-      
-      if (copperUtils::valid($requestIds, false)) {
+  public static function getUidsFromRequestIds($requestIds) {
+    $appid = copperConfig::get('appId');
+    $secret = copperConfig::get('appSecret');
+    $uids = array();
 
-          $app_token = file_get_contents('https://graph.facebook.com/oauth/access_token?client_id=' . $appid . '&client_secret=' . $secret . '&grant_type=client_credentials'); //Get application token
+    if (copperUtils::valid($requestIds, false)) {
 
-          foreach ($requestIds as $key => $sent) {
+      $app_token = file_get_contents('https://graph.facebook.com/oauth/access_token?client_id=' . $appid . '&client_secret=' . $secret . '&grant_type=client_credentials'); //Get application token
 
-              $request = file_get_contents('https://graph.facebook.com/' . $sent . '?' . $app_token);
+      foreach ($requestIds as $key => $sent) {
 
-              $request = json_decode($request);
+        $request = file_get_contents('https://graph.facebook.com/' . $sent . '?' . $app_token);
 
-              $uids[] = $request->to->id;
-          }
+        $request = json_decode($request);
+
+        $uids[] = $request->to->id;
       }
-      
-      return $uids;
+    }
+
+    return $uids;
   }
-  
+
 }

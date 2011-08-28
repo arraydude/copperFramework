@@ -28,7 +28,7 @@ Example
       new copperView('head.php', true);
 
       $body = new copperView('bodys/test.php');
-      $body->welcome = 'Welcome, your copperFramework is succesful installed.';
+      $body->welcome = 'Welcome, your copperFramework is successful installed.';
       $body->render();
 
       new copperView('foot.php', true);

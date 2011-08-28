@@ -13,7 +13,7 @@ Want to contribute? Great! please create a branch or contact me at arraydude@gma
 Configuring
 -----------
 
-* Rename and configure the "config-custom-template.php" file to "config-custom.php".
+* Renamee and configure the "config-custom-template.php" file to "config-custom.php".
 * Configure the config.php file.
 * Use it.
 
@@ -28,7 +28,7 @@ Example
       new copperView('head.php', true);
 
       $body = new copperView('bodys/test.php');
-      $body->welcome = 'Welcome, your copperFramework is succesful installed.';
+      $body->welcome = 'Welcome, your copperFramework is successful installed.';
       $body->render();
 
       new copperView('foot.php', true);

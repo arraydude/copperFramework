@@ -96,18 +96,18 @@ class copperTwitter {
   public function search() {
 
     if (!is_null($this->user)) {
-      $this->search_api .= "%20" . $this->user;
+      $this->search_api .= " " . $this->user;
     }
 
     if (!is_null($this->hashtags)) {
-      $this->search_api .= "%20" . $this->hashtags;
+      $this->search_api .= " " . $this->hashtags;
     }
 
     if (!is_null($this->sinceId)) {
       $this->search_api .= $this->sinceId;
     }
 
-    $result = file_get_contents($this->search_api);
+    $result = file_get_contents(urlencode($this->search_api));
     
     $parsed = json_decode($result);
 

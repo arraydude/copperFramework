@@ -39,9 +39,10 @@ $copperConfig = array(
     'youtubeDeveloperKey' => '',
     'youtubeUsername' => '',
     'youtubePassword' => '',
+    'configsDir' => 'config/'
 );
 
-$customConfig = realpath('.') . DIRECTORY_SEPARATOR . 'config-custom.php';
+$customConfig = realpath('.') . DIRECTORY_SEPARATOR . 'config/system.php';
 
 if (!file_exists($customConfig)) {
   die('Create the file `' . basename($customConfig) . '` from  the same file -template and put your custom configurations there.' . "\n");

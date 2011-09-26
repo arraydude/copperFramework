@@ -1,1 +1,3 @@
 
+26-09-2011 10:58:11 | * ERROR * -  Configure: SQLSTATE[28000] [1045] Access denied for user 'socialab_nike'@'localhost' (using password: YES) File: /var/www/copperFramework/includes/classes/copperDb.php:50
+26-09-2011 10:59:08 | * ERROR * -  Configure: SQLSTATE[28000] [1045] Access denied for user 'socialab_nike'@'localhost' (using password: YES) File: /var/www/copperFramework/includes/classes/copperDb.php:50

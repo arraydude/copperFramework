@@ -61,9 +61,8 @@ ini_set('error_log', copperConfig::get('log'));
 
 require_once copperConfig::get('lib') . '/phpmailer/class.phpmailer.php';
 
-require_once copperConfig::get('lib') . '/facebook/facebook.php';
-
 if (copperConfig::get('facebookActivate')) {
+  require_once copperConfig::get('lib') . '/facebook/facebook.php';
   try {
     $fbInstance = copperFacebook::factory(array(), array('req_perms' => copperConfig::get('facebookPerms')));
   } catch (Exception $e) {

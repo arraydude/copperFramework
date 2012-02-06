@@ -34,7 +34,10 @@ class copperConfig {
     public static function init($values) {
         self::$conf = $values;
         self::loadConfigs();
-        self::initDb();
+        
+        if(self::get('dbActivate')){
+            self::initDb();
+        }
     }
 
     protected static function loadConfigs() {
@@ -59,10 +62,10 @@ class copperConfig {
 
     protected static function initDb() {
         global $copperDb;
-        $user = copperConfig::get('dbUser');
-        $pass = copperConfig::get('dbPass');
-        $host = copperConfig::get('dbHost');
-        $name = copperConfig::get('dbName');
+        $user = self::get('dbUser');
+        $pass = self::get('dbPass');
+        $host = self::get('dbHost');
+        $name = self::get('dbName');
         $dsn = "mysql:host=$host;dbname=$name";
         $copperDb = copperDb::configure($dsn, $user, $pass);
         self::set('copperDb', $copperDb);
@@ -231,7 +234,7 @@ class copperConfig {
             $filePath = self::$conf['path'] . DIRECTORY_SEPARATOR . self::$conf['stylesDir'] . DIRECTORY_SEPARATOR . $fileName;
             $fileData = file_get_contents($filePath);
             $vars = array("##ROOT##", "##IMGS_VERSION##");
-            $rep = array(copperConfig::get('canvasUrl'), self::$conf['imgsVersion']);
+            $rep = array(self::get('canvasUrl'), self::$conf['imgsVersion']);
             $replaced = str_replace($vars, $rep, $fileData);
             echo $replaced;
             echo '</style>';
@@ -241,7 +244,7 @@ class copperConfig {
              * @todo Check this out
              */
             //echo self::publicPath(self::$conf['stylesDir'] . '/' . $fileName) . '?vs=' . self::$conf['stylesVersion'] . '" />' . "\n";
-            echo copperConfig::get('callbackUrl') . self::$conf['stylesDir'] . '/' . $fileName . '?vs=' . self::$conf['stylesVersion'] . '" />' . "\n";
+            echo self::get('callbackUrl') . self::$conf['stylesDir'] . '/' . $fileName . '?vs=' . self::$conf['stylesVersion'] . '" />' . "\n";
         }
         return true;
     }
@@ -267,7 +270,7 @@ class copperConfig {
              * @todo Check this out
              */
             //echo self::publicPath(self::$conf['jsDir'] . '/' . $fileName) . '?vs=' . self::$conf['jsVersion'] . '"></script>' . "\n";
-            echo copperConfig::get('callbackUrl') . self::$conf['jsDir'] . '/' . $fileName . '?vs=' . self::$conf['jsVersion'] . '"></script>' . "\n";
+            echo self::get('callbackUrl') . self::$conf['jsDir'] . '/' . $fileName . '?vs=' . self::$conf['jsVersion'] . '"></script>' . "\n";
         }
         return true;
     }
@@ -293,7 +296,8 @@ class copperConfig {
      * @return string
      */
     public static function pubUpload($fileName) {
-        return self::publicPath(copperConfig::get('uploadsPublic') . '/' . $fileName);
+        return self::publicPath(self::get('uploadsPublic') . '/' . $fileName);
     }
 
 }
+
